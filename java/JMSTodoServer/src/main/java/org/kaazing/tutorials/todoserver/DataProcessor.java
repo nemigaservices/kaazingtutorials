@@ -18,7 +18,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Component
 public class DataProcessor {
-
+	private final static String SND_Topic="testWSTodoSnd";
+	private final static String RCV_Topic="testWSTodoRcv";
+	
 	@Autowired
 	private JmsTemplate jmsTemplate;
     /**
@@ -32,7 +34,7 @@ public class DataProcessor {
      * When you receive a message, print it out, then shut down the application.
      * Finally, clean up any ActiveMQ server stuff.
      */
-    @JmsListener(destination = Constants.SND_Topic, containerFactory = "myJmsContainerFactory")
+    @JmsListener(destination = SND_Topic, containerFactory = "myJmsContainerFactory")
     public void receiveMessage(final String message) {
     	System.out.println("Received a new message: "+message);
     	
@@ -54,7 +56,7 @@ public class DataProcessor {
             }
         };
                 
-        jmsTemplate.send(Constants.RCV_Topic, messageCreator);
+        jmsTemplate.send(RCV_Topic, messageCreator);
         System.out.println("Sending a new message.");
     }
 }

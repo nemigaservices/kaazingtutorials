@@ -28,11 +28,13 @@ angular.module("webSocketApp", [])
             $scope.mouseoverIndex = -1;
             if (e.type === "mouseover") {
                 $scope.mouseoverIndex = index;
-
-                // See Send and Receive Data facilities for details on how to send the data
+                //TODO: ADD code to send command "busy" for this item
+                // See Send messages facilities for details on how to send the data
                 $scope.sendCommand(item, "busy");
             }
             else {
+                //TODO: ADD code to send command "available" for this item
+                // See Send messages facilities for details on how to send the data
                 $scope.sendCommand(item, "available");
             }
         }
@@ -62,7 +64,8 @@ angular.module("webSocketApp", [])
                 message: msg
             }
             $scope.localMessages.push(msgObj);
-            // See Send and Receive Data facilities for details on how to send the data
+            //TODO: ADD code to send command "complete" or "incomplete" for this item
+            // See Send messages facilities for details on how to send the data
             $scope.sendCommand(item, ((item.complete) ? "complete" : "incomplete"))
         }
 
@@ -100,6 +103,7 @@ angular.module("webSocketApp", [])
         }
 
 
+        // TODO: Add code to establish JMS connection
         // Connection facilities
         $scope.prepareSend = function () {
             var dest = $scope.session.createTopic(webSocketConfig.TOPIC_PUB);
@@ -159,7 +163,8 @@ angular.module("webSocketApp", [])
         $scope.connectToWebSocket();
 
 
-        // Send and receive messages facilities
+        // TODO: Add code to generate unique application ID and send the message
+        // Send messages facilities
         $scope.appId = (function () {
             /**! http://stackoverflow.com/a/2117523/377392 */
             var fmt = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
@@ -191,6 +196,9 @@ angular.module("webSocketApp", [])
             $scope.logWebSocketMessage("Send command " + msg, "sent");
 
         }
+
+        // TODO: Add code to receive and process the message
+        // Receive messages facilities
         $scope.onMessage=function(message){
             var cmd=angular.fromJson(message);
             $scope.logWebSocketMessage("Received from: "+cmd.from+", command: "+cmd.command+", item id: "+cmd.item,"received")
