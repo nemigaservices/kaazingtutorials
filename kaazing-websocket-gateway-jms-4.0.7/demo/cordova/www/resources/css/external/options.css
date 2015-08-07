@@ -1,0 +1,370 @@
+
+header#header {position: relative;}
+#slideshow .sliderContainer { padding: 50px 0; }
+#slideshow .container {padding: 30px 0 45px;}#page_header .container {padding: 0 0 30px;}
+#logo a img{
+	
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+/*----------------------  Header --------------------------*/
+
+
+#page_header.zn_def_header_style , #slideshow.zn_def_header_style , #page_header.uh_zn_def_header_style , #slideshow.uh_zn_def_header_style{
+background-color:#000000;}
+
+#page_header.zn_def_header_style #sparkles, #slideshow.zn_def_header_style #sparkles , #page_header.uh_zn_def_header_style #sparkles, #slideshow.uh_zn_def_header_style #sparkles {
+}
+
+#page_header.zn_def_header_style .bgback , #slideshow.zn_def_header_style .bgback , #page_header.uh_zn_def_header_style .bgback , #slideshow.uh_zn_def_header_style .bgback{
+background-image:url("http://developer.kaazing.com/wordpress/wp-content/uploads/2013/06/banner2.png");}
+
+#page_header.zn_def_header_style , #slideshow.zn_def_header_style {}#page_header.zn_def_header_style .zn_header_bottom_style , #slideshow.zn_def_header_style .zn_header_bottom_style {position:absolute; bottom:0; left:0; width:100%; height:27px; z-index:99; background:url(../images/bottom_mask.png) no-repeat center top;}
+
+
+/*----------------------  Unlimited Headers --------------------------*/
+
+#page_header.uh_background_2nd_level .bgback , #slideshow.uh_background_2nd_level .bgback {background-image:url("http://developer.kaazing.com/wordpress/wp-content/uploads/2013/06/banner2.png");}#page_header.uh_background_2nd_level #sparkles , #slideshow.uh_background_2nd_level #sparkles{display:none}#page_header.uh_background_2nd_level , #slideshow.uh_background_2nd_level {background-color:#4aaadf;}#page_header.uh_background_2nd_level .zn_header_bottom_style , #slideshow.uh_background_2nd_level .zn_header_bottom_style {position:absolute; bottom:0; left:0; width:100%; z-index:99; height:33px; background:url(../images/bottom_mask2.png) no-repeat center top;}/* GENERAL COLOR */
+
+	 a:hover, 
+	.cart_details .checkout, 
+	.info_pop .buyit, 
+	.m_title, 
+	.smallm_title, 
+	.circle_title, 
+	.feature_box .title, 
+	.services_box .title, 
+	.latest_posts.default-style .hoverBorder:hover h6, 
+	.latest_posts.style2 ul.posts .title, 
+	.latest_posts.style3 ul.posts .title, 
+	.recentwork_carousel li .details h4, 
+	.acc-group.default-style > button, 
+	.acc-group.style3 > button:after, 
+	.screenshot-box .left-side h3.title, 
+	.vertical_tabs .tabbable .nav>li>a:hover, 
+	.vertical_tabs .tabbable .nav>li.active>a, 
+	.services_box.style2 .box .list li, 
+	.shop-latest .tabbable .nav li.active a, 
+	.product-list-item:hover .details h3, 
+	.latest_posts.style3 ul.posts .title a,
+	.statbox h4 
+	{color:#595959;}
+	
+	.acc-group.style3 > button:hover, 
+	.acc-group.style3 > button:hover:after 
+	{ color:#595959 ;}
+
+	.tabs_style1 > ul.nav > li.active > a, 
+	header.style1, 
+	header.style2 #logo a, 
+	header.style3 #logo a 
+	{border-top: 3px solid #595959;}
+
+nav#main_menu > ul > li.active > a, 
+nav#main_menu > ul > li > a:hover, 
+nav#main_menu > ul > li:hover > a, 
+.social-icons li a:hover, 
+#action_box, 
+body .circlehover,
+body .flex-direction-nav li a:hover,
+body .iosSlider .item .caption.style1 .more:before,
+body .iosSlider .item .caption.style1 .more:after,
+body .iosSlider .item .caption.style2 .more,
+body .nivo-directionNav a:hover,
+body #wowslider-container a.ws_next:hover,
+body #wowslider-container a.ws_prev:hover,
+.br-next:hover, .br-previous:hover,
+body .ca-more,
+body .title_circle,
+body .title_circle:before,
+body ul.links li a,
+.hg-portfolio-sortable #portfolio-nav li a:hover, .hg-portfolio-sortable #portfolio-nav li.current a,
+.iosSlider .item .caption.style1 .more:before, .iosSlider .item .caption.style1 .more:after,
+.btn-flat ,
+body.woocommerce a.button:hover, 
+body.woocommerce button.button:hover, 
+body.woocommerce input.button:hover, 
+body.woocommerce #respond input#submit:hover, 
+body.woocommerce #content input.button:hover, 
+body.woocommerce-page a.button:hover, 
+body.woocommerce-page button.button:hover, 
+body.woocommerce-page input.button:hover, 
+body.woocommerce-page #respond input#submit:hover, 
+body.woocommerce-page #content input.button:hover,
+body.woocommerce a.button, 
+body.woocommerce button.button, 
+body.woocommerce input.button, 
+body.woocommerce #respond input#submit, 
+body.woocommerce #content input.button, 
+body.woocommerce-page a.button, 
+body.woocommerce-page button.button, 
+body.woocommerce-page input.button, 
+body.woocommerce-page #respond input#submit, 
+body.woocommerce-page #content input.button,
+body.woocommerce a.button.alt, 
+body.woocommerce button.button.alt, 
+body.woocommerce input.button.alt, 
+body.woocommerce #respond input#submit.alt, 
+body.woocommerce #content input.button.alt, 
+body.woocommerce-page a.button.alt, 
+body.woocommerce-page button.button.alt, 
+body.woocommerce-page input.button.alt, 
+body.woocommerce-page #respond input#submit.alt, 
+body.woocommerce-page #content input.button.alt,
+body .woocommerce a.button, 
+body .woocommerce button.button, 
+body .woocommerce input.button, 
+body .woocommerce #respond input#submit, 
+body .woocommerce #content input.button, 
+body .woocommerce-page a.button, 
+body .woocommerce-page button.button, 
+body .woocommerce-page input.button, 
+body .woocommerce-page #respond input#submit, 
+body .woocommerce-page #content input.button ,
+span.zonsale,
+.sidebar .widget ul.menu li.active > a,
+.sidebar .widget ul.product-categories li.active > a, 
+.sidebar .widget ul.pagenav li.active a, 
+.sidebar .widget ul.menu li.current-cat > a, 
+.sidebar .widget ul.product-categories li.current-cat > a, 
+.sidebar .widget ul.pagenav li.current-cat > a, 
+.sidebar .widget ul.menu li > a:hover, 
+.sidebar .widget ul.product-categories li > a:hover, 
+.sidebar .widget ul.pagenav li a:hover,
+#limited_offers li:after,
+.login-panel .create_account, 
+.login-panel input[type=submit], 
+.register-panel input[type=submit], 
+.forgot-panel input[type=submit], 
+.login-panel .login_facebook {background-color:#595959;}
+
+span.zonsale:before ,#limited_offers li:before{border-color:#595959  transparent transparent;}
+
+	.how_to_shop .number, .newsletter-signup input[type=submit], .vertical_tabs .tabbable .nav>li.active>a>span, .vertical_tabs .tabbable .nav>li>a:hover>span, #map_controls, .hg-portfolio-sortable #portfolio-nav li.current a, .ptcarousel .controls > a:hover, .itemLinks span a:hover, .product-list-item .details .actions a, .shop-features .shop-feature:hover, .btn-flat, .redbtn, #sidebar ul.menu li a:hover, .imgboxes_style1 .hoverBorder h6, .feature_box.style3 .box:hover, .services_box .box:hover .icon, .latest_posts.default-style .hoverBorder h6, .process_steps .step.intro, .recentwork_carousel.style2 li a .details .plus, .gobox.ok, .hover-box:hover, .recentwork_carousel li .details > .bg, .circlehover:before,.iosSlider .item .caption.style1 .more:before, .iosSlider .item .caption.style1 .more:after ,.iosSlider .item .caption.style2 .more {background-color:#595959;}
+	#action_box:before ,#action_box:after, header#header.style1{border-top-color:#595959;}
+
+	/* BORDER LEFT */
+	.process_steps .step.intro:after,
+	body .nivo-caption,
+	body .flex-caption,
+	body #wowslider-container .ws-title
+	{border-left-color:#595959; }
+
+	.theHoverBorder:hover {box-shadow:0 0 0 5px #595959 inset;}
+
+	.offline-page .containerbox {border-bottom:5px solid #595959; }
+
+	.offline-page .containerbox:after {border-top: 20px solid #595959;}
+
+	header#header.style2 #logo a {border-top: 3px solid #595959;}
+
+	body .iosSlider .item .caption.style2 .title_big, body .iosSlider .item .caption.style2 .title_small {border-left: 5px solid #595959; }
+	body .iosSlider .item .caption.style2.fromright .title_big, body .iosSlider .item .caption.style2.fromright .title_small {border-right: 5px solid #595959 ; }
+
+
+
+/* HEADINGS */
+h1 , .page-title{
+	
+	font-family:Open Sans;	font-size:36px;	line-height:40px;
+
+}
+
+h2 {
+	
+	font-family:Open Sans;	font-size:30px;	line-height:40px;
+
+}
+
+h3 {
+	
+	font-family:Open Sans;	font-size:24px;	line-height:40px;
+
+}
+
+h4 {
+	
+	font-family:Open Sans;	font-size:16px;	line-height:20px;
+
+}
+
+h5 {
+	
+	font-family:Open Sans;	font-size:16px;	line-height:20px;
+
+}
+
+h6 {
+	
+	font-family:Open Sans;	font-size:16px;	line-height:20px;
+
+}
+
+/* Body */
+body{
+	
+	font-family:helvetica;	font-size:16px;	line-height:19px;	
+}
+/* Grey Area */
+body .gray-area {
+	
+	font-family:helvetica;	font-size:16px;	line-height:19px;	
+}
+/* Footer Area */
+body #footer {
+	
+	font-family:helvetica;	font-size:16px;	line-height:19px;	
+}
+
+body #page_wrapper , body.boxed #page_wrapper {
+			background-repeat:repeat;
+	background-position:left top;
+	background-attachment:scroll;
+}
+
+.gray-area {
+			background-repeat:repeat;
+	background-position:left top;
+	background-attachment:scroll;
+}
+.italic {
+font-style:italic;
+}
+
+
+header#header , .oldie #page_wrapper header#header{
+					
+}
+
+footer#footer {
+					
+}
+
+footer#footer .bottom{
+	border-top:5px solid #484848;}
+
+
+nav#main_menu > ul > li > a {
+	
+	/*19July13 font-family:"Lato" , "Helvetica Neue", Helvetica, Arial, sans-serif;	font-size:13px;	line-height:14px;	*/color:#fff;	font-weight:bold; font-family:Helvetica, Arial, sans-serif; font-size:12px; line-height:12px;	
+}
+
+/*19July13*/
+/*.topnav.navRight{
+	float:right;
+	margin:0;
+}
+.topnav > li{
+	margin-right:0;
+	margin-left:15px;
+}*/
+.topnav > li > a{
+	font-size:11px;
+}
+
+/*19July13*/
+
+#bbpress-forums{
+  margin-top:30px;
+}
+
+#bbpress-forums li.bbp-header{
+  background:#F7922E;
+  color:#fff;
+}
+
+#bbpress-forums li.bbp-footer{
+  background:#4aaadf;
+  color:#fff;
+}
+
+form[role=search] input{
+  margin-bottom:0px;
+}
+
+form[role=search] input[type=submit]{
+  background: #F7922E;
+  color:#fff;
+  border:none;
+  padding:4px 15px;
+  border-radius:5px;
+}
+
+
+/*** footer menus ***/
+
+#footer .widget_nav_menu {
+    float: left;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+#footer .widget_nav_menu ul {
+    list-style: none outside none;
+    margin: 0;
+}
+#footer .widget_nav_menu ul li {
+    margin-bottom: 45px;
+}
+#footer .widget_nav_menu ul li a {
+    color: #F7922E;
+    font-size: 16px;
+    font-weight: bold;
+}
+#footer .widget_nav_menu ul.sub-menu {
+    margin-top: 10px;
+}
+#footer .widget_nav_menu ul.sub-menu li {
+    margin-bottom: 3px;
+}
+#footer .widget_nav_menu ul.sub-menu li a {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/** home page **/
+
+.community_form h3.orange{
+    font-size: 22px;
+    font-style: normal;
+    line-height: 22px;
+}
+
+.partners_carousel li a{
+  min-height:170px;
+}
+
+
+header#header {position: fixed;}
+
+
+/***** Grey list dash *****/
+
+ul.list-grey{
+ list-style:none;
+ margin:15px 10px;
+ padding:0px;
+}
+
+ul.list-grey li{
+  text-align:left;
+  margin:0 0 20px;
+  font-style: normal;
+  background: url("../images/list-grey.png") 0 9px no-repeat;
+  padding-left:20px;
+  color:#535353;
+  clear:both;
+}
+
+ul.list-grey.vspace li{
+ margin-bottom:4px;
+}
+
+
+
+
+
+

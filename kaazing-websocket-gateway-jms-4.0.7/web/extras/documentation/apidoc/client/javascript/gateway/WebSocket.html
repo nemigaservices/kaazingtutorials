@@ -1,0 +1,884 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: WebSocket</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class WebSocket</h2>
+
+
+
+<p>
+WebSocket provides a bidirectional communication channel. <b>Application 
+    developers should use <code>WebSocketFactory#createWebSocket()</code> function to
+    create an instance of WebSocket. </b></p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<a name="field_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Field Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>String</code></font>
+			</td>
+			<td>
+				<code><b><a href="#binaryType">binaryType</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type of binary data for message events.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#bufferedAmount">bufferedAmount</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> Number of bytes that are queued to send but not yet written to the network.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number(Integer)</code></font>
+			</td>
+			<td>
+				<code><b><a href="#connectTimeout">connectTimeout</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> Connect timeout in milliseconds.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>String</code></font>
+			</td>
+			<td>
+				<code><b><a href="#extensions">extensions</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extensions chosen by the server during the connection handshake.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Function</code></font>
+			</td>
+			<td>
+				<code><b><a href="#onclose">onclose</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CloseEvent handler property.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Function</code></font>
+			</td>
+			<td>
+				<code><b><a href="#onerror">onerror</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ErrorEvent handler property.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Function</code></font>
+			</td>
+			<td>
+				<code><b><a href="#onmessage">onmessage</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MessageEvent handler property.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Function</code></font>
+			</td>
+			<td>
+				<code><b><a href="#onopen">onopen</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Event fired when the WebSocket connection opens.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>String</code></font>
+			</td>
+			<td>
+				<code><b><a href="#protocol">protocol</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Protocol name selected by the WebSocket server during the connection
+    handshake.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#readyState">readyState</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> State of the connection.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>String</code></font>
+			</td>
+			<td>
+				<code><b><a href="#url">url</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> The location of the WebSocket.
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#WebSocket">WebSocket</a></b>(url, protocols)
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  Creates and immedately connects a new WebSocket instance.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#close">close</a></b>(code, reason) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Disconnects the WebSocket.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ChallengeHandler
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getChallengeHandler">getChallengeHandler</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the ChallengeHandler that is used during authentication both at the
+    connect-time as well as at subsequent revalidation-time that occurs at
+    regular intervals.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;HttpRedirectPolicy
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getRedirectPolicy">getRedirectPolicy</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the default HTTP redirect policy used in a clustered environment for
+    this connection.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#send">send</a></b>(data) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sends a WebSocket message containing the given payload.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setChallengeHandler">setChallengeHandler</a></b>(challengeHandler) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the ChallengeHandler that is used during authentication both at the
+    connect-time as well as at subsequent revalidation-time that occurs at
+    regular intervals.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setRedirectPolicy">setRedirectPolicy</a></b>(redirectPolicy) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the HTTP redirect policy used in a clustered environment for this
+    connection.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+<a name="event_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Event Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+                
+                
+                
+                  void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#close">close</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Event fired when the WebSocket connection closes.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+                
+                
+                
+                  void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#error">error</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Event fired when the WebSocket closes uncleanly.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+                
+                
+                
+                  void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#message">message</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Event fired when a WebSocket message arrives.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+                
+                
+                
+                  void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#open">open</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Event fired when the WebSocket connection opens.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<a name="field_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Field Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<!-- One single method detail entry -->
+	<a name="binaryType">
+	<!-- -->
+	</a> <h3>binaryType</h3>
+		<pre>String <b>binaryType</b></pre> 
+	<ul>
+		Type of binary data for message events. Valid values are "blob", "arraybuffer"
+    and "bytebuffer". Blob and ByteBuffer will work on any supported browser. 
+    ArrayBuffer is only an allowable value on browsers that support the
+    <a href="http://www.khronos.org/registry/typedarray/specs/latest/">
+        Typed Array Specification
+    </a>.
+    If this property is set to an invalid type, a <code>SyntaxError</code> will
+    be thrown.
+    
+    NOTE: On older platforms where setter cannot be defined, the value is checked 
+          onmessage is fired. 
+          If set to an invalid value, the error event is fired.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="bufferedAmount">
+	<!-- -->
+	</a> <h3>bufferedAmount</h3>
+		<pre>Number <b>bufferedAmount</b></pre> 
+	<ul>
+		<B>(Read only)</B> Number of bytes that are queued to send but not yet written to the network.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="connectTimeout">
+	<!-- -->
+	</a> <h3>connectTimeout</h3>
+		<pre>Number(Integer) <b>connectTimeout</b></pre> 
+	<ul>
+		<B>(Read only)</B> Connect timeout in milliseconds. The timeout will expire if 
+    there is no exchange of packets(for example, 100% packet loss) while 
+    establishing the connection. A timeout value of zero indicates 
+    no timeout.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="extensions">
+	<!-- -->
+	</a> <h3>extensions</h3>
+		<pre>String <b>extensions</b></pre> 
+	<ul>
+		Extensions chosen by the server during the connection handshake. If the
+    connection has not yet been established, or if no extensions were selected,
+    this property will be the empty string.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="onclose">
+	<!-- -->
+	</a> <h3>onclose</h3>
+		<pre>Function <b>onclose</b></pre> 
+	<ul>
+		CloseEvent handler property.
+    See <a href="./CloseEvent.html">CloseEvent</a>.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="onerror">
+	<!-- -->
+	</a> <h3>onerror</h3>
+		<pre>Function <b>onerror</b></pre> 
+	<ul>
+		ErrorEvent handler property.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="onmessage">
+	<!-- -->
+	</a> <h3>onmessage</h3>
+		<pre>Function <b>onmessage</b></pre> 
+	<ul>
+		MessageEvent handler property.
+    See <a href="./MessageEvent.html">MessageEvent</a>.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="onopen">
+	<!-- -->
+	</a> <h3>onopen</h3>
+		<pre>Function <b>onopen</b></pre> 
+	<ul>
+		Event fired when the WebSocket connection opens.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="protocol">
+	<!-- -->
+	</a> <h3>protocol</h3>
+		<pre>String <b>protocol</b></pre> 
+	<ul>
+		Protocol name selected by the WebSocket server during the connection
+    handshake.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="readyState">
+	<!-- -->
+	</a> <h3>readyState</h3>
+		<pre>Number <b>readyState</b></pre> 
+	<ul>
+		<B>(Read only)</B> State of the connection. 
+    It can be one of the following constants - <BR /><BR />
+    <B>CONNECTING(0):</B> The connection is not yet open.<BR />
+    <B>OPEN(1):</B> The connection is open and ready to communicate.<BR />
+    <B>CLOSING(2):</B> The connection is in the process of closing.<BR />
+    <B>CLOSED(3):</B> The connection is closed or couldn't be opened.<BR />
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="url">
+	<!-- -->
+	</a> <h3>url</h3>
+		<pre>String <b>url</b></pre> 
+	<ul>
+		<B>(Read only)</B> The location of the WebSocket.
+	</ul>
+	<hr>
+
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="WebSocket"> </a>
+<h3>WebSocket</h3>
+
+	<pre><b>WebSocket</b>(url, protocols)</pre>
+	<ul>
+	   Creates and immedately connects a new WebSocket instance..
+    If the url is not valid, the constructor will throw a
+    <code>SyntaxError</code>.
+
+    If the port is blocked by the browser or if a secure connection is
+    attemped from a non-secure origin, the constructor will throw a
+    <code>SecurityException</code>.
+
+    If any protocol value is invalid or if a protocol appears in the Array
+    more than once, the constructor will throw a <code>SyntaxError</code>.
+
+    <b>Application developers should use WebSocketFactory.createWebSocket function
+    to create an instance of WebSocket.</b>
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<ul>
+		<b>Parameters:</b>
+		
+		<ul>
+			<code>url</code> - {String} 
+		</ul>
+		
+		<ul>
+			<code>protocols</code> - {String|String[]} 
+		</ul>
+		
+	</ul>
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="close"> </a> <h3>close</h3>
+		<pre>void&nbsp;void&nbsp;<b>close</b>(code, reason)</pre> 
+	<ul>
+		Disconnects the WebSocket. If code is not an integer equal to 1000
+    or in the range 3000..4999, close() will throw an 
+    <code>InvalidAccessError</code>.
+
+    The reason string must be at most 123 bytes when UTF-8 encoded. If the
+    reason string is too long, close() will throw a <code>SyntaxError</code>.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>code </code> - {Number}    <B>(Optional)</B> A numeric value indicating close code. 
+		</ul>
+		<ul>
+			<code>reason </code> - {String}  <B>(Optional)</B> A human readable string indicating why the client is closing the WebSocket 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getChallengeHandler"> </a> <h3>getChallengeHandler</h3>
+		<pre>ChallengeHandler&nbsp;<b>getChallengeHandler</b>()</pre> 
+	<ul>
+		Gets the ChallengeHandler that is used during authentication both at the
+    connect-time as well as at subsequent revalidation-time that occurs at
+    regular intervals.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ChallengeHandler</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getRedirectPolicy"> </a> <h3>getRedirectPolicy</h3>
+		<pre>HttpRedirectPolicy&nbsp;<b>getRedirectPolicy</b>()</pre> 
+	<ul>
+		Gets the default HTTP redirect policy used in a clustered environment for
+    this connection. Default redirect policy is HttpRedirectPolicy.ALWAYS.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>HttpRedirectPolicy</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="send"> </a> <h3>send</h3>
+		<pre>void&nbsp;<b>send</b>(data)</pre> 
+	<ul>
+		Sends a WebSocket message containing the given payload. Can be called with
+    a String, Blob, ArrayBuffer or ByteBuffer. When send() is called with a String, a
+    text WebSocket message is sent. When send() is called with a Blob, ArrayBuffer or
+    ByteBuffer, a binary WebSocket message is sent.
+
+    If send() is called with other data types,
+    an invalid type Error will be thrown.
+
+    If send() is called while the WebSocket is in the CONNECTING state,
+    an <code>InvalidStateError</code> will be thrown.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>data </code> - {String|Blob|ArrayBuffer|ByteBuffer}   message payload 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setChallengeHandler"> </a> <h3>setChallengeHandler</h3>
+		<pre>void&nbsp;<b>setChallengeHandler</b>(challengeHandler)</pre> 
+	<ul>
+		Sets the ChallengeHandler that is used during authentication both at the
+    connect-time as well as at subsequent revalidation-time that occurs at
+    regular intervals.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>challengeHandler </code> - {ChallengeHandler}  used for authentication 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setRedirectPolicy"> </a> <h3>setRedirectPolicy</h3>
+		<pre>void&nbsp;<b>setRedirectPolicy</b>(redirectPolicy)</pre> 
+	<ul>
+		Sets the HTTP redirect policy used in a clustered environment for this
+    connection. Overrides the redirect policy inherited from WebSocketFactory.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>redirectPolicy </code> - {HttpRedirectPolicy}  HTTP redirect policy 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Event Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="close"> </a> <h3>close</h3>
+		<pre><b>close</b>()</pre> 
+	<ul>
+		Event fired when the WebSocket connection closes.
+    See <a href="./CloseEvent.html">CloseEvent</a>.
+	</ul>
+	<!-- EVENT PARAMETERS START -->
+	
+	<!-- EVENT PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="error"> </a> <h3>error</h3>
+		<pre><b>error</b>()</pre> 
+	<ul>
+		Event fired when the WebSocket closes uncleanly.
+	</ul>
+	<!-- EVENT PARAMETERS START -->
+	
+	<!-- EVENT PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="message"> </a> <h3>message</h3>
+		<pre><b>message</b>()</pre> 
+	<ul>
+		Event fired when a WebSocket message arrives.
+    The <code>data</code> property of the MessageEvent will be a String when
+    the WebSocket message is a WebSocket text message. It will be the type
+    specified by <code>binaryType</code> if the message is a WebSocket
+    binary message.
+	</ul>
+	<!-- EVENT PARAMETERS START -->
+	
+	<!-- EVENT PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="open"> </a> <h3>open</h3>
+		<pre><b>open</b>()</pre> 
+	<ul>
+		Event fired when the WebSocket connection opens.
+	</ul>
+	<!-- EVENT PARAMETERS START -->
+	
+	<!-- EVENT PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

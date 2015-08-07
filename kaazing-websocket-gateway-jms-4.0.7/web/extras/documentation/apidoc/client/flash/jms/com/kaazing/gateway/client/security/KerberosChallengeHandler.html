@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="KerberosChallengeHandler,com.kaazing.gateway.client.security.KerberosChallengeHandler,clear,defaultImplementation,getDefaultLocation,getRealmLocation,getServiceName,setDefaultLocation,setRealmLocation,setServiceName" name="keywords">
+<title>com.kaazing.gateway.client.security.KerberosChallengeHandler</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'KerberosChallengeHandler - API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/kaazing/gateway/client/security/KerberosChallengeHandler.html&amp;com/kaazing/gateway/client/security/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;KerberosChallengeHandler</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class KerberosChallengeHandler"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.kaazing.gateway.client.security</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class KerberosChallengeHandler</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">KerberosChallengeHandler <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../../images/inherit-arrow.gif"> com.kaazing.gateway.client.security.NegotiableChallengeHandler</td>
+</tr>
+</table>
+<p></p>
+ A <code>KerberosChallengeHandler</code>, when registered with the <code>DispatchChallengeHandler</code>
+ can be used to directly respond to "Negotiate" challenges where Kerberos-generated authentication
+ credentials are required. In addition, a KerberosChallengeHandler can be used indirectly in conjunction
+ with a <code>NegotiateChallengeHandler</code>
+ to assist in the construction of a challenge response using object identifiers.
+  <p>This abstract class captures common requirements for a number of implementation flavors for Kerberos, including
+ <a href="http://tools.ietf.org/html/rfc4559">Microsoft's SPNEGO implementation</a>, and a
+ <a href="http://tools.ietf.org/html/rfc4178">SPNEGO</a> <a href="http://tools.ietf.org/html/rfc4121">Kerberos v5 GSS</a> implementation.
+ <p/>
+  <p>To successfully use a KerberosChallengeHandler, one must know one or more Kerberos KDC
+ service locations and optionally (if not defaulted to <code>HTTP/requestedURIHostname</code>) provide
+ the name of the specific service being requested.
+ <ol>
+     <li>For the KDC service location, one must establish either
+        <ul>
+            <li>a default Kerberos KDC service location, using <code>setDefaultLocation(String)</code>, or</li>
+            <li> a mapping from a Kerberos Realm to at least one Kerberos KDC service location using <code>setRealmLocation(String, String)</code>.</li>
+       </ul>
+     </li>
+     <li> For the non-defaulted service name being requested,
+          one can configure the service name using <code>setServiceName(String)</code>.</li>
+ </ol>
+ </p>
+  <p>For example, one may install a configured a kerberos challenge handler as:
+ <div class='listing'><pre>
+ LoginHandler someServerLoginHandler = ...; // perhaps this pops a dialog
+  ChallengeHandlers.setDefault((ChallengeHandlers.load(DispatchChallengeHandler.class) as DispatchChallengeHandler)
+       .register("servergw.hostname.com:8000/jms",
+           (ChallengeHandlers.load(KerberosChallengeHandler.class) as KerberosChallengeHandler)
+           .setDefaultLocation(URI.create("ws://kb.hostname.com/kerberos5"))
+           .setRealmLocation("ATHENA.MIT.EDU", URI.create("ws://athena.hostname.com/kerberos5"))
+           .setServiceName("HTTP/servergw.hostname.com")
+           .setLoginHandler(someServerLoginHandler)
+       )
+ );
+ </pre></div></p>
+  <p>Following the code above, any user attempting to access "servergw.hostname.com:8000/jms" will be challenged using
+ a {<p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#clear()">clear</a>(... realmNames):<a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a>
+</div>
+<div class="summaryTableDescription">
+     Clear any data associated with the provided realm names, including any realm-specific location information.</div>
+</td><td class="summaryTableOwnerCol">KerberosChallengeHandler</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#defaultImplementation()">defaultImplementation</a>():String</div>
+<div class="summaryTableDescription">[static]
+     Called to automatically discover the default implementation when loading this challenge handler.</div>
+</td><td class="summaryTableOwnerCol">KerberosChallengeHandler</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getDefaultLocation()">getDefaultLocation</a>():String</div>
+<div class="summaryTableDescription">
+     Retrieve the specified default location.</div>
+</td><td class="summaryTableOwnerCol">KerberosChallengeHandler</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRealmLocation()">getRealmLocation</a>(realmName:String):String</div>
+<div class="summaryTableDescription">
+     Return the URI to be used for Kerberos service requests when a user in the realm mentioned
+                     provides credentials.</div>
+</td><td class="summaryTableOwnerCol">KerberosChallengeHandler</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getServiceName()">getServiceName</a>():String</div>
+<div class="summaryTableDescription">
+     Retrieve the service name.</div>
+</td><td class="summaryTableOwnerCol">KerberosChallengeHandler</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setDefaultLocation()">setDefaultLocation</a>(location:String):<a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a>
+</div>
+<div class="summaryTableDescription">
+     Set the default location to connect to a Kerberos service.</div>
+</td><td class="summaryTableOwnerCol">KerberosChallengeHandler</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setRealmLocation()">setRealmLocation</a>(realmName:String, location:String):<a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a>
+</div>
+<div class="summaryTableDescription">
+     Specify the connect location of a Kerberos service to be used for users in the named realm.</div>
+</td><td class="summaryTableOwnerCol">KerberosChallengeHandler</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setServiceName()">setServiceName</a>(serviceName:String):<a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a>
+</div>
+<div class="summaryTableDescription">
+     Specify the service principal name for which a ticket is desired.</div>
+</td><td class="summaryTableOwnerCol">KerberosChallengeHandler</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="clear()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clear</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function clear(... realmNames):<a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a></code><p>
+     Clear any data associated with the provided realm names, including any realm-specific location information.
+          After this call, any default location, and the service name, will always remain unaffected.
+     This permits a cleared challenge handler to be further used without re-initialization.
+          If no realm names are specified, ALL realm-specific data associated with this challenge handler are cleared.
+     If some realm names are specified, ONLY data associated with those realms in this challenge handler are cleared.
+          </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code>... <span class="label">realmNames</span></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a></code> &mdash; 
+                        a reference to this object, for chained call support.
+     
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="defaultImplementation()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">defaultImplementation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function defaultImplementation():String</code><p>
+     Called to automatically discover the default implementation when loading this challenge handler.
+     </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+</div>
+<a name="getDefaultLocation()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getDefaultLocation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getDefaultLocation():String</code><p>
+     Retrieve the specified default location.
+          </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; the default kerberos location to connect to, or <code>null</code> if none has been specified.
+     </td>
+</tr>
+</table>
+</div>
+<a name="getRealmLocation()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRealmLocation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getRealmLocation(realmName:String):String</code><p>
+     Return the URI to be used for Kerberos service requests when a user in the realm mentioned
+                     provides credentials.
+          </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">realmName</span>:String</code> &mdash; the name of the realm for which to find URIs
+          </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; the URI to be used for Kerberos service requests when a user in the realm mentioned
+                     provides credentials, or <code>getDefaultLocation()</code> if no such URI exists.
+     </td>
+</tr>
+</table>
+</div>
+<a name="getServiceName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getServiceName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getServiceName():String</code><p>
+     Retrieve the service name.
+          </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; the previously specified service name, or <code>null</code>  if none has been specified.
+     </td>
+</tr>
+</table>
+</div>
+<a name="setDefaultLocation()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setDefaultLocation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setDefaultLocation(location:String):<a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a></code><p>
+     Set the default location to connect to a Kerberos service.
+          </p><p>If not specified, this challenge handler will only correctly connect
+     to realms specified using <code>setRealmLocation()</code>.</p>
+          <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">location</span>:String</code> &mdash; the location of the Kerberos service to connect to by default, if
+                     a realm-specific location is not specified.
+          </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a></code> &mdash; 
+                        a reference to this object, for chained call support.
+     
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="setRealmLocation()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setRealmLocation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setRealmLocation(realmName:String, location:String):<a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a></code><p>
+     Specify the connect location of a Kerberos service to be used for users in the named realm.
+          </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">realmName</span>:String</code> &mdash;  the realm for which a specific location is to be specified
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">location</span>:String</code> &mdash; a specific location to be used for Kerberos service requests when a user in the realm mentioned
+                     provides credentials.
+     </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a></code> &mdash; 
+                        a reference to this object, for chained call support.
+     
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="setServiceName()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setServiceName</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setServiceName(serviceName:String):<a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a></code><p>
+     Specify the service principal name for which a ticket is desired.
+          </p><p>If not specified, this challenge handler will not provide a service principal name.</p>
+          <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">serviceName</span>:String</code> &mdash; the service principal name for which a ticket is desired.
+          </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../security/KerberosChallengeHandler.html">KerberosChallengeHandler</a></code> &mdash; 
+                        a reference to this object, for chained call support.
+     
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

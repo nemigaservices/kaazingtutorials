@@ -1,0 +1,99 @@
+/**
+ * Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+ */
+
+// ############################### Less Declarations #################################
+
+@cc-orange: #F37A38;
+@cc-blue: #4C89B1;
+@cc-button-blue: #3E9CE6;
+@cc-black: #2F2F2F;
+@cc-background-grey: #EBEBEB;
+
+@hn-font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "TexGyreHerosRegular", "Helvetica", "FreeSans", "Tahoma", "Geneva", "Arial", "Lucida Grande", sans-serif; 
+@hn-font-weight: normal;
+@hn-font-stretch: normal;
+
+@hnb-font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosBold", "Helvetica", "FreeSans", "Tahoma", "Geneva", "Arial", "Lucida Grande", sans-serif; 
+@hnb-font-weight: bold;
+@hnb-font-stretch: normal;
+
+
+//
+// Symbols in this block are the 'skinnable' values. The values above are constants
+// for the Kaazing-specific skin. The commandcenter.less file uses the symbols
+// below, and does not reference the symbols above at all.
+//
+
+@config-table-background: #FFFFFF;
+@config-table-padding: 8px;
+@config-table-border: 1px solid @cc-background-grey;
+@config-table-border-radius: 3px;
+@config-table-line-height:20px;
+@config-table-box-shadow: 0 0 10px #E0E0E0;
+@config-table-cell-bottom-border:1px solid #C8C8C8;
+@config-table-header-bottom-border:1px solid #A0A0A0;
+
+@light-border-color: #C8C8C8;
+@light-border: 1px solid @light-border-color;
+
+@header-height: 38px;
+@header-background-color: @cc-black;
+@menu-margin: 15px;
+
+@content-background: @cc-background-grey;
+
+@footer-height: 30px;
+@footer-background-color: @cc-black;
+
+@std-text-color: #444444;
+@std-border-color: #444444;
+@std-stroke-color: #444444;
+
+@command-button-background-color: @cc-button-blue;
+@toolbar-button-background-color: @cc-button-blue;
+
+@graphic-realm-title-color: @cc-orange;
+@config-license-label-color: @cc-orange;
+@config-services-service-name-color: @cc-orange;
+@config-security-realm-truststore-name-color: @cc-orange;
+@config-security-certificate-alias-color: @cc-orange;
+@monitor-filter-value-color: @cc-orange;
+@overview-gateway-title-name-color: @cc-orange;
+
+@monitor-filter-panel-decoration-color: @cc-black;
+@monitor-filter-panel-background-color: @cc-background-grey;
+
+@dashboard-chart-title-background-color: @cc-button-blue;
+@dashboard-chart-background: @content-background;
+@dashboard-chart-content-background: @content-background;
+@dashboard-chart-border-background: @cc-background-grey;
+
+@default-font-family: @hn-font-family;
+@default-font-weight: @hn-font-weight;
+@default-font-stretch: @hn-font-stretch;
+@default-text-color: @std-text-color;
+
+@toolbar-font-family: @hnb-font-family;
+@toolbar-font-weight: @hnb-font-weight;
+@toolbar-font-stretch: @hnb-font-stretch;
+
+@about-panel-label-font-family: @hnb-font-family;
+@about-panel-label-font-weight: @hnb-font-weight;
+@about-panel-label-font-stretch: @hnb-font-stretch;
+@about-panel-field-font-family: @hn-font-family;
+@about-panel-field-font-weight: @hn-font-weight;
+@about-panel-field-font-stretch: @hn-font-stretch;
+
+@about-login-copyright-font-family: @hn-font-family;
+@about-login-copyright-font-weight: @hn-font-weight;
+@about-login-copyright-font-stretch: @hn-font-stretch;
+
+
+//
+// Symbols here are less symbols that rely on the skinnable values above.
+//
+
+@content-top: @header-height + 1; 
+@content-bottom: @footer-height + 1;
+

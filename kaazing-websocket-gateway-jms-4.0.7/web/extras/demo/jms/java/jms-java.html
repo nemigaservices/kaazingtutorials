@@ -1,0 +1,40 @@
+<!--
+
+    Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="shortcut icon"
+    href="http://www.kaazing.com/images/favicon.ico" />
+<style type="text/css">
+@import url("../../../resources/css/demo.css");
+</style>
+<title>Java JMS Client Demo</title>
+
+</head>
+<body>
+<script>
+var clsid = 'java:com.kaazing.gateway.jms.client.demo.JmsApplet';
+var ie = navigator.userAgent.match(/MSIE/);
+if( ie != null ) {
+    clsid = "clsid:CAFEEFAC-0016-0000-FFFF-ABCDEFFEDCBA";
+}
+</script>
+
+    <script>document.write('<OBJECT classid="' + clsid + '" ')</script>
+    archive="jms-demo.jar" WIDTH="930" HEIGHT="650" id="testStompApplet"
+    TYPE="application/x-java-applet;version=1.6.0_12">
+    <PARAM NAME="archive" VALUE="jms-demo.jar">
+    <PARAM NAME="MAYSCRIPT" VALUE="true">
+    <PARAM NAME="CODE" VALUE="com.kaazing.gateway.jms.client.demo.JmsApplet">
+    <PARAM NAME="classloader_cache" VALUE="false">
+    <PARAM NAME="separate_jvm" VALUE="true">
+    <PARAM NAME="java.naming.factory.initial" VALUE="com.kaazing.gateway.jms.client.JmsInitialContextFactory">
+    </OBJECT>
+
+</body>
+</html>

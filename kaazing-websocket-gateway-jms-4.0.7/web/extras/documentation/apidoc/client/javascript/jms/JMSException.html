@@ -1,0 +1,383 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: JMSException</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class JMSException</h2>
+
+
+
+<p>
+Creates a new JMSException instance.JMSException is the common exception prototype for all exceptions thrown from JMS Client APIs.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#JMSException">JMSException</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+Creates a new JMSException instance.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getErrorCode">getErrorCode</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a string representing an error code for the exception.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Error
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getLinkedException">getLinkedException</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns any exception that may have caused this exception
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getMessage">getMessage</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a message for the cause of the exception
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getType">getType</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the exception type.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setLinkedException">setLinkedException</a></b>(ex) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the linked exception that caused this exception.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#toString">toString</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a string representing the type and cause of the exception.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="JMSException"> </a>
+<h3>JMSException</h3>
+
+	<pre><b>JMSException</b>()</pre>
+	<ul>
+	   
+Creates a new JMSException instance.JMSException is the common exception prototype for all exceptions thrown from JMS Client APIs.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="getErrorCode"> </a> <h3>getErrorCode</h3>
+		<pre>String&nbsp;<b>getErrorCode</b>()</pre> 
+	<ul>
+		Returns a string representing an error code for the exception.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getLinkedException"> </a> <h3>getLinkedException</h3>
+		<pre>Error&nbsp;<b>getLinkedException</b>()</pre> 
+	<ul>
+		Returns any exception that may have caused this exception
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Error</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getMessage"> </a> <h3>getMessage</h3>
+		<pre>String&nbsp;<b>getMessage</b>()</pre> 
+	<ul>
+		Returns a message for the cause of the exception
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getType"> </a> <h3>getType</h3>
+		<pre>String&nbsp;<b>getType</b>()</pre> 
+	<ul>
+		Returns the exception type. The type can be used to futher classify the exception thrown fromJavaScript client library.<BR />The valid return values are - <BR /><B>1. ConnectionClosedException:</B><BR />Exception raised when the JMS Client closes the connection due to a fatal error.<BR /><BR /><B>2. ConnectionDisconnectedException:</B><BR />Exception raised when the Gateway closes the client connection, typically due to a fatal error.<BR /><BR /><B>3. ConnectionDroppedException:</B><BR />Exception raised when the JMS Connection to the server is dropped during operation.<BR /><BR /><B>4. ConnectionFailedException:</B><BR />Exception raised when the JMS Connection could not be established with the server.<BR /><BR /><B>5. ConnectionInterruptedException:</B><BR />Exception raised when the JMS Connection is interrupted between Gateway and JMS Server.<BR /><BR /><B>6. ConnectionRestoredException:</B><BR />Exception raised when the JMS Connection is restored. When a connection is either                              interrupted(between the Gateway and the JMS Broker/Server) or dropped(between the JMS Client and the Gateway),                              the client will try to restore the connection periodically. <BR /><BR /><B>7. ReconnectFailedException:</B><BR />Exception thrown when a reconnect was attempted but failed.<BR /><BR /><B>8. TransactionNotCommittedException:</B><BR />Exception raised when a JMS Transaction has not been reported back as committed prior                                   to connection close. It is possible that the transaction was committed by the broker,                                   but a network interruption caused the receipt to be lost in flight.<BR /><BR /><B>9. TransactionRolledBackException:</B><BR />Exception raised when a JMS Transaction is rolled back due to an error.<BR /><BR /><B>10. MessageNotReadableException:</B><BR />This exception must be thrown when a JMS client attempts to read a write-only message.<BR /><BR /><B>11. MessageNotWriteableException:</B><BR />This exception must be thrown when a JMS client attempts to write to a read-only message.<BR /><BR /><B>12. IllegalStateException:</B><BR />This exception is thrown when a method is invoked at an illegal or inappropriate time or if                                   the provider is not in an appropriate state for the requested operation.<BR /><BR /><B>13. InvalidDestinationException:</B><BR />This exception must be thrown when a destination either is not understood by a provider or is no longer valid.<BR /><BR /><B>14. JMSSecurityException:</B><BR />This exception must be thrown when a provider rejects a user name/password submitted by a client.                                      It may also be thrown for any case where a security restriction prevents a method from completing.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setLinkedException"> </a> <h3>setLinkedException</h3>
+		<pre>void&nbsp;<b>setLinkedException</b>(ex)</pre> 
+	<ul>
+		Sets the linked exception that caused this exception.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Exception</i>&nbsp;ex </code> - The linked exception 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="toString"> </a> <h3>toString</h3>
+		<pre>String&nbsp;<b>toString</b>()</pre> 
+	<ul>
+		Returns a string representing the type and cause of the exception.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

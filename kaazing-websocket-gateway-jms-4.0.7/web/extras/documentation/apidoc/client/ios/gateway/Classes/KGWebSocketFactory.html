@@ -1,0 +1,1058 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KGWebSocketFactory Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KGWebSocket </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KGWebSocketFactory Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/createWebSocketFactory">&nbsp;&nbsp;&nbsp;&nbsp;+ createWebSocketFactory</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/clientIdentity">&nbsp;&nbsp;&nbsp;&nbsp;- clientIdentity</option>
+	
+	<option value="//api/name/createWebSocket:">&nbsp;&nbsp;&nbsp;&nbsp;- createWebSocket:</option>
+	
+	<option value="//api/name/createWebSocket:protocols:">&nbsp;&nbsp;&nbsp;&nbsp;- createWebSocket:protocols:</option>
+	
+	<option value="//api/name/defaultChallengeHandler">&nbsp;&nbsp;&nbsp;&nbsp;- defaultChallengeHandler</option>
+	
+	<option value="//api/name/defaultConnectTimeout">&nbsp;&nbsp;&nbsp;&nbsp;- defaultConnectTimeout</option>
+	
+	<option value="//api/name/defaultEnabledExtensions">&nbsp;&nbsp;&nbsp;&nbsp;- defaultEnabledExtensions</option>
+	
+	<option value="//api/name/defaultParameter:">&nbsp;&nbsp;&nbsp;&nbsp;- defaultParameter:</option>
+	
+	<option value="//api/name/setClientIdentity:">&nbsp;&nbsp;&nbsp;&nbsp;- setClientIdentity:</option>
+	
+	<option value="//api/name/setDefaultChallengeHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultChallengeHandler:</option>
+	
+	<option value="//api/name/setDefaultConnectTimeout:">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultConnectTimeout:</option>
+	
+	<option value="//api/name/setDefaultEnabledExtensions:">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultEnabledExtensions:</option>
+	
+	<option value="//api/name/setDefaultParameter:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultParameter:value:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createWebSocketFactory">createWebSocketFactory</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clientIdentity">clientIdentity</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createWebSocket:">createWebSocket:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createWebSocket:protocols:">createWebSocket:protocols:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultChallengeHandler">defaultChallengeHandler</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultConnectTimeout">defaultConnectTimeout</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultEnabledExtensions">defaultEnabledExtensions</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultParameter:">defaultParameter:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setClientIdentity:">setClientIdentity:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultChallengeHandler:">setDefaultChallengeHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultConnectTimeout:">setDefaultConnectTimeout:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultEnabledExtensions:">setDefaultEnabledExtensions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultParameter:value:">setDefaultParameter:value:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KGWebSocketFactory Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KGWebSocketFactory Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KGWebSocketFactory.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>KGWebSocketFactory is used to create <a href="../Classes/KGWebSocket.html">KGWebSocket</a> instance(s) by specifying
+the end-point and the enabled protocols.</p>
+
+<p>Using KGWebSocketFactory instance, application developers can set
+KGWebSocketParameter that will be inherited by all the <a href="../Classes/KGWebSocket.html">KGWebSocket</a> instances
+created from the factory. Application developers can override the parameter(s)
+at the individual <a href="../Classes/KGWebSocket.html">KGWebSocket</a> level too.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createWebSocketFactory">+&nbsp;createWebSocketFactory</a></code>
+		<span class="tooltip"><p>Creates a <a href="../Classes/KGWebSocket.html">KGWebSocket</a> to establish a full-duplex connection to the
+target location.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createWebSocket:">&ndash;&nbsp;createWebSocket:</a></code>
+		<span class="tooltip"><p>Creates a <a href="../Classes/KGWebSocket.html">KGWebSocket</a> to establish a full-duplex connection to the
+target location.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createWebSocket:protocols:">&ndash;&nbsp;createWebSocket:protocols:</a></code>
+		<span class="tooltip"><p>Creates a <a href="../Classes/KGWebSocket.html">KGWebSocket</a> to establish a full-duplex connection to the
+target location.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultParameter:">&ndash;&nbsp;defaultParameter:</a></code>
+		<span class="tooltip"><p>Returns the default value of the specified <a href="../Classes/KGWebSocketExtensionParameter.html">KGWebSocketExtensionParameter</a></p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultParameter:value:">&ndash;&nbsp;setDefaultParameter:value:</a></code>
+		<span class="tooltip"><p>Sets the default value of the specified <a href="../Classes/KGWebSocketExtensionParameter.html">KGWebSocketExtensionParameter</a>
+that will be inherited by all the <a href="../Classes/KGWebSocket.html">KGWebSocket</a> instances that are created
+using this factory instance. <a href="../Classes/KGWebSocket.html">KGWebSocket</a> created before
+setting the parameter using this API will not be able to inherit the
+default value of the parameter.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultEnabledExtensions">&ndash;&nbsp;defaultEnabledExtensions</a></code>
+		<span class="tooltip"><p>Gets the names of the default enabled extensions that will be inherited
+by all the <a href="../Classes/KGWebSocket.html">KGWebSocket</a> objectes created using this factory. These
+extensions are negotiated between the client and the server during the
+WebSocket handshake only if all the required parameters belonging to the
+extension have been set as enabled parameters. An empty Collection is
+returned if no extensions have been enabled for this factory.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultEnabledExtensions:">&ndash;&nbsp;setDefaultEnabledExtensions:</a></code>
+		<span class="tooltip"><p>Registers the names of all the default enabled extensions to be inherited
+by all the <a href="../Classes/KGWebSocket.html">KGWebSocket</a> objects created using this factory. The extensions
+will be negotiated between the client and the server during the WebSocket
+handshake if all the required parameters belonging to the extension have
+been set.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultChallengeHandler">&ndash;&nbsp;defaultChallengeHandler</a></code>
+		<span class="tooltip"><p>Gets the default <a href="../Classes/KGChallengeHandler.html">KGChallengeHandler</a> that is used during
+authentication both at the connect-time as well as at subsequent
+revalidation-time that occurs at regular intervals.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultChallengeHandler:">&ndash;&nbsp;setDefaultChallengeHandler:</a></code>
+		<span class="tooltip"><p>Sets the default <a href="../Classes/KGChallengeHandler.html">KGChallengeHandler</a> that is used during
+authentication both at the connect-time as well as at subsequent
+revalidation-time that occurs at regular intervals. All the
+<a href="../Classes/KGWebSocket.html">KGWebSocket</a> instances created using this factory will inherit
+the default ChallengeHandler.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clientIdentity">&ndash;&nbsp;clientIdentity</a></code>
+		<span class="tooltip"><p>Returns the SecIdentityRef object used for client certificate authentication</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setClientIdentity:">&ndash;&nbsp;setClientIdentity:</a></code>
+		<span class="tooltip"><p>Sets Client Identity for SSL client certificate authentication.
+The Client Identity set in KGWebSocketFactory will be inherited by
+the <a href="../Classes/KGWebSocket.html">KGWebSocket</a> created from this factory.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultConnectTimeout">&ndash;&nbsp;defaultConnectTimeout</a></code>
+		<span class="tooltip"><p>Gets the default connect timeout in milliseconds. Default value of the
+default connect timeout is zero &mdash; which means no timeout.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultConnectTimeout:">&ndash;&nbsp;setDefaultConnectTimeout:</a></code>
+		<span class="tooltip"><p>Sets the default connect timeout in milliseconds. The specified
+timeout is inherited by all the WebSocket instances that are created
+using this WebSocketFactory instance. The timeout will expire if there is
+no exchange of packets(for example, 100% packet loss) while establishing
+the connection. A timeout value of zero indicates no timeout.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/createWebSocketFactory" title="createWebSocketFactory"></a>
+	<h3 class="subsubtitle method-title">createWebSocketFactory</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a <a href="../Classes/KGWebSocket.html">KGWebSocket</a> to establish a full-duplex connection to the
+target location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (KGWebSocketFactory *)createWebSocketFactory</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The default extension parameters that were set on the KGWebSocketFactory
+prior to this call are inherited by the newly created <a href="../Classes/KGWebSocket.html">KGWebSocket</a> instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/clientIdentity" title="clientIdentity"></a>
+	<h3 class="subsubtitle method-title">clientIdentity</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the SecIdentityRef object used for client certificate authentication</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (SecIdentityRef)clientIdentity</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>SecIdentityRef object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createWebSocket:" title="createWebSocket:"></a>
+	<h3 class="subsubtitle method-title">createWebSocket:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a <a href="../Classes/KGWebSocket.html">KGWebSocket</a> to establish a full-duplex connection to the
+target location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KGWebSocket *)createWebSocket:(NSURL *)<em>url</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>NSURL to server</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The default extension parameters that were set on the
+KGWebSocketFactory prior to this call are inherited by the newly
+newly created <a href="../Classes/KGWebSocket.html">KGWebSocket</a> instance.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>If the scheme is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createWebSocket:protocols:" title="createWebSocket:protocols:"></a>
+	<h3 class="subsubtitle method-title">createWebSocket:protocols:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a <a href="../Classes/KGWebSocket.html">KGWebSocket</a> to establish a full-duplex connection to the
+target location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KGWebSocket *)createWebSocket:(NSURL *)<em>url</em> protocols:(NSArray *)<em>protocols</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>protocols</em></dt>
+			<dd><p>protocols to be negotiated over the WebSocket</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>URI of the WebSocket service for the connection</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The default extension parameters that were set on the
+KGWebSocketFactory prior to this call are inherited by the newly
+newly created <a href="../Classes/KGWebSocket.html">KGWebSocket</a> instance.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>If the scheme is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultChallengeHandler" title="defaultChallengeHandler"></a>
+	<h3 class="subsubtitle method-title">defaultChallengeHandler</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the default <a href="../Classes/KGChallengeHandler.html">KGChallengeHandler</a> that is used during
+authentication both at the connect-time as well as at subsequent
+revalidation-time that occurs at regular intervals.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KGChallengeHandler *)defaultChallengeHandler</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultConnectTimeout" title="defaultConnectTimeout"></a>
+	<h3 class="subsubtitle method-title">defaultConnectTimeout</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the default connect timeout in milliseconds. Default value of the
+default connect timeout is zero &mdash; which means no timeout.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)defaultConnectTimeout</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>default connect timeout value in milliseconds</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultEnabledExtensions" title="defaultEnabledExtensions"></a>
+	<h3 class="subsubtitle method-title">defaultEnabledExtensions</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the names of the default enabled extensions that will be inherited
+by all the <a href="../Classes/KGWebSocket.html">KGWebSocket</a> objectes created using this factory. These
+extensions are negotiated between the client and the server during the
+WebSocket handshake only if all the required parameters belonging to the
+extension have been set as enabled parameters. An empty Collection is
+returned if no extensions have been enabled for this factory.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)defaultEnabledExtensions</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultParameter:" title="defaultParameter:"></a>
+	<h3 class="subsubtitle method-title">defaultParameter:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the default value of the specified <a href="../Classes/KGWebSocketExtensionParameter.html">KGWebSocketExtensionParameter</a></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)defaultParameter:(KGWebSocketExtensionParameter *)<em>parameter</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setClientIdentity:" title="setClientIdentity:"></a>
+	<h3 class="subsubtitle method-title">setClientIdentity:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets Client Identity for SSL client certificate authentication.
+The Client Identity set in KGWebSocketFactory will be inherited by
+the <a href="../Classes/KGWebSocket.html">KGWebSocket</a> created from this factory.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setClientIdentity:(SecIdentityRef)<em>clientIdentity</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>clientIdentity</em></dt>
+			<dd><p>SecIdentityRef for authentication</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultChallengeHandler:" title="setDefaultChallengeHandler:"></a>
+	<h3 class="subsubtitle method-title">setDefaultChallengeHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the default <a href="../Classes/KGChallengeHandler.html">KGChallengeHandler</a> that is used during
+authentication both at the connect-time as well as at subsequent
+revalidation-time that occurs at regular intervals. All the
+<a href="../Classes/KGWebSocket.html">KGWebSocket</a> instances created using this factory will inherit
+the default ChallengeHandler.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDefaultChallengeHandler:(KGChallengeHandler *)<em>challengeHandler</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultConnectTimeout:" title="setDefaultConnectTimeout:"></a>
+	<h3 class="subsubtitle method-title">setDefaultConnectTimeout:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the default connect timeout in milliseconds. The specified
+timeout is inherited by all the WebSocket instances that are created
+using this WebSocketFactory instance. The timeout will expire if there is
+no exchange of packets(for example, 100% packet loss) while establishing
+the connection. A timeout value of zero indicates no timeout.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDefaultConnectTimeout:(int)<em>connectTimeout</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connectTimeout</em></dt>
+			<dd><p>timeout value in milliseconds</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSInvalidArgumentException</em></dt>
+			<dd><p>if connectTimeout is negative</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultEnabledExtensions:" title="setDefaultEnabledExtensions:"></a>
+	<h3 class="subsubtitle method-title">setDefaultEnabledExtensions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Registers the names of all the default enabled extensions to be inherited
+by all the <a href="../Classes/KGWebSocket.html">KGWebSocket</a> objects created using this factory. The extensions
+will be negotiated between the client and the server during the WebSocket
+handshake if all the required parameters belonging to the extension have
+been set.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDefaultEnabledExtensions:(NSArray *)<em>extensions</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> If the required parameter is missing for any of the enabled extension,
+the KGWebSocket created won&rsquo;t be able to connect and will throw exception
+on <a href="../Classes/KGWebSocket.html#//api/name/connect">[KGWebSocket connect]</a></p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultParameter:value:" title="setDefaultParameter:value:"></a>
+	<h3 class="subsubtitle method-title">setDefaultParameter:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the default value of the specified <a href="../Classes/KGWebSocketExtensionParameter.html">KGWebSocketExtensionParameter</a>
+that will be inherited by all the <a href="../Classes/KGWebSocket.html">KGWebSocket</a> instances that are created
+using this factory instance. <a href="../Classes/KGWebSocket.html">KGWebSocket</a> created before
+setting the parameter using this API will not be able to inherit the
+default value of the parameter.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDefaultParameter:(KGWebSocketExtensionParameter *)<em>parameter</em> value:(id)<em>value</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGWebSocketFactory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

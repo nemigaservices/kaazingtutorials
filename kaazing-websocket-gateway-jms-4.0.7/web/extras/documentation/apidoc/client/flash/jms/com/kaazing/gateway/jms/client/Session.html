@@ -1,0 +1,900 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="Session,com.kaazing.gateway.jms.client.Session,acknowledgeMode,messageListener,transacted,close,commit,createBrowser,createBytesMessage,createConsumer,createDurableSubscriber,createMapMessage,createMessage,createProducer,createQueue,createTemporaryQueue,createTemporaryTopic,createTextMessage,createTopic,recover,rollback,unsubscribe" name="keywords">
+<title>com.kaazing.gateway.jms.client.Session</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Session - API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/kaazing/gateway/jms/client/Session.html&amp;com/kaazing/gateway/jms/client/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Interface&nbsp;Session</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Interface Session"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.kaazing.gateway.jms.client</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Interface</td><td class="classSignature">public interface Session</td>
+</tr>
+</table>
+<p></p> A <CODE>Session</CODE> object is a (single-threaded) context for producing and consuming messages.
+    <P>A session serves several purposes:
+    <UL>
+    <LI>It is a factory for its message producers and consumers.
+    <LI>It supplies provider-optimized message factories.
+    <LI>It is a factory for <CODE>TemporaryTopics</CODE> and 
+         <CODE>TemporaryQueues</CODE>. 
+    <LI> It provides a way to create <CODE>Queue</CODE> or <CODE>Topic</CODE>
+       objects for those clients that need to dynamically manipulate 
+       provider-specific destination names.
+    <LI>It supports a single series of transactions that combine work 
+        spanning its producers and consumers into atomic units.
+    <LI>It defines a serial order for the messages it consumes and 
+        the messages it produces.
+    <LI>It retains messages it consumes until they have been 
+        acknowledged.
+    <LI>It serializes execution of message listeners registered with 
+        its message consumers.
+    <LI> It is a factory for <CODE>QueueBrowsers</CODE>.
+  </UL>
+    <P>A session can create and service multiple message producers and 
+  consumers.
+    <P>One typical use is to have one flow of control wait using a
+  <CODE>MessageConsumer</CODE> until a message arrives, then 
+  use one or more of the <CODE>Session</CODE>'s <CODE>MessageProducer</CODE>s.
+    <P>If a client desires to have one flow of execution produce messages while
+  others consume them, the client should use a separate session for producing 
+  messages.
+    <P>Once a connection has been started, any session with one or more 
+  registered message listeners is dedicated to the flow of control that 
+  delivers messages to it. It is erroneous for client code to use this session
+  or any of its constituent objects from another flow of control (execute
+  concurrently). The
+  only exception to this rule is the use of the session or connection 
+  <CODE>close</CODE> method.
+    <P>It should be easy for most clients to partition their work naturally
+  into sessions. This model allows clients to start simply and incrementally
+  add message processing complexity as their need for concurrency grows.
+    <P>The <CODE>close</CODE> method is the only session method that can be 
+  called while some other session method is being executed in another flow of
+  control.
+    <P>A session may be specified as transacted. Each transacted 
+  session supports a single series of transactions. Each transaction groups 
+  a set of message sends and a set of message receives into an atomic unit 
+  of work. In effect, transactions organize a session's input message 
+  stream and output message stream into series of atomic units. When a 
+  transaction commits, its atomic unit of input is acknowledged and its 
+  associated atomic unit of output is sent. If a transaction rollback is 
+  done, the transaction's sent messages are destroyed and the session's input 
+  is automatically recovered.
+    <P>The content of a transaction's input and output units is simply those 
+  messages that have been produced and consumed within the session's current 
+  transaction.
+    <P>A transaction is completed using either its session's <CODE>commit</CODE>
+  method or its session's <CODE>rollback</CODE> method. The completion of a
+  session's current transaction automatically begins the next. The result is
+  that a transacted session always has a current transaction within which its 
+  work is done.  
+    <P>The Java Transaction Service (JTS) or some other transaction monitor may 
+  be used to combine a session's transaction with transactions on other 
+  resources (databases, other JMS sessions, etc.). Since Java distributed 
+  transactions are controlled via the Java Transaction API (JTA), use of the 
+  session's <CODE>commit</CODE> and <CODE>rollback</CODE> methods in 
+  this context is prohibited.
+    <P>The JMS API does not require support for JTA; however, it does define 
+  how a provider supplies this support.
+    <P>Although it is also possible for a JMS client to handle distributed 
+  transactions directly, it is unlikely that many JMS clients will do this.
+  Support for JTA in the JMS API is targeted at systems vendors who will be 
+  integrating the JMS API into their application server products.
+    <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#acknowledgeMode">acknowledgeMode</a> : int<div class="summaryTableDescription">[read-only] Returns the acknowledgement mode of the session.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#messageListener">messageListener</a> : <a href="../client/MessageListener.html">MessageListener</a>
+<div class="summaryTableDescription"> Returns the session's distinguished message listener (optional).</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#transacted">transacted</a> : Boolean<div class="summaryTableDescription">[read-only] Indicates whether the session is in transacted mode.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#close()">close</a>(callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a>
+</div>
+<div class="summaryTableDescription"> Closes the session asynchronously, meaning that the function itself
+      returns immediately, with close processing happening in the background,
+      and finally invoking the callback upon completion.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#commit()">commit</a>(callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a>
+</div>
+<div class="summaryTableDescription"> Commits all messages done in this transaction and releases any locks
+      currently held.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createBrowser()">createBrowser</a>(queue:<a href="Queue.html">Queue</a>, messageSelector:String = null):<a href="../client/QueueBrowser.html">QueueBrowser</a>
+</div>
+<div class="summaryTableDescription"> Creates a <CODE>QueueBrowser</CODE> object to peek at the messages on 
+      the specified queue using a message selector.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createBytesMessage()">createBytesMessage</a>():<a href="../client/BytesMessage.html">BytesMessage</a>
+</div>
+<div class="summaryTableDescription"> Creates a <CODE>BytesMessage</CODE> object.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createConsumer()">createConsumer</a>(destination:<a href="Destination.html">Destination</a>, messageSelector:String = null, noLocal:Boolean = false):<a href="../client/MessageConsumer.html">MessageConsumer</a>
+</div>
+<div class="summaryTableDescription"> Creates <CODE>MessageConsumer</CODE> for the specified destination, using a
+      message selector.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createDurableSubscriber()">createDurableSubscriber</a>(topic:<a href="Topic.html">Topic</a>, name:String, messageSelector:String = null, noLocal:Boolean = false):<a href="../client/TopicSubscriber.html">TopicSubscriber</a>
+</div>
+<div class="summaryTableDescription"> Creates a durable subscriber to the specified topic, using a
+      message selector and specifying whether messages published by its
+      own connection should be delivered to it.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createMapMessage()">createMapMessage</a>():<a href="../client/MapMessage.html">MapMessage</a>
+</div>
+<div class="summaryTableDescription"> Creates a <CODE>MapMessage</CODE> object.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createMessage()">createMessage</a>():<a href="../client/Message.html">Message</a>
+</div>
+<div class="summaryTableDescription"> Creates a <CODE>Message</CODE> object.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createProducer()">createProducer</a>(destination:<a href="Destination.html">Destination</a>):<a href="../client/MessageProducer.html">MessageProducer</a>
+</div>
+<div class="summaryTableDescription"> Creates a <CODE>MessageProducer</CODE> to send messages to the specified 
+      destination.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createQueue()">createQueue</a>(queueName:String):<a href="../client/Queue.html">Queue</a>
+</div>
+<div class="summaryTableDescription"> Creates a queue identity given a <CODE>Queue</CODE> name.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createTemporaryQueue()">createTemporaryQueue</a>():<a href="../client/TemporaryQueue.html">TemporaryQueue</a>
+</div>
+<div class="summaryTableDescription"> Creates a <CODE>TemporaryQueue</CODE> object.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createTemporaryTopic()">createTemporaryTopic</a>():<a href="../client/TemporaryTopic.html">TemporaryTopic</a>
+</div>
+<div class="summaryTableDescription"> Creates a <CODE>TemporaryTopic</CODE> object.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createTextMessage()">createTextMessage</a>(text:String = null):<a href="../client/TextMessage.html">TextMessage</a>
+</div>
+<div class="summaryTableDescription"> Creates an initialized <CODE>TextMessage</CODE> object.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createTopic()">createTopic</a>(topicName:String):<a href="../client/Topic.html">Topic</a>
+</div>
+<div class="summaryTableDescription"> Creates a topic identity given a <CODE>Topic</CODE> name.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#recover()">recover</a>():void</div>
+<div class="summaryTableDescription"> Stops message delivery in this session, and restarts message delivery
+      with the oldest unacknowledged message.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#rollback()">rollback</a>(callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a>
+</div>
+<div class="summaryTableDescription"> Rolls back any messages done in this transaction and releases any locks 
+      currently held.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#unsubscribe()">unsubscribe</a>(name:String):void</div>
+<div class="summaryTableDescription"> Unsubscribes a durable subscription that has been created by a client.</div>
+</td><td class="summaryTableOwnerCol">Session</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="acknowledgeMode"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">acknowledgeMode</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>acknowledgeMode:int</code>&nbsp;&nbsp;[read-only]<p> Returns the acknowledgement mode of the session. The acknowledgement
+     mode is set at the time that the session is created. If the session is
+     transacted, the acknowledgement mode is ignored.
+          return            If the session is not transacted, returns the 
+                      current acknowledgement mode for the session.
+                      If the session
+                      is transacted, returns SESSION_TRANSACTED.
+          exception JMSException   if the JMS provider fails to return the 
+                             acknowledgment mode due to some internal error.
+          see Connection#createSession
+     since 1.1
+     </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get acknowledgeMode():int</code>
+<br>
+</div>
+<a name="messageListener"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">messageListener</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>messageListener:<a href="../client/MessageListener.html">MessageListener</a></code>&nbsp;&nbsp;[read-write]<p> Returns the session's distinguished message listener (optional).
+            </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get messageListener():<a href="../client/MessageListener.html">MessageListener</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set messageListener(value:<a href="../client/MessageListener.html">MessageListener</a>):void</code>
+<br>
+</div>
+<a name="transacted"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">transacted</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>transacted:Boolean</code>&nbsp;&nbsp;[read-only]<p> Indicates whether the session is in transacted mode.
+       
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get transacted():Boolean</code>
+<br>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="close()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">close</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function close(callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a></code><p> Closes the session asynchronously, meaning that the function itself
+      returns immediately, with close processing happening in the background,
+      and finally invoking the callback upon completion.
+            <P>Since a provider may allocate some resources on behalf of a session 
+      outside the JVM, clients should close the resources when they are not 
+      needed. 
+      Relying on garbage collection to eventually reclaim these resources 
+      may not be timely enough.
+            <P>There is no need to close the producers and consumers
+      of a closed session. 
+            <P> The operation does not complete until a <CODE>receive</CODE> call 
+      or message listener in progress has completed. A message consumer
+      <CODE>receive</CODE> call waiting for messages asynchronously will
+      return <CODE>null</CODE> when this session is closed.
+            <P>Closing a transacted session must roll back the transaction
+      in progress.
+      
+      <P>This method is the only <CODE>Session</CODE> method that can 
+      be called concurrently. 
+            <P>Invoking any other <CODE>Session</CODE> method on a closed session 
+      must throw a <CODE>JMSException.IllegalStateException</CODE>. Closing a 
+      closed session must <I>not</I> throw an exception.
+      
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">callback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; called when function has returned a value or thrown an exception
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/VoidFuture.html">VoidFuture</a></code></td>
+</tr>
+</table>
+</div>
+<a name="commit()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">commit</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function commit(callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a></code><p> Commits all messages done in this transaction and releases any locks
+      currently held.  The callback is invoked when all processing has completed.
+            </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">callback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; called when function has returned a value or thrown an exception
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/VoidFuture.html">VoidFuture</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createBrowser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createBrowser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createBrowser(queue:<a href="Queue.html">Queue</a>, messageSelector:String = null):<a href="../client/QueueBrowser.html">QueueBrowser</a></code><p> Creates a <CODE>QueueBrowser</CODE> object to peek at the messages on 
+      the specified queue using a message selector.
+       
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">queue</span>:<a href="Queue.html">Queue</a></code> &mdash; the <CODE>queue</CODE> to access
+            </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">messageSelector</span>:String</code> (default = <code>null</code>)<code></code> &mdash; only messages with properties matching the
+      message selector expression are delivered. A value of null or
+      an empty string indicates that there is no message selector 
+      for the message consumer.
+       
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/QueueBrowser.html">QueueBrowser</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createBytesMessage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createBytesMessage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createBytesMessage():<a href="../client/BytesMessage.html">BytesMessage</a></code><p> Creates a <CODE>BytesMessage</CODE> object. A <CODE>BytesMessage</CODE> 
+      object is used to send a message containing a stream of uninterpreted 
+      bytes.
+       
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/BytesMessage.html">BytesMessage</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createConsumer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createConsumer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createConsumer(destination:<a href="Destination.html">Destination</a>, messageSelector:String = null, noLocal:Boolean = false):<a href="../client/MessageConsumer.html">MessageConsumer</a></code><p> Creates <CODE>MessageConsumer</CODE> for the specified destination, using a
+      message selector. This method can specify whether messages published by 
+      its own connection should be delivered to it, if the destination is a 
+      topic. 
+            <P>Since <CODE>Queue</CODE> and <CODE>Topic</CODE> 
+      both inherit from <CODE>Destination</CODE>, they can be used in
+      the destination parameter to create a <CODE>MessageConsumer</CODE>.
+      <P>A client uses a <CODE>MessageConsumer</CODE> object to receive 
+      messages that have been published to a destination. 
+                    
+      <P>In some cases, a connection may both publish and subscribe to a 
+      topic. The consumer <CODE>NoLocal</CODE> attribute allows a consumer
+      to inhibit the delivery of messages published by its own connection.
+      The default value for this attribute is False. The <CODE>noLocal</CODE> 
+      value must be supported by destinations that are topics. 
+            </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">destination</span>:<a href="Destination.html">Destination</a></code> &mdash; the <CODE>Destination</CODE> to access 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">messageSelector</span>:String</code> (default = <code>null</code>)<code></code> &mdash; only messages with properties matching the
+      message selector expression are delivered. A value of null or
+      an empty string indicates that there is no message selector 
+      for the message consumer.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">noLocal</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash;  - if true, and the destination is a topic,
+                        inhibits the delivery of messages published
+                        by its own connection.  The behavior for
+                        <CODE>NoLocal</CODE> is 
+                        not specified if the destination is a queue.
+      
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/MessageConsumer.html">MessageConsumer</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createDurableSubscriber()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createDurableSubscriber</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createDurableSubscriber(topic:<a href="Topic.html">Topic</a>, name:String, messageSelector:String = null, noLocal:Boolean = false):<a href="../client/TopicSubscriber.html">TopicSubscriber</a></code><p> Creates a durable subscriber to the specified topic, using a
+      message selector and specifying whether messages published by its
+      own connection should be delivered to it.
+       
+      <P>If a client needs to receive all the messages published on a 
+      topic, including the ones published while the subscriber is inactive,
+      it uses a durable <CODE>TopicSubscriber</CODE>. The JMS provider
+      retains a record of this 
+      durable subscription and insures that all messages from the topic's 
+      publishers are retained until they are acknowledged by this 
+      durable subscriber or they have expired.
+            <P>Sessions with durable subscribers must always provide the same
+      client identifier. In addition, each client must specify a name which
+      uniquely identifies (within client identifier) each durable
+      subscription it creates. Only one session at a time can have a
+      <CODE>TopicSubscriber</CODE> for a particular durable subscription.
+      An inactive durable subscriber is one that exists but
+      does not currently have a message consumer associated with it.
+            <P>A client can change an existing durable subscription by creating 
+      a durable <CODE>TopicSubscriber</CODE> with the same name and a new 
+      topic and/or 
+      message selector. Changing a durable subscriber is equivalent to 
+      unsubscribing (deleting) the old one and creating a new one.
+            </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">topic</span>:<a href="Topic.html">Topic</a></code> &mdash; the non-temporary <CODE>Topic</CODE> to subscribe to
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; the name used to identify this subscription
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">messageSelector</span>:String</code> (default = <code>null</code>)<code></code> &mdash; only messages with properties matching the
+      message selector expression are delivered.  A value of null or
+      an empty string indicates that there is no message selector 
+      for the message consumer.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">noLocal</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; if set, inhibits the delivery of messages published
+      by its own connection
+       
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/TopicSubscriber.html">TopicSubscriber</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createMapMessage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createMapMessage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createMapMessage():<a href="../client/MapMessage.html">MapMessage</a></code><p> Creates a <CODE>MapMessage</CODE> object. A <CODE>MapMessage</CODE> 
+      object is used to send a self-defining set of name-value pairs, where 
+      names are <CODE>String</CODE> objects and values are primitive values 
+      in the Actionscript programming language.
+       
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/MapMessage.html">MapMessage</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createMessage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createMessage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createMessage():<a href="../client/Message.html">Message</a></code><p> Creates a <CODE>Message</CODE> object. The <CODE>Message</CODE> 
+      interface is the root interface of all JMS messages. A 
+      <CODE>Message</CODE> object holds all the 
+      standard message header information. It can be sent when a message 
+      containing only header information is sufficient.
+       
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/Message.html">Message</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createProducer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createProducer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createProducer(destination:<a href="Destination.html">Destination</a>):<a href="../client/MessageProducer.html">MessageProducer</a></code><p> Creates a <CODE>MessageProducer</CODE> to send messages to the specified 
+      destination.
+            <P>A client uses a <CODE>MessageProducer</CODE> object to send 
+      messages to a destination. Since <CODE>Queue</CODE> and <CODE>Topic</CODE> 
+      both inherit from <CODE>Destination</CODE>, they can be used in
+      the destination parameter to create a <CODE>MessageProducer</CODE> object.
+      
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">destination</span>:<a href="Destination.html">Destination</a></code> &mdash; the <CODE>Destination</CODE> to send to, 
+      or null if this is a producer which does not have a specified 
+      destination.
+            </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/MessageProducer.html">MessageProducer</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createQueue()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createQueue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createQueue(queueName:String):<a href="../client/Queue.html">Queue</a></code><p> Creates a queue identity given a <CODE>Queue</CODE> name.
+            <P>This facility is provided for the rare cases where clients need to
+      dynamically manipulate queue identity. It allows the creation of a
+      queue identity with a provider-specific name. Clients that depend 
+      on this ability are not portable.
+            <P>Note that this method is not for creating the physical queue. 
+      The physical creation of queues is an administrative task and is not
+      to be initiated by the JMS API. The one exception is the
+      creation of temporary queues, which is accomplished with the 
+      <CODE>createTemporaryQueue</CODE> method.
+            </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">queueName</span>:String</code> &mdash; the name of this <CODE>Queue</CODE>
+            </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/Queue.html">Queue</a></code> &mdash; 
+                        a <CODE>Queue</CODE> with the given name
+            
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="createTemporaryQueue()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createTemporaryQueue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createTemporaryQueue():<a href="../client/TemporaryQueue.html">TemporaryQueue</a></code><p> Creates a <CODE>TemporaryQueue</CODE> object. Its lifetime will be that 
+      of the <CODE>Connection</CODE> unless it is deleted earlier.
+            </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/TemporaryQueue.html">TemporaryQueue</a></code> &mdash; 
+                        a temporary queue identity
+            
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="createTemporaryTopic()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createTemporaryTopic</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createTemporaryTopic():<a href="../client/TemporaryTopic.html">TemporaryTopic</a></code><p> Creates a <CODE>TemporaryTopic</CODE> object. Its lifetime will be that 
+      of the <CODE>Connection</CODE> unless it is deleted earlier.
+            </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/TemporaryTopic.html">TemporaryTopic</a></code> &mdash; 
+                        a temporary topic identity
+            
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="createTextMessage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createTextMessage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createTextMessage(text:String = null):<a href="../client/TextMessage.html">TextMessage</a></code><p> Creates an initialized <CODE>TextMessage</CODE> object. A 
+      <CODE>TextMessage</CODE> object is used to send 
+      a message containing a <CODE>String</CODE>.
+            </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">text</span>:String</code> (default = <code>null</code>)<code></code> &mdash; the string used to initialize this message
+            </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/TextMessage.html">TextMessage</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createTopic()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createTopic</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createTopic(topicName:String):<a href="../client/Topic.html">Topic</a></code><p> Creates a topic identity given a <CODE>Topic</CODE> name.
+            <P>This facility is provided for the rare cases where clients need to
+      dynamically manipulate topic identity. This allows the creation of a
+      topic identity with a provider-specific name. Clients that depend 
+      on this ability are not portable.
+            <P>Note that this method is not for creating the physical topic. 
+      The physical creation of topics is an administrative task and is not
+      to be initiated by the JMS API. The one exception is the
+      creation of temporary topics, which is accomplished with the 
+      <CODE>createTemporaryTopic</CODE> method.
+       
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">topicName</span>:String</code> &mdash; the name of this <CODE>Topic</CODE>
+            </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/Topic.html">Topic</a></code> &mdash; 
+                        a <CODE>Topic</CODE> with the given name
+            
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="recover()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">recover</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function recover():void</code><p> Stops message delivery in this session, and restarts message delivery
+      with the oldest unacknowledged message.
+       
+      <P>All consumers deliver messages in a serial order.
+      Acknowledging a received message automatically acknowledges all 
+      messages that have been delivered to the client.
+            <P>Restarting a session causes it to take the following actions:
+            <UL>
+        <LI>Stop message delivery
+        <LI>Mark all messages that might have been delivered but not 
+            acknowledged as "redelivered"
+        <LI>Restart the delivery sequence including all unacknowledged 
+            messages that had been previously delivered. Redelivered messages
+            do not have to be delivered in 
+            exactly their original delivery order.
+      </UL>
+            </p></div>
+<a name="rollback()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rollback</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function rollback(callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a></code><p> Rolls back any messages done in this transaction and releases any locks 
+      currently held.  The callback is invoked when all processing has completed.
+            </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">callback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; called when function has returned a value or thrown an exception
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/VoidFuture.html">VoidFuture</a></code></td>
+</tr>
+</table>
+</div>
+<a name="unsubscribe()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">unsubscribe</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function unsubscribe(name:String):void</code><p> Unsubscribes a durable subscription that has been created by a client.
+       
+      <P>This method deletes the state being maintained on behalf of the 
+      subscriber by its provider.
+            <P>It is erroneous for a client to delete a durable subscription
+      while there is an active <CODE>MessageConsumer</CODE>
+      or <CODE>TopicSubscriber</CODE> for the 
+      subscription, or while a consumed message is part of a pending 
+      transaction or has not been acknowledged in the session.
+            </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; the name used to identify this subscription
+       
+      </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

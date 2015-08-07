@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="ChallengeRequest,com.kaazing.gateway.client.security.ChallengeRequest,authenticationParameters,authenticationScheme,location" name="keywords">
+<title>com.kaazing.gateway.client.security.ChallengeRequest</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'ChallengeRequest - API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/kaazing/gateway/client/security/ChallengeRequest.html&amp;com/kaazing/gateway/client/security/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;ChallengeRequest</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class ChallengeRequest"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.kaazing.gateway.client.security</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class ChallengeRequest</td>
+</tr>
+</table>
+<p></p>
+ An immutable object representing the challenge presented by the server when the client accessed
+ the URI represented by a location.
+  <p>According to <a href="http://tools.ietf.org/html/rfc2617#section-1.2">RFC 2617</a>,
+ <pre>
+     challenge   = auth-scheme 1P 1#auth-param
+ </pre>
+ so we model the authentication scheme and parameters in this class.</p>
+  <p>This class is also responsible for detecting and adapting the <code>Application Basic</code>
+ and <code>Application Negotiate</code> authentication schemes into their <code>Basic</code> and
+ <code>Negotiate</code> counterpart authentication schemes.
+ <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#authenticationParameters">authenticationParameters</a> : String<div class="summaryTableDescription">[read-only]
+     Return the string after the space separator, not including the authentication scheme nor the space itself,
+     or <code>null</code> if no such string exists.</div>
+</td><td class="summaryTableOwnerCol">ChallengeRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#authenticationScheme">authenticationScheme</a> : String<div class="summaryTableDescription">[read-only]
+     Return the authentication scheme with which the server is challenging.</div>
+</td><td class="summaryTableOwnerCol">ChallengeRequest</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#location">location</a> : String<div class="summaryTableDescription">[read-only]
+     Return the protected URI the access of which triggered this challenge as a <code>String</code>.</div>
+</td><td class="summaryTableOwnerCol">ChallengeRequest</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#ChallengeRequest()">ChallengeRequest</a>(location:String, challenge:String)</div>
+<div class="summaryTableDescription">
+     Constructor from the protected URI location triggering the challenge,
+     and an entire server-provided 'WWW-Authenticate:' string.</div>
+</td><td class="summaryTableOwnerCol">ChallengeRequest</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="authenticationParameters"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">authenticationParameters</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>authenticationParameters:String</code>&nbsp;&nbsp;[read-only]<p>
+     Return the string after the space separator, not including the authentication scheme nor the space itself,
+     or <code>null</code> if no such string exists.
+          </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get authenticationParameters():String</code>
+<br>
+</div>
+<a name="authenticationScheme"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">authenticationScheme</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>authenticationScheme:String</code>&nbsp;&nbsp;[read-only]<p>
+     Return the authentication scheme with which the server is challenging.
+          </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get authenticationScheme():String</code>
+<br>
+</div>
+<a name="location"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">location</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>location:String</code>&nbsp;&nbsp;[read-only]<p>
+     Return the protected URI the access of which triggered this challenge as a <code>String</code>.
+          </p><p>For some authentication schemes, the production of a response to the challenge may require
+     access to the location of the URI triggering the challenge.</p>
+          <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get location():String</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="ChallengeRequest()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ChallengeRequest</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function ChallengeRequest(location:String, challenge:String)</code><p>
+     Constructor from the protected URI location triggering the challenge,
+     and an entire server-provided 'WWW-Authenticate:' string.
+          </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">location</span>:String</code> &mdash;  the protected URI location triggering the challenge
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">challenge</span>:String</code> &mdash; an entire server-provided 'WWW-Authenticate:' string
+     </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

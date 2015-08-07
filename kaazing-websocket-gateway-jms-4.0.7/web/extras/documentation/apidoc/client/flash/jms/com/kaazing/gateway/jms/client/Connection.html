@@ -1,0 +1,460 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="Connection,com.kaazing.gateway.jms.client.Connection,clientID,connectionListener,exceptionListener,metaData,close,createSession,isConnected,start,stop" name="keywords">
+<title>com.kaazing.gateway.jms.client.Connection</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Connection - API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/kaazing/gateway/jms/client/Connection.html&amp;com/kaazing/gateway/jms/client/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Interface&nbsp;Connection</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Interface Connection"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.kaazing.gateway.jms.client</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Interface</td><td class="classSignature">public interface Connection</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implementors</td><td><a href="../client/ConnectionListenerAdapter.html">ConnectionListenerAdapter</a>, <a href="stomp/StompConnectionFactory.html">StompConnectionFactory</a></td>
+</tr>
+</table>
+<p></p> A <CODE>Connection</CODE> object is a client's active connection to its JMS 
+  provider. It typically allocates provider resources outside the environment.
+    <P>Connections support concurrent use.
+    <P>A connection serves several purposes:
+    <UL>
+    <LI>It encapsulates an open connection with a JMS provider. It 
+        typically represents an open TCP/IP socket between a client and 
+        the service provider software.
+    <LI>Its creation is where client authentication takes place.
+    <LI>It can specify a unique client identifier.
+    <LI>It provides a <CODE>ConnectionMetaData</CODE> object.
+    <LI>It supports an optional <CODE>ExceptionListener</CODE> object.
+  </UL>
+    <P>Because the creation of a connection involves setting up authentication 
+  and communication, a connection is a relatively heavyweight 
+  object. Most clients will do all their messaging with a single connection.
+  Other more advanced applications may use several connections. The JMS API
+  does 
+  not architect a reason for using multiple connections; however, there may 
+  be operational reasons for doing so.
+    <P>A JMS client typically creates a connection, one or more sessions, 
+  and a number of message producers and consumers. When a connection is
+  created, it is in stopped mode. That means that no messages are being
+  delivered.
+    <P>It is typical to leave the connection in stopped mode until setup 
+  is complete (that is, until all message consumers have been 
+  created).  At that point, the client calls 
+  the connection's <CODE>start</CODE> method, and messages begin arriving at 
+  the connection's consumers. This setup
+  convention minimizes any client confusion that may result from 
+  asynchronous message delivery while the client is still in the process 
+  of setting itself up.
+    <P>A connection can be started immediately, and the setup can be done 
+  afterwards. Clients that do this must be prepared to handle asynchronous 
+  message delivery while they are still in the process of setting up.
+    <P>A message producer can send messages while a connection is stopped.
+    <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#clientID">clientID</a> : String<div class="summaryTableDescription"> Gets the client identifier for this connection.</div>
+</td><td class="summaryTableOwnerCol">Connection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#connectionListener">connectionListener</a> : <a href="../client/ConnectionListener.html">ConnectionListener</a>
+<div class="summaryTableDescription">
+  Gets the connectionListener associated with this connection.</div>
+</td><td class="summaryTableOwnerCol">Connection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#exceptionListener">exceptionListener</a> : <a href="../client/ExceptionListener.html">ExceptionListener</a>
+<div class="summaryTableDescription">
+     Gets the <CODE>ExceptionListener</CODE> object for this connection.</div>
+</td><td class="summaryTableOwnerCol">Connection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#metaData">metaData</a> : <a href="../client/ConnectionMetaData.html">ConnectionMetaData</a>
+<div class="summaryTableDescription">[read-only] Gets the metadata for this connection.</div>
+</td><td class="summaryTableOwnerCol">Connection</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#close()">close</a>(callback:Function):<a href="../client/VoidFuture.html">VoidFuture</a>
+</div>
+<div class="summaryTableDescription"> Closes the connection.</div>
+</td><td class="summaryTableOwnerCol">Connection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createSession()">createSession</a>(transacted:Boolean, acknowledgeMode:int):<a href="../client/Session.html">Session</a>
+</div>
+<div class="summaryTableDescription"> Creates a <CODE>Session</CODE> object.</div>
+</td><td class="summaryTableOwnerCol">Connection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isConnected()">isConnected</a>():Boolean</div>
+<div class="summaryTableDescription">
+  Returns true if the underlying WebSocket connection is established and currently
+  connected.</div>
+</td><td class="summaryTableOwnerCol">Connection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#start()">start</a>(callback:Function):<a href="../client/VoidFuture.html">VoidFuture</a>
+</div>
+<div class="summaryTableDescription"> Starts (or restarts) a connection's delivery of incoming messages.</div>
+</td><td class="summaryTableOwnerCol">Connection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#stop()">stop</a>(callback:Function):<a href="../client/VoidFuture.html">VoidFuture</a>
+</div>
+<div class="summaryTableDescription"> Temporarily stops a connection's delivery of incoming messages.</div>
+</td><td class="summaryTableOwnerCol">Connection</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="clientID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clientID</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>clientID:String</code>&nbsp;&nbsp;[read-write]<p> Gets the client identifier for this connection.
+       
+      <P>This value is specific to the JMS provider.  It is either preconfigured 
+      by an administrator in a <CODE>ConnectionFactory</CODE> object
+      or assigned dynamically by the application by calling the
+      <code>setClientID</code> method.
+      
+      
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get clientID():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set clientID(value:String):void</code>
+<br>
+</div>
+<a name="connectionListener"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">connectionListener</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>connectionListener:<a href="../client/ConnectionListener.html">ConnectionListener</a></code>&nbsp;&nbsp;[read-write]<p>
+  Gets the connectionListener associated with this connection.
+  </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get connectionListener():<a href="../client/ConnectionListener.html">ConnectionListener</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set connectionListener(value:<a href="../client/ConnectionListener.html">ConnectionListener</a>):void</code>
+<br>
+</div>
+<a name="exceptionListener"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">exceptionListener</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>exceptionListener:<a href="../client/ExceptionListener.html">ExceptionListener</a></code>&nbsp;&nbsp;[read-write]<p>
+     Gets the <CODE>ExceptionListener</CODE> object for this connection. 
+     Not every <CODE>Connection</CODE> has an <CODE>ExceptionListener</CODE>
+     associated with it.
+          </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get exceptionListener():<a href="../client/ExceptionListener.html">ExceptionListener</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set exceptionListener(value:<a href="../client/ExceptionListener.html">ExceptionListener</a>):void</code>
+<br>
+</div>
+<a name="metaData"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">metaData</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>metaData:<a href="../client/ConnectionMetaData.html">ConnectionMetaData</a></code>&nbsp;&nbsp;[read-only]<p> Gets the metadata for this connection.
+          
+         </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get metaData():<a href="../client/ConnectionMetaData.html">ConnectionMetaData</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../client/ConnectionMetaData.html" target="">com.kaazing.gateway.jms.client.ConnectionMetaData</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="close()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">close</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function close(callback:Function):<a href="../client/VoidFuture.html">VoidFuture</a></code><p> Closes the connection.
+            <P>Since a provider typically allocates significant resources outside 
+      the JVM on behalf of a connection, clients should close these resources
+      when they are not needed. Relying on garbage collection to eventually 
+      reclaim these resources may not be timely enough.
+            <P>There is no need to close the sessions, producers, and consumers
+      of a closed connection.
+            <P>Closing a connection causes all temporary destinations to be
+      deleted.
+            <P>When this method is invoked, it executes asynchronously (returns
+      immediately), but does not invoke the callback until message processing
+      has been shut down in an orderly fashion. This means that all message
+      listeners that may have been running have returned, and that all pending 
+      receives have returned. A close terminates all pending message receives 
+      on the connection's sessions' consumers. The receive callbacks may be 
+      invoked with a message or with null, depending on whether there was a 
+      message available at the time of the close.
+      If one or more of the connection's sessions' message listeners are
+      processing a message at the time when connection <CODE>close</CODE> is
+      invoked, all the facilities of the connection and 
+      its sessions must remain available to those listeners until they return 
+      control to the JMS provider. 
+            <P>Closing a connection causes any of its sessions' transactions
+      in progress to be rolled back. In the case where a session's
+      work is coordinated by an external transaction manager, a session's 
+      <CODE>commit</CODE> and <CODE>rollback</CODE> methods are
+      not used and the result of a closed session's work is determined
+      later by the transaction manager.
+            Closing a connection does NOT force an 
+      acknowledgment of client-acknowledged sessions. 
+      
+      <P>Invoking the <CODE>acknowledge</CODE> method of a received message 
+      from a closed connection's session must throw an 
+      <CODE>IllegalStateException</CODE>.  Closing a closed connection must 
+      NOT throw an exception.
+       
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">callback</span>:Function</code> &mdash; called when function has returned a value or thrown an exception
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/VoidFuture.html">VoidFuture</a></code></td>
+</tr>
+</table>
+</div>
+<a name="createSession()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createSession</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createSession(transacted:Boolean, acknowledgeMode:int):<a href="../client/Session.html">Session</a></code><p> Creates a <CODE>Session</CODE> object.
+       
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">transacted</span>:Boolean</code> &mdash; indicates whether the session is transacted
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">acknowledgeMode</span>:int</code> &mdash; indicates whether the consumer or the
+      client will acknowledge any messages it receives; ignored if the session
+      is transacted. Legal values are <code>Session.AUTO_ACKNOWLEDGE</code>, 
+      <code>Session.CLIENT_ACKNOWLEDGE</code>, and 
+      <code>Session.DUPS_OK_ACKNOWLEDGE</code>.
+       
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/Session.html">Session</a></code> &mdash; 
+                        a newly created  session
+       
+      
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SessionConstants.html#AUTO_ACKNOWLEDGE" target="">SessionConstants.AUTO_ACKNOWLEDGE</a>
+<br>
+<a href="SessionConstants.html#CLIENT_ACKNOWLEDGE" target="">SessionConstants.CLIENT_ACKNOWLEDGE</a>
+<br>
+<a href="SessionConstants.html#DUPS_OK_ACKNOWLEDGE" target="">SessionConstants.DUPS_OK_ACKNOWLEDGE</a>
+</div>
+</div>
+<a name="isConnected()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isConnected</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function isConnected():Boolean</code><p>
+  Returns true if the underlying WebSocket connection is established and currently
+  connected.  If the WebSocket connection is broken due to a network failure or
+  similar transient issue, the WebSocket will attempt to reconnect until the 
+  connection is explicitly closed by calling <CODE>connection.close()</CODE>.
+  </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code></td>
+</tr>
+</table>
+</div>
+<a name="start()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">start</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function start(callback:Function):<a href="../client/VoidFuture.html">VoidFuture</a></code><p> Starts (or restarts) a connection's delivery of incoming messages.
+      A call to <CODE>start</CODE> on a connection that has already been
+      started is ignored.
+      
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">callback</span>:Function</code> &mdash; called when function has returned a value or thrown an exception
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/VoidFuture.html">VoidFuture</a></code></td>
+</tr>
+</table>
+</div>
+<a name="stop()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">stop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function stop(callback:Function):<a href="../client/VoidFuture.html">VoidFuture</a></code><p> Temporarily stops a connection's delivery of incoming messages.
+      Delivery can be restarted using the connection's <CODE>start</CODE>
+      method. When the connection is stopped,
+      delivery to all the connection's message consumers is inhibited:
+      callbacks from receive are delayed, and messages are not delivered to message
+      listeners.
+            <P>This call executes asynchronously (returns immediately).  The callback is
+      invoked when receives and/or message listeners in progress have completed.
+            <P>Stopping a connection has no effect on its ability to send messages.
+      A call to <CODE>stop</CODE> on a connection that has already been
+      stopped is ignored.
+            <P>A call to <CODE>stop</CODE> does not invoke the callback until delivery
+      of messages has paused.
+      This means that a client can rely on the fact that none of its message listeners
+      will be called and that callbacks waiting for <CODE>receive</CODE> will not be 
+      invoked with a message until the connection is restarted.  The receive timers
+      for a stopped connection continue to advance, so receives may time out while 
+      the connection is stopped.
+      
+      <P>If message listeners are running when <CODE>stop</CODE> is invoked, 
+      the <CODE>stop</CODE> will not invoke the callback until all of them have returned.
+      While these message listeners are completing, they must have the full services of the
+      connection available to them.
+       
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">callback</span>:Function</code> &mdash; called when function has returned a value or thrown an exception
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/VoidFuture.html">VoidFuture</a></code></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

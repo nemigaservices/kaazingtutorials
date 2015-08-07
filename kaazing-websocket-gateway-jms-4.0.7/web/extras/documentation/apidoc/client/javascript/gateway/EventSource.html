@@ -1,0 +1,326 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: EventSource</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class EventSource</h2>
+
+
+
+<p>
+EventSource provides a text-based stream abstraction for JavaScript.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<a name="field_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Field Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Function</code></font>
+			</td>
+			<td>
+				<code><b><a href="#onerror">onerror</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The onerror handler is called when the stream has a network or server error.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Function</code></font>
+			</td>
+			<td>
+				<code><b><a href="#onmessage">onmessage</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The onmessage handler is called when data arrives.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Function</code></font>
+			</td>
+			<td>
+				<code><b><a href="#onopen">onopen</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The onopen handler is called when the stream is established.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#readyState">readyState</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ready state indicates the stream status, Possible values are 0 (CONNECTING), 1 (OPEN) and 2 (CLOSED)
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#EventSource">EventSource</a></b>(location)
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  Creates a new EventSource instance and connects to the stream location.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#disconnect">disconnect</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Disconnects the stream.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<a name="field_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Field Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<!-- One single method detail entry -->
+	<a name="onerror">
+	<!-- -->
+	</a> <h3>onerror</h3>
+		<pre>Function <b>onerror</b></pre> 
+	<ul>
+		The onerror handler is called when the stream has a network or server error.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="onmessage">
+	<!-- -->
+	</a> <h3>onmessage</h3>
+		<pre>Function <b>onmessage</b></pre> 
+	<ul>
+		The onmessage handler is called when data arrives.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="onopen">
+	<!-- -->
+	</a> <h3>onopen</h3>
+		<pre>Function <b>onopen</b></pre> 
+	<ul>
+		The onopen handler is called when the stream is established.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="readyState">
+	<!-- -->
+	</a> <h3>readyState</h3>
+		<pre>Number <b>readyState</b></pre> 
+	<ul>
+		The ready state indicates the stream status, Possible values are 0 (CONNECTING), 1 (OPEN) and 2 (CLOSED)
+	</ul>
+	<hr>
+
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="EventSource"> </a>
+<h3>EventSource</h3>
+
+	<pre><b>EventSource</b>(location)</pre>
+	<ul>
+	   Creates a new EventSource instance and connects to the stream location.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<ul>
+		<b>Parameters:</b>
+		
+		<ul>
+			<code><i>String</i>&nbsp;location</code> - the stream location 
+		</ul>
+		
+	</ul>
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="disconnect"> </a> <h3>disconnect</h3>
+		<pre>void&nbsp;<b>disconnect</b>()</pre> 
+	<ul>
+		Disconnects the stream.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

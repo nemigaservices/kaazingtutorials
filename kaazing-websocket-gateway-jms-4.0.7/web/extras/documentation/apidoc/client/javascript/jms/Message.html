@@ -1,0 +1,2153 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: Message</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class Message</h2>
+
+
+
+<p>
+The <CODE>Message</CODE> interface is the root interface of all JMSmessages. It defines the message header and the <CODE>acknowledge</CODE>method used for all messages.<P>Most message-oriented middleware (MOM) products treat messages aslightweight entities that consistof a header and a payload. The header contains fields used for messagerouting and identification; the payload contains the application databeing sent.<P>Within this general form, the definition of a message variessignificantly across products. It would be quite difficult for the JMS APIto support all of these message models.<P>With this in mind, the JMS message model has the following goals:<UL>  <LI>Provide a single, unified message API  <LI>Provide an API suitable for creating messages that match the      format used by provider-native messaging applications  <LI>Support the development of heterogeneous applications that span      operating systems, machine architectures, and computer languages  <LI>Support messages containing Extensible Markup Language (XML) pages</UL><P>JMS messages are composed of the following parts:<UL>  <LI>Header - All messages support the same set of header fields.      Header fields contain values used by both clients and providers to      identify and route messages.  <LI>Properties - Each message contains a built-in facility for supporting      application-defined property values. Properties provide an efficient      mechanism for supporting application-defined message filtering.  <LI>Body - The JMS API defines several types of message body, which cover      the majority of messaging styles currently in use.</UL><H4>Message Bodies</H4><P>The JMS API defines Text and Bytes as message body:<UL>  <LI>Text - A <CODE>TextMessage</CODE> object's message body contains a      <CODE>java.lang.String</CODE> object. This message type can be used      to transport plain-text messages, and XML messages.  <LI>Bytes - A <CODE>BytesMessage</CODE> object's message body contains a      stream of uninterpreted bytes. This message type is for      literally encoding a body to match an existing message format. In      many cases, it is possible to use one of the other body types,      which are easier to use. Although the JMS API allows the use of      message properties with byte messages, they are typically not used,      since the inclusion of properties may affect the format.</UL><H4>Message Headers</H4><P>The <CODE>JMSCorrelationID</CODE> header field is used for linking onemessage withanother. It typically links a reply message with its requesting message.<P><CODE>JMSCorrelationID</CODE> can hold a provider-specific message ID,an application-specific <CODE>String</CODE> object, or a provider-native<CODE>byte[]</CODE> value.<H4>Message Properties</H4><P>A <CODE>Message</CODE> object contains a built-in facility for supportingapplication-defined property values. In effect, this provides a mechanismfor adding application-specific header fields to a message.<P>Properties allow an application, via message selectors, to have a JMSprovider select, or filter, messages on its behalf usingapplication-specific criteria.<P>Property names must obey the rules for a message selector identifier.Property names must not be null, and must not be empty strings. If a propertyname is set and it is either null or an empty string, an<CODE>IllegalArgumentException</CODE> must be thrown.<P>Property values are set prior to sending a message. When a clientreceives a message, its properties are in read-only mode. If aclient attempts to set properties at this point, a<CODE>MessageNotWriteableException</CODE> is thrown. If<CODE>clearProperties</CODE> is called, the properties can now be bothread from and written to. Note that header fields are distinct fromproperties. Header fields are never in read-only mode.<P>A property value may duplicate a value in a message's body, or it maynot. Although JMS does not define a policy for what should or should notbe made a property, application developers should note that JMS providerswill likely handle data in a message's body more efficiently than data ina message's properties. For best performance, applications should usemessage properties only when they need to customize a message's header.The primary reason for doing this is to support customized messageselection.<P>Message properties support the following conversion table. The markedcases must be supported. The unmarked cases must throw a<CODE>JMSException</CODE>. The <CODE>String</CODE>-to-primitive conversionsmay throw a runtime exception if theprimitive's <CODE>valueOf</CODE> method does not accept the<CODE>String</CODE> as a valid representation of the primitive.<P>The order of property values is not defined. To iterate through amessage's property values, use <CODE>getPropertyNames</CODE> to retrievea property name enumeration and then use the various property get methodsto retrieve their values.<P>A message's properties are deleted by the <CODE>clearProperties</CODE>method. This leaves the message with an empty set of properties.<P>Getting a property value for a name which has not been set returns anull value. Only the <CODE>getStringProperty</CODE> and<CODE>getObjectProperty</CODE> methods can return a null value.Attempting to read a null value as a primitive type must be treated ascalling the primitive's corresponding <CODE>valueOf(String)</CODE>conversion method with a null value.<P>The JMS API reserves the <CODE>JMSX</CODE> property name prefix for JMSdefined properties.The full set of these properties is defined in the Java Message Servicespecification. New JMS defined properties may be added in later versionsof the JMS API.  Support for these properties is optional. The<CODE>String[] ConnectionMetaData.getJMSXPropertyNames</CODE> methodreturns the names of the JMSX properties supported by a connection.<P>JMSX properties may be referenced in message selectors whether or notthey are supported by a connection. If they are not present in amessage, they are treated like any other absent property.<P>JMSX properties defined in the specification as "set by provider onsend" are available to both the producer and the consumers of the message.JMSX properties defined in the specification as "set by provider onreceive" are available only to the consumers.<P><CODE>JMSXGroupID</CODE> and <CODE>JMSXGroupSeq</CODE> are standardproperties that clientsshould use if they want to group messages. All providers must support them.Unless specifically noted, the values and semantics of the JMSX propertiesare undefined.<P>The JMS API reserves the <CODE>JMS_<I>vendor_name</I></CODE> propertyname prefix for provider-specific properties. Each provider defines its ownvalue for <CODE><I>vendor_name</I></CODE>. This is the mechanism a JMSprovider uses to make its special per-message services available to a JMSclient.<P>The purpose of provider-specific properties is to provide specialfeatures needed to integrate JMS clients with provider-native clients in asingle JMS application. They should not be used for messaging between JMSclients.<H4>Provider Implementations of JMS Message Interfaces</H4><P>The JMS API provides a set of message interfaces that define the JMSmessagemodel. It does not provide implementations of these interfaces.<P>Each JMS provider supplies a set of message factories with its<CODE>Session</CODE> object for creating instances of messages. This allowsa provider to use message implementations tailored to its specific needs.<P>A provider must be prepared to accept message implementations that arenot its own. They may not be handled as efficiently as its ownimplementation; however, they must be handled.<P>Note the following exception case when a provider is handling a foreignmessage implementation. If the foreign message implementation contains a<CODE>JMSReplyTo</CODE> header field that is set to a foreign destinationimplementation, the provider is not required to handle or preserve thevalue of this header field.<!-- Message Selectors omitted --></p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<a name="field_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Field Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>int</code></font>
+			</td>
+			<td>
+				<code><b><a href="#DEFAULT_DELIVERY_MODE">DEFAULT_DELIVERY_MODE</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The message producer's default delivery mode is <CODE>PERSISTENT</CODE>.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>int</code></font>
+			</td>
+			<td>
+				<code><b><a href="#DEFAULT_PRIORITY">DEFAULT_PRIORITY</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The message producer's default priority is 4.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>int</code></font>
+			</td>
+			<td>
+				<code><b><a href="#DEFAULT_TIME_TO_LIVE">DEFAULT_TIME_TO_LIVE</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The message producer's default time to live is unlimited; the message never expires.
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#Message">Message</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+The <CODE>Message</CODE> interface is the root interface of all JMSmessages.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#acknowledge">acknowledge</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acknowledges all consumed messages of the session of this consumedmessage.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#clearBody">clearBody</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Clears out the message body.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#clearProperties">clearProperties</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Clears a message's properties.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getBooleanProperty">getBooleanProperty</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the value of the <CODE>Boolean</CODE> property with thespecified name.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getByteProperty">getByteProperty</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns <CODE>Number</CODE> representing byte value with the specifiedname.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getDoubleProperty">getDoubleProperty</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns <CODE>Number</CODE> representing double value with the specifiedname.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getFloatProperty">getFloatProperty</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the value of the <CODE>float</CODE> property with the specifiedname.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getIntProperty">getIntProperty</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns <CODE>Number</CODE> representing int value with the specifiedname.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSCorrelationID">getJMSCorrelationID</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the correlation ID for the message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSDeliveryMode">getJMSDeliveryMode</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the <CODE>DeliveryMode</CODE> value specified for this message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Destination
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSDestination">getJMSDestination</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the <CODE>Destination</CODE> object for this message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSExpiration">getJMSExpiration</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the message's expiration value.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSMessageID">getJMSMessageID</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the message ID.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSPriority">getJMSPriority</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the message priority level.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSRedelivered">getJMSRedelivered</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets an indication of whether this message is being redelivered.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Destination
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSReplyTo">getJMSReplyTo</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the <CODE>Destination</CODE> object to which a reply to thismessage should be sent.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSTimestamp">getJMSTimestamp</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the message timestamp.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getJMSType">getJMSType</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the message type identifier supplied by the client when themessage was sent.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getLongProperty">getLongProperty</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns <CODE>Number</CODE> representing long value with the specifiedname.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void&nbsp;
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getObjectProperty">getObjectProperty</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the value of the object property with the specified name.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Enumeration
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getPropertyNames">getPropertyNames</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns an <CODE>Enumeration</CODE> of all the property names.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getShortProperty">getShortProperty</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns <CODE>Number</CODE> representing short value with the specifiedname.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getStringProperty">getStringProperty</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the value of the <CODE>String</CODE> property with the specifiedname.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#propertyExists">propertyExists</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indicates whether a property value exists.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setBooleanProperty">setBooleanProperty</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets a <CODE>Boolean</CODE> property value with the specified name intothe message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setByteProperty">setByteProperty</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets a <CODE>Number</CODE> representing byte value with the specified name intothe message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setDoubleProperty">setDoubleProperty</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets a <CODE>Number</CODE> representing double value with the specified name intothe message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setFloatProperty">setFloatProperty</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets a <CODE>Number</CODE> representing float value with the specified name intothe message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setIntProperty">setIntProperty</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets a <CODE>Number</CODE> representing int value with the specified name intothe message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSCorrelationID">setJMSCorrelationID</a></b>(correlationID) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the correlation ID for the message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSDeliveryMode">setJMSDeliveryMode</a></b>(deliveryMode) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>DeliveryMode</CODE> value for this message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSDestination">setJMSDestination</a></b>(destination) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>Destination</CODE> object for this message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSExpiration">setJMSExpiration</a></b>(expiration) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the message's expiration value.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSMessageID">setJMSMessageID</a></b>(id) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the message ID.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSPriority">setJMSPriority</a></b>(priority) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the priority level for this message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSRedelivered">setJMSRedelivered</a></b>(redelivered) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Specifies whether this message is being redelivered.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSReplyTo">setJMSReplyTo</a></b>(replyTo) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>Destination</CODE> object to which a reply to thismessage should be sent.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSTimestamp">setJMSTimestamp</a></b>(timestamp) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the message timestamp.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setJMSType">setJMSType</a></b>(type) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the message type.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setLongProperty">setLongProperty</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets a <CODE>Number</CODE> representing long value for a property.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setObjectProperty">setObjectProperty</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets a object property value with the specified name into themessage.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setShortProperty">setShortProperty</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets a <CODE>Number</CODE> representing short value with the specified name intothe message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setStringProperty">setStringProperty</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets a <CODE>String</CODE> property value with the specified name intothe message.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<a name="field_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Field Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<!-- One single method detail entry -->
+	<a name="DEFAULT_DELIVERY_MODE">
+	<!-- -->
+	</a> <h3>DEFAULT_DELIVERY_MODE</h3>
+		<pre>int <b>DEFAULT_DELIVERY_MODE</b></pre> 
+	<ul>
+		The message producer's default delivery mode is <CODE>PERSISTENT</CODE>.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="DEFAULT_PRIORITY">
+	<!-- -->
+	</a> <h3>DEFAULT_PRIORITY</h3>
+		<pre>int <b>DEFAULT_PRIORITY</b></pre> 
+	<ul>
+		The message producer's default priority is 4.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="DEFAULT_TIME_TO_LIVE">
+	<!-- -->
+	</a> <h3>DEFAULT_TIME_TO_LIVE</h3>
+		<pre>int <b>DEFAULT_TIME_TO_LIVE</b></pre> 
+	<ul>
+		The message producer's default time to live is unlimited; the message never expires.
+	</ul>
+	<hr>
+
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="Message"> </a>
+<h3>Message</h3>
+
+	<pre><b>Message</b>()</pre>
+	<ul>
+	   
+The <CODE>Message</CODE> interface is the root interface of all JMSmessages. It defines the message header and the <CODE>acknowledge</CODE>method used for all messages.<P>Most message-oriented middleware (MOM) products treat messages aslightweight entities that consistof a header and a payload. The header contains fields used for messagerouting and identification; the payload contains the application databeing sent.<P>Within this general form, the definition of a message variessignificantly across products. It would be quite difficult for the JMS APIto support all of these message models.<P>With this in mind, the JMS message model has the following goals:<UL>  <LI>Provide a single, unified message API  <LI>Provide an API suitable for creating messages that match the      format used by provider-native messaging applications  <LI>Support the development of heterogeneous applications that span      operating systems, machine architectures, and computer languages  <LI>Support messages containing Extensible Markup Language (XML) pages</UL><P>JMS messages are composed of the following parts:<UL>  <LI>Header - All messages support the same set of header fields.      Header fields contain values used by both clients and providers to      identify and route messages.  <LI>Properties - Each message contains a built-in facility for supporting      application-defined property values. Properties provide an efficient      mechanism for supporting application-defined message filtering.  <LI>Body - The JMS API defines several types of message body, which cover      the majority of messaging styles currently in use.</UL><H4>Message Bodies</H4><P>The JMS API defines Text and Bytes as message body:<UL>  <LI>Text - A <CODE>TextMessage</CODE> object's message body contains a      <CODE>java.lang.String</CODE> object. This message type can be used      to transport plain-text messages, and XML messages.  <LI>Bytes - A <CODE>BytesMessage</CODE> object's message body contains a      stream of uninterpreted bytes. This message type is for      literally encoding a body to match an existing message format. In      many cases, it is possible to use one of the other body types,      which are easier to use. Although the JMS API allows the use of      message properties with byte messages, they are typically not used,      since the inclusion of properties may affect the format.</UL><H4>Message Headers</H4><P>The <CODE>JMSCorrelationID</CODE> header field is used for linking onemessage withanother. It typically links a reply message with its requesting message.<P><CODE>JMSCorrelationID</CODE> can hold a provider-specific message ID,an application-specific <CODE>String</CODE> object, or a provider-native<CODE>byte[]</CODE> value.<H4>Message Properties</H4><P>A <CODE>Message</CODE> object contains a built-in facility for supportingapplication-defined property values. In effect, this provides a mechanismfor adding application-specific header fields to a message.<P>Properties allow an application, via message selectors, to have a JMSprovider select, or filter, messages on its behalf usingapplication-specific criteria.<P>Property names must obey the rules for a message selector identifier.Property names must not be null, and must not be empty strings. If a propertyname is set and it is either null or an empty string, an<CODE>IllegalArgumentException</CODE> must be thrown.<P>Property values are set prior to sending a message. When a clientreceives a message, its properties are in read-only mode. If aclient attempts to set properties at this point, a<CODE>MessageNotWriteableException</CODE> is thrown. If<CODE>clearProperties</CODE> is called, the properties can now be bothread from and written to. Note that header fields are distinct fromproperties. Header fields are never in read-only mode.<P>A property value may duplicate a value in a message's body, or it maynot. Although JMS does not define a policy for what should or should notbe made a property, application developers should note that JMS providerswill likely handle data in a message's body more efficiently than data ina message's properties. For best performance, applications should usemessage properties only when they need to customize a message's header.The primary reason for doing this is to support customized messageselection.<P>Message properties support the following conversion table. The markedcases must be supported. The unmarked cases must throw a<CODE>JMSException</CODE>. The <CODE>String</CODE>-to-primitive conversionsmay throw a runtime exception if theprimitive's <CODE>valueOf</CODE> method does not accept the<CODE>String</CODE> as a valid representation of the primitive.<P>The order of property values is not defined. To iterate through amessage's property values, use <CODE>getPropertyNames</CODE> to retrievea property name enumeration and then use the various property get methodsto retrieve their values.<P>A message's properties are deleted by the <CODE>clearProperties</CODE>method. This leaves the message with an empty set of properties.<P>Getting a property value for a name which has not been set returns anull value. Only the <CODE>getStringProperty</CODE> and<CODE>getObjectProperty</CODE> methods can return a null value.Attempting to read a null value as a primitive type must be treated ascalling the primitive's corresponding <CODE>valueOf(String)</CODE>conversion method with a null value.<P>The JMS API reserves the <CODE>JMSX</CODE> property name prefix for JMSdefined properties.The full set of these properties is defined in the Java Message Servicespecification. New JMS defined properties may be added in later versionsof the JMS API.  Support for these properties is optional. The<CODE>String[] ConnectionMetaData.getJMSXPropertyNames</CODE> methodreturns the names of the JMSX properties supported by a connection.<P>JMSX properties may be referenced in message selectors whether or notthey are supported by a connection. If they are not present in amessage, they are treated like any other absent property.<P>JMSX properties defined in the specification as "set by provider onsend" are available to both the producer and the consumers of the message.JMSX properties defined in the specification as "set by provider onreceive" are available only to the consumers.<P><CODE>JMSXGroupID</CODE> and <CODE>JMSXGroupSeq</CODE> are standardproperties that clientsshould use if they want to group messages. All providers must support them.Unless specifically noted, the values and semantics of the JMSX propertiesare undefined.<P>The JMS API reserves the <CODE>JMS_<I>vendor_name</I></CODE> propertyname prefix for provider-specific properties. Each provider defines its ownvalue for <CODE><I>vendor_name</I></CODE>. This is the mechanism a JMSprovider uses to make its special per-message services available to a JMSclient.<P>The purpose of provider-specific properties is to provide specialfeatures needed to integrate JMS clients with provider-native clients in asingle JMS application. They should not be used for messaging between JMSclients.<H4>Provider Implementations of JMS Message Interfaces</H4><P>The JMS API provides a set of message interfaces that define the JMSmessagemodel. It does not provide implementations of these interfaces.<P>Each JMS provider supplies a set of message factories with its<CODE>Session</CODE> object for creating instances of messages. This allowsa provider to use message implementations tailored to its specific needs.<P>A provider must be prepared to accept message implementations that arenot its own. They may not be handled as efficiently as its ownimplementation; however, they must be handled.<P>Note the following exception case when a provider is handling a foreignmessage implementation. If the foreign message implementation contains a<CODE>JMSReplyTo</CODE> header field that is set to a foreign destinationimplementation, the provider is not required to handle or preserve thevalue of this header field.<!-- Message Selectors omitted -->
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="acknowledge"> </a> <h3>acknowledge</h3>
+		<pre>void&nbsp;<b>acknowledge</b>()</pre> 
+	<ul>
+		Acknowledges all consumed messages of the session of this consumedmessage.<P>All consumed JMS messages support the <CODE>acknowledge</CODE>method for use when a client has specified that its JMS session'sconsumed messages are to be explicitly acknowledged.  By invoking<CODE>acknowledge</CODE> on a consumed message, a client acknowledgesall messages consumed by the session that the message was delivered to.<P>Calls to <CODE>acknowledge</CODE> are ignored for both transactedsessions and sessions specified to use implicit acknowledgement modes.<P>A client may individually acknowledge each message as it is consumed,or it may choose to acknowledge messages as an application-defined group(which is done by calling acknowledge on the last received message of the group, thereby acknowledging all messages consumed by the session.)<P>Messages that have been received but not acknowledged may beredelivered.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to acknowledge the                        messages due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalStateException if this method is called on a closed                        session. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="clearBody"> </a> <h3>clearBody</h3>
+		<pre>void&nbsp;<b>clearBody</b>()</pre> 
+	<ul>
+		Clears out the message body. Clearing a message's body does not clearits header values or property entries.<P>If this message body was read-only, calling this method leavesthe message body in the same state as an empty body in a newlycreated message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to clear the message                        body due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="clearProperties"> </a> <h3>clearProperties</h3>
+		<pre>void&nbsp;<b>clearProperties</b>()</pre> 
+	<ul>
+		Clears a message's properties.<P>The message's header fields and body are not cleared.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to clear the message                        properties due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getBooleanProperty"> </a> <h3>getBooleanProperty</h3>
+		<pre>Boolean&nbsp;<b>getBooleanProperty</b>(name)</pre> 
+	<ul>
+		Returns the value of the <CODE>Boolean</CODE> property with thespecified name.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>Boolean</CODE> property 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Boolean</i>&nbsp;</code>the <CODE>Boolean</CODE> property value for the specified name 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                        value due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getByteProperty"> </a> <h3>getByteProperty</h3>
+		<pre>Number&nbsp;<b>getByteProperty</b>(name)</pre> 
+	<ul>
+		Returns <CODE>Number</CODE> representing byte value with the specifiedname.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the byte property 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the <CODE>Number</CODE> representing byte value for the specified name 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                        value due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getDoubleProperty"> </a> <h3>getDoubleProperty</h3>
+		<pre>Number&nbsp;<b>getDoubleProperty</b>(name)</pre> 
+	<ul>
+		Returns <CODE>Number</CODE> representing double value with the specifiedname.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>string</i>&nbsp;name </code> - the name of the double property 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code><CODE>Number</CODE> representing double value with the specifiedname. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                        value due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getFloatProperty"> </a> <h3>getFloatProperty</h3>
+		<pre>Number&nbsp;<b>getFloatProperty</b>(name)</pre> 
+	<ul>
+		Returns the value of the <CODE>float</CODE> property with the specifiedname.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>float</CODE> property 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code><CODE>Number</CODE> representing float value with the specifiedname. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                        value due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getIntProperty"> </a> <h3>getIntProperty</h3>
+		<pre>Number&nbsp;<b>getIntProperty</b>(name)</pre> 
+	<ul>
+		Returns <CODE>Number</CODE> representing int value with the specifiedname.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the int property 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the <CODE>Number</CODE> representing int value with the specifiedname 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                        value due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSCorrelationID"> </a> <h3>getJMSCorrelationID</h3>
+		<pre>String&nbsp;<b>getJMSCorrelationID</b>()</pre> 
+	<ul>
+		Gets the correlation ID for the message.<P>This method is used to return correlation ID values that areeither provider-specific message IDs or application-specific<CODE>String</CODE> values.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>the correlation ID of a message as a <CODE>String</CODE> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the correlation                        ID due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSDeliveryMode"> </a> <h3>getJMSDeliveryMode</h3>
+		<pre>Number&nbsp;<b>getJMSDeliveryMode</b>()</pre> 
+	<ul>
+		Gets the <CODE>DeliveryMode</CODE> value specified for this message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the delivery mode for this message 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the                        delivery mode due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSDestination"> </a> <h3>getJMSDestination</h3>
+		<pre>Destination&nbsp;<b>getJMSDestination</b>()</pre> 
+	<ul>
+		Gets the <CODE>Destination</CODE> object for this message.<P>The <CODE>JMSDestination</CODE> header field contains thedestination to which the message is being sent.<P>When a message is sent, this field is ignored. After completionof the <CODE>send</CODE> or <CODE>publish</CODE> method, the fieldholds the destination specified by the method.<P>When a message is received, its <CODE>JMSDestination</CODE> valuemust be equivalent to the value assigned when it was sent.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Destination</i>&nbsp;</code>the destination of this message 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the destination                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSExpiration"> </a> <h3>getJMSExpiration</h3>
+		<pre>Number&nbsp;<b>getJMSExpiration</b>()</pre> 
+	<ul>
+		Gets the message's expiration value.<P>When a message is sent, the <CODE>JMSExpiration</CODE> header fieldis left unassigned. After completion of the <CODE>send</CODE> or<CODE>publish</CODE> method, it holds the expiration time of themessage. This is the sum of the time-to-live value specified by theclient and the GMT at the time of the <CODE>send</CODE> or<CODE>publish</CODE>.<P>If the time-to-live is specified as zero, <CODE>JMSExpiration</CODE>is set to zero to indicate that the message does not expire.<P>When a message's expiration time is reached, a provider shoulddiscard it. The JMS API does not define any form of notification ofmessage expiration.<P>Clients should not receive messages that have expired; however,the JMS API does not guarantee that this will not happen.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the time the message expires, which is the sum of thetime-to-live value specified by the client and the GMT in millisecondssince midnight January 1, 1970 at the time of the send 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the message                        expiration due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSMessageID"> </a> <h3>getJMSMessageID</h3>
+		<pre>String&nbsp;<b>getJMSMessageID</b>()</pre> 
+	<ul>
+		Gets the message ID.<P>The <CODE>JMSMessageID</CODE> header field contains a value thatuniquely identifies each message sent by a provider.<P>When a message is sent, <CODE>JMSMessageID</CODE> can be ignored.When the <CODE>send</CODE> or <CODE>publish</CODE> method returns, itcontains a provider-assigned value.<P>A <CODE>JMSMessageID</CODE> is a <CODE>String</CODE> value thatshould function as aunique key for identifying messages in a historical repository.The exact scope of uniqueness is provider-defined. It should atleast cover all messages for a specific installation of aprovider, where an installation is some connected set of messagerouters.<P>All <CODE>JMSMessageID</CODE> values must start with the prefix<CODE>'ID:'</CODE>.Uniqueness of message ID values across different providers isnot required.<P>Since message IDs take some effort to create and increase amessage's size, some JMS providers may be able to optimize messageoverhead if they are given a hint that the message ID is not used byan application. By calling the<CODE>MessageProducer.setDisableMessageID</CODE> method, a JMS clientenables this potential optimization for all messages sent by thatmessage producer. If the JMS provider accepts thishint, these messages must have the message ID set to null; if theprovider ignores the hint, the message ID must be set to its normalunique value.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSPriority"> </a> <h3>getJMSPriority</h3>
+		<pre>Number&nbsp;<b>getJMSPriority</b>()</pre> 
+	<ul>
+		Gets the message priority level.<P>The JMS API defines ten levels of priority value, with 0 as thelowestpriority and 9 as the highest. In addition, clients should considerpriorities 0-4 as gradations of normal priority and priorities 5-9as gradations of expedited priority.<P>The JMS API does not require that a provider strictly implementpriorityordering of messages; however, it should do its best to deliverexpedited messages ahead of normal messages.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the default message priority 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the message                        priority due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSRedelivered"> </a> <h3>getJMSRedelivered</h3>
+		<pre>boolean&nbsp;<b>getJMSRedelivered</b>()</pre> 
+	<ul>
+		Gets an indication of whether this message is being redelivered.<P>If a client receives a message with the <CODE>JMSRedelivered</CODE>field set,it is likely, but not guaranteed, that this message was deliveredearlier but that its receipt was not acknowledgedat that time.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>boolean</i>&nbsp;</code>true if this message is being redelivered 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the redelivered                        state due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSReplyTo"> </a> <h3>getJMSReplyTo</h3>
+		<pre>Destination&nbsp;<b>getJMSReplyTo</b>()</pre> 
+	<ul>
+		Gets the <CODE>Destination</CODE> object to which a reply to thismessage should be sent.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Destination</i>&nbsp;</code>Destination to which to send a response to this        message 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the                        <CODE>JMSReplyTo</CODE> destination due to some                        internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSTimestamp"> </a> <h3>getJMSTimestamp</h3>
+		<pre>Number&nbsp;<b>getJMSTimestamp</b>()</pre> 
+	<ul>
+		Gets the message timestamp.<P>The <CODE>JMSTimestamp</CODE> header field contains the time amessage washanded off to a provider to be sent. It is not the time themessage was actually transmitted, because the actual send may occurlater due to transactions or other client-side queueing of messages.<P>When a message is sent, <CODE>JMSTimestamp</CODE> is ignored. Whenthe <CODE>send</CODE> or <CODE>publish</CODE>method returns, it contains a time value somewhere in the intervalbetween the call and the return. The value is in the format of a normalmillis time value.<P>Since timestamps take some effort to create and increase amessage's size, some JMS providers may be able to optimize messageoverhead if they are given a hint that the timestamp is not used by anapplication. By calling the<CODE>MessageProducer.setDisableMessageTimestamp</CODE> method, a JMSclient enables this potential optimization for all messages sent bythat message producer. If the JMS provider accepts thishint, these messages must have the timestamp set to zero; if theprovider ignores the hint, the timestamp must be set to its normalvalue.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the message timestamp 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the timestamp                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getJMSType"> </a> <h3>getJMSType</h3>
+		<pre>String&nbsp;<b>getJMSType</b>()</pre> 
+	<ul>
+		Gets the message type identifier supplied by the client when themessage was sent.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>the message type 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the message                        type due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getLongProperty"> </a> <h3>getLongProperty</h3>
+		<pre>Number&nbsp;<b>getLongProperty</b>(name)</pre> 
+	<ul>
+		Returns <CODE>Number</CODE> representing long value with the specifiedname.<p>NOTE: JavaScript does not support 64 bit long integer natively.The maximum integer value supported by the Number type rangesfrom -9,007,199,254,740,992 (-2^53) to 9,007,199,254,740,992 (2^53).If the value received from the wire is out of range, exception is thrownwhen trying to retrieve using getLongProperty.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the long property 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code><CODE>Number</CODE> representing long value for the specified name 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                        value due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getObjectProperty"> </a> <h3>getObjectProperty</h3>
+		<pre>void&nbsp;&nbsp;<b>getObjectProperty</b>(name)</pre> 
+	<ul>
+		Returns the value of the object property with the specified name.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the Java object property 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+		<ul>
+			<code></code><CODE>Number</CODE>, <CODE>String</CODE>,<CODE>Boolean</CODE> objects.if there is no property by this name, a null valueis returned 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                        value due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getPropertyNames"> </a> <h3>getPropertyNames</h3>
+		<pre>Enumeration&nbsp;<b>getPropertyNames</b>()</pre> 
+	<ul>
+		Returns an <CODE>Enumeration</CODE> of all the property names.<P>Note that JMS standard header fields are not consideredproperties and are not returned in this enumeration.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Enumeration</i>&nbsp;</code>an enumeration of all the names of property values as String. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                         names due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getShortProperty"> </a> <h3>getShortProperty</h3>
+		<pre>Number&nbsp;<b>getShortProperty</b>(name)</pre> 
+	<ul>
+		Returns <CODE>Number</CODE> representing short value with the specifiedname.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the short property 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code><CODE>Number</CODE> representing short value with the specifiedname 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                        value due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getStringProperty"> </a> <h3>getStringProperty</h3>
+		<pre>String&nbsp;<b>getStringProperty</b>(name)</pre> 
+	<ul>
+		Returns the value of the <CODE>String</CODE> property with the specifiedname.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;name </code> - the name of the <CODE>String</CODE> property 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>the <CODE>String</CODE> property value for the specified name;if there is no property by this name, a null value is returned 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the property                        value due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="propertyExists"> </a> <h3>propertyExists</h3>
+		<pre>boolean&nbsp;<b>propertyExists</b>(name)</pre> 
+	<ul>
+		Indicates whether a property value exists.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;name </code> - the name of the property to test 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>boolean</i>&nbsp;</code>true if the property exists 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to determine if the                        property exists due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setBooleanProperty"> </a> <h3>setBooleanProperty</h3>
+		<pre>void&nbsp;<b>setBooleanProperty</b>(name, value)</pre> 
+	<ul>
+		Sets a <CODE>Boolean</CODE> property value with the specified name intothe message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>Boolean</CODE> property 
+		</ul>
+		<ul>
+			<code>value </code> - the <CODE>Boolean</CODE> property value to set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the property                         due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                         an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if properties are read-only 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setByteProperty"> </a> <h3>setByteProperty</h3>
+		<pre>void&nbsp;<b>setByteProperty</b>(name, value)</pre> 
+	<ul>
+		Sets a <CODE>Number</CODE> representing byte value with the specified name intothe message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the byte property 
+		</ul>
+		<ul>
+			<code>value </code> - the byte property value to set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the property                         due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                         an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if properties are read-only 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setDoubleProperty"> </a> <h3>setDoubleProperty</h3>
+		<pre>void&nbsp;<b>setDoubleProperty</b>(name, value)</pre> 
+	<ul>
+		Sets a <CODE>Number</CODE> representing double value with the specified name intothe message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the double property 
+		</ul>
+		<ul>
+			<code>value </code> - the double property value to set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the property                         due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                         an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if properties are read-only 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setFloatProperty"> </a> <h3>setFloatProperty</h3>
+		<pre>void&nbsp;<b>setFloatProperty</b>(name, value)</pre> 
+	<ul>
+		Sets a <CODE>Number</CODE> representing float value with the specified name intothe message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the float property 
+		</ul>
+		<ul>
+			<code>value </code> - the float property value to set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the property                         due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                         an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if properties are read-only 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setIntProperty"> </a> <h3>setIntProperty</h3>
+		<pre>void&nbsp;<b>setIntProperty</b>(name, value)</pre> 
+	<ul>
+		Sets a <CODE>Number</CODE> representing int value with the specified name intothe message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the int property 
+		</ul>
+		<ul>
+			<code>value </code> - the int property value to set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the property                         due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                         an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if properties are read-only 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSCorrelationID"> </a> <h3>setJMSCorrelationID</h3>
+		<pre>void&nbsp;<b>setJMSCorrelationID</b>(correlationID)</pre> 
+	<ul>
+		Sets the correlation ID for the message.<P>A client can use the <CODE>JMSCorrelationID</CODE> header field tolink one message with another. A typical use is to link a responsemessage with its request message.<P><CODE>JMSCorrelationID</CODE> can hold one of the following:   <UL>     <LI>A provider-specific message ID     <LI>An application-specific <CODE>String</CODE>     <LI>A provider-native <CODE>byte[]</CODE> value   </UL><P>Since each message sent by a JMS provider is assigned a message IDvalue, it is convenient to link messages via message ID. All message IDvalues must start with the <CODE>'ID:'</CODE> prefix.<P>In some cases, an application (made up of several clients) needs touse an application-specific value for linking messages. For instance,an application may use <CODE>JMSCorrelationID</CODE> to hold a valuereferencing some external information. Application-specified valuesmust not start with the <CODE>'ID:'</CODE> prefix; this is reserved forprovider-generated message ID values.<P>If a provider supports the native concept of correlation ID, a JMSclient may need to assign specific <CODE>JMSCorrelationID</CODE> valuesto match those expected by clients that do not use the JMS API. A<CODE>byte[]</CODE> value is used for thispurpose. JMS providers without native correlation ID values are notrequired to support <CODE>byte[]</CODE> values. The use of a<CODE>byte[]</CODE> value for <CODE>JMSCorrelationID</CODE> isnon-portable.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;correlationID </code> - the message ID of a message being referred to 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the correlation                        ID due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSDeliveryMode"> </a> <h3>setJMSDeliveryMode</h3>
+		<pre>void&nbsp;<b>setJMSDeliveryMode</b>(deliveryMode)</pre> 
+	<ul>
+		Sets the <CODE>DeliveryMode</CODE> value for this message.<P>JMS providers set this field when a message is sent. This methodcan be used to change the value for a message that has been received.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;deliveryMode </code> - the delivery mode for this message 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the                        delivery mode due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSDestination"> </a> <h3>setJMSDestination</h3>
+		<pre>void&nbsp;<b>setJMSDestination</b>(destination)</pre> 
+	<ul>
+		Sets the <CODE>Destination</CODE> object for this message.<P>JMS providers set this field when a message is sent. This methodcan be used to change the value for a message that has been received.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Destination</i>&nbsp;destination </code> - the destination for this message 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the destination                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSExpiration"> </a> <h3>setJMSExpiration</h3>
+		<pre>void&nbsp;<b>setJMSExpiration</b>(expiration)</pre> 
+	<ul>
+		Sets the message's expiration value.<P>JMS providers set this field when a message is sent. This methodcan be used to change the value for a message that has been received.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;expiration </code> - the message's expiration time 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the message                        expiration due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSMessageID"> </a> <h3>setJMSMessageID</h3>
+		<pre>void&nbsp;<b>setJMSMessageID</b>(id)</pre> 
+	<ul>
+		Sets the message ID.<P>JMS providers set this field when a message is sent. This methodcan be used to change the value for a message that has been received.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;id </code> - the ID of the message 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the message ID                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSPriority"> </a> <h3>setJMSPriority</h3>
+		<pre>void&nbsp;<b>setJMSPriority</b>(priority)</pre> 
+	<ul>
+		Sets the priority level for this message.<P>JMS providers set this field when a message is sent. This methodcan be used to change the value for a message that has been received.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;priority </code> - the priority of this message 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the message                        priority due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSRedelivered"> </a> <h3>setJMSRedelivered</h3>
+		<pre>void&nbsp;<b>setJMSRedelivered</b>(redelivered)</pre> 
+	<ul>
+		Specifies whether this message is being redelivered.<P>This field is set at the time the message is delivered. Thismethod can be used to change the value for a message that hasbeen received.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>boolean</i>&nbsp;redelivered </code> - an indication of whether this message is being redelivered. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the redelivered                        state due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSReplyTo"> </a> <h3>setJMSReplyTo</h3>
+		<pre>void&nbsp;<b>setJMSReplyTo</b>(replyTo)</pre> 
+	<ul>
+		Sets the <CODE>Destination</CODE> object to which a reply to thismessage should be sent.<P>The <CODE>JMSReplyTo</CODE> header field contains the destinationwhere a replyto the current message should be sent. If it is null, no reply isexpected. The destination may be either a <CODE>Queue</CODE> object ora <CODE>Topic</CODE> object.<P>Messages sent with a null <CODE>JMSReplyTo</CODE> value may be anotification of some event, or they may just be some data the senderthinks is of interest.<P>Messages with a <CODE>JMSReplyTo</CODE> value typically expect aresponse. A response is optional; it is up to the client to decide.These messages are called requests. A message sent in response to arequest is called a reply.<P>In some cases a client may wish to match a request it sent earlierwith a reply it has just received. The client can use the<CODE>JMSCorrelationID</CODE> header field for this purpose.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Destination</i>&nbsp;replyTo </code> - Destination to which to send a response to               this message 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the                        <CODE>JMSReplyTo</CODE> destination due to some                        internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSTimestamp"> </a> <h3>setJMSTimestamp</h3>
+		<pre>void&nbsp;<b>setJMSTimestamp</b>(timestamp)</pre> 
+	<ul>
+		Sets the message timestamp.<P>JMS providers set this field when a message is sent. This methodcan be used to change the value for a message that has been received.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;timestamp </code> - the timestamp for this message 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the timestamp                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setJMSType"> </a> <h3>setJMSType</h3>
+		<pre>void&nbsp;<b>setJMSType</b>(type)</pre> 
+	<ul>
+		Sets the message type.<P>Some JMS providers use a message repository that contains thedefinitions of messages sent by applications. The <CODE>JMSType</CODE>header field may reference a message's definition in the provider'srepository.<P>The JMS API does not define a standard message definition repository,nor does it define a naming policy for the definitions it contains.<P>Some messaging systems require that a message type definition foreach application message be created and that each message specify itstype. In order to work with such JMS providers, JMS clients shouldassign a value to <CODE>JMSType</CODE>, whether the application makesuse of it or not. This ensures that the field is properly set for thoseproviders that require it.<P>To ensure portability, JMS clients should use symbolic values for<CODE>JMSType</CODE> that can be configured at installation time to thevalues defined in the current provider's message repository. If stringliterals are used, they may not be valid type names for some JMSproviders.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;type </code> - the message type 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the message                        type due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setLongProperty"> </a> <h3>setLongProperty</h3>
+		<pre>void&nbsp;<b>setLongProperty</b>(name, value)</pre> 
+	<ul>
+		Sets a <CODE>Number</CODE> representing long value for a property.<p>NOTE: Javascript does not support 64 bit long integer natively.The maximum integer value supported by the Number type rangesfrom -9,007,199,254,740,992 (-2^53) to 9,007,199,254,740,992 (2^53).
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>long</CODE> property 
+		</ul>
+		<ul>
+			<code>value </code> - the <CODE>long</CODE> property value to set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the property                         due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                         an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if properties are read-only 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setObjectProperty"> </a> <h3>setObjectProperty</h3>
+		<pre>void&nbsp;<b>setObjectProperty</b>(name, value)</pre> 
+	<ul>
+		Sets a object property value with the specified name into themessage.<P>Note that this method works only for the objectified primitiveobject types supported in JavaScript <CODE>Number</CODE>, <CODE>String</CODE>,<CODE>Boolean</CODE> objects. If Number is specified in setObjectProperty as value,it will be internally marked as double type while sending in the wire.JavaScript represents number as using IEEE-754 double-precision (64 bit) format.It is recommended to use the type specific message property setter.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the object property 
+		</ul>
+		<ul>
+			<code>value </code> - the object property value to set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the property                         due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                         an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if the object is invalid 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if properties are read-only 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setShortProperty"> </a> <h3>setShortProperty</h3>
+		<pre>void&nbsp;<b>setShortProperty</b>(name, value)</pre> 
+	<ul>
+		Sets a <CODE>Number</CODE> representing short value with the specified name intothe message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the short property 
+		</ul>
+		<ul>
+			<code>value </code> - the short property value to set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the property                         due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                         an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if properties are read-only 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setStringProperty"> </a> <h3>setStringProperty</h3>
+		<pre>void&nbsp;<b>setStringProperty</b>(name, value)</pre> 
+	<ul>
+		Sets a <CODE>String</CODE> property value with the specified name intothe message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;name </code> - the name of the <CODE>String</CODE> property 
+		</ul>
+		<ul>
+			<code><i>String</i>&nbsp;value </code> - the <CODE>String</CODE> property value to set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the property                         due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                         an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if properties are read-only 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

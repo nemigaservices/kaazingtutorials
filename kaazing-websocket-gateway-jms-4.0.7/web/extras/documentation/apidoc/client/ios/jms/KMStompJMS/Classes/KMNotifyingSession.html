@@ -1,0 +1,611 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMNotifyingSession Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMNotifyingSession Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/createDurableNotification:durableName:messageSelector:noLocal:notificationPayload:">&nbsp;&nbsp;&nbsp;&nbsp;- createDurableNotification:durableName:messageSelector:noLocal:notificationPayload:</option>
+	
+	<option value="//api/name/createDurableNotification:durableName:notificationPayload:">&nbsp;&nbsp;&nbsp;&nbsp;- createDurableNotification:durableName:notificationPayload:</option>
+	
+	<option value="//api/name/createNotification:messageSelector:noLocal:notificationPayload:">&nbsp;&nbsp;&nbsp;&nbsp;- createNotification:messageSelector:noLocal:notificationPayload:</option>
+	
+	<option value="//api/name/createNotification:notificationPayload:">&nbsp;&nbsp;&nbsp;&nbsp;- createNotification:notificationPayload:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createDurableNotification:durableName:messageSelector:noLocal:notificationPayload:">createDurableNotification:durableName:messageSelector:noLocal:notificationPayload:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createDurableNotification:durableName:notificationPayload:">createDurableNotification:durableName:notificationPayload:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createNotification:messageSelector:noLocal:notificationPayload:">createNotification:messageSelector:noLocal:notificationPayload:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createNotification:notificationPayload:">createNotification:notificationPayload:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMNotifyingSession Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMNotifyingSession Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KMSession.html">KMSession</a> : <a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMNotifyingSession.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>KMNotifyingSession class is used to create notifying subscribers
+to facilitate receiving remote notifications from Apple Push
+Notification Service(APNS). Currently, only durable notifying
+subscribers are supported.</p>
+
+<p>Application developers should use KMSessionNotifyAcknowledge
+mode with KMSession&rsquo;s createSession:transacted API to create
+an instance of this class. Even though this is a sub-class of
+<a href="../Classes/KMSession.html">KMSession</a>, it&rsquo;s only meant to  be used to create notifying
+subscribers. For other operations such as creating a topic,
+creating a queue, performing transactions, etc., application
+developers should use a <a href="../Classes/KMSession.html">KMSession</a> instance that is created
+created using other acknowledge-modes such as
+KMSessionAutoAcknowledge, KMSessionClientAcknowledge, and
+KMSessionDupsOKAcknowledge. Trying to perform other operations
+using KMNotifyingSession will result in
+UnsupportedOperationException.</p>
+
+<p>Similarly, the <a href="../Classes/KMTopicSubscriber.html">KMTopicSubscriber</a> returned by the methods
+defined on KMNotifyingSession is specifically meant for
+receiving remote notififcations from APNS when the app has
+disconnected and running in the background. <a href="../Classes/KMTopicSubscriber.html">KMTopicSubscriber</a>
+cannot be used to receive messages like regular
+<a href="../Classes/KMTopicSubscriber.html">KMTopicSubscriber</a>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createNotification:notificationPayload:">&ndash;&nbsp;createNotification:notificationPayload:</a></code>
+		<span class="tooltip"><p>Creates a notifying topic subscriber with message selector.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createNotification:messageSelector:noLocal:notificationPayload:">&ndash;&nbsp;createNotification:messageSelector:noLocal:notificationPayload:</a></code>
+		<span class="tooltip"><p>Creates a notifying topic subscriber with message selector.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createDurableNotification:durableName:notificationPayload:">&ndash;&nbsp;createDurableNotification:durableName:notificationPayload:</a></code>
+		<span class="tooltip"><p>Creates a notifying durable topic subscriber. When the app is
+disconnected and running in the background, APNS will deliver
+remote notification based on the specified payload.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createDurableNotification:durableName:messageSelector:noLocal:notificationPayload:">&ndash;&nbsp;createDurableNotification:durableName:messageSelector:noLocal:notificationPayload:</a></code>
+		<span class="tooltip"><p>Creates a notifying durable topic subscriber with message selector.
+When the app is disconnected and running in the background, APNS will
+deliver remote notification based on the specified payload.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/createDurableNotification:durableName:messageSelector:noLocal:notificationPayload:" title="createDurableNotification:durableName:messageSelector:noLocal:notificationPayload:"></a>
+	<h3 class="subsubtitle method-title">createDurableNotification:durableName:messageSelector:noLocal:notificationPayload:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a notifying durable topic subscriber with message selector.
+When the app is disconnected and running in the background, APNS will
+deliver remote notification based on the specified payload.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createDurableNotification:(KMTopic *)<em>topic</em> durableName:(NSString *)<em>name</em> messageSelector:(NSString *)<em>messageSelector</em> noLocal:(BOOL)<em>noLocal</em> notificationPayload:(KGNotificationPayload *)<em>payload</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>the non-temporary <a href="../Classes/KMTopic.html">KMTopic</a> to subscribe to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name used to identify this subscription</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered.
+A value of null or an empty string indicates
+that there is no message selector for the message
+consumer</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>noLocal</em></dt>
+			<dd><p>if set, inhibits the delivery of messages
+published by its own connection</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>payload</em></dt>
+			<dd><p>APNS paylad for rendering the notification on
+the device</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><a href="../Classes/KMTopicSubscriber.html">KMTopicSubscriber</a> repesenting the durable notifying subscriber</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMNotifyingSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createDurableNotification:durableName:notificationPayload:" title="createDurableNotification:durableName:notificationPayload:"></a>
+	<h3 class="subsubtitle method-title">createDurableNotification:durableName:notificationPayload:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a notifying durable topic subscriber. When the app is
+disconnected and running in the background, APNS will deliver
+remote notification based on the specified payload.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createDurableNotification:(KMTopic *)<em>topic</em> durableName:(NSString *)<em>name</em> notificationPayload:(KGNotificationPayload *)<em>payload</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>the non-temporary <a href="../Classes/KMTopic.html">KMTopic</a> to subscribe to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name used to identify this subscription</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>payload</em></dt>
+			<dd><p>APNS paylad for rendering the notification on
+the device</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><a href="../Classes/KMTopicSubscriber.html">KMTopicSubscriber</a> repesenting the durable notifying subscriber</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMNotifyingSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createNotification:messageSelector:noLocal:notificationPayload:" title="createNotification:messageSelector:noLocal:notificationPayload:"></a>
+	<h3 class="subsubtitle method-title">createNotification:messageSelector:noLocal:notificationPayload:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a notifying topic subscriber with message selector.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createNotification:(KMDestination *)<em>destination</em> messageSelector:(NSString *)<em>messageSelector</em> noLocal:(BOOL)<em>noLocal</em> notificationPayload:(KGNotificationPayload *)<em>payload</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the <a href="../Classes/KMDestination.html">KMDestination</a> to access</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered.
+A value of null or an empty string indicates
+that there is no message selector for the message
+consumer</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>noLocal</em></dt>
+			<dd><p>if set, inhibits the delivery of messages
+published by its own connection</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>payload</em></dt>
+			<dd><p>APNS paylad for rendering the notification on
+the device</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><a href="../Classes/KMTopicSubscriber.html">KMTopicSubscriber</a> repesenting the notifying subscriber</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> Currently, this is not supported.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMNotifyingSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createNotification:notificationPayload:" title="createNotification:notificationPayload:"></a>
+	<h3 class="subsubtitle method-title">createNotification:notificationPayload:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a notifying topic subscriber with message selector.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createNotification:(KMDestination *)<em>destination</em> notificationPayload:(KGNotificationPayload *)<em>payload</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the <a href="../Classes/KMDestination.html">KMDestination</a> to access</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>payload</em></dt>
+			<dd><p>APNS paylad for rendering the notification on
+the device</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><a href="../Classes/KMTopicSubscriber.html">KMTopicSubscriber</a> repesenting the notifying subscriber</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> Currently, this is not supported.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMNotifyingSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMQueueRequestor Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMQueueRequestor Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/close">&nbsp;&nbsp;&nbsp;&nbsp;- close</option>
+	
+	<option value="//api/name/initWithSession:queue:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSession:queue:</option>
+	
+	<option value="//api/name/queue">&nbsp;&nbsp;&nbsp;&nbsp;- queue</option>
+	
+	<option value="//api/name/receiver">&nbsp;&nbsp;&nbsp;&nbsp;- receiver</option>
+	
+	<option value="//api/name/request:">&nbsp;&nbsp;&nbsp;&nbsp;- request:</option>
+	
+	<option value="//api/name/sender">&nbsp;&nbsp;&nbsp;&nbsp;- sender</option>
+	
+	<option value="//api/name/session">&nbsp;&nbsp;&nbsp;&nbsp;- session</option>
+	
+	<option value="//api/name/tempQueue">&nbsp;&nbsp;&nbsp;&nbsp;- tempQueue</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/close">close</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSession:queue:">initWithSession:queue:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/queue">queue</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/receiver">receiver</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/request:">request:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sender">sender</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session">session</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tempQueue">tempQueue</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMQueueRequestor Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMQueueRequestor Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMQueueRequestor.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The QueueRequestor helper class simplifies
+making service requests.</p>
+
+<p><em><em>KMQueueRequestor is a JMS 1.0 API. <a href="../Classes/KMMessageConsumer.html">KMMessageConsumer</a> or <a href="../Classes/KMTopicSubscriber.html">KMTopicSubscriber</a> should be used instead.</em></em></p>
+
+<p>The QueueRequestor constructor is given a non-transacted
+<a href="../Classes/KMQueueSession.html">KMQueueSession</a> and a destination <a href="../Classes/KMQueue.html">KMQueue</a>. It creates a
+<a href="../Classes/KMTemporaryQueue.html">KMTemporaryQueue</a> for the responses and provides a
+request method that sends the request message and waits
+for its reply.</p>
+
+<p>This is a basic request/reply abstraction that should be sufficient
+for most uses. JMS providers and clients are free to create more
+sophisticated versions.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session">&ndash;&nbsp;session</a></code>
+		<span class="tooltip"><p>Associated Session</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/queue">&ndash;&nbsp;queue</a></code>
+		<span class="tooltip"><p>Associated Queue</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tempQueue">&ndash;&nbsp;tempQueue</a></code>
+		<span class="tooltip"><p>Associated Temporary Queue</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sender">&ndash;&nbsp;sender</a></code>
+		<span class="tooltip"><p>Associated sender</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/receiver">&ndash;&nbsp;receiver</a></code>
+		<span class="tooltip"><p>Associated receiver</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithSession:queue:">&ndash;&nbsp;initWithSession:queue:</a></code>
+		<span class="tooltip"><p>Init using a <a href="#//api/name/session">session</a> and <a href="#//api/name/queue">queue</a>.  This implementation assumes the <a href="#//api/name/session">session</a>
+parameter to be non-transacted,with a delivery mode of either AUTO_ACKNOWLEDGE or
+DUPS_OK_ACKNOWLEDGE.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/request:">&ndash;&nbsp;request:</a></code>
+		<span class="tooltip"><p>Sends a request and waits for a reply. The temporary <a href="#//api/name/queue">queue</a> is used for
+the JMSReplyTo destination, and only one reply per request
+is expected.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/close">&ndash;&nbsp;close</a></code>
+		<span class="tooltip"><p>Closes the QueueRequestor and its <a href="#//api/name/session">session</a>.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/close" title="close"></a>
+	<h3 class="subsubtitle method-title">close</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Closes the QueueRequestor and its <a href="#//api/name/session">session</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)close</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Since a provider may allocate some resources on behalf of a
+QueueRequestor, clients
+should close them when they
+are not needed. Relying on garbage collection to eventually reclaim
+these resources may not be timely enough.</p>
+
+<p>Note that this method closes the <a href="../Classes/KMQueueSession.html">KMQueueSession</a> object
+passed to the QueueRequestor constructor.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to close the
+QueueRequestor due to some internal
+error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMQueueRequestor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithSession:queue:" title="initWithSession:queue:"></a>
+	<h3 class="subsubtitle method-title">initWithSession:queue:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Init using a <a href="#//api/name/session">session</a> and <a href="#//api/name/queue">queue</a>.  This implementation assumes the <a href="#//api/name/session">session</a>
+parameter to be non-transacted,with a delivery mode of either AUTO_ACKNOWLEDGE or
+DUPS_OK_ACKNOWLEDGE.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMQueueRequestor *)initWithSession:(KMQueueSession *)<em>session</em> queue:(KMQueue *)<em>queue</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>session</em></dt>
+			<dd><p>the <a href="../Classes/KMQueueSession.html">KMQueueSession</a> the <a href="#//api/name/queue">queue</a> belongs to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>queue</em></dt>
+			<dd><p>the <a href="#//api/name/queue">queue</a> to perform the request/reply call on</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to create the
+QueueRequestor due to some internal
+error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid <a href="#//api/name/queue">queue</a> is specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMQueueRequestor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/queue" title="queue"></a>
+	<h3 class="subsubtitle method-title">queue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Associated Queue</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMQueue *)queue</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMQueueRequestor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/receiver" title="receiver"></a>
+	<h3 class="subsubtitle method-title">receiver</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Associated receiver</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMQueueReceiver *)receiver</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMQueueRequestor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/request:" title="request:"></a>
+	<h3 class="subsubtitle method-title">request:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sends a request and waits for a reply. The temporary <a href="#//api/name/queue">queue</a> is used for
+the JMSReplyTo destination, and only one reply per request
+is expected.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMessage *)request:(KMMessage *)<em>message</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>the message to send</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the reply message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to complete the
+request due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMQueueRequestor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sender" title="sender"></a>
+	<h3 class="subsubtitle method-title">sender</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Associated sender</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMQueueSender *)sender</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMQueueRequestor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session" title="session"></a>
+	<h3 class="subsubtitle method-title">session</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Associated Session</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMQueueSession *)session</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMQueueRequestor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tempQueue" title="tempQueue"></a>
+	<h3 class="subsubtitle method-title">tempQueue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Associated Temporary Queue</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTemporaryQueue *)tempQueue</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMQueueRequestor.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

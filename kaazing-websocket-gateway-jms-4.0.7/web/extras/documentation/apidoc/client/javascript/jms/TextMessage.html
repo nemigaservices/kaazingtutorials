@@ -1,0 +1,536 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: TextMessage</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class TextMessage</h2>
+
+
+	Extends <a href="Message.html">Message</a>.<br/>
+
+
+<p>
+A <CODE>TextMessage</CODE> object is used to send a message containing a<CODE>java.lang.String</CODE>.It inherits from the <CODE>Message</CODE> interface and adds a text messagebody.<P>This message type can be used to transport text-based messages, including those with XML content.<P>When a client receives a <CODE>TextMessage</CODE>, it is in read-onlymode. If a client attempts to write to the message at this point, a<CODE>MessageNotWriteableException</CODE> is thrown. If<CODE>clearBody</CODE> iscalled, the message can now be both read from and written to.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#TextMessage">TextMessage</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+A <CODE>TextMessage</CODE> object is used to send a message containing a<CODE>java.lang.String</CODE>.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getText">getText</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the string containing this message's data.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setText">setText</a></b>(val) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the string containing this message's data.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+		
+		<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+			<td>
+				<b>Methods inherited from class <a href="Message.html">Message</a></b>
+			</td>
+		</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSMessageID">getJMSMessageID</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSMessageID">setJMSMessageID</a>(id)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSTimestamp">getJMSTimestamp</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSTimestamp">setJMSTimestamp</a>(timestamp)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSCorrelationID">setJMSCorrelationID</a>(correlationID)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSCorrelationID">getJMSCorrelationID</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSReplyTo">getJMSReplyTo</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSReplyTo">setJMSReplyTo</a>(replyTo)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSDestination">getJMSDestination</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSDestination">setJMSDestination</a>(destination)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSDeliveryMode">getJMSDeliveryMode</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSDeliveryMode">setJMSDeliveryMode</a>(deliveryMode)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSRedelivered">getJMSRedelivered</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSRedelivered">setJMSRedelivered</a>(redelivered)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSType">getJMSType</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSType">setJMSType</a>(type)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSExpiration">getJMSExpiration</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSExpiration">setJMSExpiration</a>(expiration)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSPriority">getJMSPriority</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSPriority">setJMSPriority</a>(priority)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#clearProperties">clearProperties</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#propertyExists">propertyExists</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getBooleanProperty">getBooleanProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getByteProperty">getByteProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getShortProperty">getShortProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getIntProperty">getIntProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getLongProperty">getLongProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getFloatProperty">getFloatProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getDoubleProperty">getDoubleProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getStringProperty">getStringProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getObjectProperty">getObjectProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setBooleanProperty">setBooleanProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setByteProperty">setByteProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setShortProperty">setShortProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setIntProperty">setIntProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setLongProperty">setLongProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setFloatProperty">setFloatProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setDoubleProperty">setDoubleProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setStringProperty">setStringProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setObjectProperty">setObjectProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getPropertyNames">getPropertyNames</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#acknowledge">acknowledge</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#clearBody">clearBody</a>()
+				</td>
+			</tr>
+		
+		
+	</table>
+	<br/>
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="TextMessage"> </a>
+<h3>TextMessage</h3>
+
+	<pre><b>TextMessage</b>()</pre>
+	<ul>
+	   
+A <CODE>TextMessage</CODE> object is used to send a message containing a<CODE>java.lang.String</CODE>.It inherits from the <CODE>Message</CODE> interface and adds a text messagebody.<P>This message type can be used to transport text-based messages, including those with XML content.<P>When a client receives a <CODE>TextMessage</CODE>, it is in read-onlymode. If a client attempts to write to the message at this point, a<CODE>MessageNotWriteableException</CODE> is thrown. If<CODE>clearBody</CODE> iscalled, the message can now be both read from and written to.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="getText"> </a> <h3>getText</h3>
+		<pre>String&nbsp;<b>getText</b>()</pre> 
+	<ul>
+		Gets the string containing this message's data.  The defaultvalue is null.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>the <CODE>String</CODE> containing the message's data 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the text due to                        some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setText"> </a> <h3>setText</h3>
+		<pre>void&nbsp;<b>setText</b>(val)</pre> 
+	<ul>
+		Sets the string containing this message's data.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;val </code> - the <CODE>String</CODE> containing the message's data 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the text due to                        some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

@@ -1,0 +1,554 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: WebSocketFactory</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class WebSocketFactory</h2>
+
+
+
+<p>
+WebSocketFactory is used to create instances of WebSocket by specifying 
+         the end-point and the enabled protocols.
+         <p>
+         Using WebSocketFactory instance, application developers can set the ChallengeHandler
+         or enabled extensions that will be inherited by all the WebSocket instances created 
+         from the factory. Once the WebSocket is connected, extensions that were successfully
+         negotiated with the server can be determined using <code>WebSocket.extensions</code>
+         property.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#WebSocketFactory">WebSocketFactory</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  Creates a new WebSocketFactory instance.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;WebSocket
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createWebSocket">createWebSocket</a></b>(location, protocols) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a WebSocket to establish a full-duplex connection to the 
+          target location.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ChallengeHandler
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getChallengeHandler">getChallengeHandler</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the default ChallengeHandler that is used during
+          authentication both at the connect-time as well as at subsequent 
+          revalidation-time that occurs at regular intervals.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;int
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getDefaultConnectTimeout">getDefaultConnectTimeout</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the default connect timeout in milliseconds.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;HttpRedirectPolicy
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getDefaultRedirectPolicy">getDefaultRedirectPolicy</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the default HTTP redirect policy used in a clustered environment.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;WebSocketExtension
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getExtension">getExtension</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the specified extension from the list of registered extensions.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setChallengeHandler">setChallengeHandler</a></b>(challengeHandler) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the default ChallengeHandler that is used during
+          authentication both at the connect-time as well as at subsequent 
+          revalidation-time that occurs at regular intervals.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setDefaultConnectTimeout">setDefaultConnectTimeout</a></b>(connectTimeout) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the default connect timeout in milliseconds.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setDefaultRedirectPolicy">setDefaultRedirectPolicy</a></b>(redirectPolicy) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the default HTTP redirect policy used in a clustered environment.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setExtension">setExtension</a></b>(extension) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Registers the specified extension.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="WebSocketFactory"> </a>
+<h3>WebSocketFactory</h3>
+
+	<pre><b>WebSocketFactory</b>()</pre>
+	<ul>
+	   Creates a new WebSocketFactory instance.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="createWebSocket"> </a> <h3>createWebSocket</h3>
+		<pre>WebSocket&nbsp;<b>createWebSocket</b>(location, protocols)</pre> 
+	<ul>
+		Creates a WebSocket to establish a full-duplex connection to the 
+          target location.
+          <p>
+          The extensions that were registered with the WebSocketFactory instance 
+          prior to this call are inherited by the newly created WebSocket instance.
+          <p>
+          If the port is blocked by the browser or if a secure connection is
+          attempted from a non-secure origin, this function will throw a
+          <code>SecurityException</code>.
+          <p>
+          If any protocol value is invalid or if a protocol appears in the Array
+          more than once, this function will throw a <code>SyntaxError</code>.
+          <p>
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>location </code> - {string} URL of the WebSocket service for the connection 
+		</ul>
+		<ul>
+			<code>protocols </code> - {string[]} protocols for the connection 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>WebSocket</i>&nbsp;</code>the WebSocket 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getChallengeHandler"> </a> <h3>getChallengeHandler</h3>
+		<pre>ChallengeHandler&nbsp;<b>getChallengeHandler</b>()</pre> 
+	<ul>
+		Gets the default ChallengeHandler that is used during
+          authentication both at the connect-time as well as at subsequent 
+          revalidation-time that occurs at regular intervals.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ChallengeHandler</i>&nbsp;</code>the default ChallengeHandler 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getDefaultConnectTimeout"> </a> <h3>getDefaultConnectTimeout</h3>
+		<pre>int&nbsp;<b>getDefaultConnectTimeout</b>()</pre> 
+	<ul>
+		Gets the default connect timeout in milliseconds. Default value of the
+          default connect timeout is zero -- which means no timeout.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>int</i>&nbsp;</code>default connect timeout 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getDefaultRedirectPolicy"> </a> <h3>getDefaultRedirectPolicy</h3>
+		<pre>HttpRedirectPolicy&nbsp;<b>getDefaultRedirectPolicy</b>()</pre> 
+	<ul>
+		Gets the default HTTP redirect policy used in a clustered environment.
+         Default redirect policy is HttpRedirectPolicy.ALWAYS.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>HttpRedirectPolicy</i>&nbsp;</code>default HTTP redirect policy 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getExtension"> </a> <h3>getExtension</h3>
+		<pre>WebSocketExtension&nbsp;<b>getExtension</b>(name)</pre> 
+	<ul>
+		Gets the specified extension from the list of registered extensions. A null is
+          returned if no extension with the specified name has been registered for this factory.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - {String} extension name 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>WebSocketExtension</i>&nbsp;</code>the registered extension with the specified name 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setChallengeHandler"> </a> <h3>setChallengeHandler</h3>
+		<pre>void&nbsp;<b>setChallengeHandler</b>(challengeHandler)</pre> 
+	<ul>
+		Sets the default ChallengeHandler that is used during
+          authentication both at the connect-time as well as at subsequent 
+          revalidation-time that occurs at regular intervals. All the 
+          WebSockets created using this factory will inherit the default
+          ChallengeHandler.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>challengeHandler </code> - {ChallengeHandler}  the default ChallengeHandler 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setDefaultConnectTimeout"> </a> <h3>setDefaultConnectTimeout</h3>
+		<pre>void&nbsp;<b>setDefaultConnectTimeout</b>(connectTimeout)</pre> 
+	<ul>
+		Sets the default connect timeout in milliseconds. The specified
+         timeout is inherited by all the WebSocket instances that are created
+         using this WebSocketFactory instance. The timeout will expire if there is
+         no exchange of packets(for example, 100% packet loss) while establishing
+         the connection. A timeout value of zero indicates no timeout.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>connectTimeout </code> - {int}   default connection timeout 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setDefaultRedirectPolicy"> </a> <h3>setDefaultRedirectPolicy</h3>
+		<pre>void&nbsp;<b>setDefaultRedirectPolicy</b>(redirectPolicy)</pre> 
+	<ul>
+		Sets the default HTTP redirect policy used in a clustered environment.
+          The specified policy is inherited by all the WebSocket instances that
+          are created using this WebSocketFactory instance.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>redirectPolicy </code> - {HttpRedirectPolicy}   default HTTP redirect policy 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setExtension"> </a> <h3>setExtension</h3>
+		<pre>void&nbsp;<b>setExtension</b>(extension)</pre> 
+	<ul>
+		Registers the specified extension. All the registered extensions are inherited by 
+          the WebSocket instances created using this factory. The extensions will be
+          negotiated between the client and the server during the WebSocket handshake.
+          The negotiated extensions can be obtained directly from the WebSocket
+          instance using <code>WebSocket.extensions</code> property after the connection has 
+          been established. 
+          <p>
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>extension </code> - {WebSocketExtension} extension to be inherited by all the WebSockets 
+                                                 created using this factory 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

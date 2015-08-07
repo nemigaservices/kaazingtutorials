@@ -1,0 +1,2272 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMStreamMessage Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMStreamMessage Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/readBoolean">&nbsp;&nbsp;&nbsp;&nbsp;- readBoolean</option>
+	
+	<option value="//api/name/readByte">&nbsp;&nbsp;&nbsp;&nbsp;- readByte</option>
+	
+	<option value="//api/name/readBytes:">&nbsp;&nbsp;&nbsp;&nbsp;- readBytes:</option>
+	
+	<option value="//api/name/readChar">&nbsp;&nbsp;&nbsp;&nbsp;- readChar</option>
+	
+	<option value="//api/name/readDouble">&nbsp;&nbsp;&nbsp;&nbsp;- readDouble</option>
+	
+	<option value="//api/name/readFloat">&nbsp;&nbsp;&nbsp;&nbsp;- readFloat</option>
+	
+	<option value="//api/name/readInt">&nbsp;&nbsp;&nbsp;&nbsp;- readInt</option>
+	
+	<option value="//api/name/readLong">&nbsp;&nbsp;&nbsp;&nbsp;- readLong</option>
+	
+	<option value="//api/name/readObject">&nbsp;&nbsp;&nbsp;&nbsp;- readObject</option>
+	
+	<option value="//api/name/readShort">&nbsp;&nbsp;&nbsp;&nbsp;- readShort</option>
+	
+	<option value="//api/name/readString">&nbsp;&nbsp;&nbsp;&nbsp;- readString</option>
+	
+	<option value="//api/name/reset">&nbsp;&nbsp;&nbsp;&nbsp;- reset</option>
+	
+	<option value="//api/name/writeBoolean:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBoolean:</option>
+	
+	<option value="//api/name/writeByte:">&nbsp;&nbsp;&nbsp;&nbsp;- writeByte:</option>
+	
+	<option value="//api/name/writeBytes:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBytes:</option>
+	
+	<option value="//api/name/writeBytes:offset:length:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBytes:offset:length:</option>
+	
+	<option value="//api/name/writeChar:">&nbsp;&nbsp;&nbsp;&nbsp;- writeChar:</option>
+	
+	<option value="//api/name/writeDouble:">&nbsp;&nbsp;&nbsp;&nbsp;- writeDouble:</option>
+	
+	<option value="//api/name/writeFloat:">&nbsp;&nbsp;&nbsp;&nbsp;- writeFloat:</option>
+	
+	<option value="//api/name/writeInt:">&nbsp;&nbsp;&nbsp;&nbsp;- writeInt:</option>
+	
+	<option value="//api/name/writeLong:">&nbsp;&nbsp;&nbsp;&nbsp;- writeLong:</option>
+	
+	<option value="//api/name/writeObject:">&nbsp;&nbsp;&nbsp;&nbsp;- writeObject:</option>
+	
+	<option value="//api/name/writeShort:">&nbsp;&nbsp;&nbsp;&nbsp;- writeShort:</option>
+	
+	<option value="//api/name/writeString:">&nbsp;&nbsp;&nbsp;&nbsp;- writeString:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBoolean">readBoolean</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readByte">readByte</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBytes:">readBytes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readChar">readChar</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readDouble">readDouble</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readFloat">readFloat</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readInt">readInt</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readLong">readLong</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readObject">readObject</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readShort">readShort</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readString">readString</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reset">reset</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBoolean:">writeBoolean:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeByte:">writeByte:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBytes:">writeBytes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBytes:offset:length:">writeBytes:offset:length:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeChar:">writeChar:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeDouble:">writeDouble:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeFloat:">writeFloat:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeInt:">writeInt:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeLong:">writeLong:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeObject:">writeObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeShort:">writeShort:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeString:">writeString:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMStreamMessage Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMStreamMessage Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KMMessage.html">KMMessage</a> : <a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMStreamMessage.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A StreamMessage object is used to send a stream of primitive types.
+It is filled and read sequentially.  It inherits from the Message interface
+and adds a stream message body. Its methods are based largely on those
+found in the Java platform: java.io.DataInputStream and java.io.DataOutputStream.</p>
+
+<p>The primitive types can be read or written explicitly using methods
+for each type. They may also be read or written generically as objects.
+For instance, a call to StreamMessage.writeInt(6) is
+equivalent to StreamMessage.writeObject(new Integer(6)).
+Both forms are provided, because the explicit form is convenient for
+static programming, and the object form is needed when types are not known
+at compile time.</p>
+
+<p>When the message is first created, and when clearBody
+is called, the body of the message is in write-only mode. After the
+first call to <a href="#//api/name/reset">reset</a> has been made, the message body is in
+read-only mode.
+After a message has been sent, the client that sent it can retain and
+modify it without affecting the message that has been sent. The same message
+object can be sent multiple times.
+When a message has been received, the provider has called
+<a href="#//api/name/reset">reset</a> so that the message body is in read-only mode for the client.</p>
+
+<p>If clearBody is called on a message in read-only mode,
+the message body is cleared and the message body is in write-only mode.</p>
+
+<p>If a client attempts to read a message in write-only mode, a
+<a href="../Classes/KMMessageNotReadableException.html">KMMessageNotReadableException</a> is thrown.</p>
+
+<p>If a client attempts to write a message in read-only mode, a
+<a href="../Classes/KMMessageNotWriteableException.html">KMMessageNotWriteableException</a> is thrown.</p>
+
+<p>StreamMessage objects support the following conversion
+table. The marked cases must be supported. The unmarked cases must throw a
+<a href="../Classes/KMJMSException.html">KMJMSException</a>. The String-to-primitive conversions
+may throw a runtime exception if the primitive&rsquo;s valueOf()
+method does not accept it as a valid String representation of
+the primitive.</p>
+
+<p>A value written as the row type can be read as the column type.</p>
+
+<pre><code>
+|        | boolean byte short char int long float double String byte[]
+|----------------------------------------------------------------------
+|boolean |    X                                            X
+|byte    |          X     X         X   X                  X
+|short   |                X         X   X                  X
+|char    |                     X                           X
+|int     |                          X   X                  X
+|long    |                              X                  X
+|float   |                                    X     X      X
+|double  |                                          X      X
+|String  |    X     X     X         X   X     X     X      X
+|byte[]  |                                                        X
+|----------------------------------------------------------------------
+</code></pre>
+
+
+<p>Attempting to read a null value as a primitive type must be treated
+as calling the primitive&rsquo;s corresponding valueOf(String)
+conversion method with a null value. Since char does not
+support a String conversion, attempting to read a null value
+as a char must throw an exception.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readBoolean">&ndash;&nbsp;readBoolean</a></code>
+		<span class="tooltip"><p>Reads a boolean from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readByte">&ndash;&nbsp;readByte</a></code>
+		<span class="tooltip"><p>Reads a byte value from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readShort">&ndash;&nbsp;readShort</a></code>
+		<span class="tooltip"><p>Reads a 16-bit integer from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readChar">&ndash;&nbsp;readChar</a></code>
+		<span class="tooltip"><p>Reads a Unicode character value from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readInt">&ndash;&nbsp;readInt</a></code>
+		<span class="tooltip"><p>Reads a 32-bit integer from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readLong">&ndash;&nbsp;readLong</a></code>
+		<span class="tooltip"><p>Reads a 64-bit integer from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readFloat">&ndash;&nbsp;readFloat</a></code>
+		<span class="tooltip"><p>Reads a float from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readDouble">&ndash;&nbsp;readDouble</a></code>
+		<span class="tooltip"><p>Reads a double from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readString">&ndash;&nbsp;readString</a></code>
+		<span class="tooltip"><p>Reads a String from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readBytes:">&ndash;&nbsp;readBytes:</a></code>
+		<span class="tooltip"><p>Reads a byte array field from the stream message into the
+specified byte[] object (the read buffer).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readObject">&ndash;&nbsp;readObject</a></code>
+		<span class="tooltip"><p>Reads an object from the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBoolean:">&ndash;&nbsp;writeBoolean:</a></code>
+		<span class="tooltip"><p>Writes a boolean to the stream message.
+The value true is written as the value
+(byte)1; the value false is written as
+the value (byte)0.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeByte:">&ndash;&nbsp;writeByte:</a></code>
+		<span class="tooltip"><p>Writes a byte to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeShort:">&ndash;&nbsp;writeShort:</a></code>
+		<span class="tooltip"><p>Writes a short to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeChar:">&ndash;&nbsp;writeChar:</a></code>
+		<span class="tooltip"><p>Writes a char to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeInt:">&ndash;&nbsp;writeInt:</a></code>
+		<span class="tooltip"><p>Writes an int to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeLong:">&ndash;&nbsp;writeLong:</a></code>
+		<span class="tooltip"><p>Writes a long to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeFloat:">&ndash;&nbsp;writeFloat:</a></code>
+		<span class="tooltip"><p>Writes a float to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeDouble:">&ndash;&nbsp;writeDouble:</a></code>
+		<span class="tooltip"><p>Writes a double to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeString:">&ndash;&nbsp;writeString:</a></code>
+		<span class="tooltip"><p>Writes a String to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBytes:">&ndash;&nbsp;writeBytes:</a></code>
+		<span class="tooltip"><p>Writes a byte array field to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBytes:offset:length:">&ndash;&nbsp;writeBytes:offset:length:</a></code>
+		<span class="tooltip"><p>Writes a portion of a byte array as a byte array field to the stream
+message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeObject:">&ndash;&nbsp;writeObject:</a></code>
+		<span class="tooltip"><p>Writes an object to the stream message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reset">&ndash;&nbsp;reset</a></code>
+		<span class="tooltip"><p>Puts the message body in read-only mode and repositions the stream
+to the beginning.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/readBoolean" title="readBoolean"></a>
+	<h3 class="subsubtitle method-title">readBoolean</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a boolean from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)readBoolean</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the boolean value read</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readByte" title="readByte"></a>
+	<h3 class="subsubtitle method-title">readByte</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a byte value from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (char)readByte</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the next byte from the stream message as a 8-bit
+byte</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readBytes:" title="readBytes:"></a>
+	<h3 class="subsubtitle method-title">readBytes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a byte array field from the stream message into the
+specified byte[] object (the read buffer).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)readBytes:(NSData *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the buffer into which the data is read</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the total number of bytes read into the buffer, or -1 if
+there is no more data because the end of the byte field has been
+reached</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>To read the field value, readBytes should be
+successively called
+until it returns a value less than the length of the read buffer.
+The value of the bytes in the buffer following the last byte
+read is undefined.</p>
+
+<p>If readBytes returns a value equal to the length of the
+buffer, a subsequent readBytes call must be made. If there
+are no more bytes to be read, this call returns -1.</p>
+
+<p>If the byte array field value is null, readBytes
+returns -1.</p>
+
+<p>If the byte array field value is empty, readBytes
+returns 0.</p>
+
+<p>Once the first readBytes call on a byte[]
+field value has been made,
+the full value of the field must be read before it is valid to read
+the next field. An attempt to read the next field before that has
+been done will throw a <a href="../Classes/KMMessageFormatException.html">KMMessageFormatException</a>.</p>
+
+<p>To read the byte field value into a new byte[] object,
+use the <a href="#//api/name/readObject">readObject</a> method.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/readObject">&ndash; readObject</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readChar" title="readChar"></a>
+	<h3 class="subsubtitle method-title">readChar</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a Unicode character value from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (char)readChar</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a Unicode character from the stream message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readDouble" title="readDouble"></a>
+	<h3 class="subsubtitle method-title">readDouble</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a double from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (double)readDouble</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a double value from the stream message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readFloat" title="readFloat"></a>
+	<h3 class="subsubtitle method-title">readFloat</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a float from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (float)readFloat</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a float value from the stream message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readInt" title="readInt"></a>
+	<h3 class="subsubtitle method-title">readInt</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a 32-bit integer from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)readInt</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a 32-bit integer value from the stream message, interpreted
+as an int</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readLong" title="readLong"></a>
+	<h3 class="subsubtitle method-title">readLong</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a 64-bit integer from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (long long)readLong</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a 64-bit integer value from the stream message, interpreted as
+a long</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readObject" title="readObject"></a>
+	<h3 class="subsubtitle method-title">readObject</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads an object from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KCObject *)readObject</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a object from the stream message, in objectified
+format (for example, if the object was written as an int,
+an NSNumber is returned)</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method can be used to return, in objectified format,
+an object  that has
+been written to the stream with the equivalent
+writeObject method call, or its equivalent primitive
+<em>writeType</em> method.</p>
+
+<p>Note that byte values are returned as NSData, not byte[].</p>
+
+<p>An attempt to call readObject to read a byte field
+value into a new byte[] object before the full value of the
+byte field has been read will throw a
+<a href="../Classes/KMMessageFormatException.html">KMMessageFormatException</a>.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readShort" title="readShort"></a>
+	<h3 class="subsubtitle method-title">readShort</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a 16-bit integer from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (short)readShort</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a 16-bit integer from the stream message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readString" title="readString"></a>
+	<h3 class="subsubtitle method-title">readString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads a String from the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)readString</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a Unicode string from the stream message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageEOFException</em></dt>
+			<dd><p>if unexpected end of message stream has
+been reached.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotReadableException</em></dt>
+			<dd><p>if the message is in write-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reset" title="reset"></a>
+	<h3 class="subsubtitle method-title">reset</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Puts the message body in read-only mode and repositions the stream
+to the beginning.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)reset</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to reset the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if the message has an invalid
+format.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeBoolean:" title="writeBoolean:"></a>
+	<h3 class="subsubtitle method-title">writeBoolean:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a boolean to the stream message.
+The value true is written as the value
+(byte)1; the value false is written as
+the value (byte)0.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBoolean:(BOOL)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the boolean value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeByte:" title="writeByte:"></a>
+	<h3 class="subsubtitle method-title">writeByte:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a byte to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeByte:(char)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the byte value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeBytes:" title="writeBytes:"></a>
+	<h3 class="subsubtitle method-title">writeBytes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a byte array field to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBytes:(NSData *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the byte array value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The byte array value is written to the message
+as a byte array field. Consecutively written byte array fields are
+treated as two distinct fields when the fields are read.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeBytes:offset:length:" title="writeBytes:offset:length:"></a>
+	<h3 class="subsubtitle method-title">writeBytes:offset:length:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a portion of a byte array as a byte array field to the stream
+message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBytes:(NSData *)<em>value</em> offset:(int)<em>offset</em> length:(int)<em>length</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the byte array value to be written</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd><p>the initial offset within the byte array</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>length</em></dt>
+			<dd><p>the number of bytes to use</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The a portion of the byte array value is written to the
+message as a byte array field. Consecutively written byte
+array fields are treated as two distinct fields when the fields are
+read.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeChar:" title="writeChar:"></a>
+	<h3 class="subsubtitle method-title">writeChar:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a char to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeChar:(unichar)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the char value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeDouble:" title="writeDouble:"></a>
+	<h3 class="subsubtitle method-title">writeDouble:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a double to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeDouble:(double)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the double value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeFloat:" title="writeFloat:"></a>
+	<h3 class="subsubtitle method-title">writeFloat:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a float to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeFloat:(float)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the float value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeInt:" title="writeInt:"></a>
+	<h3 class="subsubtitle method-title">writeInt:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes an int to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeInt:(int)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the int value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeLong:" title="writeLong:"></a>
+	<h3 class="subsubtitle method-title">writeLong:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a long to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeLong:(long long)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the long value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeObject:" title="writeObject:"></a>
+	<h3 class="subsubtitle method-title">writeObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes an object to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeObject:(NSObject *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the object to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method works only for the objectified primitive
+object types (Integer, Double,
+Long&hellip;), String objects, and byte
+arrays.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if the object is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeShort:" title="writeShort:"></a>
+	<h3 class="subsubtitle method-title">writeShort:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a short to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeShort:(short)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the short value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeString:" title="writeString:"></a>
+	<h3 class="subsubtitle method-title">writeString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes a String to the stream message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeString:(NSString *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the String value to be written</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMStreamMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

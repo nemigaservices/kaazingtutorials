@@ -1,0 +1,474 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: HttpRedirectPolicy</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class HttpRedirectPolicy</h2>
+
+
+
+<p>
+Using HttpRedirectPolicy, application developers can more control over 
+        HTTP redirect in a clustered environment. Application developers can
+        specify the policy using WebSocketFactory.setDefaultRedirectPolicy()
+        that will be inherited by all the WebSocket objects that are created
+        from the factory. The policy can be overridden on individual connection
+        basis using WebSocket.setRedirectPolicy().
+        <p>
+        The pre-defined policies are HttpRedirectPolicy.ALWAYS, 
+        HttpRedirectPolicy.NEVER, HttpRedirectPolicy.PEER_DOMAIN, 
+        HttpRedirectPolicy.SAME_DOMAIN, HttpRedirectPolicy.SAME_ORIGIN, and 
+        HttpRedirectPolicy.SUB_DOMAIN.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<a name="field_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Field Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;HttpRedirectPolicy</code></font>
+			</td>
+			<td>
+				<code><b><a href="#ALWAYS">ALWAYS</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> Follow HTTP redirect requests always regardless of the 
+    origin, host, domain, etc.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;HttpRedirectPolicy</code></font>
+			</td>
+			<td>
+				<code><b><a href="#NEVER">NEVER</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> Do not follow HTTP redirects.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;HttpRedirectPolicy</code></font>
+			</td>
+			<td>
+				<code><b><a href="#PEER_DOMAIN">PEER_DOMAIN</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> Follow HTTP redirect only if the redirected request is 
+     for a peer-domain.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;HttpRedirectPolicy</code></font>
+			</td>
+			<td>
+				<code><b><a href="#SAME_DOMAIN">SAME_DOMAIN</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> Follow HTTP redirect only if the redirected request is
+     for same domain.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;HttpRedirectPolicy</code></font>
+			</td>
+			<td>
+				<code><b><a href="#SAME_ORIGIN">SAME_ORIGIN</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> Follow HTTP redirect only if the redirected request is
+     for same origin.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;HttpRedirectPolicy</code></font>
+			</td>
+			<td>
+				<code><b><a href="#SUB_DOMAIN">SUB_DOMAIN</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>(Read only)</B> Follow HTTP redirect only if the redirected request is
+     for child-domain or sub-domain of the original request.
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#HttpRedirectPolicy">HttpRedirectPolicy</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <b>Do not create a new instance of HttpRedirectPolicy.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#isRedirectAllowed">isRedirectAllowed</a></b>(originalLoc, redirectLoc) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns true if the policy allows redirecting from the original URI to
+       the redirect URI.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;string
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#toString">toString</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the policy name.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<a name="field_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Field Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<!-- One single method detail entry -->
+	<a name="ALWAYS">
+	<!-- -->
+	</a> <h3>ALWAYS</h3>
+		<pre>&lt;static&gt;&nbsp;HttpRedirectPolicy <b>ALWAYS</b></pre> 
+	<ul>
+		<B>(Read only)</B> Follow HTTP redirect requests always regardless of the 
+    origin, host, domain, etc.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="NEVER">
+	<!-- -->
+	</a> <h3>NEVER</h3>
+		<pre>&lt;static&gt;&nbsp;HttpRedirectPolicy <b>NEVER</b></pre> 
+	<ul>
+		<B>(Read only)</B> Do not follow HTTP redirects.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="PEER_DOMAIN">
+	<!-- -->
+	</a> <h3>PEER_DOMAIN</h3>
+		<pre>&lt;static&gt;&nbsp;HttpRedirectPolicy <b>PEER_DOMAIN</b></pre> 
+	<ul>
+		<B>(Read only)</B> Follow HTTP redirect only if the redirected request is 
+     for a peer-domain. This implies that both the scheme/protocol and the 
+     <b>domain</b> should match between the current and the redirect URIs.
+     <p>
+     URIs that satisfy HttpRedirectPolicy.SAME_DOMAIN policy will implicitly
+     satisfy HttpRedirectPolicy.PEER_DOMAIN policy.
+     <p>
+     To determine if the two URIs that are passed into 
+     <b>isRedirectionAllowed(originalURI, redirectedURI)</b>
+     function have peer-domains, we do the following:
+     <ul>
+       <li>compute base-domain by removing the token before the first '.' in the 
+           hostname of the original URI and check if the hostname of the redirected 
+           URI ends with the computed base-domain
+       <li>compute base-domain by removing the token before the first '.' in the 
+           hostname of the redirected URI and check if the hostname of the original 
+           URI ends with the computed base-domain
+     </ul>
+     <p>
+     If both the conditions are satisfied, then we conclude that the URIs are for 
+     peer-domains. However, if the host in the URI has no '.'(for eg., ws://localhost:8000),
+     then we just use the entire hostname as the computed base-domain.
+     <p>
+     <p>
+     If you are using this policy, it is recommended that the number of tokens in
+     the hostname be atleast 2 + number_of_tokens(top-level-domain). For example,
+     if the top-level-domain(TLD) is "com", then the URIs should have atleast 3 tokens
+     in the hostname. So, ws://marketing.example.com:8001 and ws://sales.example.com:8002
+     are examples of URIs with peer-domains. Similarly, if the TLD is "co.uk", then 
+     the URIs should have atleast 4 tokens in the hostname. So, 
+     ws://marketing.example.co.uk:8001 and ws://sales.example.co.uk:8002 are examples of
+     URIs with peer-domains.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="SAME_DOMAIN">
+	<!-- -->
+	</a> <h3>SAME_DOMAIN</h3>
+		<pre>&lt;static&gt;&nbsp;HttpRedirectPolicy <b>SAME_DOMAIN</b></pre> 
+	<ul>
+		<B>(Read only)</B> Follow HTTP redirect only if the redirected request is
+     for same domain. This implies that both the scheme/protocol and the 
+     <b>hostname</b> should match between the current and the redirect URIs.
+     <p>
+     URIs that satisfy HttpRedirectPolicy.SAME_ORIGIN policy will implicitly satisfy
+     HttpRedirectPolicy.SAME_DOMAIN policy.
+     <p>
+     URIs with identical domains would be ws://production.example.com:8001 and 
+     ws://production.example.com:8002.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="SAME_ORIGIN">
+	<!-- -->
+	</a> <h3>SAME_ORIGIN</h3>
+		<pre>&lt;static&gt;&nbsp;HttpRedirectPolicy <b>SAME_ORIGIN</b></pre> 
+	<ul>
+		<B>(Read only)</B> Follow HTTP redirect only if the redirected request is
+     for same origin. This implies that both the scheme/protocol and the 
+     <b>authority</b> should match between the current and the redirect URIs. 
+     Note that authority includes the hostname and the port.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="SUB_DOMAIN">
+	<!-- -->
+	</a> <h3>SUB_DOMAIN</h3>
+		<pre>&lt;static&gt;&nbsp;HttpRedirectPolicy <b>SUB_DOMAIN</b></pre> 
+	<ul>
+		<B>(Read only)</B> Follow HTTP redirect only if the redirected request is
+     for child-domain or sub-domain of the original request.
+     <p>
+     URIs that satisfy HttpRedirectPolicy.SAME_DOMAIN policy will implicitly
+     satisfy HttpRedirectPolicy.SUB_DOMAIN policy.
+     <p>
+     To determine if the domain of the redirected URI is sub-domain/child-domain
+     of the domain of the original URI, we check if the hostname of the
+     redirected URI ends with the hostname of the original URI.
+     <p>
+     Domain of the redirected URI ws://benefits.hr.example.com:8002 is a 
+     sub-domain/child-domain of the domain of the original URI 
+     ws://hr.example.com:8001. Note that domain in ws://example.com:9001 is a 
+     sub-domain of the domain in ws://example.com:9001.
+	</ul>
+	<hr>
+
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="HttpRedirectPolicy"> </a>
+<h3>HttpRedirectPolicy</h3>
+
+	<pre><b>HttpRedirectPolicy</b>()</pre>
+	<ul>
+	   <b>Do not create a new instance of HttpRedirectPolicy. Use the pre-defined 
+       policies for following HTTP redirect requests with response code 3xx.</b>
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="isRedirectAllowed"> </a> <h3>isRedirectAllowed</h3>
+		<pre>boolean&nbsp;<b>isRedirectAllowed</b>(originalLoc, redirectLoc)</pre> 
+	<ul>
+		Returns true if the policy allows redirecting from the original URI to
+       the redirect URI. Otherwise false is returned.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>originalLoc </code> - {String} the original URI 
+		</ul>
+		<ul>
+			<code>redirectLoc </code> - {String} the redirected URI 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>boolean</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="toString"> </a> <h3>toString</h3>
+		<pre>string&nbsp;<b>toString</b>()</pre> 
+	<ul>
+		Returns the policy name.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>string</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

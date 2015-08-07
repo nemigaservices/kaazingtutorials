@@ -1,0 +1,986 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Kaazing.JMS Namespace</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="Kaazing.JMS namespace" />
+    <meta name="Microsoft.Help.F1" content="Kaazing.JMS" />
+    <meta name="Microsoft.Help.Id" content="N:Kaazing.JMS" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="Kaazing.JMS" />
+    <meta name="file" content="N_Kaazing_JMS" />
+    <meta name="guid" content="N_Kaazing_JMS" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="N:Kaazing.JMS" />
+      <MSHelp:TOCTitle Title="Kaazing.JMS Namespace" />
+      <MSHelp:RLTitle Title="Kaazing.JMS Namespace ()" />
+      <MSHelp:Keyword Index="A" Term="N:Kaazing.JMS" />
+      <MSHelp:Keyword Index="A" Term="frlrfKaazingJMS" />
+      <MSHelp:Keyword Index="K" Term="Kaazing.JMS namespace" />
+      <MSHelp:Keyword Index="F" Term="Kaazing.JMS" />
+      <MSHelp:Attr Name="HelpPriority" Value="1" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuVisualBasicLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual Basic </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuManagedCPlusPlusLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual C++ </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="VisualBasicCheckbox" type="checkbox" data="VisualBasic,vb,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="VisualBasicCheckbox">Visual Basic</label>
+        <br />
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="ManagedCPlusPlusCheckbox" type="checkbox" data="ManagedCPlusPlus,cpp,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="ManagedCPlusPlusCheckbox">Visual C++</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">.NET Framework Class Library</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Kaazing.JMS Namespace</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left" />
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <font color="DarkGray"></font>
+        <p /> <h1 class="heading"><span onclick="ExpandCollapse(classToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(classToggle, event)" tabindex="0"><img id="classToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Classes</span></h1><div id="classSection" class="section" name="collapseableSection" style=""><table id="typeList" class="members" frame="lhs" cellpadding="2"><col width="10%" /><tr><th class="iconColumn">
+           
+       </th><th class="nameColumn">Class</th><th class="descriptionColumn">Description</th></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_AlreadyFulfilledFutureException.htm">AlreadyFulfilledFutureException</a></td><td /></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_DeliveryModeConstants.htm">DeliveryModeConstants</a></td><td><div class="summary">
+             The delivery modes supported by the JMS API are PERSISTENT and
+             NON_PERSISTENT.
+            
+             <p>A client marks a message as persistent if it feels that the 
+             application will have problems if the message is lost in transit.
+             A client marks a message as non-persistent if an occasional
+             lost message is tolerable. Clients use delivery mode to tell a
+             JMS provider how to balance message transport reliability with throughput.</p><p>Delivery mode covers only the transport of the message to its 
+             destination. Retention of a message at the destination until
+             its receipt is acknowledged is not guaranteed by a PERSISTENT 
+             delivery mode. Clients should assume that message retention 
+             policies are set administratively. Message retention policy
+             governs the reliability of message delivery from destination
+             to message consumer. For example, if a client's message storage 
+             space is exhausted, some messages may be dropped in accordance with 
+             a site-specific message retention policy.</p><p>A message is guaranteed to be delivered once and only once
+             by a JMS provider if the delivery mode of the message is 
+             PERSISTENT 
+             and if the destination has a sufficient message retention policy.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_IllegalStateException.htm">IllegalStateException</a></td><td><div class="summary"><p> This exception is thrown when a method is 
+                 invoked at an illegal or inappropriate time or if the provider is 
+                 not in an appropriate state for the requested operation. For example, 
+                 this exception must be thrown if Session.commit is 
+                 called on a non-transacted session. This exception is also called when
+                 a domain inappropriate method is called, such as calling 
+                 ITopicSession.CreateQueueBrowser.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_InvalidClientIDException.htm">InvalidClientIDException</a></td><td><div class="summary"><p> This exception must be thrown when a 
+                 client attempts to set a connection's client ID to a value that 
+                 is rejected by a provider.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_InvalidDestinationException.htm">InvalidDestinationException</a></td><td><div class="summary"><p> This exception must be thrown when a 
+                 destination either is not understood by a provider or is no 
+                 longer valid.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_InvalidSelectorException.htm">InvalidSelectorException</a></td><td><div class="summary"><p> This exception must be thrown when a 
+                 JMS client attempts to give a provider a message selector with 
+                 invalid syntax.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_JMSException.htm">JMSException</a></td><td><div class="summary"><p>This is the root class of all JMS API exceptions.</p><p>It provides the following information:
+             <ul><li> A provider-specific string describing the error. This string is 
+                    the standard exception message and is available via the
+                    getMessage method.</li><li> A provider-specific string error code </li><li> A reference to another exception. Often a JMS API exception will 
+                    be the result of a lower-level problem. If appropriate, this 
+                    lower-level exception can be linked to the JMS API exception.</li></ul></p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_JMSSecurityException.htm">JMSSecurityException</a></td><td><div class="summary"><p> This exception must be thrown when a provider rejects a user 
+                 name/password submitted by a client. It may also be thrown for any case 
+                 where a security restriction prevents a method from completing.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_MessageConstants.htm">MessageConstants</a></td><td><div class="summary">
+            Class the contains the contants of the Java/JMS Message interface.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_MessageEOFException.htm">MessageEOFException</a></td><td><div class="summary"><p> This exception must be thrown when an unexpected 
+                 end of stream has been reached when a IStreamMessage or 
+                 IBytesMessage is being read.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_MessageFormatException.htm">MessageFormatException</a></td><td><div class="summary"><p> This exception must be thrown when a JMS client 
+                 attempts to use a data type not supported by a message or attempts to 
+                 read data in a message as the wrong type. It must also be thrown when 
+                 equivalent type errors are made with message property values. For 
+                 example, this exception must be thrown if 
+                 IStreamMessage.WriteObject is given an unsupported class or 
+                 if IStreamMessage.ReadShort is used to read a 
+                 bool value. Note that the special case of a failure 
+                 caused by an attempt to read improperly formatted String 
+                 data as numeric values must throw the 
+                 NumberFormatException.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_MessageNotReadableException.htm">MessageNotReadableException</a></td><td><div class="summary"><p> This exception must be thrown when a JMS client attempts to read a 
+                 write-only message.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_MessageNotWriteableException.htm">MessageNotWriteableException</a></td><td><div class="summary"><p> This exception must be thrown when a JMS client attempts to write to a 
+                 read-only message.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_QueueRequestor.htm">QueueRequestor</a></td><td><div class="summary">
+             The QueueRequestor helper class simplifies
+             making service requests.
+            
+             <p>The QueueRequestor constructor is given a non-transacted 
+             IQueueSession and a destination IQueue. It creates a
+             ITemporaryQueue for the responses and provides a 
+             request method that sends the request message and waits 
+             for its reply.</p><p>This is a basic request/reply abstraction that should be sufficient 
+             for most uses. JMS providers and clients are free to create more 
+             sophisticated versions.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_ResourceAllocationException.htm">ResourceAllocationException</a></td><td><div class="summary"><p>This exception is thrown when a provider is unable to allocate the 
+                resources required by a method. For example, this exception should be 
+                thrown when a call to 
+                ITopicConnectionFactory.CreateTopicConnection fails due to a
+                lack of JMS provider resources.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_SessionConstants.htm">SessionConstants</a></td><td><div class="summary">
+            Class the contains the contants of the Java/JMS Session interface.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_TopicRequestor.htm">TopicRequestor</a></td><td><div class="summary">
+             The TopicRequestor helper class simplifies
+             making service requests.
+            
+             <p>The TopicRequestor constructor is given a non-transacted 
+             ITopicSession and a destination ITopic. It creates a 
+             ITemporaryTopic for the responses and provides a 
+             request method that sends the request message and waits 
+             for its reply.</p><p>This is a basic request/reply abstraction that should be sufficient 
+             for most uses. JMS providers and clients are free to create more 
+             sophisticated versions.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_TransactionInProgressException.htm">TransactionInProgressException</a></td><td><div class="summary"><p> This exception is thrown when an 
+                 operation is invalid because a transaction is in progress. 
+                 For instance, an attempt to call ISession.Commit when a 
+                 session is part of a distributed transaction should throw a 
+                 TransactionInProgressException.</p></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Kaazing_JMS_TransactionRolledBackException.htm">TransactionRolledBackException</a></td><td><div class="summary"><p> This exception must be thrown when a 
+                 call to <span class="code">ISession.Commit()</span> results in a rollback of the current 
+                 transaction.</p></div></td></tr></table></div><h1 class="heading"><span onclick="ExpandCollapse(interfaceToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(interfaceToggle, event)" tabindex="0"><img id="interfaceToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Interfaces</span></h1><div id="interfaceSection" class="section" name="collapseableSection" style=""><table id="typeList" class="members" frame="lhs" cellpadding="2"><col width="10%" /><tr><th class="iconColumn">
+           
+       </th><th class="nameColumn">Interface</th><th class="descriptionColumn">Description</th></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IBytesMessage.htm">IBytesMessage</a></td><td><div class="summary">
+             A IBytesMessage object is used to send a message containing a 
+             stream of uninterpreted bytes. It inherits from the IMessage 
+             interface and adds a bytes
+             message body. The receiver of the message supplies the interpretation
+             of the bytes.
+            
+             <p>This message type is for client encoding of existing message formats. 
+             If possible, one of the other self-defining message types should be used 
+             instead.</p><p>Although the JMS API allows the use of message properties with byte 
+             messages, they are typically not used, since the inclusion of properties 
+             may affect the format.</p><p>The primitive types can be written explicitly using methods
+             for each type. They may also be written generically as objects.
+             For instance, a call to IBytesMessage.WriteInt(6) is
+             equivalent to IBytesMessage.WriteObject(new Integer(6)).
+             Both forms are provided, because the explicit form is convenient for
+             static programming, and the object form is needed when types are not known
+             at compile time.</p><p>When the message is first created, and when ClearBody
+             is called, the body of the message is in write-only mode. After the 
+             first call to Reset has been made, the message body is in 
+             read-only mode. 
+             After a message has been sent, the client that sent it can retain and 
+             modify it without affecting the message that has been sent. The same message
+             object can be sent multiple times.
+             When a message has been received, the provider has called 
+             reset so that the message body is in read-only mode for the client.</p><p>If ClearBody method is called on a message in read-only mode, 
+             the message body is cleared and the message is in write-only mode.</p><p>If a client attempts to read a message in write-only mode, a 
+             MessageNotReadableException is thrown.</p><p>If a client attempts to write a message in read-only mode, a 
+             MessageNotWriteableException is thrown.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IConnection.htm">IConnection</a></td><td><div class="summary">
+             A IConnection object is a client's active connection to its JMS 
+             provider.
+            
+             <p>Connections support concurrent use.</p><p>A connection serves several purposes:
+            
+             <ul><li>It encapsulates an open connection with a JMS provider. It 
+                   typically represents an open TCP/IP socket between a client and 
+                   the service provider software.</li><li>Its creation is where client authentication takes place.</li><li>It can specify a unique client identifier.</li><li>It provides a IConnectionMetaData object.</li><li>It supports an optional IExceptionListener object.</li></ul></p><p>Because the creation of a connection involves setting up authentication 
+             and communication, a connection is a relatively heavyweight 
+             object. Most clients will do all their messaging with a single connection.
+             Other more advanced applications may use several connections. The JMS API
+             does 
+             not architect a reason for using multiple connections; however, there may 
+             be operational reasons for doing so.</p><p>A JMS client typically creates a connection, one or more sessions, 
+             and a number of message producers and consumers. When a connection is
+             created, it is in stopped mode. That means that no messages are being
+             delivered.</p><p>It is typical to leave the connection in stopped mode until setup 
+             is complete (that is, until all message consumers have been 
+             created).  At that point, the client calls 
+             the connection's start method, and messages begin arriving at 
+             the connection's consumers. This setup
+             convention minimizes any client confusion that may result from 
+             asynchronous message delivery while the client is still in the process 
+             of setting itself up.</p><p>A connection can be started immediately, and the setup can be done 
+             afterwards. Clients that do this must be prepared to handle asynchronous 
+             message delivery while they are still in the process of setting up.</p><p>A message producer can send messages while a connection is stopped.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IConnectionConsumer.htm">IConnectionConsumer</a></td><td><div class="summary">
+             For application servers, IConnection objects provide a special 
+             facility 
+             for creating a IConnectionConsumer (optional). The messages it 
+             is to consume are 
+             specified by a Destination and a message selector. In addition,
+             a IConnectionConsumer must be given a 
+             IServerSessionPool to use for 
+             processing its messages.
+            
+             <p>Normally, when traffic is light, a IConnectionConsumer gets a
+             IServerSession from its pool, loads it with a single message, and
+             starts it. As traffic picks up, messages can back up. If this happens, 
+             a IConnectionConsumer can load each ServerSession
+             with more than one 
+             message. This reduces the thread context switches and minimizes resource 
+             use at the expense of some serialization of message processing.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IConnectionFactory.htm">IConnectionFactory</a></td><td><div class="summary">
+             A IConnectionFactory object encapsulates a set of connection 
+             configuration 
+             parameters that has been defined by an administrator. A client uses 
+             it to create a connection with a JMS provider.
+            
+             <p>A IConnectionFactory object is a JMS administered object and
+              supports concurrent use.</p><p>JMS administered objects are objects containing configuration 
+             information that are created by an administrator and later used by 
+             JMS clients. They make it practical to administer the JMS API in the 
+             enterprise.</p><p>Clients should think of administered objects as local objects. 
+             Looking them up should not have any hidden side effects or use surprising 
+             amounts of local resources.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IConnectionMetaData.htm">IConnectionMetaData</a></td><td><div class="summary">
+             A ConnectionMetaData object provides information describing the 
+             Connection object.
+            
+             </div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IDestination.htm">IDestination</a></td><td><div class="summary">
+             A IDestination object encapsulates a provider-specific 
+             address.
+             The JMS API does not define a standard address syntax. Although a standard
+             address syntax was considered, it was decided that the differences in 
+             address semantics between existing message-oriented middleware (MOM) 
+             products were too wide to bridge with a single syntax. 
+            
+             <p>Since IDestination is an administered object, it may 
+             contain 
+             provider-specific configuration information in addition to its address.</p><p>The JMS API also supports a client's use of provider-specific address 
+             names.</p><p>IDestination objects support concurrent use.</p><p>A IDestination object is a JMS administered object.</p><p>JMS administered objects are objects containing configuration 
+             information that are created by an administrator and later used by 
+             JMS clients. They make it practical to administer the JMS API in the 
+             enterprise.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IExceptionListener.htm">IExceptionListener</a></td><td><div class="summary">
+             If a JMS provider detects a serious problem with a Connection
+             object, it informs the Connection object's 
+             ExceptionListener, if one has been registered. 
+             It does this by calling the listener's onException method, 
+             passing it a JMSException argument describing the problem.
+            
+             <p>An exception listener allows a client to be notified of a problem 
+             asynchronously. Some connections only consume messages, so they would have no
+             other way to learn that their connection has failed.</p><p>A JMS provider should attempt to resolve connection problems 
+             itself before it notifies the client of them.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IMapMessage.htm">IMapMessage</a></td><td><div class="summary">
+             A IMapMessage object is used to send a set of name-value pairs.
+             The names are String objects, and the values are primitive 
+             data types. The names must have a value that
+             is not null, and not an empty string. The entries can be accessed 
+             sequentially or randomly by name. The order of the entries is undefined. 
+             IMapMessage inherits from the Message interface
+             and adds a message body that contains a Map.
+            
+             <p>The primitive types can be read or written explicitly using methods
+             for each type. They may also be read or written generically as objects.
+             For instance, a call to IMapMessage.setInt("foo", 6) is 
+             equivalent to IMapMessage.setObject("foo", new Integer(6)).
+             Both forms are provided, because the explicit form is convenient for
+             static programming, and the object form is needed when types are not known
+             at compile time.</p><p>When a client receives a IMapMessage, it is in read-only 
+             mode. If a client attempts to write to the message at this point, a 
+             MessageNotWriteableException is thrown. If 
+             clearBody is called, the message can now be both read from and 
+             written to.</p><p>IMapMessage objects support the following conversion table. 
+             The marked cases must be supported. The unmarked cases must throw a 
+             JMSException. The String-to-primitive conversions 
+             may throw a runtime exception if the primitive's valueOf() 
+             method does not accept it as a valid String representation of 
+             the primitive.</p><p>A value written as the row type can be read as the column type.</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             |        | boolean byte short char int long float double String byte[]
+             |----------------------------------------------------------------------
+             |boolean |    X                                            X
+             |byte    |          X     X         X   X                  X
+             |short   |                X         X   X                  X
+             |char    |                     X                           X
+             |int     |                          X   X                  X
+             |long    |                              X                  X
+             |float   |                                    X     X      X
+             |double  |                                          X      X
+             |String  |    X     X     X         X   X     X     X      X
+             |byte[]  |                                                        X
+             |----------------------------------------------------------------------
+             </pre></td></tr></table></span></div><p>Attempting to read a null value as a primitive type must be treated
+             as calling the primitive's corresponding valueOf(String) 
+             conversion method with a null value. Since char does not 
+             support a String conversion, attempting to read a null value 
+             as a char must throw a ArgumentException.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IMessage.htm">IMessage</a></td><td><div class="summary">
+             The Message interface is the root interface of all JMS 
+             messages. It defines the message header and the acknowledge 
+             method used for all messages.
+            
+             <p>Most message-oriented middleware (MOM) products treat messages as 
+             lightweight entities that consist
+             of a header and a payload. The header contains fields used for message
+             routing and identification; the payload contains the application data
+             being sent.</p><p>Within this general form, the definition of a message varies
+             significantly across products. It would be quite difficult for the JMS API
+             to support all of these message models.</p><p>With this in mind, the JMS message model has the following goals:
+             <ul><li>Provide a single, unified message API</li><li>Provide an API suitable for creating messages that match the
+                   format used by provider-native messaging applications</li><li>Support the development of heterogeneous applications that span
+                   operating systems, machine architectures, and computer languages</li><li>Support messages containing objects
+                   ("objects")</li><li>Support messages containing Extensible Markup Language (XML) pages</li></ul></p><p>JMS messages are composed of the following parts:
+             <ul><li>Header - All messages support the same set of header fields. 
+                   Header fields contain values used by both clients and providers to 
+                   identify and route messages.</li><li>Properties - Each message contains a built-in facility for supporting
+                   application-defined property values. Properties provide an efficient 
+                   mechanism for supporting application-defined message filtering.</li><li>Body - The JMS API defines several types of message body, which cover
+                   the majority of messaging styles currently in use.</li></ul></p>Message Bodies<p>The JMS API defines five types of message body:
+             <ul><li>Stream - A StreamMessage object's message body contains 
+                   a stream of primitive values in the Java programming 
+                   language ("Java primitives"). It is filled and read sequentially.</li><li>Map - A MapMessage object's message body contains a set 
+                   of name-value pairs, where names are String 
+                   objects, and values are Java primitives. The entries can be accessed 
+                   sequentially or randomly by name. The order of the entries is 
+                   undefined.</li><li>Text - A ITextMessage object's message body contains a 
+                   String object. This message type can be used
+                   to transport plain-text messages, and XML messages.</li><li>Object - An ObjectMessage object's message body contains 
+                   a Serializable object.</li><li>Bytes - A BytesMessage object's message body contains a 
+                   stream of uninterpreted bytes. This message type is for 
+                   literally encoding a body to match an existing message format. In 
+                   many cases, it is possible to use one of the other body types, 
+                   which are easier to use. Although the JMS API allows the use of  
+                   message properties with byte messages, they are typically not used,
+                   since the inclusion of properties may affect the format.</li></ul></p>Message Headers<p>The JMSCorrelationID header field is used for linking one 
+             message with
+             another. It typically links a reply message with its requesting message.</p><p>JMSCorrelationID can hold a provider-specific message ID,
+             an application-specific String object, or a provider-native 
+             byte[] value.</p>Message Properties<p>A Message object contains a built-in facility for supporting
+             application-defined property values. In effect, this provides a mechanism 
+             for adding application-specific header fields to a message.</p><p>Properties allow an application, via message selectors, to have a JMS 
+             provider select, or filter, messages on its behalf using 
+             application-specific criteria.</p><p>Property names must obey the rules for a message selector identifier. 
+             Property names must not be null, and must not be empty strings. If a property
+             name is set and it is either null or an empty string, an 
+             ArgumentException must be thrown.</p><p>Property values can be boolean, byte, 
+             short, int, long, float,
+             double, and String.</p><p>Property values are set prior to sending a message. When a client 
+             receives a message, its properties are in read-only mode. If a 
+             client attempts to set properties at this point, a 
+             MessageNotWriteableException is thrown. If 
+             clearProperties is called, the properties can now be both
+             read from and written to. Note that header fields are distinct from 
+             properties. Header fields are never in read-only mode. </p><p>A property value may duplicate a value in a message's body, or it may 
+             not. Although JMS does not define a policy for what should or should not 
+             be made a property, application developers should note that JMS providers 
+             will likely handle data in a message's body more efficiently than data in 
+             a message's properties. For best performance, applications should use
+             message properties only when they need to customize a message's header. 
+             The primary reason for doing this is to support customized message 
+             selection.</p><p>Message properties support the following conversion table. The marked 
+             cases must be supported. The unmarked cases must throw a 
+             JMSException. The String-to-primitive conversions 
+             may throw a runtime exception if the
+             primitive's valueOf method does not accept the 
+             String as a valid representation of the primitive.</p><p>A value written as the row type can be read as the column type.</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             |        | boolean byte short int long float double String 
+             |----------------------------------------------------------
+             |boolean |    X                                       X
+             |byte    |          X     X    X   X                  X 
+             |short   |                X    X   X                  X 
+             |int     |                     X   X                  X 
+             |long    |                         X                  X 
+             |float   |                               X     X      X 
+             |double  |                                     X      X 
+             |String  |    X     X     X    X   X     X     X      X 
+             |----------------------------------------------------------
+             </pre></td></tr></table></span></div><p>In addition to the type-specific set/get methods for properties, JMS 
+             provides the SetObjectProperty and 
+             GetObjectProperty methods. These support the same set of 
+             property types using the objectified primitive values. Their purpose is 
+             to allow the decision of property type to made at execution time rather 
+             than at compile time. They support the same property value conversions.</p><p>The SetObjectProperty method accepts values of class 
+             Boolean, Byte, Short, 
+             Integer, Long, Float, 
+             Double, and String. An attempt 
+             to use any other class must throw a JMSException.</p><p>The getObjectProperty method only returns values of class 
+             Boolean, Byte, Short, 
+             Integer, Long, Float, 
+             Double, and String.</p><p>The order of property values is not defined. To iterate through a 
+             message's property values, use getPropertyNames to retrieve 
+             a property name enumeration and then use the various property get methods 
+             to retrieve their values.</p><p>A message's properties are deleted by the clearProperties
+             method. This leaves the message with an empty set of properties.</p><p>Getting a property value for a name which has not been set returns a 
+             null value. Only the getStringProperty and 
+             getObjectProperty methods can return a null value. 
+             Attempting to read a null value as a primitive type must be treated as 
+             calling the primitive's corresponding valueOf(String) 
+             conversion method with a null value.</p><p>The JMS API reserves the JMSX property name prefix for JMS 
+             defined properties.
+             The full set of these properties is defined in the Java Message Service
+             specification. New JMS defined properties may be added in later versions 
+             of the JMS API.  Support for these properties is optional. The 
+             String[] ConnectionMetaData.getJMSXPropertyNames method 
+             returns the names of the JMSX properties supported by a connection.</p><p>JMSX properties may be referenced in message selectors whether or not
+             they are supported by a connection. If they are not present in a
+             message, they are treated like any other absent property.</p><p>JMSX properties defined in the specification as "set by provider on 
+             send" are available to both the producer and the consumers of the message. 
+             JMSX properties defined in the specification as "set by provider on 
+             receive" are available only to the consumers.</p><p>JMSXGroupID and JMSXGroupSeq are standard 
+             properties that clients 
+             should use if they want to group messages. All providers must support them.
+             Unless specifically noted, the values and semantics of the JMSX properties 
+             are undefined.</p><p>The JMS API reserves the JMS_vendor_name property 
+             name prefix for provider-specific properties. Each provider defines its own 
+             value for vendor_name. This is the mechanism a JMS 
+             provider uses to make its special per-message services available to a JMS 
+             client.</p><p>The purpose of provider-specific properties is to provide special 
+             features needed to integrate JMS clients with provider-native clients in a 
+             single JMS application. They should not be used for messaging between JMS 
+             clients.</p>Provider Implementations of JMS Message Interfaces<p>The JMS API provides a set of message interfaces that define the JMS 
+             message 
+             model. It does not provide implementations of these interfaces.</p><p>Each JMS provider supplies a set of message factories with its 
+             Session object for creating instances of messages. This allows 
+             a provider to use message implementations tailored to its specific needs.</p><p>A provider must be prepared to accept message implementations that are 
+             not its own. They may not be handled as efficiently as its own 
+             implementation; however, they must be handled.</p><p>Note the following exception case when a provider is handling a foreign 
+             message implementation. If the foreign message implementation contains a 
+             JMSReplyTo header field that is set to a foreign destination 
+             implementation, the provider is not required to handle or preserve the 
+             value of this header field. </p>Message Selectors<p>A JMS message selector allows a client to specify, by
+             header field references and property references, the
+             messages it is interested in. Only messages whose header 
+             and property values
+             match the 
+             selector are delivered. What it means for a message not to be delivered
+             depends on the MessageConsumer being used (see 
+             {@link Kaazing.JMS.IQueueReceiver QueueReceiver} and 
+             {@link Kaazing.JMS.ITopicSubscriber TopicSubscriber}).</p><p>Message selectors cannot reference message body values.</p><p>A message selector matches a message if the selector evaluates to 
+             true when the message's header field values and property values are 
+             substituted for their corresponding identifiers in the selector.</p><p>A message selector is a String whose syntax is based on a 
+             subset of 
+             the SQL92 conditional expression syntax. If the value of a message selector 
+             is an empty string, the value is treated as a null and indicates that there 
+             is no message selector for the message consumer. </p><p>The order of evaluation of a message selector is from left to right 
+             within precedence level. Parentheses can be used to change this order.</p><p>Predefined selector literals and operator names are shown here in 
+             uppercase; however, they are case insensitive.</p><p>A selector can contain:</p><ul><li>Literals:</li><li>Identifiers:</li><li>White space is the same as that defined for the Java programming
+                   language: space, horizontal tab, form feed, and line terminator.</li><li>Expressions: </li><li>Standard bracketing () for ordering expression evaluation
+                  is supported.</li><li>Logical operators in precedence order: NOT, 
+                   AND, OR</li><li>Comparison operators: =, &gt;, &gt;=,
+                   &lt;, &lt;=, &lt;&gt; (not equal)</li><li>Arithmetic operators in precedence order:</li><li>arithmetic-expr1 [NOT] BETWEEN arithmetic-expr2 
+                   AND arithmetic-expr3 (comparison operator)</li><li>identifier [NOT] IN (string-literal1, 
+                   string-literal2,...) (comparison operator where 
+                   identifier has a String or 
+                   NULL value)</li><li>identifier [NOT] LIKE pattern-value [ESCAPE 
+                   escape-character] (comparison operator, where 
+                   identifier has a String value; 
+                   pattern-value is a string literal where 
+                   '_' stands for any single character; '%' 
+                   stands for any sequence of characters, including the empty sequence; 
+                   and all other characters stand for themselves. The optional 
+                   escape-character is a single-character string 
+                   literal whose character is used to escape the special meaning of the 
+                   '_' and '%' in 
+                   pattern-value.)</li><li>identifier IS NULL (comparison operator that tests
+                   for a null header field value or a missing property value)</li><li>identifier IS NOT NULL (comparison operator that
+                   tests for the existence of a non-null header field value or a property
+                   value)</li></ul><p>JMS providers are required to verify the syntactic correctness of a 
+                message selector at the time it is presented. A method that provides a 
+              syntactically incorrect selector must result in a JMSException.
+             JMS providers may also optionally provide some semantic checking at the time
+             the selector is presented. Not all semantic checking can be performed at
+             the time a message selector is presented, because property types are not known.</p><p>The following message selector selects messages with a message type 
+             of car and color of blue and weight greater than 2500 pounds:</p>Null Values<p>As noted above, property values may be NULL. The evaluation 
+             of selector expressions containing NULL values is defined by 
+             SQL92 NULL semantics. A brief description of these semantics 
+             is provided here.</p><p>SQL treats a NULL value as unknown. Comparison or arithmetic
+             with an unknown value always yields an unknown value.</p><p>The IS NULL and IS NOT NULL operators convert 
+             an unknown value into the respective TRUE and 
+             FALSE values.</p><p>The boolean operators use three-valued logic as defined by the 
+             following tables:</p><p>The definition of the AND operator</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             | AND  |   T   |   F   |   U
+             +------+-------+-------+-------
+             |  T   |   T   |   F   |   U
+             |  F   |   F   |   F   |   F
+             |  U   |   U   |   F   |   U
+             +------+-------+-------+-------
+             </pre></td></tr></table></span></div><p>The definition of the OR operator</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             | OR   |   T   |   F   |   U
+             +------+-------+-------+--------
+             |  T   |   T   |   T   |   T
+             |  F   |   T   |   F   |   U
+             |  U   |   T   |   U   |   U
+             +------+-------+-------+------- 
+             </pre></td></tr></table></span></div><p>The definition of the NOT operator</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             | NOT
+             +------+------
+             |  T   |   F
+             |  F   |   T
+             |  U   |   U
+             +------+-------
+             </pre></td></tr></table></span></div>Special Notes<p>When used in a message selector, the JMSDeliveryMode header 
+                field is treated as having the values 'PERSISTENT' and 
+                'NON_PERSISTENT'.</p><p>Date and time values should use the standard long 
+                millisecond value. When a date or time literal is included in a message 
+                selector, it should be an integer literal for a millisecond value.</p><p>Although SQL supports fixed decimal comparison and arithmetic, JMS 
+                message selectors do not. This is the reason for restricting exact 
+                numeric literals to those without a decimal (and the addition of 
+                numerics with a decimal as an alternate representation for 
+                approximate numeric values).</p><p>SQL comments are not supported.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IMessageConsumer.htm">IMessageConsumer</a></td><td><div class="summary">
+             A client uses a MessageConsumer object to receive messages 
+             from a destination.  A MessageConsumer object is created by 
+             passing a Destination object to a message-consumer creation
+             method supplied by a session.
+            
+             <p>MessageConsumer is the parent interface for all message 
+             consumers.</p><p>A message consumer can be created with a message selector. A message
+             selector allows 
+             the client to restrict the messages delivered to the message consumer to 
+             those that match the selector.</p><p>A client may either synchronously receive a message consumer's messages 
+             or have the consumer asynchronously deliver them as they arrive.</p><p>For synchronous receipt, a client can request the next message from a 
+             message consumer using one of its receive methods. There are 
+             several variations of receive that allow a 
+             client to poll or wait for the next message.</p><p>For asynchronous delivery, a client can register a 
+             MessageListener object with a message consumer. 
+             As messages arrive at the message consumer, it delivers them by calling the 
+             MessageListener's onMessage method.</p><p>It is a client programming error for a MessageListener to 
+             throw an exception.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IMessageListener.htm">IMessageListener</a></td><td><div class="summary">
+             A MessageListener object is used to receive asynchronously 
+             delivered messages.
+            
+             <p>Each session must insure that it passes messages serially to the
+             listener. This means that a listener assigned to one or more consumers
+             of the same session can assume that the onMessage method 
+             is not called with the next message until the session has completed the 
+             last call.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IMessageProducer.htm">IMessageProducer</a></td><td><div class="summary">
+             A client uses a MessageProducer object to send messages to a 
+             destination. A MessageProducer object is created by passing a 
+             Destination object to a message-producer creation method 
+             supplied by a session.
+            
+             <p>MessageProducer is the parent interface for all message 
+             producers.</p><p>A client also has the option of creating a message producer without 
+             supplying a destination. In this case, a destination must be provided with 
+             every send operation. A typical use for this kind of message producer is
+             to send replies to requests using the request's JMSReplyTo 
+             destination.</p><p>A client can specify a default delivery mode, priority, and time to live 
+             for messages sent by a message producer. It can also specify the delivery 
+             mode, priority, and time to live for an individual message.</p><p>A client can specify a time-to-live value in milliseconds for each
+             message it sends. This value defines a message expiration time that
+             is the sum of the message's time-to-live and the GMT when it is sent (for
+             transacted sends, this is the time the client sends the message, not
+             the time the transaction is committed).</p><p>A JMS provider should do its best to expire messages accurately;
+             however, the JMS API does not define the accuracy provided.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IObjectMessage.htm">IObjectMessage</a></td><td><div class="summary">
+             An ObjectMessage object is used to send a message that contains
+             a serializable object .
+             It inherits from the Message interface and adds a body
+             containing a single reference to an object. Only Serializable 
+             objects can be used.
+            
+             <p>If a collection of objects must be sent, one of the 
+             Collection classes provided since JDK 1.2 can be used.</p><p>When a client receives an ObjectMessage, it is in read-only 
+             mode. If a client attempts to write to the message at this point, a 
+             MessageNotWriteableException is thrown. If 
+             clearBody is called, the message can now be both read from and 
+             written to.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IQueue.htm">IQueue</a></td><td><div class="summary">
+             A Queue object encapsulates a provider-specific queue name. 
+             It is the way a client specifies the identity of a queue to JMS API methods.
+             For those methods that use a Destination as a parameter, a 
+             Queue object used as an argument. For example, a queue can
+             be used  to create a MessageConsumer and a 
+             MessageProducer  by calling:
+            <ul><li> Session.CreateConsumer(Destination destination)</li><li> Session.CreateProducer(Destination destination)</li></ul><p>The actual length of time messages are held by a queue and the 
+             consequences of resource overflow are not defined by the JMS API.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IQueueBrowser.htm">IQueueBrowser</a></td><td><div class="summary">
+             A client uses a QueueBrowser object to look at messages on a 
+             queue without removing them.
+            
+             <p>The getEnumeration method returns a 
+             java.util.Enumeration that is used to scan 
+             the queue's messages. It may be an enumeration of the entire content of a 
+             queue, or it may contain only the messages matching a message selector.</p><p>Messages may be arriving and expiring while the scan is done. The JMS API
+             does 
+             not require the content of an enumeration to be a static snapshot of queue 
+             content. Whether these changes are visible or not depends on the JMS 
+             provider.</p><p>A QueueBrowser can be created from either a 
+             Session or a  QueueSession. </p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IQueueConnection.htm">IQueueConnection</a></td><td><div class="summary">
+             A QueueConnection object is an active connection to a 
+             point-to-point JMS provider. A client uses a QueueConnection 
+             object to create one or more QueueSession objects
+             for producing and consuming messages.
+            
+            <p>A QueueConnection can be used to create a
+             QueueSession, from which specialized  queue-related objects
+             can be created.
+             A more general, and recommended, approach is to use the 
+             Connection object.</p><p>The QueueConnection object
+             should be used to support existing code that has already used it.</p><p>A QueueConnection cannot be used to create objects 
+             specific to the   publish/subscribe domain. The
+             createDurableConnectionConsumer method inherits
+             from  Connection, but must throw an 
+             IllegalStateException
+             if used from QueueConnection.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IQueueConnectionFactory.htm">IQueueConnectionFactory</a></td><td><div class="summary">
+             A client uses a QueueConnectionFactory object to create 
+             QueueConnection objects with a point-to-point JMS provider.
+            
+             <p>QueueConnectionFactory can be used to create a 
+             QueueConnection, from which specialized queue-related objects
+             can be  created. A more general, and recommended,  approach 
+             is to use the ConnectionFactory object.</p><p> The QueueConnectionFactory object
+             can be used to support existing code that already uses it.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IQueueReceiver.htm">IQueueReceiver</a></td><td><div class="summary">
+             A client uses a QueueReceiver object to receive messages that 
+             have been delivered to a queue.
+            
+             <p>Although it is possible to have multiple QueueReceivers 
+             for the same queue, the JMS API does not define how messages are 
+             distributed between the QueueReceivers.</p><p>If a QueueReceiver specifies a message selector, the 
+             messages that are not selected remain on the queue. By definition, a message
+             selector allows a QueueReceiver to skip messages. This 
+             means that when the skipped messages are eventually read, the total ordering
+             of the reads does not retain the partial order defined by each message 
+             producer. Only QueueReceivers without a message selector
+             will read messages in message producer order.</p><p>Creating a MessageConsumer provides the same features as
+             creating a QueueReceiver. A MessageConsumer object is 
+             recommended for creating new code. The  QueueReceiver is
+             provided to support existing code.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IQueueSender.htm">IQueueSender</a></td><td><div class="summary">
+             A client uses a QueueSender object to send messages to a queue.
+             
+             <p>Normally, the Queue is specified when a 
+             QueueSender is created.  In this case, an attempt to use
+             the send methods for an unidentified 
+             QueueSender will throw a 
+             java.lang.UnsupportedOperationException.</p><p>If the QueueSender is created with an unidentified 
+             Queue, an attempt to use the send methods that 
+             assume that the Queue has been identified will throw a
+             java.lang.UnsupportedOperationException.</p><p>During the execution of its send method, a message 
+             must not be changed by other threads within the client. 
+             If the message is modified, the result of the send is 
+             undefined.</p><p>After sending a message, a client may retain and modify it
+             without affecting the message that has been sent. The same message
+             object may be sent multiple times.</p><p>The following message headers are set as part of sending a 
+             message: JMSDestination, JMSDeliveryMode, 
+             JMSExpiration, JMSPriority, 
+             JMSMessageID and JMSTimeStamp.
+             When the message is sent, the values of these headers are ignored. 
+             After the completion of the send, the headers hold the values 
+             specified by the method sending the message. It is possible for the 
+             send method not to set JMSMessageID and 
+             JMSTimeStamp if the 
+             setting of these headers is explicitly disabled by the 
+             MessageProducer.setDisableMessageID or
+             MessageProducer.setDisableMessageTimestamp method.</p><p>Creating a MessageProducer provides the same features as
+             creating a QueueSender. A MessageProducer object is 
+             recommended when creating new code. The  QueueSender is
+             provided to support existing code.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IQueueSession.htm">IQueueSession</a></td><td><div class="summary">
+             A QueueSession object provides methods for creating 
+             QueueReceiver, QueueSender, 
+             QueueBrowser, and TemporaryQueue objects.
+            
+             <p>If there are messages that have been received but not acknowledged 
+             when a QueueSession terminates, these messages will be retained 
+             and redelivered when a consumer next accesses the queue.</p><p>A QueueSession is used for creating Point-to-Point specific
+             objects. In general, use the Session object. 
+             The QueueSession is used to support
+             existing code. Using the Session object simplifies the 
+             programming model, and allows transactions to be used across the two 
+             messaging domains.</p><p>A QueueSession cannot be used to create objects specific to the 
+             publish/subscribe domain. The following methods inherit from 
+             Session, but must throw an
+             IllegalStateException 
+             if they are used from QueueSession:
+            <ul><li>createDurableSubscriber</li><li>createTemporaryTopic</li><li>createTopic</li><li>unsubscribe</li></ul></p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IServerSession.htm">IServerSession</a></td><td><div class="summary">
+             A ServerSession object is an application server object that 
+             is used by a server to associate a thread with a JMS session (optional).
+            
+             <p>A ServerSession implements two methods:
+            
+             <ul><li>getSession - returns the ServerSession's 
+                   JMS session.</li><li>start - starts the execution of the 
+                   ServerSession 
+                   thread and results in the execution of the JMS session's 
+                   run method.</li></ul></p><p>A ConnectionConsumer implemented by a JMS provider uses a 
+             ServerSession to process one or more messages that have 
+             arrived. It does this by getting a ServerSession from the 
+             ConnectionConsumer's ServerSessionPool; getting 
+             the ServerSession's JMS session; loading it with the messages; 
+             and then starting the ServerSession.</p><p>In most cases the ServerSession will register some object 
+             it provides as the ServerSession's thread run object. The 
+             ServerSession's start method will call the 
+             thread's start method, which will start the new thread, and 
+             from it, call the run method of the 
+             ServerSession's run object. This object will do some 
+             housekeeping and then call the Session's run 
+             method. When run returns, the ServerSession's run 
+             object can return the ServerSession to the 
+             ServerSessionPool, and the cycle starts again.</p><p>Note that the JMS API does not architect how the 
+             ConnectionConsumer loads the Session with 
+             messages. Since both the ConnectionConsumer and 
+             Session are implemented by the same JMS provider, they can 
+             accomplish the load using a private mechanism.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IServerSessionPool.htm">IServerSessionPool</a></td><td><div class="summary">
+             A ServerSessionPool object is an object implemented by an 
+             application server to provide a pool of ServerSession objects 
+             for processing the messages of a ConnectionConsumer (optional).
+            
+             <p>Its only method is getServerSession. The JMS API does not 
+             architect how the pool is implemented. It could be a static pool of 
+             ServerSession objects, or it could use a sophisticated 
+             algorithm to dynamically create ServerSession objects as 
+             needed.</p><p>If the ServerSessionPool is out of 
+             ServerSession objects, the getServerSession call 
+             may block. If a ConnectionConsumer is blocked, it cannot 
+             deliver new messages until a ServerSession is 
+             eventually returned.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ISession.htm">ISession</a></td><td><div class="summary"><p>A Session object is a single-threaded context for producing and consuming 
+             messages. Although it may allocate provider resources outside the Java 
+             virtual machine (JVM), it is considered a lightweight JMS object.</p><p>A session serves several purposes:
+            
+             <ul><li>It is a factory for its message producers and consumers.</li><li>It supplies provider-optimized message factories.</li><li>It is a factory for TemporaryTopics and 
+                    TemporaryQueues. </li><li> It provides a way to create Queue or Topic
+                  objects for those clients that need to dynamically manipulate 
+                  provider-specific destination names.</li><li>It supports a single series of transactions that combine work 
+                   spanning its producers and consumers into atomic units.</li><li>It defines a serial order for the messages it consumes and 
+                   the messages it produces.</li><li>It retains messages it consumes until they have been 
+                   acknowledged.</li><li>It serializes execution of message listeners registered with 
+                   its message consumers.</li><li> It is a factory for QueueBrowsers.</li></ul></p><p>A session can create and service multiple message producers and 
+             consumers.</p><p>One typical use is to have a thread block on a synchronous 
+             MessageConsumer until a message arrives. The thread may then
+             use one or more of the Session's MessageProducers.</p><p>If a client desires to have one thread produce messages while others 
+             consume them, the client should use a separate session for its producing 
+             thread.</p><p>Once a connection has been started, any session with one or more 
+             registered message listeners is dedicated to the thread of control that 
+             delivers messages to it. It is erroneous for client code to use this session
+             or any of its constituent objects from another thread of control. The
+             only exception to this rule is the use of the session or connection 
+             close method.</p><p>It should be easy for most clients to partition their work naturally
+             into sessions. This model allows clients to start simply and incrementally
+             add message processing complexity as their need for concurrency grows.</p><p>The close method is the only session method that can be 
+             called while some other session method is being executed in another thread.</p><p>A session may be specified as transacted. Each transacted 
+             session supports a single series of transactions. Each transaction groups 
+             a set of message sends and a set of message receives into an atomic unit 
+             of work. In effect, transactions organize a session's input message 
+             stream and output message stream into series of atomic units. When a 
+             transaction commits, its atomic unit of input is acknowledged and its 
+             associated atomic unit of output is sent. If a transaction rollback is 
+             done, the transaction's sent messages are destroyed and the session's input 
+             is automatically recovered.</p><p>The content of a transaction's input and output units is simply those 
+             messages that have been produced and consumed within the session's current 
+             transaction.</p><p>A transaction is completed using either its session's commit
+             method or its session's rollback method. The completion of a
+             session's current transaction automatically begins the next. The result is
+             that a transacted session always has a current transaction within which its 
+             work is done.  </p><p>The Java Transaction Service (JTS) or some other transaction monitor may 
+             be used to combine a session's transaction with transactions on other 
+             resources (databases, other JMS sessions, etc.). Since Java distributed 
+             transactions are controlled via the Java Transaction API (JTA), use of the 
+             session's commit and rollback methods in 
+             this context is prohibited.</p><p>The JMS API does not require support for JTA; however, it does define 
+             how a provider supplies this support.</p><p>Although it is also possible for a JMS client to handle distributed 
+             transactions directly, it is unlikely that many JMS clients will do this.
+             Support for JTA in the JMS API is targeted at systems vendors who will be 
+             integrating the JMS API into their application server products.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_IStreamMessage.htm">IStreamMessage</a></td><td><div class="summary">
+             A StreamMessage object is used to send a stream of primitive
+             types. It is filled and read sequentially.
+             It inherits from the Message interface
+             and adds a stream message body. Its methods are based largely on those
+             found in java.io.DataInputStream and
+             java.io.DataOutputStream.
+            
+             <p>The primitive types can be read or written explicitly using methods
+             for each type. They may also be read or written generically as objects.
+             For instance, a call to StreamMessage.writeInt(6) is
+             equivalent to StreamMessage.writeObject(new Integer(6)).
+             Both forms are provided, because the explicit form is convenient for
+             static programming, and the object form is needed when types are not known
+             at compile time.</p><p>When the message is first created, and when clearBody
+             is called, the body of the message is in write-only mode. After the 
+             first call to reset has been made, the message body is in 
+             read-only mode. 
+             After a message has been sent, the client that sent it can retain and 
+             modify it without affecting the message that has been sent. The same message
+             object can be sent multiple times.
+             When a message has been received, the provider has called 
+             reset so that the message body is in read-only mode for the client.</p><p>If clearBody is called on a message in read-only mode, 
+             the message body is cleared and the message body is in write-only mode.</p><p>If a client attempts to read a message in write-only mode, a 
+             MessageNotReadableException is thrown.</p><p>If a client attempts to write a message in read-only mode, a 
+             MessageNotWriteableException is thrown.</p><p>StreamMessage objects support the following conversion 
+             table. The marked cases must be supported. The unmarked cases must throw a 
+             JMSException. The String-to-primitive conversions 
+             may throw a runtime exception if the primitive's valueOf() 
+             method does not accept it as a valid String representation of 
+             the primitive.</p><p>A value written as the row type can be read as the column type.</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             |        | boolean byte short char int long float double String byte[]
+             |----------------------------------------------------------------------
+             |boolean |    X                                            X
+             |byte    |          X     X         X   X                  X   
+             |short   |                X         X   X                  X   
+             |char    |                     X                           X
+             |int     |                          X   X                  X   
+             |long    |                              X                  X   
+             |float   |                                    X     X      X   
+             |double  |                                          X      X   
+             |String  |    X     X     X         X   X     X     X      X   
+             |byte[]  |                                                        X
+             |----------------------------------------------------------------------
+             </pre></td></tr></table></span></div><p>Attempting to read a null value as a primitive type must be treated
+             as calling the primitive's corresponding valueOf(String) 
+             conversion method with a null value. Since char does not 
+             support a String conversion, attempting to read a null value 
+             as a char must throw a ArgumentException.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ITemporaryQueue.htm">ITemporaryQueue</a></td><td><div class="summary">
+             A TemporaryQueue object is a unique Queue object 
+             created for the duration of a Connection. It is a 
+             system-defined queue that can be consumed only by the 
+             Connection that created it.
+            
+             <p>
+             A TemporaryQueue object can be created at either the 
+             Session or QueueSession level. Creating it at the
+             Session level allows to the TemporaryQueue to 
+             participate in transactions with objects from the Pub/Sub  domain. 
+             If it is created at the QueueSession, it will only
+             be able participate in transactions with objects from the PTP domain.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ITemporaryTopic.htm">ITemporaryTopic</a></td><td><div class="summary">
+             A TemporaryTopic object is a unique Topic object 
+             created for the duration of a Connection. It is a 
+             system-defined topic that can be consumed only by the 
+             Connection that created it.
+            
+            <p>A TemporaryTopic object can be created either at the 
+             Session or TopicSession level. Creating it at the
+             Session level allows the TemporaryTopic to participate
+             in the same transaction with objects from the PTP domain. 
+             If a TemporaryTopic is  created at the 
+             TopicSession, it will only
+             be able participate in transactions with objects from the Pub/Sub domain.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ITextMessage.htm">ITextMessage</a></td><td><div class="summary">
+             A TextMessage object is used to send a message containing a 
+             java.lang.String.
+             It inherits from the Message interface and adds a text message 
+             body.
+            
+             <p>This message type can be used to transport text-based messages, including
+              those with XML content.</p><p>When a client receives a TextMessage, it is in read-only 
+             mode. If a client attempts to write to the message at this point, a 
+             MessageNotWriteableException is thrown. If 
+             clearBody is 
+             called, the message can now be both read from and written to.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ITopic.htm">ITopic</a></td><td><div class="summary">
+             A Topic object encapsulates a provider-specific topic name. 
+             It is the way a client specifies the identity of a topic to JMS API methods.
+             For those methods that use a Destination as a parameter, a 
+             Topic object may used as an argument . For 
+             example, a Topic can be used to create a MessageConsumer
+             and a MessageProducer
+             by calling:
+            <ul><li> Session.CreateConsumer(Destination destination)</li><li> Session.CreateProducer(Destination destination)</li></ul><p>Many publish/subscribe (pub/sub) providers group topics into hierarchies 
+             and provide various options for subscribing to parts of the hierarchy. The 
+             JMS API places no restriction on what a Topic object 
+             represents. It may be a leaf in a topic hierarchy, or it may be a larger 
+             part of the hierarchy.</p><p>The organization of topics and the granularity of subscriptions to 
+             them is an important part of a pub/sub application's architecture. The JMS 
+             API 
+             does not specify a policy for how this should be done. If an application 
+             takes advantage of a provider-specific topic-grouping mechanism, it 
+             should document this. If the application is installed using a different 
+             provider, it is the job of the administrator to construct an equivalent 
+             topic architecture and create equivalent Topic objects.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ITopicConnection.htm">ITopicConnection</a></td><td><div class="summary">
+             A TopicConnection object is an active connection to a 
+             publish/subscribe JMS provider. A client uses a TopicConnection 
+             object to create one or more TopicSession objects
+             for producing and consuming messages.
+            
+            <p>A TopicConnection can be used to create a 
+            TopicSession, from which
+             specialized topic-related objects can be created. 
+             A more general, and recommended approach is to use the 
+             Connection object. </p><p>The TopicConnection object
+             should be used to support existing code.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ITopicConnectionFactory.htm">ITopicConnectionFactory</a></td><td><div class="summary">
+             A client uses a TopicConnectionFactory object to create 
+             TopicConnection objects with a publish/subscribe JMS provider.
+            
+             <p>A TopicConnectionFactory can be used to create a 
+             TopicConnection, from which specialized topic-related objects
+             can be  created. A more general, and recommended approach 
+             is to use the ConnectionFactory object.</p><p> The TopicConnectionFactory object
+             should be used to support existing code.</p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ITopicPublisher.htm">ITopicPublisher</a></td><td /></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ITopicSession.htm">ITopicSession</a></td><td><div class="summary">
+             A TopicSession object provides methods for creating 
+             TopicPublisher, TopicSubscriber, and 
+             TemporaryTopic objects. It also provides a method for 
+             deleting its client's durable subscribers.
+            
+            <p>A TopicSession is used for creating Pub/Sub specific
+             objects. In general, use the  Session object, and 
+              use TopicSession  only to support
+             existing code. Using the Session object simplifies the 
+             programming model, and allows transactions to be used across the two 
+             messaging domains.</p><p>A TopicSession cannot be used to create objects specific to the 
+             point-to-point domain. The following methods inherit from 
+             Session, but must throw an 
+             IllegalStateException 
+             if used from TopicSession:
+            <ul><li>createBrowser</li><li>createQueue</li><li>createTemporaryQueue</li></ul></p></div></td></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Kaazing_JMS_ITopicSubscriber.htm">ITopicSubscriber</a></td><td><div class="summary">
+             A client uses a TopicSubscriber object to receive messages that
+             have been published to a topic. A TopicSubscriber object is the
+             publish/subscribe form of a message consumer. A MessageConsumer
+             can be created by using Session.createConsumer. 
+            
+             <p>A TopicSession allows the creation of multiple 
+             TopicSubscriber objects per topic.  It will deliver each 
+             message for a topic to each
+             subscriber eligible to receive it. Each copy of the message
+             is treated as a completely separate message. Work done on one copy has
+             no effect on the others; acknowledging one does not acknowledge the
+             others; one message may be delivered immediately, while another waits
+             for its subscriber to process messages ahead of it.</p><p>Regular TopicSubscriber objects are not durable. They 
+             receive only messages that are published while they are active.</p><p>Messages filtered out by a subscriber's message selector will never 
+             be delivered to the subscriber. From the subscriber's perspective, they 
+             do not exist.</p><p>In some cases, a connection may both publish and subscribe to a topic.
+             The subscriber NoLocal attribute allows a subscriber to inhibit
+             the 
+             delivery of messages published by its own connection.</p><p>If a client needs to receive all the messages published on a topic, 
+             including the ones published while the subscriber is inactive, it uses 
+             a durable TopicSubscriber. The JMS provider retains a record of
+             this durable 
+             subscription and insures that all messages from the topic's publishers 
+             are retained until they are acknowledged by this durable 
+             subscriber or they have expired.</p><p>Sessions with durable subscribers must always provide the same client 
+             identifier. In addition, each client must specify a name that uniquely 
+             identifies (within client identifier) each durable subscription it creates.
+             Only one session at a time can have a TopicSubscriber for a 
+             particular durable subscription. </p><p>A client can change an existing durable subscription by creating a 
+             durable TopicSubscriber with the same name and a new topic 
+             and/or message 
+             selector. Changing a durable subscription is equivalent to unsubscribing 
+             (deleting) the old one and creating a new one.</p><p>The unsubscribe method is used to delete a durable 
+             subscription. The unsubscribe method can be used at the 
+             Session or TopicSession level.
+             This method deletes the state being 
+             maintained on behalf of the subscriber by its provider.</p><p>Creating a MessageConsumer provides the same features as
+             creating a TopicSubscriber. To create a durable subscriber, 
+             use of Session.CreateDurableSubscriber is recommended. The 
+             TopicSubscriber is provided to support existing code.</p></div></td></tr></table></div></div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

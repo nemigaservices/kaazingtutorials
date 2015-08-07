@@ -1,0 +1,2355 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMMapMessage Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMMapMessage Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/getBoolean:">&nbsp;&nbsp;&nbsp;&nbsp;- getBoolean:</option>
+	
+	<option value="//api/name/getByte:">&nbsp;&nbsp;&nbsp;&nbsp;- getByte:</option>
+	
+	<option value="//api/name/getBytes:">&nbsp;&nbsp;&nbsp;&nbsp;- getBytes:</option>
+	
+	<option value="//api/name/getChar:">&nbsp;&nbsp;&nbsp;&nbsp;- getChar:</option>
+	
+	<option value="//api/name/getDouble:">&nbsp;&nbsp;&nbsp;&nbsp;- getDouble:</option>
+	
+	<option value="//api/name/getFloat:">&nbsp;&nbsp;&nbsp;&nbsp;- getFloat:</option>
+	
+	<option value="//api/name/getInt:">&nbsp;&nbsp;&nbsp;&nbsp;- getInt:</option>
+	
+	<option value="//api/name/getLong:">&nbsp;&nbsp;&nbsp;&nbsp;- getLong:</option>
+	
+	<option value="//api/name/getObject:">&nbsp;&nbsp;&nbsp;&nbsp;- getObject:</option>
+	
+	<option value="//api/name/getShort:">&nbsp;&nbsp;&nbsp;&nbsp;- getShort:</option>
+	
+	<option value="//api/name/getString:">&nbsp;&nbsp;&nbsp;&nbsp;- getString:</option>
+	
+	<option value="//api/name/itemExists:">&nbsp;&nbsp;&nbsp;&nbsp;- itemExists:</option>
+	
+	<option value="//api/name/mapNames">&nbsp;&nbsp;&nbsp;&nbsp;- mapNames</option>
+	
+	<option value="//api/name/setBoolean:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setBoolean:value:</option>
+	
+	<option value="//api/name/setByte:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setByte:value:</option>
+	
+	<option value="//api/name/setBytes:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setBytes:value:</option>
+	
+	<option value="//api/name/setBytes:value:offset:length:">&nbsp;&nbsp;&nbsp;&nbsp;- setBytes:value:offset:length:</option>
+	
+	<option value="//api/name/setChar:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setChar:value:</option>
+	
+	<option value="//api/name/setDouble:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setDouble:value:</option>
+	
+	<option value="//api/name/setFloat:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setFloat:value:</option>
+	
+	<option value="//api/name/setInt:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setInt:value:</option>
+	
+	<option value="//api/name/setLong:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setLong:value:</option>
+	
+	<option value="//api/name/setObject:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setObject:value:</option>
+	
+	<option value="//api/name/setShort:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setShort:value:</option>
+	
+	<option value="//api/name/setString:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setString:value:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getBoolean:">getBoolean:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getByte:">getByte:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getBytes:">getBytes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getChar:">getChar:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getDouble:">getDouble:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getFloat:">getFloat:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getInt:">getInt:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getLong:">getLong:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getObject:">getObject:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getShort:">getShort:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getString:">getString:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/itemExists:">itemExists:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mapNames">mapNames</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBoolean:value:">setBoolean:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setByte:value:">setByte:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBytes:value:">setBytes:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBytes:value:offset:length:">setBytes:value:offset:length:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setChar:value:">setChar:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDouble:value:">setDouble:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setFloat:value:">setFloat:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setInt:value:">setInt:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLong:value:">setLong:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setObject:value:">setObject:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setShort:value:">setShort:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setString:value:">setString:value:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMMapMessage Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMMapMessage Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KMMessage.html">KMMessage</a> : <a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMMapMessage.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A KMMapMessage object is used to send a set of name-value pairs.
+The names are String objects, and the values are primitive
+data types. The names must have a value that
+is not null, and not an empty string. The entries can be accessed
+sequentially or randomly by name. The order of the entries is undefined.
+KMMapMessage inherits from the Message interface
+and adds a message body that contains a Map.</p>
+
+<p>The primitive types can be read or written explicitly using methods
+for each type. They may also be read or written generically as objects.
+For instance, a call to KMMapMessage.setInt(&ldquo;foo&rdquo;, 6) is
+equivalent to KMMapMessage.setObject(&ldquo;foo&rdquo;, new Integer(6)).
+Both forms are provided, because the explicit form is convenient for
+static programming, and the object form is needed when types are not known
+at compile time.</p>
+
+<p>When a client receives a KMMapMessage, it is in read-only
+mode. If a client attempts to write to the message at this point, a
+<a href="../Classes/KMMessageNotWriteableException.html">KMMessageNotWriteableException</a> is thrown. If
+clearBody is called, the message can now be both read from and
+written to.</p>
+
+<p>KMMapMessage objects support the following conversion table.
+The marked cases must be supported. The unmarked cases must throw a
+<a href="../Classes/KMJMSException.html">KMJMSException</a>. The String-to-primitive conversions
+may throw a runtime exception if the primitive&rsquo;s valueOf()
+method does not accept it as a valid String representation of
+the primitive.</p>
+
+<p>A value written as the row type can be read as the column type.</p>
+
+<pre><code>
+|        | boolean byte short char int long float double String byte[]
+|----------------------------------------------------------------------
+|boolean |    X                                            X
+|byte    |          X     X         X   X                  X
+|short   |                X         X   X                  X
+|char    |                     X                           X
+|int     |                          X   X                  X
+|long    |                              X                  X
+|float   |                                    X     X      X
+|double  |                                          X      X
+|String  |    X     X     X         X   X     X     X      X
+|byte[]  |                                                        X
+|----------------------------------------------------------------------
+</code></pre>
+
+
+<p>Attempting to read a null value as a primitive type must be treated
+as calling the primitive&rsquo;s corresponding valueOf(String)
+conversion method with a null value. Since char does not
+support a String conversion, attempting to read a null value
+as a char must throw an exception.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getBoolean:">&ndash;&nbsp;getBoolean:</a></code>
+		<span class="tooltip"><p>Returns the boolean value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getByte:">&ndash;&nbsp;getByte:</a></code>
+		<span class="tooltip"><p>Returns the byte value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getShort:">&ndash;&nbsp;getShort:</a></code>
+		<span class="tooltip"><p>Returns the short value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getChar:">&ndash;&nbsp;getChar:</a></code>
+		<span class="tooltip"><p>Returns the Unicode character value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getInt:">&ndash;&nbsp;getInt:</a></code>
+		<span class="tooltip"><p>Returns the int value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getLong:">&ndash;&nbsp;getLong:</a></code>
+		<span class="tooltip"><p>Returns the long value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getFloat:">&ndash;&nbsp;getFloat:</a></code>
+		<span class="tooltip"><p>Returns the float value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getDouble:">&ndash;&nbsp;getDouble:</a></code>
+		<span class="tooltip"><p>Returns the double value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getString:">&ndash;&nbsp;getString:</a></code>
+		<span class="tooltip"><p>Returns the String value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getBytes:">&ndash;&nbsp;getBytes:</a></code>
+		<span class="tooltip"><p>Returns the byte array value with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getObject:">&ndash;&nbsp;getObject:</a></code>
+		<span class="tooltip"><p>Returns the value of the object with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mapNames">&ndash;&nbsp;mapNames</a></code>
+		<span class="tooltip"><p>Returns an Enumeration of all the names in the
+KMMapMessage object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBoolean:value:">&ndash;&nbsp;setBoolean:value:</a></code>
+		<span class="tooltip"><p>Sets a boolean value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setByte:value:">&ndash;&nbsp;setByte:value:</a></code>
+		<span class="tooltip"><p>Sets a byte value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setShort:value:">&ndash;&nbsp;setShort:value:</a></code>
+		<span class="tooltip"><p>Sets a short value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setChar:value:">&ndash;&nbsp;setChar:value:</a></code>
+		<span class="tooltip"><p>Sets a Unicode character value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setInt:value:">&ndash;&nbsp;setInt:value:</a></code>
+		<span class="tooltip"><p>Sets an int value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLong:value:">&ndash;&nbsp;setLong:value:</a></code>
+		<span class="tooltip"><p>Sets a long value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setFloat:value:">&ndash;&nbsp;setFloat:value:</a></code>
+		<span class="tooltip"><p>Sets a float value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDouble:value:">&ndash;&nbsp;setDouble:value:</a></code>
+		<span class="tooltip"><p>Sets a double value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setString:value:">&ndash;&nbsp;setString:value:</a></code>
+		<span class="tooltip"><p>Sets a String value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBytes:value:">&ndash;&nbsp;setBytes:value:</a></code>
+		<span class="tooltip"><p>Sets a byte array value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBytes:value:offset:length:">&ndash;&nbsp;setBytes:value:offset:length:</a></code>
+		<span class="tooltip"><p>Sets a portion of the byte array value with the specified name into the
+Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setObject:value:">&ndash;&nbsp;setObject:value:</a></code>
+		<span class="tooltip"><p>Sets an object value with the specified name into the Map.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/itemExists:">&ndash;&nbsp;itemExists:</a></code>
+		<span class="tooltip"><p>Indicates whether an item exists in this KMMapMessage object.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/getBoolean:" title="getBoolean:"></a>
+	<h3 class="subsubtitle method-title">getBoolean:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the boolean value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)getBoolean:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the boolean</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the boolean value with the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getByte:" title="getByte:"></a>
+	<h3 class="subsubtitle method-title">getByte:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the byte value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (Byte)getByte:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the byte</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the byte value with the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getBytes:" title="getBytes:"></a>
+	<h3 class="subsubtitle method-title">getBytes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the byte array value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSData *)getBytes:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the byte array</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a copy of the byte array value with the specified name; if there
+is no
+item by this name, a null value is returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getChar:" title="getChar:"></a>
+	<h3 class="subsubtitle method-title">getChar:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the Unicode character value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (char)getChar:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the Unicode character</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the Unicode character value with the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getDouble:" title="getDouble:"></a>
+	<h3 class="subsubtitle method-title">getDouble:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the double value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (double)getDouble:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the double</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the double value with the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getFloat:" title="getFloat:"></a>
+	<h3 class="subsubtitle method-title">getFloat:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the float value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (float)getFloat:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the float</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the float value with the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getInt:" title="getInt:"></a>
+	<h3 class="subsubtitle method-title">getInt:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the int value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)getInt:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the int</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the int value with the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getLong:" title="getLong:"></a>
+	<h3 class="subsubtitle method-title">getLong:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the long value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (long long)getLong:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the long</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the long value with the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getObject:" title="getObject:"></a>
+	<h3 class="subsubtitle method-title">getObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the object with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSObject *)getObject:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the object</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The return value is one of NSString, NSData, or NSNumber types
+depending on the type of value matching the key.
+nil is returned if there is no matching key, or if the value itself is empty (null).
+If the map message entry contains a string or byte array, then getObject
+returns NSString or NSData respectively.  Numeric values, as well as byte and boolean
+are returned as NSNumber.  The application developer may prefer to
+use the appropriate getter methods to retrieve the value when the
+data type is known to retrieve a specific data type.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getShort:" title="getShort:"></a>
+	<h3 class="subsubtitle method-title">getShort:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the short value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (short)getShort:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the short</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the short value with the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getString:" title="getString:"></a>
+	<h3 class="subsubtitle method-title">getString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the String value with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)getString:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the String</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the String value with the specified name; if there
+is no item by this name, a null value is returned</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/itemExists:" title="itemExists:"></a>
+	<h3 class="subsubtitle method-title">itemExists:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates whether an item exists in this KMMapMessage object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)itemExists:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the item to test</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if the item exists</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to determine if the
+item exists due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mapNames" title="mapNames"></a>
+	<h3 class="subsubtitle method-title">mapNames</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an Enumeration of all the names in the
+KMMapMessage object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSEnumerator *)mapNames</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>an enumeration of all the names in this KMMapMessage</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to read the message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setBoolean:value:" title="setBoolean:value:"></a>
+	<h3 class="subsubtitle method-title">setBoolean:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a boolean value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setBoolean:(NSString *)<em>name</em> value:(BOOL)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the boolean</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the boolean value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setByte:value:" title="setByte:value:"></a>
+	<h3 class="subsubtitle method-title">setByte:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a byte value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setByte:(NSString *)<em>name</em> value:(Byte)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the byte</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the byte value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setBytes:value:" title="setBytes:value:"></a>
+	<h3 class="subsubtitle method-title">setBytes:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a byte array value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setBytes:(NSString *)<em>name</em> value:(NSData *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the byte array</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the byte array value to set in the Map; the array
+is copied so that the value for name will
+not be altered by future modifications</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null, or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setBytes:value:offset:length:" title="setBytes:value:offset:length:"></a>
+	<h3 class="subsubtitle method-title">setBytes:value:offset:length:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a portion of the byte array value with the specified name into the
+Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setBytes:(NSString *)<em>name</em> value:(NSData *)<em>value</em> offset:(int)<em>offset</em> length:(int)<em>length</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the byte array</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the byte array value to set in the Map</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd><p>the initial offset within the byte array</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>length</em></dt>
+			<dd><p>the number of bytes to use</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setChar:value:" title="setChar:value:"></a>
+	<h3 class="subsubtitle method-title">setChar:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a Unicode character value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setChar:(NSString *)<em>name</em> value:(char)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the Unicode character</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the Unicode character value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDouble:value:" title="setDouble:value:"></a>
+	<h3 class="subsubtitle method-title">setDouble:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a double value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDouble:(NSString *)<em>name</em> value:(double)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the double</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the double value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setFloat:value:" title="setFloat:value:"></a>
+	<h3 class="subsubtitle method-title">setFloat:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a float value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setFloat:(NSString *)<em>name</em> value:(float)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the float</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the float value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setInt:value:" title="setInt:value:"></a>
+	<h3 class="subsubtitle method-title">setInt:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets an int value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setInt:(NSString *)<em>name</em> value:(int)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the int</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the int value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLong:value:" title="setLong:value:"></a>
+	<h3 class="subsubtitle method-title">setLong:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a long value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setLong:(NSString *)<em>name</em> value:(long long)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the long</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the long value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setObject:value:" title="setObject:value:"></a>
+	<h3 class="subsubtitle method-title">setObject:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets an object value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setObject:(NSString *)<em>name</em> value:(NSObject *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the object</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the object value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method works only for NSNumber, NSString, and NSData.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if the object is invalid.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setShort:value:" title="setShort:value:"></a>
+	<h3 class="subsubtitle method-title">setShort:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a short value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setShort:(NSString *)<em>name</em> value:(short)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the short</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the short value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setString:value:" title="setString:value:"></a>
+	<h3 class="subsubtitle method-title">setString:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a String value with the specified name into the Map.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setString:(NSString *)<em>name</em> value:(NSString *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the String</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the String value to set in the Map</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to write the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if the message is in read-only
+mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMapMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

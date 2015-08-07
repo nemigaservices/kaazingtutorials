@@ -1,0 +1,261 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>IMapMessage Methods</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="IMapMessage interface, methods" />
+    <meta name="Microsoft.Help.Id" content="Methods.T:Kaazing.JMS.IMapMessage" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="Kaazing.JMS" />
+    <meta name="file" content="Methods_T_Kaazing_JMS_IMapMessage" />
+    <meta name="guid" content="Methods_T_Kaazing_JMS_IMapMessage" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="Methods.T:Kaazing.JMS.IMapMessage" />
+      <MSHelp:TOCTitle Title="IMapMessage Methods" />
+      <MSHelp:RLTitle Title="IMapMessage Methods (Kaazing.JMS)" />
+      <MSHelp:Keyword Index="A" Term="Methods.T:Kaazing.JMS.IMapMessage" />
+      <MSHelp:Keyword Index="A" Term="frlrfKaazingJMSIMapMessageMethodsTopic" />
+      <MSHelp:Keyword Index="K" Term="IMapMessage interface, methods" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="4.0.0.69" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuVisualBasicLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual Basic </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuManagedCPlusPlusLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual C++ </nobr></label></span>
+            <span>    </span>
+            <span id="memberOptionsDropdown" class="filter" tabindex="0">
+              <img id="memberOptionsDropdownImage" src="../icons/dropdown.gif" /> <label id="memberOptionsMenuAllLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Show All </nobr></label><label id="memberOptionsMenuMultipleLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuProtectedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuInheritedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="VisualBasicCheckbox" type="checkbox" data="VisualBasic,vb,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="VisualBasicCheckbox">Visual Basic</label>
+        <br />
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="ManagedCPlusPlusCheckbox" type="checkbox" data="ManagedCPlusPlus,cpp,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="ManagedCPlusPlusCheckbox">Visual C++</label>
+        <br />
+      </div>
+      <div id="memberOptionsMenu">
+        <input id="ProtectedCheckbox" type="checkbox" data="Protected" value="on" onClick="SetMemberOptions(this, 'vis')" />
+        <label class="checkboxLabel" for="ProtectedCheckbox">Include Protected Members</label>
+        <br />
+        <input id="InheritedCheckbox" type="checkbox" data="Inherited" value="on" onClick="SetMemberOptions(this, 'decl')" />
+        <label class="checkboxLabel" for="InheritedCheckbox">Include Inherited Members</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">.NET Framework Class Library</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">IMapMessage Methods</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="T_Kaazing_JMS_IMapMessage.htm">IMapMessage Interface</a>  <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a>  </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <font color="DarkGray"></font>
+        <p /> <p>The <a href="T_Kaazing_JMS_IMapMessage.htm">IMapMessage</a> type exposes the following members.</p><h1 class="heading"><span onclick="ExpandCollapse(methodTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(methodTableToggle, event)" tabindex="0"><img id="methodTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span></h1><div id="methodTableSection" class="section" name="collapseableSection" style=""><table id="memberList" class="members" frame="lhs" cellpadding="2"><col width="10%" /><tr><th class="iconColumn">
+               
+            </th><th class="nameColumn">Name</th><th class="descriptionColumn">Description</th></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_Acknowledge.htm">Acknowledge</a></td><td><div class="summary">
+             Acknowledges all consumed messages of the session of this consumed 
+             message.
+              
+             <p>All consumed JMS messages support the acknowledge 
+             method for use when a client has specified that its JMS session's 
+             consumed messages are to be explicitly acknowledged.  By invoking 
+             acknowledge on a consumed message, a client acknowledges 
+             all messages consumed by the session that the message was delivered to.</p><p>Calls to acknowledge are ignored for both transacted 
+             sessions and sessions specified to use implicit acknowledgement modes.</p><p>A client may individually acknowledge each message as it is consumed,
+             or it may choose to acknowledge messages as an application-defined group 
+             (which is done by calling acknowledge on the last received message of the group,
+              thereby acknowledging all messages consumed by the session.)</p><p>Messages that have been received but not acknowledged may be 
+             redelivered.</p></div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_ClearBody.htm">ClearBody</a></td><td><div class="summary">
+             Clears out the message body. Clearing a message's body does not clear 
+             its header values or property entries.
+            
+             <p>If this message body was read-only, calling this method leaves
+             the message body in the same state as an empty body in a newly
+             created message.</p></div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_ClearProperties.htm">ClearProperties</a></td><td><div class="summary">
+             Clears a message's properties.
+            
+             <p>The message's header fields and body are not cleared.</p></div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetBoolean_1_bb3a7a4f.htm">GetBoolean</a></td><td><div class="summary">
+             Returns the boolean value with the specified name.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_GetBooleanProperty_1_bb3a7a4f.htm">GetBooleanProperty</a></td><td><div class="summary">
+            Returns the value of the boolean property with the  
+            specified name.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetByte_1_bb3a7a4f.htm">GetByte</a></td><td><div class="summary">
+             Returns the byte value with the specified name.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_GetByteProperty_1_bb3a7a4f.htm">GetByteProperty</a></td><td><div class="summary">
+            Returns the value of the byte property with the specified 
+            name.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetBytes_1_bb3a7a4f.htm">GetBytes</a></td><td><div class="summary">
+             Returns the byte array value with the specified name.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetChar_1_bb3a7a4f.htm">GetChar</a></td><td><div class="summary">
+             Returns the Unicode character value with the specified name.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetDouble_1_bb3a7a4f.htm">GetDouble</a></td><td><div class="summary">
+             Returns the double value with the specified name.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_GetDoubleProperty_1_bb3a7a4f.htm">GetDoubleProperty</a></td><td><div class="summary">
+            Returns the value of the double property with the specified
+            name.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetFloat_1_bb3a7a4f.htm">GetFloat</a></td><td><div class="summary">
+             Returns the float value with the specified name.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_GetFloatProperty_1_bb3a7a4f.htm">GetFloatProperty</a></td><td><div class="summary">
+            Returns the value of the float property with the specified 
+            name.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetInt_1_bb3a7a4f.htm">GetInt</a></td><td><div class="summary">
+             Returns the int value with the specified name.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_GetIntProperty_1_bb3a7a4f.htm">GetIntProperty</a></td><td><div class="summary">
+            Returns the value of the int property with the specified 
+            name.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetLong_1_bb3a7a4f.htm">GetLong</a></td><td><div class="summary">
+             Returns the long value with the specified name.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_GetLongProperty_1_bb3a7a4f.htm">GetLongProperty</a></td><td><div class="summary">
+            Returns the value of the long property with the specified 
+            name.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetObject_1_bb3a7a4f.htm">GetObject</a></td><td><div class="summary">
+             Returns the value of the object with the specified name.
+            
+             <p>This method can be used to return, in objectified format,
+             an object  that had 
+             been stored in the Map with the equivalent
+             setObject method call, or its equivalent primitive
+             settype method.</p><p>Note that byte values are returned as byte[], not 
+             Byte[].</p></div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_GetObjectProperty_1_bb3a7a4f.htm">GetObjectProperty</a></td><td><div class="summary">
+            Returns the value of the object property with the specified name.
+             
+            <p>This method can be used to return, in objectified format,
+            an object that has been stored as a property in the message with the 
+            equivalent SetObjectProperty method call, or its equivalent
+            primitive SettypeProperty method.</p></div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetShort_1_bb3a7a4f.htm">GetShort</a></td><td><div class="summary">
+             Returns the short value with the specified name.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_GetShortProperty_1_bb3a7a4f.htm">GetShortProperty</a></td><td><div class="summary">
+             Returns the value of the short property with the specified 
+             name.
+             </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_GetString_1_bb3a7a4f.htm">GetString</a></td><td><div class="summary">
+             Returns the String value with the specified name.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_GetStringProperty_1_bb3a7a4f.htm">GetStringProperty</a></td><td><div class="summary">
+            Returns the value of the String property with the specified
+            name.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_ItemExists_1_bb3a7a4f.htm">ItemExists</a></td><td><div class="summary">
+             Indicates whether an item exists in this IMapMessage object.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_PropertyExists_1_bb3a7a4f.htm">PropertyExists</a></td><td><div class="summary">
+             Indicates whether a property value exists.
+             </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetBoolean_2_7ffb34cc.htm">SetBoolean</a></td><td><div class="summary">
+             Sets a boolean value with the specified name into the Map.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_SetBooleanProperty_2_7ffb34cc.htm">SetBooleanProperty</a></td><td><div class="summary">
+             Sets a boolean property value with the specified name into 
+             the message.
+             </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetByte_2_ccd192c0.htm">SetByte</a></td><td><div class="summary">
+             Sets a byte value with the specified name into the Map.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_SetByteProperty_2_ccd192c0.htm">SetByteProperty</a></td><td><div class="summary">
+            Sets a byte property value with the specified name into 
+            the message.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetBytes_2_957d6960.htm">SetBytes(String, <span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Byte<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span>)</a></td><td><div class="summary">
+             Sets a byte array value with the specified name into the Map.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetBytes_4_7ff800f6.htm">SetBytes(String, <span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Byte<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span>, Int32, Int32)</a></td><td><div class="summary">
+             Sets a portion of the byte array value with the specified name into the 
+             Map.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetChar_2_8d8800fe.htm">SetChar</a></td><td><div class="summary">
+             Sets a Unicode character value with the specified name into the Map.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetDouble_2_1c747d2d.htm">SetDouble</a></td><td><div class="summary">
+             Sets a double value with the specified name into the Map.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_SetDoubleProperty_2_1c747d2d.htm">SetDoubleProperty</a></td><td><div class="summary">
+            Sets a double property value with the specified name into 
+            the message.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetFloat_2_1dbfa9fa.htm">SetFloat</a></td><td><div class="summary">
+             Sets a float value with the specified name into the Map.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_SetFloatProperty_2_1dbfa9fa.htm">SetFloatProperty</a></td><td><div class="summary">
+            Sets a float property value with the specified name into 
+            the message.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetInt_2_90454198.htm">SetInt</a></td><td><div class="summary">
+             Sets an int value with the specified name into the Map.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_SetIntProperty_2_90454198.htm">SetIntProperty</a></td><td><div class="summary">
+            Sets an int property value with the specified name into
+            the message.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetLong_2_a98329ad.htm">SetLong</a></td><td><div class="summary">
+             Sets a long value with the specified name into the Map.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_SetLongProperty_2_a98329ad.htm">SetLongProperty</a></td><td><div class="summary">
+            Sets a long property value with the specified name into 
+            the message.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetObject_2_579d451d.htm">SetObject</a></td><td><div class="summary">
+             Sets an object value with the specified name into the Map.
+            
+             <p>This method works only for the objectified primitive
+             object types (Integer, Double, 
+             Long...), String objects, and byte 
+             arrays.</p></div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_SetObjectProperty_2_579d451d.htm">SetObjectProperty</a></td><td><div class="summary">
+            Sets a object property value with the specified name into the 
+            message.
+             
+            <p>Note that this method works only for the objectified primitive
+            object types (Integer, Double, 
+            Long ...) and String objects.</p></div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetShort_2_7f715192.htm">SetShort</a></td><td><div class="summary">
+             Sets a short value with the specified name into the Map.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_SetShortProperty_2_7f715192.htm">SetShortProperty</a></td><td><div class="summary">
+            Sets a short property value with the specified name into
+            the message.
+            </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMapMessage_SetString_2_f3570541.htm">SetString</a></td><td><div class="summary">
+             Sets a String value with the specified name into the Map.
+             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Kaazing_JMS_IMessage_SetStringProperty_2_f3570541.htm">SetStringProperty</a></td><td><div class="summary">
+             Sets a String property value with the specified name into 
+             the message.
+             </div> (Inherited from <a href="T_Kaazing_JMS_IMessage.htm">IMessage</a>.)</td></tr></table></div><h1 class="heading"><span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0"><img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span></h1><div id="seeAlsoSection" class="section" name="collapseableSection" style=""><div class="seeAlsoStyle"><a href="T_Kaazing_JMS_IMapMessage.htm">IMapMessage Interface</a></div><div class="seeAlsoStyle"><a href="N_Kaazing_JMS.htm">Kaazing.JMS Namespace</a></div></div></div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

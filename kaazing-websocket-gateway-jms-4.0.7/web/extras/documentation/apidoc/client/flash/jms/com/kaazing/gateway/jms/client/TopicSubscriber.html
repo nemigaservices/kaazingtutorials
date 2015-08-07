@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="TopicSubscriber,com.kaazing.gateway.jms.client.TopicSubscriber,noLocal,topic" name="keywords">
+<title>com.kaazing.gateway.jms.client.TopicSubscriber</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'TopicSubscriber - API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/kaazing/gateway/jms/client/TopicSubscriber.html&amp;com/kaazing/gateway/jms/client/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Interface&nbsp;TopicSubscriber</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Interface TopicSubscriber"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.kaazing.gateway.jms.client</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Interface</td><td class="classSignature">public interface TopicSubscriber extends <a href="MessageConsumer.html">MessageConsumer</a></td>
+</tr>
+</table>
+<p></p> A client uses a <CODE>TopicSubscriber</CODE> object to receive messages that
+  have been published to a topic. A <CODE>TopicSubscriber</CODE> object is the
+  publish/subscribe form of a message consumer. A <CODE>MessageConsumer</CODE>
+  can be created by using <CODE>Session.createConsumer</CODE>. 
+    <P>A <CODE>TopicSession</CODE> allows the creation of multiple 
+  <CODE>TopicSubscriber</CODE> objects per topic.  It will deliver each 
+  message for a topic to each
+  subscriber eligible to receive it. Each copy of the message
+  is treated as a completely separate message. Work done on one copy has
+  no effect on the others; acknowledging one does not acknowledge the
+  others; one message may be delivered immediately, while another waits
+  for its subscriber to process messages ahead of it.
+    <P>Regular <CODE>TopicSubscriber</CODE> objects are not durable. They 
+  receive only messages that are published while they are active.
+    <P>Messages filtered out by a subscriber's message selector will never 
+  be delivered to the subscriber. From the subscriber's perspective, they 
+  do not exist.
+    <P>In some cases, a connection may both publish and subscribe to a topic.
+  The subscriber <CODE>NoLocal</CODE> attribute allows a subscriber to inhibit
+  the 
+  delivery of messages published by its own connection.
+    <P>If a client needs to receive all the messages published on a topic, 
+  including the ones published while the subscriber is inactive, it uses 
+  a durable <CODE>TopicSubscriber</CODE>. The JMS provider retains a record of
+  this durable 
+  subscription and insures that all messages from the topic's publishers 
+  are retained until they are acknowledged by this durable 
+  subscriber or they have expired.
+    <P>Sessions with durable subscribers must always provide the same client 
+  identifier. In addition, each client must specify a name that uniquely 
+  identifies (within client identifier) each durable subscription it creates.
+  Only one session at a time can have a <CODE>TopicSubscriber</CODE> for a 
+  particular durable subscription. 
+    <P>A client can change an existing durable subscription by creating a 
+  durable <CODE>TopicSubscriber</CODE> with the same name and a new topic 
+  and/or message 
+  selector. Changing a durable subscription is equivalent to unsubscribing 
+  (deleting) the old one and creating a new one.
+    <P>The <CODE>unsubscribe</CODE> method is used to delete a durable 
+  subscription. The <CODE>unsubscribe</CODE> method can be used at the 
+  <CODE>Session</CODE> or <CODE>TopicSession</CODE> level.
+  This method deletes the state being 
+  maintained on behalf of the subscriber by its provider.
+    <P>Creating a <CODE>MessageConsumer</CODE> provides the same features as
+  creating a <CODE>TopicSubscriber</CODE>. To create a durable subscriber, 
+  use of <CODE>Session.CreateDurableSubscriber</CODE> is recommended. The 
+  <CODE>TopicSubscriber</CODE> is provided to support existing code.
+  
+  
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="MessageConsumer.html#messageListener">messageListener</a> : <a href="../client/MessageListener.html">MessageListener</a>
+<div class="summaryTableDescription"> Gets the message consumer's <CODE>MessageListener</CODE>.</div>
+</td><td class="summaryTableOwnerCol"><a href="MessageConsumer.html">MessageConsumer</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="MessageConsumer.html#messageSelector">messageSelector</a> : String<div class="summaryTableDescription"> Gets this message consumer's message selector expression.</div>
+</td><td class="summaryTableOwnerCol"><a href="MessageConsumer.html">MessageConsumer</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#noLocal">noLocal</a> : Boolean<div class="summaryTableDescription">[read-only]</div>
+</td><td class="summaryTableOwnerCol">TopicSubscriber</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#topic">topic</a> : <a href="../client/Topic.html">Topic</a>
+<div class="summaryTableDescription">[read-only]</div>
+</td><td class="summaryTableOwnerCol">TopicSubscriber</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable hideInheritedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="MessageConsumer.html#close()">close</a>(callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a>
+</div>
+<div class="summaryTableDescription"> Closes the message consumer.</div>
+</td><td class="summaryTableOwnerCol"><a href="MessageConsumer.html">MessageConsumer</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="MessageConsumer.html#receive()">receive</a>(timeout:int = 0, callback:Function = null):<a href="../client/MessageFuture.html">MessageFuture</a>
+</div>
+<div class="summaryTableDescription"> <B>Not yet implemented.</B>
+            Receives the next message produced for this message consumer,
+      that arrives within the specified timeout interval.</div>
+</td><td class="summaryTableOwnerCol"><a href="MessageConsumer.html">MessageConsumer</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="MessageConsumer.html#receiveNoWait()">receiveNoWait</a>():<a href="../client/Message.html">Message</a>
+</div>
+<div class="summaryTableDescription"> <B>Not yet implemented.</B>
+            Receives the next message if one is immediately available.</div>
+</td><td class="summaryTableOwnerCol"><a href="MessageConsumer.html">MessageConsumer</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="noLocal"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">noLocal</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>noLocal:Boolean</code>&nbsp;&nbsp;[read-only]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get noLocal():Boolean</code>
+<br>
+</div>
+<a name="topic"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">topic</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>topic:<a href="../client/Topic.html">Topic</a></code>&nbsp;&nbsp;[read-only]<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get topic():<a href="../client/Topic.html">Topic</a></code>
+<br>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

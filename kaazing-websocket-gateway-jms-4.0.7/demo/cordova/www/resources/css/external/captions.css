@@ -1,0 +1,282 @@
+.tp-caption.upper_white{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 52px; 
+			line-height: 58px; 
+			font-family: Verdana; 
+			padding: 0px 4px; 
+			padding-top: 1px;
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 	
+			letter-spacing: -1px;										
+		}
+    
+    
+    
+.tp-caption.lower_yellow {
+    border-style: none;
+    border-width: 0;
+    color: #FFC200;
+    font-family: 'Trebuchet MS';
+    font-size: 36px;
+    font-style: italic;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    line-height: 42px;
+    margin: 0;
+    opacity: 1;
+    padding: 1px 4px 0;
+    transform: scale(1, 1) rotate(0deg);
+    white-space: nowrap;
+}
+
+.tp-caption.big_white{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 36px; 
+			line-height: 36px; 
+			font-family: Arial; 
+			padding: 0px 4px; 
+			padding-top: 1px;
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			background-color:#000;	
+			letter-spacing: -1.5px;										
+		}
+
+.tp-caption.big_orange{
+			position: absolute; 
+			color: #ff7302; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 36px; 
+			line-height: 36px; 
+			font-family: Arial; 
+			padding: 0px 4px; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			background-color:#fff;	
+			letter-spacing: -1.5px;															
+		}	
+					
+.tp-caption.big_black{
+			position: absolute; 
+			color: #000; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 36px; 
+			line-height: 36px; 
+			font-family: Arial; 
+			padding: 0px 4px; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			background-color:#fff;	
+			letter-spacing: -1.5px;															
+		}		
+
+.tp-caption.medium_grey{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 20px; 
+			line-height: 20px; 
+			font-family: Arial; 
+			padding: 2px 4px; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			background-color:#888;		
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+		}	
+					
+.tp-caption.small_text{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 14px; 
+			line-height: 20px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+		}
+					
+.tp-caption.medium_text{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 20px; 
+			line-height: 20px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+		}
+					
+.tp-caption.large_text{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 40px; 
+			line-height: 40px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);		
+		}	
+					
+.tp-caption.very_large_text{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 60px; 
+			line-height: 60px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+			letter-spacing: -2px;		
+		}
+					
+.tp-caption.very_big_white{
+			position: absolute; 
+			color: #fff; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 60px; 
+			line-height: 60px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			padding: 0px 4px; 
+			padding-top: 1px;
+			background-color:#000;		
+					}	
+					
+.tp-caption.very_big_black{
+			position: absolute; 
+			color: #000; 
+			text-shadow: none; 
+			font-weight: 700; 
+			font-size: 60px; 
+			line-height: 60px; 
+			font-family: Arial; 
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+			white-space:nowrap;	
+			padding: 0px 4px; 
+			padding-top: 1px;
+			background-color:#fff;		
+					}
+					
+.tp-caption.boxshadow{
+		-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+		-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	}
+											
+.tp-caption.black{
+		color: #000; 
+		text-shadow: none;		
+	}	
+					
+.tp-caption.noshadow {
+		text-shadow: none;		
+	}	
+					
+.tp-caption a { 
+	color: #ff7302; text-shadow: none;	-webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out;	 
+}			
+	
+.tp-caption a:hover { 
+	color: #ffa902; 
+}
+
+/* REVOLUTION SLIDER */
+.tp-caption.project_title{ 
+	font-size: 30px; 
+	font-weight: 700; 
+	color: white; 
+	text-transform: uppercase; 
+	background: rgba(0, 0, 0, 0.3); 
+	text-shadow:1px 1px 0 rgba(0,0,0,0.4); 
+	padding: 8px 15px 14px;  
+	-webkit-border-radius: 2px; 
+	-moz-border-radius: 2px; 
+	border-radius: 2px; 
+	}
+
+.tp-caption.project_subtitle {
+	font-size: 18px; 
+	font-weight: 700; 
+	text-shadow: 1px 1px 0 white; 
+	color: #888;
+}
+
+.tp-caption.more_details{
+	font-size: 10px; 
+	color: #fff; 
+	background-color: #CD2122; 
+	padding: 2px 8px; 
+	line-height: 1.4; 
+	border-radius: 2px; 
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.tp-caption.desc_text{
+	width:340px; white-space: normal !important;}
+.tp-caption.big_title_white{
+	width:540px; white-space: normal !important;}
+.tp-caption.big_title_white h3{
+	font-size:36px; font-weight:700; text-shadow:1px 1px 0 rgba(0,0,0,0.5); color:#fff; text-transform:uppercase;}
+
+.tp-caption.big_text_white{
+	width:500px; white-space: normal !important;}
+.tp-caption.big_text_white p{
+	font-size:28px; font-weight:500; text-shadow:1px 1px 0 rgba(0,0,0,0.5); color:#fff; line-height: 1.3; margin-bottom: 25px;}
+
+.tp-caption.more_details a {
+	color:#fff;
+}
+
+.tp-caption.para1 {
+
+}
+.tp-caption.para2 {
+
+}
+.tp-caption.para3 {
+
+}
+.tp-caption.para4 {
+
+}
+.tp-caption.para5 {
+
+}

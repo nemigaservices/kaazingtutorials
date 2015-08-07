@@ -1,0 +1,352 @@
+Kaazing Gateway
+Copyright 2007-2014 Kaazing Corporation
+
+
+==============================================================================
+The following is a complete list of all third party software, including free
+and open source software as well as proprietary third party code, that is
+delivered with or as part of the licensed product or upon which the licensed
+server product depends:
+==============================================================================
+
+
+------------------------------------------------------------------------------
+
+This product contains a modified version of Apache Mina 2.0.0 RC1 (Modified)
+
+    Homepage:    http://mina.apache.org/
+    Description: Network application framework for Java NIO.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on Apache Geronimo 1.1
+
+    Homepage:    http://geronimo.apache.org/
+    Description: JMS Client API interfaces.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on Google Web Toolkit 2.5.1
+
+    Homepage:    http://code.google.com/p/google-web-toolkit/
+    Description: Javascript client runtime library.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on Hazelcast 1.9.4.8
+
+    Homepage:    http://www.hazelcast.com/
+    Description: A clustering and data distribution platform for Java.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on HdrHistogram 1.2.1
+
+    Homepage:    http://giltene.github.io/HdrHistogram/
+    Description: A High Dynamic Range Histogram for recording and analyzing
+                 sampled data value counts.
+    License:     BSD 2-Clause License
+    License URL: https://github.com/HdrHistogram/HdrHistogram/blob/master/LICENSE.txt
+
+------------------------------------------------------------------------------
+
+This product depends on Jackson 2.1.0
+
+    Homepage:    http://wiki.fasterxml.com/JacksonHome
+    Description: JSON library for parsing and creating JSON formatted
+                 messages.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on Javassist 3.7
+
+    Homepage:    http://www.csg.is.titech.ac.jp/~chiba/javassist/
+    Description: Enables Java programs to define a new class at runtime and to
+                 modify a class file when the JVM loads it.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on JDOM 1.1
+
+    Homepage:    http://www.jdom.org/
+    Description: Java-based solution for accessing, manipulating, and
+                 outputting XML data from Java code.
+    License:     JDOM License
+    License URL: Included in 3RDPARTY.txt
+
+------------------------------------------------------------------------------
+
+This product depends on json.org 20090211
+
+    Homepage:    http://www.json.org/java/index.html
+    Description: JSON library for createing JSON formatted messages
+    License:     The JSON License
+    License URL: http://www.json.org/license.html
+
+------------------------------------------------------------------------------
+
+This product depends on Log4j 1.2.14
+
+    Homepage:    http://logging.apache.org/log4j/
+    Description: Lightweight, inheritance-based logging implementation for
+                 Java.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on Netty 3.5.0
+
+    Homepage:    http://netty.io
+    Description: Client-server framework for network applications.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on OGNL 2.7.2
+
+    Homepage:    http://commons.apache.org/proper/commons-ognl/
+    Description: Object-Graph Navigation Language: An expression language for
+                 getting and setting properties of Java objects.
+    License:     OGNL License
+    License URL: Included in 3RDPARTY.txt
+
+------------------------------------------------------------------------------
+
+This product depends on SIGAR 1.6.4
+
+    Homepage:    http://github.com/hyperic/sigar/
+    Description: System Information Gatherer And Reporter.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on SLF4J 1.5.2
+
+    Homepage:    http://www.slf4j.org/
+    Description: An abstraction for switching logging technologies.
+    License:     MIT License
+    License URL: http://www.slf4j.org/license.html
+
+------------------------------------------------------------------------------
+
+This product depends on SNMP4J 1.11.3/Agent 1.4.3
+
+    Homepage:    http://www.snmp4j.org/
+    Description: Simple Network Management Protocol API and Implemenation.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on VicariousThreadLocal 4.0.5.18
+
+    Homepage:    http://ehcache.org/xref/net/sf/ehcache/util/lang/VicariousThreadLocal.html
+    Description: Memory efficient ThreadLocal implementation.
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+This product depends on XMLBeans 2.4.0
+
+    Homepage:    Maps XML Schema definitions to Java code.
+    Description: http://xmlbeans.apache.org/
+    License:     Apache License 2.0
+    License URL: http://www.apache.org/licenses/LICENSE-2.0
+
+------------------------------------------------------------------------------
+
+
+==============================================================================
+The following is a complete list of all third party software, including free
+and open source software as well as proprietary third party code, that is
+delivered with or as part of the licensed product or upon which the licensed
+client libraries depend:
+==============================================================================
+
+
+------------------------------------------------------------------------------
+
+The Flash client depends on AS3Crypto 1.4.0.0 (Modified)
+
+    Homepage:    http://code.google.com/p/as3crypto/
+    Description: ActionScript Encryption Utility providing common algorithms
+                 for TLS.
+    License:     BSD 3-Clause License
+    License URL: http://opensource.org/licenses/BSD-3-Clause
+
+------------------------------------------------------------------------------
+
+
+==============================================================================
+The following is a complete list of all third party software, including free
+and open source software as well as proprietary third party code, that is
+delivered with or as part of the licensed product or upon which the licensed
+applications depend:
+==============================================================================
+
+
+------------------------------------------------------------------------------
+
+Kaazing Command Center depends on less.js 1.4.1
+
+    Homepage:    http://lesscss.org/
+    Description: A CSS pre-processor.
+    License:     Apache License 2.0
+    License URL: https://github.com/less/less.js/blob/master/LICENSE
+
+------------------------------------------------------------------------------
+
+Kaazing Command Center depends on PrefixFree 1.0.7
+
+    Homepage:    https://leaverou.github.io/prefixfree/
+    Description: Use only unprefixed CSS properties.
+    License:     MIT License
+    License URL: http://opensource.org/licenses/MIT
+
+------------------------------------------------------------------------------
+
+Kaazing Command Center depends on stacktrace.js 0.6.0
+
+    Homepage:    http://www.stacktracejs.com/
+    Description: Framework-agnostic, micro-library for getting stack traces in
+                 all web browsers
+    License:     Public Domain (Unlicense)
+    License URL: https://github.com/stacktracejs/stacktrace.js/blob/master/LICENSE
+
+------------------------------------------------------------------------------
+
+Kaazing Command Center depends on YUI and YUI Gallery 3.1.1
+
+    Homepage:    http://yuilibrary.com/
+    Description: JavaScript and CSS library for building richly interactive
+                 web applications.
+    License:     BSD 3-Clause License
+    License URL: https://github.com/yui/yui3/blob/master/LICENSE.md
+
+------------------------------------------------------------------------------
+
+
+==============================================================================
+The following is a complete list of all third party software, including free
+and open source software as well as proprietary third party code, that is
+delivered with or as part of the licensed product documentation:
+==============================================================================
+
+
+------------------------------------------------------------------------------
+
+The documentation depends on JQuery 1.7.1
+
+    Homepage:    http://jquery.org/
+    Description: HTML development JavaScript library.
+    License:     MIT License
+    License URL: http://jquery.org/license
+
+------------------------------------------------------------------------------
+
+The documentation depends on JQuery 1.9.1
+
+    Homepage:    http://jquery.org/
+    Description: HTML development JavaScript library.
+    License:     MIT License
+    License URL: http://jquery.org/license
+
+------------------------------------------------------------------------------
+
+The documentation depends on jquery.backgroundSize
+
+    Homepage:    http://github.com/louisremi/jquery.backgroundSize.js
+    Description: JQuery plugin emulation library for HTML5 details element.
+    License:     MIT License
+    License URL: http://louisremi.mit-license.org/
+
+------------------------------------------------------------------------------
+
+The documentation depends on jq_detailselement 1.0.3
+
+    Homepage:    http://mathiasbynens.be/notes/html5-details-jquery
+    Description: JQuery plugin emulation library for HTML5 details element.
+    License:     MIT License
+    License URL: http://github.com/mathiasbynens/jquery-details/blob/master/LICENSE-MIT.txt
+
+------------------------------------------------------------------------------
+
+The documentation depends on Modernizr 2.0.6
+
+    Homepage:    http://www.modernizr.com/
+    Description: Backwards-compatibility JavaScript library for HTML5
+    License:     MIT License
+    License URL: http://modernizr.com/license/
+
+------------------------------------------------------------------------------
+
+This product depends on SyntaxHighlighter 3.0.83
+
+    Homepage:    http://alexgorbatchev.com/SyntaxHighlighter/
+    Description: Code syntax highlighter
+    License:     MIT License
+    License URL: Included in 3RDPARTY.txt
+
+------------------------------------------------------------------------------
+
+This product depends on XRegExp 1.5.1
+
+    Homepage:    http://xregexp.com
+    Description: Regular expression parser
+    License:     MIT License
+    License URL: http://github.com/slevithan/xregexp/blob/master/LICENSE.txt
+
+------------------------------------------------------------------------------
+
+
+==============================================================================
+The following is a complete list of all third party software, including free
+and open source software as well as proprietary third party code, that is
+delivered with or as part of the licensed product demos:
+==============================================================================
+
+
+------------------------------------------------------------------------------
+
+The demos depend on JQuery 1.9.1
+
+    Homepage:    http://jquery.org/
+    Description: HTML development JavaScript library.
+    License:     MIT License
+    License URL: http://jquery.org/license
+
+------------------------------------------------------------------------------
+
+The demos depend on jquery.backgroundSize
+
+    Homepage:    http://github.com/louisremi/jquery.backgroundSize.js
+    Description: JQuery plugin emulation library for HTML5 details element.
+    License:     MIT License
+    License URL: http://louisremi.mit-license.org/
+
+------------------------------------------------------------------------------
+
+The demos depend on Modernizr 2.0.6
+
+    Homepage:    http://www.modernizr.com/
+    Description: Backwards-compatibility JavaScript library for HTML5
+    License:     MIT License
+    License URL: http://modernizr.com/license/
+
+------------------------------------------------------------------------------

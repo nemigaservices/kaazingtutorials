@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<meta content="MessageProducer,com.kaazing.gateway.jms.client.MessageProducer,deliveryMode,destination,disableMessageID,disableMessageTimestamp,priority,timeToLive,close,send,sendToDestination" name="keywords">
+<title>com.kaazing.gateway.jms.client.MessageProducer</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'MessageProducer - API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/kaazing/gateway/jms/client/MessageProducer.html&amp;com/kaazing/gateway/jms/client/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Interface&nbsp;MessageProducer</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Interface MessageProducer"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.kaazing.gateway.jms.client</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Interface</td><td class="classSignature">public interface MessageProducer</td>
+</tr>
+</table>
+<p></p> A client uses a <CODE>MessageProducer</CODE> object to send messages to a 
+  destination. A <CODE>MessageProducer</CODE> object is created by passing a 
+  <CODE>Destination</CODE> object to a message-producer creation method 
+  supplied by a session.
+    <P><CODE>MessageProducer</CODE> is the parent interface for all message 
+  producers.
+    <P>A client also has the option of creating a message producer without 
+  supplying a destination. In this case, a destination must be provided with 
+  every send operation. A typical use for this kind of message producer is
+  to send replies to requests using the request's <CODE>JMSReplyTo</CODE> 
+  destination.
+    <P>A client can specify a default delivery mode, priority, and time to live 
+  for messages sent by a message producer. It can also specify the delivery 
+  mode, priority, and time to live for an individual message.
+    <P>A client can specify a time-to-live value in milliseconds for each
+  message it sends. This value defines a message expiration time that
+  is the sum of the message's time-to-live and the GMT when it is sent (for
+  transacted sends, this is the time the client sends the message, not
+  the time the transaction is committed).
+    <P>A JMS provider should do its best to expire messages accurately;
+  however, the JMS API does not define the accuracy provided.
+    <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#deliveryMode">deliveryMode</a> : int<div class="summaryTableDescription"> Gets the producer's default delivery mode.</div>
+</td><td class="summaryTableOwnerCol">MessageProducer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#destination">destination</a> : <a href="../client/Destination.html">Destination</a>
+<div class="summaryTableDescription">[read-only] Gets the destination associated with this <CODE>MessageProducer</CODE>.</div>
+</td><td class="summaryTableOwnerCol">MessageProducer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#disableMessageID">disableMessageID</a> : Boolean<div class="summaryTableDescription"> Gets an indication of whether message IDs are disabled.</div>
+</td><td class="summaryTableOwnerCol">MessageProducer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#disableMessageTimestamp">disableMessageTimestamp</a> : Boolean<div class="summaryTableDescription"> Gets an indication of whether message timestamps are disabled.</div>
+</td><td class="summaryTableOwnerCol">MessageProducer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#priority">priority</a> : int<div class="summaryTableDescription"> Gets the producer's default priority.</div>
+</td><td class="summaryTableOwnerCol">MessageProducer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#timeToLive">timeToLive</a> : Number<div class="summaryTableDescription"> Gets the default length of time in milliseconds from its dispatch time
+      that a produced message should be retained by the message system.</div>
+</td><td class="summaryTableOwnerCol">MessageProducer</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#close()">close</a>():void</div>
+<div class="summaryTableDescription"> Closes the message producer.</div>
+</td><td class="summaryTableOwnerCol">MessageProducer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#send()">send</a>(message:<a href="Message.html">Message</a>, deliveryMode:int = -1, priority:int = -1, timeToLive:Number = 0, callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a>
+</div>
+<div class="summaryTableDescription"> Sends a message to the destination, specifying delivery mode, priority, and 
+      time to live.</div>
+</td><td class="summaryTableOwnerCol">MessageProducer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sendToDestination()">sendToDestination</a>(destination:<a href="Destination.html">Destination</a>, message:<a href="Message.html">Message</a>, deliveryMode:int = -1, priority:int = -1, timeToLive:Number = 0, callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a>
+</div>
+<div class="summaryTableDescription"> Sends a message to a destination for an unidentified message producer, 
+      specifying delivery mode, priority and time to live.</div>
+</td><td class="summaryTableOwnerCol">MessageProducer</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="deliveryMode"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deliveryMode</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>deliveryMode:int</code>&nbsp;&nbsp;[read-write]<p> Gets the producer's default delivery mode.
+       
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get deliveryMode():int</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set deliveryMode(value:int):void</code>
+<br>
+</div>
+<a name="destination"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">destination</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>destination:<a href="../client/Destination.html">Destination</a></code>&nbsp;&nbsp;[read-only]<p> Gets the destination associated with this <CODE>MessageProducer</CODE>.
+       
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get destination():<a href="../client/Destination.html">Destination</a></code>
+<br>
+</div>
+<a name="disableMessageID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">disableMessageID</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>disableMessageID:Boolean</code>&nbsp;&nbsp;[read-write]<p> Gets an indication of whether message IDs are disabled.
+       
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get disableMessageID():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set disableMessageID(value:Boolean):void</code>
+<br>
+</div>
+<a name="disableMessageTimestamp"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">disableMessageTimestamp</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>disableMessageTimestamp:Boolean</code>&nbsp;&nbsp;[read-write]<p> Gets an indication of whether message timestamps are disabled.
+       
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get disableMessageTimestamp():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set disableMessageTimestamp(value:Boolean):void</code>
+<br>
+</div>
+<a name="priority"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">priority</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>priority:int</code>&nbsp;&nbsp;[read-write]<p> Gets the producer's default priority.
+       
+      </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get priority():int</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set priority(value:int):void</code>
+<br>
+</div>
+<a name="timeToLive"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">timeToLive</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>timeToLive:Number</code>&nbsp;&nbsp;[read-write]<p> Gets the default length of time in milliseconds from its dispatch time
+      that a produced message should be retained by the message system.
+            </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get timeToLive():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set timeToLive(value:Number):void</code>
+<br>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="close()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">close</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function close():void</code><p> Closes the message producer.
+            <P>Since a provider may allocate some resources on behalf of a
+      <CODE>MessageProducer</CODE> outside the immediate environment, clients 
+      should close them when they
+      are not needed. Relying on garbage collection to eventually reclaim
+      these resources may not be timely enough.
+       
+      </p></div>
+<a name="send()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">send</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function send(message:<a href="Message.html">Message</a>, deliveryMode:int = -1, priority:int = -1, timeToLive:Number = 0, callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a></code><p> Sends a message to the destination, specifying delivery mode, priority, and 
+      time to live.
+            <P>This function executes asynchronously (returns immediately), but does
+      not invoke the callback specified until the message has been delivered to
+      the broker.
+       
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">message</span>:<a href="Message.html">Message</a></code> &mdash; the message to send
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">deliveryMode</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; the delivery mode to use
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">priority</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; the priority for this message
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">timeToLive</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; the message's lifetime (in milliseconds)
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">callback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; called when the message has been delivered to the broker
+       
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/VoidFuture.html">VoidFuture</a></code></td>
+</tr>
+</table>
+</div>
+<a name="sendToDestination()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sendToDestination</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sendToDestination(destination:<a href="Destination.html">Destination</a>, message:<a href="Message.html">Message</a>, deliveryMode:int = -1, priority:int = -1, timeToLive:Number = 0, callback:Function = null):<a href="../client/VoidFuture.html">VoidFuture</a></code><p> Sends a message to a destination for an unidentified message producer, 
+      specifying delivery mode, priority and time to live.
+       
+      <P>Typically, a message producer is assigned a destination at creation 
+      time; however, the JMS API also supports unidentified message producers,
+      which require that the destination be supplied every time a message is
+      sent. 
+            <P>This function executes asynchronously (returns immediately), but does
+      not invoke the callback specified until the message has been delivered to
+      the broker.
+       
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">destination</span>:<a href="Destination.html">Destination</a></code> &mdash; the destination to send this message to
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">message</span>:<a href="Message.html">Message</a></code> &mdash; the message to send
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">deliveryMode</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; the delivery mode to use
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">priority</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; the priority for this message
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">timeToLive</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; the message's lifetime (in milliseconds)
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">callback</span>:Function</code> (default = <code>null</code>)<code></code> &mdash; called when the message has been delivered to the broker
+       
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../client/VoidFuture.html">VoidFuture</a></code></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

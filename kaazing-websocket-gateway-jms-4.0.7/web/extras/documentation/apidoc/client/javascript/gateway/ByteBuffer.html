@@ -1,0 +1,2677 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: ByteBuffer</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class ByteBuffer</h2>
+
+
+
+<p>
+ByteBuffer provides a compact byte array representation for         sending, receiving and processing binary data using WebSocket.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<a name="field_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Field Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Array</code></font>
+			</td>
+			<td>
+				<code><b><a href="#array">array</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The array property provides byte storage for the buffer.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Boolean</code></font>
+			</td>
+			<td>
+				<code><b><a href="#autoExpand">autoExpand</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The autoExpand property enables writing variable length data,and is on by default.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#capacity">capacity</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The capacity property indicates the maximum number of bytesof storage available if the buffer is not automatically expanding.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#limit">limit</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The limit property indicates the last byte of data available for reading.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>ByteOrder</code></font>
+			</td>
+			<td>
+				<code><b><a href="#order">order</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The order property indicates the endianness of multibyte integer types inthe buffer.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#position">position</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The position property indicates the progress through the buffer,and indicates the position within the underlying array thatsubsequent data will be read from or written to.
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#ByteBuffer">ByteBuffer</a></b>(bytes)
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  Creates a new ByteBuffer instance.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt; 
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#allocate">allocate</a></b>(capacity) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Allocates a new ByteBuffer instance.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#clear">clear</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Clears the buffer.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#compact">compact</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Compacts the buffer by removing leading bytes upto the buffer position, and decrements the limitand position values accordingly.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#duplicate">duplicate</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Duplicates the buffer by reusing the underlying bytearray but with independent position, limit and capacity.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#expand">expand</a></b>(expectedRemaining) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Expands the buffer to support the expected number of remaining bytesafter the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#expandAt">expandAt</a></b>(i, expectedRemaining) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Expands the buffer to support the expected number of remaining bytesat the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#fill">fill</a></b>(size) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fills the buffer with a repeated number of zeros.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#fillWith">fillWith</a></b>(b, size) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fills the buffer with a specific number of repeated bytes.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#flip">flip</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Flips the buffer.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#get">get</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a single-byte number from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ArrayBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getArrayBuffer">getArrayBuffer</a></b>(size) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a ArrayBuffer from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getAt">getAt</a></b>(index) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a single-byte number from the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Blob
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getBlob">getBlob</a></b>(size) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a Blob from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Blob
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getBlobAt">getBlobAt</a></b>(index, size) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a Blob from the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Array
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getBytes">getBytes</a></b>(index, size) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a n-byte number from the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Array
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getBytes">getBytes</a></b>(size) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a n-byte number from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getHexDump">getHexDump</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a hex dump of this buffer.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getInt">getInt</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a four-byte number from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getIntAt">getIntAt</a></b>(index) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a four-byte number from the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getMediumInt">getMediumInt</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a three-byte number from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getMediumIntAt">getMediumIntAt</a></b>(i) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a three-byte number from the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getPrefixedString">getPrefixedString</a></b>(fieldSize, cs) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a length-prefixed string from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getShort">getShort</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a two-byte number from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getShortAt">getShortAt</a></b>(index) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a two-byte number from the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getString">getString</a></b>(cs) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a string from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getUnsigned">getUnsigned</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns an unsigned single-byte number from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getUnsignedAt">getUnsignedAt</a></b>(index) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns an unsigned single-byte number from the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getUnsignedInt">getUnsignedInt</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns an unsigned four-byte number from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getUnsignedIntAt">getUnsignedIntAt</a></b>(index) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns an unsigned four-byte number from the buffer at the specified position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getUnsignedMediumInt">getUnsignedMediumInt</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns an unsigned three-byte number from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getUnsignedShort">getUnsignedShort</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns an unsigned two-byte number from the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getUnsignedShortAt">getUnsignedShortAt</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns an unsigned two-byte number from the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#hasRemaining">hasRemaining</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns true   if this buffer has remaining bytes,         false  otherwise.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#indexOf">indexOf</a></b>(b) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the index of the specified byte in the buffer.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#mark">mark</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marks a position in the buffer.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#put">put</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a single byte number into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putAt">putAt</a></b>(index, v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a single byte number into the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putBuffer">putBuffer</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a buffer into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putBufferAt">putBufferAt</a></b>(index, v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a buffer into the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putByteArray">putByteArray</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a ByteArray into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putBytes">putBytes</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a single-byte array into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putBytesAt">putBytesAt</a></b>(index, v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a byte array into the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putInt">putInt</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a four-byte number into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putIntAt">putIntAt</a></b>(index, v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a four-byte number into the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putMediumInt">putMediumInt</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a three-byte number into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putMediumIntAt">putMediumIntAt</a></b>(index, v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a three-byte number into the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putPrefixedString">putPrefixedString</a></b>(fieldSize, v, cs) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a string into the buffer at the specified index, using thecharacter set to encode the string as bytes.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putShort">putShort</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a two-byte short into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putShortAt">putShortAt</a></b>(index, v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a two-byte short into the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putString">putString</a></b>(v, cs) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a string into the buffer at the current position, using thecharacter set to encode the string as bytes.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putUnsigned">putUnsigned</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts an unsigned single-byte number into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putUnsignedAt">putUnsignedAt</a></b>(index, v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts an unsigned single byte into the buffer at the specified position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putUnsignedInt">putUnsignedInt</a></b>(i) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts an unsigned four-byte number into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putUnsignedIntAt">putUnsignedIntAt</a></b>(index, v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts an unsigned four-byte number into the buffer at the specified index.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putUnsignedShort">putUnsignedShort</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a two-byte unsigned short into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#putUnsignedShort">putUnsignedShort</a></b>(v) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts a two-byte unsigned short into the buffer at the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#remaining">remaining</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the number of bytes remaining from the current position to the limit.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#reset">reset</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resets the buffer position using the mark.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#rewind">rewind</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rewinds the buffer.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#skip">skip</a></b>(size) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skips the specified number of bytes from the current position.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#slice">slice</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns a sliced buffer, setting the position to zero, and decrementing the limit accordingly.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#toString">toString</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the string representation of this buffer.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt; 
+				&nbsp;ByteBuffer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#wrap">wrap</a></b>(bytes) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wraps a byte array as a new ByteBuffer instance.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<a name="field_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Field Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<!-- One single method detail entry -->
+	<a name="array">
+	<!-- -->
+	</a> <h3>array</h3>
+		<pre>Array <b>array</b></pre> 
+	<ul>
+		The array property provides byte storage for the buffer.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="autoExpand">
+	<!-- -->
+	</a> <h3>autoExpand</h3>
+		<pre>Boolean <b>autoExpand</b></pre> 
+	<ul>
+		The autoExpand property enables writing variable length data,and is on by default.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="capacity">
+	<!-- -->
+	</a> <h3>capacity</h3>
+		<pre>Number <b>capacity</b></pre> 
+	<ul>
+		The capacity property indicates the maximum number of bytesof storage available if the buffer is not automatically expanding.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="limit">
+	<!-- -->
+	</a> <h3>limit</h3>
+		<pre>Number <b>limit</b></pre> 
+	<ul>
+		The limit property indicates the last byte of data available for reading.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="order">
+	<!-- -->
+	</a> <h3>order</h3>
+		<pre>ByteOrder <b>order</b></pre> 
+	<ul>
+		The order property indicates the endianness of multibyte integer types inthe buffer.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="position">
+	<!-- -->
+	</a> <h3>position</h3>
+		<pre>Number <b>position</b></pre> 
+	<ul>
+		The position property indicates the progress through the buffer,and indicates the position within the underlying array thatsubsequent data will be read from or written to.
+	</ul>
+	<hr>
+
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="ByteBuffer"> </a>
+<h3>ByteBuffer</h3>
+
+	<pre><b>ByteBuffer</b>(bytes)</pre>
+	<ul>
+	   Creates a new ByteBuffer instance.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<ul>
+		<b>Parameters:</b>
+		
+		<ul>
+			<code><i>Array</i>&nbsp;bytes</code> - the byte-valued Number array 
+		</ul>
+		
+	</ul>
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="allocate"> </a> <h3>allocate</h3>
+		<pre>&lt;static&gt;&nbsp;ByteBuffer&nbsp;<b>allocate</b>(capacity)</pre> 
+	<ul>
+		Allocates a new ByteBuffer instance.The new buffer's position will be zero, its limit will be its capacity,and its mark will be undefined.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;capacity </code> - the maximum buffer capacity 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the allocated ByteBuffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="clear"> </a> <h3>clear</h3>
+		<pre>ByteBuffer&nbsp;<b>clear</b>()</pre> 
+	<ul>
+		Clears the buffer. The position is set to zero, the limit is set to thecapacity and the mark is reset.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="compact"> </a> <h3>compact</h3>
+		<pre>ByteBuffer&nbsp;<b>compact</b>()</pre> 
+	<ul>
+		Compacts the buffer by removing leading bytes upto the buffer position, and decrements the limitand position values accordingly.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="duplicate"> </a> <h3>duplicate</h3>
+		<pre>ByteBuffer&nbsp;<b>duplicate</b>()</pre> 
+	<ul>
+		Duplicates the buffer by reusing the underlying bytearray but with independent position, limit and capacity.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the duplicated buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="expand"> </a> <h3>expand</h3>
+		<pre>ByteBuffer&nbsp;<b>expand</b>(expectedRemaining)</pre> 
+	<ul>
+		Expands the buffer to support the expected number of remaining bytesafter the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>expectedRemaining </code> - {Number}  the expected number of remaining bytes 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="expandAt"> </a> <h3>expandAt</h3>
+		<pre>ByteBuffer&nbsp;<b>expandAt</b>(i, expectedRemaining)</pre> 
+	<ul>
+		Expands the buffer to support the expected number of remaining bytesat the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>i </code> - {Number} the index 
+		</ul>
+		<ul>
+			<code>expectedRemaining </code> - {Number}  the expected number of remaining bytes 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="fill"> </a> <h3>fill</h3>
+		<pre>ByteBuffer&nbsp;<b>fill</b>(size)</pre> 
+	<ul>
+		Fills the buffer with a repeated number of zeros.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>size </code> - {Number}  the number of zeros to repeat 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="fillWith"> </a> <h3>fillWith</h3>
+		<pre>ByteBuffer&nbsp;<b>fillWith</b>(b, size)</pre> 
+	<ul>
+		Fills the buffer with a specific number of repeated bytes.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>b </code> - {Number}  the byte to repeat 
+		</ul>
+		<ul>
+			<code>size </code> - {Number}  the number of times to repeat 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="flip"> </a> <h3>flip</h3>
+		<pre>ByteBuffer&nbsp;<b>flip</b>()</pre> 
+	<ul>
+		Flips the buffer. The limit is set to the current position,the position is set to zero, and the mark is reset.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the flipped buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="get"> </a> <h3>get</h3>
+		<pre>Number&nbsp;<b>get</b>()</pre> 
+	<ul>
+		Returns a single-byte number from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the single-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getArrayBuffer"> </a> <h3>getArrayBuffer</h3>
+		<pre>ArrayBuffer&nbsp;<b>getArrayBuffer</b>(size)</pre> 
+	<ul>
+		Returns a ArrayBuffer from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>size </code> - {Number} size the size of the ArrayBuffer to be returned 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ArrayBuffer</i>&nbsp;</code>a new ArrayBuffer with bytes read from the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getAt"> </a> <h3>getAt</h3>
+		<pre>Number&nbsp;<b>getAt</b>(index)</pre> 
+	<ul>
+		Returns a single-byte number from the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number} the index 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the single-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getBlob"> </a> <h3>getBlob</h3>
+		<pre>Blob&nbsp;<b>getBlob</b>(size)</pre> 
+	<ul>
+		Returns a Blob from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>size </code> - {Number} size the size of the Blob to be returned 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Blob</i>&nbsp;</code>a new Blob with bytes read from the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getBlobAt"> </a> <h3>getBlobAt</h3>
+		<pre>Blob&nbsp;<b>getBlobAt</b>(index, size)</pre> 
+	<ul>
+		Returns a Blob from the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number} the index 
+		</ul>
+		<ul>
+			<code>size </code> - {Number} size the size of the Blob to be returned 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Blob</i>&nbsp;</code>a new Blob with bytes read from the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getBytes"> </a> <h3>getBytes</h3>
+		<pre>Array&nbsp;<b>getBytes</b>(index, size)</pre> 
+	<ul>
+		Returns a n-byte number from the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number} the index 
+		</ul>
+		<ul>
+			<code>size </code> - {Number} size the size of the buffer to be returned 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Array</i>&nbsp;</code>a new byte array with bytes read from the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getBytes"> </a> <h3>getBytes</h3>
+		<pre>Array&nbsp;<b>getBytes</b>(size)</pre> 
+	<ul>
+		Returns a n-byte number from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>size </code> - {Number} size the size of the buffer to be returned 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Array</i>&nbsp;</code>a new byte array with bytes read from the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getHexDump"> </a> <h3>getHexDump</h3>
+		<pre>String&nbsp;<b>getHexDump</b>()</pre> 
+	<ul>
+		Returns a hex dump of this buffer.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>the hex dump 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getInt"> </a> <h3>getInt</h3>
+		<pre>Number&nbsp;<b>getInt</b>()</pre> 
+	<ul>
+		Returns a four-byte number from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the four-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getIntAt"> </a> <h3>getIntAt</h3>
+		<pre>Number&nbsp;<b>getIntAt</b>(index)</pre> 
+	<ul>
+		Returns a four-byte number from the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number} the index 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the four-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getMediumInt"> </a> <h3>getMediumInt</h3>
+		<pre>Number&nbsp;<b>getMediumInt</b>()</pre> 
+	<ul>
+		Returns a three-byte number from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the three-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getMediumIntAt"> </a> <h3>getMediumIntAt</h3>
+		<pre>Number&nbsp;<b>getMediumIntAt</b>(i)</pre> 
+	<ul>
+		Returns a three-byte number from the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>i </code> - {Number} the index 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the three-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getPrefixedString"> </a> <h3>getPrefixedString</h3>
+		<pre>String&nbsp;<b>getPrefixedString</b>(fieldSize, cs)</pre> 
+	<ul>
+		Returns a length-prefixed string from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>fieldSize </code> - {Number}   the width in bytes of the prefixed length field 
+		</ul>
+		<ul>
+			<code>cs </code> - {Charset}  the character set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>the length-prefixed string 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getShort"> </a> <h3>getShort</h3>
+		<pre>Number&nbsp;<b>getShort</b>()</pre> 
+	<ul>
+		Returns a two-byte number from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the two-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getShortAt"> </a> <h3>getShortAt</h3>
+		<pre>Number&nbsp;<b>getShortAt</b>(index)</pre> 
+	<ul>
+		Returns a two-byte number from the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number} the index 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the two-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getString"> </a> <h3>getString</h3>
+		<pre>String&nbsp;<b>getString</b>(cs)</pre> 
+	<ul>
+		Returns a string from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>cs </code> - {Charset}  the character set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>the string 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getUnsigned"> </a> <h3>getUnsigned</h3>
+		<pre>Number&nbsp;<b>getUnsigned</b>()</pre> 
+	<ul>
+		Returns an unsigned single-byte number from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the unsigned single-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getUnsignedAt"> </a> <h3>getUnsignedAt</h3>
+		<pre>&nbsp;<b>getUnsignedAt</b>(index)</pre> 
+	<ul>
+		Returns an unsigned single-byte number from the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - the index 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code></code>the unsigned single-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getUnsignedInt"> </a> <h3>getUnsignedInt</h3>
+		<pre>Number&nbsp;<b>getUnsignedInt</b>()</pre> 
+	<ul>
+		Returns an unsigned four-byte number from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the unsigned four-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getUnsignedIntAt"> </a> <h3>getUnsignedIntAt</h3>
+		<pre>Number&nbsp;<b>getUnsignedIntAt</b>(index)</pre> 
+	<ul>
+		Returns an unsigned four-byte number from the buffer at the specified position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - the index 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the unsigned four-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getUnsignedMediumInt"> </a> <h3>getUnsignedMediumInt</h3>
+		<pre>Number&nbsp;<b>getUnsignedMediumInt</b>()</pre> 
+	<ul>
+		Returns an unsigned three-byte number from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the unsigned three-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getUnsignedShort"> </a> <h3>getUnsignedShort</h3>
+		<pre>Number&nbsp;<b>getUnsignedShort</b>()</pre> 
+	<ul>
+		Returns an unsigned two-byte number from the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the unsigned two-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getUnsignedShortAt"> </a> <h3>getUnsignedShortAt</h3>
+		<pre>&nbsp;<b>getUnsignedShortAt</b>()</pre> 
+	<ul>
+		Returns an unsigned two-byte number from the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code></code>the unsigned two-byte number 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="hasRemaining"> </a> <h3>hasRemaining</h3>
+		<pre>Boolean&nbsp;<b>hasRemaining</b>()</pre> 
+	<ul>
+		Returns true   if this buffer has remaining bytes,         false  otherwise.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Boolean</i>&nbsp;</code>whether this buffer has remaining bytes 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="indexOf"> </a> <h3>indexOf</h3>
+		<pre>Number&nbsp;<b>indexOf</b>(b)</pre> 
+	<ul>
+		Returns the index of the specified byte in the buffer.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>b </code> - {Number}  the byte to find 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the index of the byte in the buffer, or -1 if not found 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="mark"> </a> <h3>mark</h3>
+		<pre>ByteBuffer&nbsp;<b>mark</b>()</pre> 
+	<ul>
+		Marks a position in the buffer.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="put"> </a> <h3>put</h3>
+		<pre>ByteBuffer&nbsp;<b>put</b>(v)</pre> 
+	<ul>
+		Puts a single byte number into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {Number}  the single-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putAt"> </a> <h3>putAt</h3>
+		<pre>ByteBuffer&nbsp;<b>putAt</b>(index, v)</pre> 
+	<ul>
+		Puts a single byte number into the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number}  the index 
+		</ul>
+		<ul>
+			<code>v </code> - {Number}  the byte 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putBuffer"> </a> <h3>putBuffer</h3>
+		<pre>ByteBuffer&nbsp;<b>putBuffer</b>(v)</pre> 
+	<ul>
+		Puts a buffer into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {Array}  the single-byte array 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putBufferAt"> </a> <h3>putBufferAt</h3>
+		<pre>ByteBuffer&nbsp;<b>putBufferAt</b>(index, v)</pre> 
+	<ul>
+		Puts a buffer into the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number} the index 
+		</ul>
+		<ul>
+			<code>v </code> - {Array}  the single-byte array 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putByteArray"> </a> <h3>putByteArray</h3>
+		<pre>ByteBuffer&nbsp;<b>putByteArray</b>(v)</pre> 
+	<ul>
+		Puts a ByteArray into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {ByteArray}  the ByteArray 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putBytes"> </a> <h3>putBytes</h3>
+		<pre>ByteBuffer&nbsp;<b>putBytes</b>(v)</pre> 
+	<ul>
+		Puts a single-byte array into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {Array}  the single-byte array 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putBytesAt"> </a> <h3>putBytesAt</h3>
+		<pre>ByteBuffer&nbsp;<b>putBytesAt</b>(index, v)</pre> 
+	<ul>
+		Puts a byte array into the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number} the index 
+		</ul>
+		<ul>
+			<code>v </code> - {Array}  the single-byte array 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putInt"> </a> <h3>putInt</h3>
+		<pre>ByteBuffer&nbsp;<b>putInt</b>(v)</pre> 
+	<ul>
+		Puts a four-byte number into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {Number}  the four-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putIntAt"> </a> <h3>putIntAt</h3>
+		<pre>ByteBuffer&nbsp;<b>putIntAt</b>(index, v)</pre> 
+	<ul>
+		Puts a four-byte number into the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number}  the index 
+		</ul>
+		<ul>
+			<code>v </code> - {Number}  the four-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putMediumInt"> </a> <h3>putMediumInt</h3>
+		<pre>ByteBuffer&nbsp;<b>putMediumInt</b>(v)</pre> 
+	<ul>
+		Puts a three-byte number into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {Number}  the three-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putMediumIntAt"> </a> <h3>putMediumIntAt</h3>
+		<pre>ByteBuffer&nbsp;<b>putMediumIntAt</b>(index, v)</pre> 
+	<ul>
+		Puts a three-byte number into the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number}  the index 
+		</ul>
+		<ul>
+			<code>v </code> - {Number}  the three-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putPrefixedString"> </a> <h3>putPrefixedString</h3>
+		<pre>ByteBuffer&nbsp;<b>putPrefixedString</b>(fieldSize, v, cs)</pre> 
+	<ul>
+		Puts a string into the buffer at the specified index, using thecharacter set to encode the string as bytes.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>fieldSize </code> - {Number}   the width in bytes of the prefixed length field 
+		</ul>
+		<ul>
+			<code>v </code> - {String}   the string 
+		</ul>
+		<ul>
+			<code>cs </code> - {Charset}  the character set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putShort"> </a> <h3>putShort</h3>
+		<pre>ByteBuffer&nbsp;<b>putShort</b>(v)</pre> 
+	<ul>
+		Puts a two-byte short into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {Number} the two-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putShortAt"> </a> <h3>putShortAt</h3>
+		<pre>ByteBuffer&nbsp;<b>putShortAt</b>(index, v)</pre> 
+	<ul>
+		Puts a two-byte short into the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number}  the index 
+		</ul>
+		<ul>
+			<code>v </code> - {Number}  the two-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putString"> </a> <h3>putString</h3>
+		<pre>ByteBuffer&nbsp;<b>putString</b>(v, cs)</pre> 
+	<ul>
+		Puts a string into the buffer at the current position, using thecharacter set to encode the string as bytes.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {String}   the string 
+		</ul>
+		<ul>
+			<code>cs </code> - {Charset}  the character set 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putUnsigned"> </a> <h3>putUnsigned</h3>
+		<pre>ByteBuffer&nbsp;<b>putUnsigned</b>(v)</pre> 
+	<ul>
+		Puts an unsigned single-byte number into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {Number}  the single-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putUnsignedAt"> </a> <h3>putUnsignedAt</h3>
+		<pre>ByteBuffer&nbsp;<b>putUnsignedAt</b>(index, v)</pre> 
+	<ul>
+		Puts an unsigned single byte into the buffer at the specified position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number}  the index 
+		</ul>
+		<ul>
+			<code>v </code> - {Number}  the single-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putUnsignedInt"> </a> <h3>putUnsignedInt</h3>
+		<pre>ByteBuffer&nbsp;<b>putUnsignedInt</b>(i)</pre> 
+	<ul>
+		Puts an unsigned four-byte number into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>i </code> - {Number}  the index 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putUnsignedIntAt"> </a> <h3>putUnsignedIntAt</h3>
+		<pre>ByteBuffer&nbsp;<b>putUnsignedIntAt</b>(index, v)</pre> 
+	<ul>
+		Puts an unsigned four-byte number into the buffer at the specified index.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>index </code> - {Number}  the index 
+		</ul>
+		<ul>
+			<code>v </code> - {Number}  the four-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putUnsignedShort"> </a> <h3>putUnsignedShort</h3>
+		<pre>ByteBuffer&nbsp;<b>putUnsignedShort</b>(v)</pre> 
+	<ul>
+		Puts a two-byte unsigned short into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {Number}  the two-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="putUnsignedShort"> </a> <h3>putUnsignedShort</h3>
+		<pre>ByteBuffer&nbsp;<b>putUnsignedShort</b>(v)</pre> 
+	<ul>
+		Puts a two-byte unsigned short into the buffer at the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>v </code> - {Number}  the two-byte number 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="remaining"> </a> <h3>remaining</h3>
+		<pre>Number&nbsp;<b>remaining</b>()</pre> 
+	<ul>
+		Returns the number of bytes remaining from the current position to the limit.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the number of bytes remaining 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="reset"> </a> <h3>reset</h3>
+		<pre>ByteBuffer&nbsp;<b>reset</b>()</pre> 
+	<ul>
+		Resets the buffer position using the mark.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code>Error</code> if the mark is invalid 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="rewind"> </a> <h3>rewind</h3>
+		<pre>ByteBuffer&nbsp;<b>rewind</b>()</pre> 
+	<ul>
+		Rewinds the buffer. The position is set to zero and the mark is reset.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="skip"> </a> <h3>skip</h3>
+		<pre>ByteBuffer&nbsp;<b>skip</b>(size)</pre> 
+	<ul>
+		Skips the specified number of bytes from the current position.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>size </code> - {Number}  the number of bytes to skip 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="slice"> </a> <h3>slice</h3>
+		<pre>ByteBuffer&nbsp;<b>slice</b>()</pre> 
+	<ul>
+		Returns a sliced buffer, setting the position to zero, and decrementing the limit accordingly.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the sliced buffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="toString"> </a> <h3>toString</h3>
+		<pre>String&nbsp;<b>toString</b>()</pre> 
+	<ul>
+		Returns the string representation of this buffer.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>the string representation 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="wrap"> </a> <h3>wrap</h3>
+		<pre>&lt;static&gt;&nbsp;ByteBuffer&nbsp;<b>wrap</b>(bytes)</pre> 
+	<ul>
+		Wraps a byte array as a new ByteBuffer instance.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Array</i>&nbsp;bytes </code> - an array of byte-sized numbers 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ByteBuffer</i>&nbsp;</code>the bytes wrapped as a ByteBuffer 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

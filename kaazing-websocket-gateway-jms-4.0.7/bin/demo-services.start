@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+#
+
+s400=false
+darwin=false
+case "`uname`" in
+CYGWIN*) cygwin=true;;
+OS400*) os400=true;;
+Darwin*) darwin=true;;
+esac
+
+PRG="$0"
+
+while [ -h "$PRG" ] ; do
+  ls=`ls -ld "$PRG"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=`dirname "$PRG"`/"$link"
+  fi
+done
+
+PRGDIR=`dirname "$PRG"`
+
+GW_HOME=`cd "$PRGDIR/.." ; pwd`
+
+# GW_HOME might have spaces in it, so quote the expressions below 
+# that contain it, and use 'eval' on the assembled command.
+[ -z "$GATEWAY_DEMO_OPTS" ] && GATEWAY_DEMO_OPTS="-Xmx512m -DGATEWAY_LOG_DIRECTORY=\"$GW_HOME/log\" -DLOG4J_CONFIG=\"$GW_HOME/conf/log4j-config.xml\""
+
+CP=""
+
+for LIBFILE in "$GW_HOME"/lib/*.jar
+do
+  CP="$CP:$LIBFILE"
+done
+
+CMD="java $GATEWAY_DEMO_OPTS -XX:+HeapDumpOnOutOfMemoryError -cp \"$CP\" com.kaazing.gateway.jms.server.demo.JmsDataSource $*"
+eval $CMD

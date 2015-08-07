@@ -1,0 +1,373 @@
+/**
+ * Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+ */
+/* Comment the following line in to override the default background color from dev. */
+/* ==========================================================================
+   Default (Mobile) Width
+   ========================================================================== */
+body {
+  /* Background color re-added here to give doc the option of overriding the default. */
+  background-color: white; }
+
+/* the following pseudo selector is used to ensure that a heading is not obscured by the floating header */
+:target { 
+  display: block; 
+  position: relative; 
+  top: -145px; 
+  visibility: hidden; }
+
+/* Remove once 3.x code has been migrated. All tables should be classed. */
+table {
+  margin-top: 10px;
+  /* Remove "tr > th" once 3.x code has been migrated. */
+  /* Add ".centered" class to andy TH or TD to center that cell. */ }
+  table > thead > tr, table > tbody > tr {
+    border: 1px solid #2185bb; }
+  table > thead > tr > th, table tr > th, table > tbody > tr > td {
+    padding: 5px 15px;
+    border-left: 1px dashed #75bee7;
+    border-right: 1px dashed #75bee7; }
+  table > thead > tr > th, table tr > th {
+    vertical-align: middle;
+    text-align: left;
+    background-color: inherit; }
+  table > tbody > tr > td {
+    vertical-align: top;
+    text-align: left; }
+  table > tbody > tr > td > p:first-child {
+    margin-top: 0; }
+  table > thead > tr > th.centered, table > tbody > tr > td.centered {
+    text-align: center; }
+
+figcaption {
+  font-weight: bold; }
+
+sup {
+  font-weight: bold; }
+
+p.code {
+  font-family: monospace;
+  font-size: 1em;
+  color: #f37333;
+  background-color: rgba(243, 115, 51, 0.05);
+  white-space: normal;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 1px dashed rgba(243, 115, 51, 0.3);
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  background-color: rgba(246, 148, 99, 0.05);
+  line-height: 22px; }
+
+span.code_inline {
+  font-family: monospace;
+  font-size: 1em;
+  color: #f37333;
+  background-color: rgba(243, 115, 51, 0.05);
+  white-space: normal;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 1px dashed rgba(243, 115, 51, 0.3); }
+
+a > span.code_inline {
+  color: #4aaadf;
+  text-decoration: none; }
+  a > span.code_inline:hover {
+    text-decoration: underline;
+    color: #595959; }
+
+span.note {
+  border-top: 3px solid #f37333;
+  border-bottom: 3px solid #f37333;
+  background: rgba(243, 115, 51, 0.03) url("../images/status-note.png") 10px 50% no-repeat;
+  display: block;
+  color: #f37333;
+  padding: 10px 10px 10px 45px;
+  margin: 10px 0px 0px 0px; }
+  span.note > p:first-child {
+    margin-top: 0; }
+  span.note ul {
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 20px; }
+  span.note ol {
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 23px; }
+  span.note a {
+    color: #2594d1; }
+  span.note .uri {
+    color: #e5550e; }
+  span.note code, span.note span.code_inline {
+    color: #e5550e;
+    background-color: rgba(133, 50, 8, 0.05);
+    border-color: rgba(133, 50, 8, 0.3); }
+
+span.alert {
+  border-top: 3px solid #fe7b7a;
+  border-bottom: 3px solid #fe7b7a;
+  background: rgba(255, 0, 0, 0.03) url("../images/status-alert.png") 10px 50% no-repeat;
+  display: block;
+  color: red;
+  padding: 10px 10px 10px 45px;
+  margin: 10px 0px 0px 0px;
+  /* Necessary modifcations due to styles inherited from main website. */
+  text-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-left: 0;
+  border-right: 0; }
+  span.alert > p:first-child {
+    margin-top: 0; }
+  span.alert ul {
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 20px; }
+  span.alert ol {
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 23px; }
+  span.alert a {
+    color: #2594d1; }
+  span.alert .uri {
+    color: #e5550e; }
+  span.alert code, span.alert span.code_inline {
+    color: #e5550e;
+    background-color: rgba(133, 50, 8, 0.05);
+    border-color: rgba(133, 50, 8, 0.3); }
+
+/* For release notes tables */
+table.release-notes {
+  margin-top: 10px;
+  /* Remove "tr > th" once 3.x code has been migrated. */
+  /* Add ".centered" class to andy TH or TD to center that cell. */ }
+  table.release-notes > thead > tr, table.release-notes > tbody > tr {
+    border: 1px solid #2185bb; }
+  table.release-notes > thead > tr > th, table.release-notes tr > th, table.release-notes > tbody > tr > td {
+    padding: 5px 15px;
+    border-left: 1px dashed #75bee7;
+    border-right: 1px dashed #75bee7; }
+  table.release-notes > thead > tr > th, table.release-notes tr > th {
+    vertical-align: middle;
+    text-align: left;
+    background-color: rgba(74, 170, 223, 0.18); }
+  table.release-notes > tbody > tr > td {
+    vertical-align: top;
+    text-align: left; }
+  table.release-notes > tbody > tr > td > p:first-child {
+    margin-top: 0; }
+  table.release-notes > thead > tr > th.centered, table.release-notes > tbody > tr > td.centered {
+    text-align: center; }
+  table.release-notes > thead > tr, table.release-notes > tbody > tr {
+    border: 1px dotted rgba(74, 170, 223, 0.4);
+    border-left: none;
+    border-right: none; }
+  table.release-notes > thead > tr > th, table.release-notes > tbody > tr > td {
+    border-left: none;
+    border-right: none; }
+  table.release-notes > tbody > tr:nth-child(odd) {
+    background-color: rgba(74, 170, 223, 0.03); }
+  table.release-notes > tbody > tr:nth-child(even) {
+    background-color: rgba(74, 170, 223, 0.07); }
+  table.release-notes thead > tr > th:first-child, table.release-notes tbody > tr > td:first-child {
+    padding-left: 10px; }
+  table.release-notes thead > tr > th:last-child, table.release-notes tbody > tr > td:last-child {
+    padding-right: 10px; }
+
+.checkmark:before {
+  content: "\2714"; }
+
+.checkmark {
+  font-weight: bold;
+  font-size: larger;
+  color: green; }
+
+.known-issue {
+  margin-bottom: 0; }
+
+.known-issue + p {
+  margin-top: 0; }
+
+/*Details styles for hidden information */
+summary {
+  color: #f47d31;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: 0; }
+
+summary::-webkit-details-marker {
+  font-size: 18px;
+  margin-left: 1px; }
+
+.no-details details > summary:before {
+  float: left;
+  width: 20px;
+  content: url("../images/arrow-07-kaazing.png"); }
+
+.no-details details.open > summary:before, .no-details details[open] > summary:before {
+  content: url("../images/arrow-07-down-kaazing.png"); }
+
+details {
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-top: 12px;
+  display: block; }
+
+details > ul:last-child, details > ol:last-child {
+  padding-bottom: 0px;
+  margin-bottom: 0px; }
+
+details[open], details.open {
+  margin-left: 22px;
+  background-color: rgba(243, 115, 51, 0.02);
+  border: 2px dotted rgba(243, 115, 51, 0.5);
+  padding-left: 30px;
+  margin-top: 3px;
+  margin-left: -10px;
+  padding-top: 7px;
+  padding-bottom: 7px; }
+
+details[open] > summary, details.open > summary {
+  left: -22px; }
+
+details.list {
+  margin-top: 0px; }
+
+details.list ul, details.list ol, details.list li {
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; }
+
+details[open].list, details.open.list {
+  border: 0;
+  background-color: inherit;
+  margin-top: 0px;
+  margin-left: -8px;
+  padding-top: 0px;
+  padding-bottom: 0px; }
+
+/* For checklist tables. */
+table.checklist {
+  margin-top: 10px;
+  /* Remove "tr > th" once 3.x code has been migrated. */
+  /* Add ".centered" class to andy TH or TD to center that cell. */ }
+  table.checklist > thead > tr, table.checklist > tbody > tr {
+    border: 1px solid #2185bb; }
+  table.checklist > thead > tr > th, table.checklist tr > th, table.checklist > tbody > tr > td {
+    padding: 5px 15px;
+    border-left: 1px dashed #75bee7;
+    border-right: 1px dashed #75bee7; }
+  table.checklist > thead > tr > th, table.checklist tr > th {
+    vertical-align: middle;
+    text-align: left;
+    background-color: rgba(74, 170, 223, 0.15); }
+  table.checklist > tbody > tr > td {
+    vertical-align: top;
+    text-align: left; }
+  table.checklist > tbody > tr > td > p:first-child {
+    margin-top: 0; }
+  table.checklist > thead > tr > th.centered, table.checklist > tbody > tr > td.centered {
+    text-align: center; }
+  table.checklist > thead > tr > th, table.checklist > tbody > tr > td {
+    border-left: none;
+    border-right: 1px dashed #75bee7; }
+  table.checklist > thead > tr > th:last-child, table.checklist > tbody > tr > td:last-child {
+    width: 45%; }
+
+/* For reference tables. */
+table.reference {
+  margin-top: 10px;
+  /* Remove "tr > th" once 3.x code has been migrated. */
+  /* Add ".centered" class to andy TH or TD to center that cell. */ }
+  table.reference > thead > tr, table.reference > tbody > tr {
+    border: 1px solid #2185bb; }
+  table.reference > thead > tr > th, table.reference tr > th, table.reference > tbody > tr > td {
+    padding: 5px 15px;
+    border-left: 1px dashed #75bee7;
+    border-right: 1px dashed #75bee7; }
+  table.reference > thead > tr > th, table.reference tr > th {
+    vertical-align: middle;
+    text-align: left;
+    background-color: rgba(74, 170, 223, 0.15); }
+  table.reference > tbody > tr > td {
+    vertical-align: top;
+    text-align: left; }
+  table.reference > tbody > tr > td > p:first-child {
+    margin-top: 0; }
+  table.reference > thead > tr > th.centered, table.reference > tbody > tr > td.centered {
+    text-align: center; }
+  table.reference > thead > tr > th:nth-child(1), table.reference > tbody > tr > td:nth-child(1) {
+    /* width: 5%; */ }
+  table.reference > thead > tr > th:nth-child(2), table.reference > tbody > tr > td:nth-child(2) {
+    /* width: 52%; */ }
+  table.reference > thead > tr > th:nth-child(3), table.reference > tbody > tr > td:nth-child(3) {
+    /* width: 43%; */ }
+
+.no, .yes {
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.no {
+  background-image: url("../images/cross.png"); }
+
+.yes {
+  background-image: url("../images/check.png"); }
+
+.group {
+  float: left;
+  border: 2px solid #f47d31;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #3b6f8f;
+  border-radius: 8px; }
+  .group:last-child {
+    margin-right: 0; }
+  .group .item {
+    float: left;
+    margin-top: 5px;
+    text-align: center;
+    width: 110px; }
+    .group .item img {
+      border: 2px solid white;
+      border-radius: 8px; }
+    .group .item img:hover {
+      border-color: #f47d31;
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -o-transform: scale(1.05); }
+    .group .item .intro {
+      height: 50px;
+      font-size: 90%;
+      line-height: 1.25em;
+      font-style: italic;
+      padding: 0 5px; }
+    .group .item .description {
+      margin-top: 5px;
+      margin-bottom: 4px; }
+  .group h2 {
+    background-color: #f47d31;
+    color: #ffffff;
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+    clear: both; }
+  .group a {
+    color: #3b6f8f; }
+
+/* ==========================================================================
+    INTERMEDIATE Width
+   ========================================================================== */
+/* ==========================================================================
+    WIDE Width
+   ========================================================================== */
+/* ==========================================================================
+    MAXIMAL Width
+   ========================================================================== */

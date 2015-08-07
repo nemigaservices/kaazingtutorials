@@ -1,0 +1,1037 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMTopicSession Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMTopicSession Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/createDurableSubscriber:name:">&nbsp;&nbsp;&nbsp;&nbsp;- createDurableSubscriber:name:</option>
+	
+	<option value="//api/name/createDurableSubscriber:name:messageSelector:noLocal:">&nbsp;&nbsp;&nbsp;&nbsp;- createDurableSubscriber:name:messageSelector:noLocal:</option>
+	
+	<option value="//api/name/createPublisher:">&nbsp;&nbsp;&nbsp;&nbsp;- createPublisher:</option>
+	
+	<option value="//api/name/createSubscriber:">&nbsp;&nbsp;&nbsp;&nbsp;- createSubscriber:</option>
+	
+	<option value="//api/name/createSubscriber:messageSelector:noLocal:">&nbsp;&nbsp;&nbsp;&nbsp;- createSubscriber:messageSelector:noLocal:</option>
+	
+	<option value="//api/name/createTemporaryTopic">&nbsp;&nbsp;&nbsp;&nbsp;- createTemporaryTopic</option>
+	
+	<option value="//api/name/createTopic:">&nbsp;&nbsp;&nbsp;&nbsp;- createTopic:</option>
+	
+	<option value="//api/name/unsubscribe:">&nbsp;&nbsp;&nbsp;&nbsp;- unsubscribe:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createDurableSubscriber:name:">createDurableSubscriber:name:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createDurableSubscriber:name:messageSelector:noLocal:">createDurableSubscriber:name:messageSelector:noLocal:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createPublisher:">createPublisher:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createSubscriber:">createSubscriber:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createSubscriber:messageSelector:noLocal:">createSubscriber:messageSelector:noLocal:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createTemporaryTopic">createTemporaryTopic</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createTopic:">createTopic:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unsubscribe:">unsubscribe:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMTopicSession Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMTopicSession Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KMSession.html">KMSession</a> : <a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMTopicSession.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A TopicSession object provides methods for creating
+TopicPublisher, TopicSubscriber, and
+TemporaryTopic objects. It also provides a method for
+deleting its client&rsquo;s durable subscribers.</p>
+
+<p><em><em>KMTopicSession is a JMS 1.0 API. <a href="../Classes/KMSession.html">KMSession</a> should be used instead.</em></em></p>
+
+<p>A TopicSession is used for creating Pub/Sub specific
+objects. In general, use the  Session object, and
+use TopicSession  only to support
+existing code. Using the Session object simplifies the
+programming model, and allows transactions to be used across the two
+messaging domains.</p>
+
+<p>A TopicSession cannot be used to create objects specific to the
+point-to-point domain. The following methods inherit from
+Session, but must throw an
+<a href="../Classes/KMIllegalStateException.html">KMIllegalStateException</a>
+if used from TopicSession:</p>
+
+<ul>
+<li>createBrowser</li>
+<li>createQueue</li>
+<li>createTemporaryQueue</li>
+</ul>
+
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createTopic:">&ndash;&nbsp;createTopic:</a></code>
+		<span class="tooltip"><p>Creates a topic identity given a Topic name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createSubscriber:">&ndash;&nbsp;createSubscriber:</a></code>
+		<span class="tooltip"><p>Creates a nondurable subscriber to the specified topic.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createSubscriber:messageSelector:noLocal:">&ndash;&nbsp;createSubscriber:messageSelector:noLocal:</a></code>
+		<span class="tooltip"><p>Creates a nondurable subscriber to the specified topic, using a
+message selector or specifying whether messages published by its
+own connection should be delivered to it.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createDurableSubscriber:name:">&ndash;&nbsp;createDurableSubscriber:name:</a></code>
+		<span class="tooltip"><p>Creates a durable subscriber to the specified topic.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createDurableSubscriber:name:messageSelector:noLocal:">&ndash;&nbsp;createDurableSubscriber:name:messageSelector:noLocal:</a></code>
+		<span class="tooltip"><p>Creates a durable subscriber to the specified topic, using a
+message selector or specifying whether messages published by its
+own connection should be delivered to it.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createPublisher:">&ndash;&nbsp;createPublisher:</a></code>
+		<span class="tooltip"><p>Creates a publisher for the specified topic.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createTemporaryTopic">&ndash;&nbsp;createTemporaryTopic</a></code>
+		<span class="tooltip"><p>Creates a TemporaryTopic object. Its lifetime will be that
+of the TopicConnection unless it is deleted earlier.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unsubscribe:">&ndash;&nbsp;unsubscribe:</a></code>
+		<span class="tooltip"><p>Unsubscribes a durable subscription that has been created by a client.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/createDurableSubscriber:name:" title="createDurableSubscriber:name:"></a>
+	<h3 class="subsubtitle method-title">createDurableSubscriber:name:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a durable subscriber to the specified topic.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createDurableSubscriber:(KMTopic *)<em>topic</em> name:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>the non-temporary Topic to subscribe to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name used to identify this subscription</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If a client needs to receive all the messages published on a
+topic, including the ones published while the subscriber is inactive,
+it uses a durable TopicSubscriber. The JMS provider
+retains a record of this
+durable subscription and insures that all messages from the topic&rsquo;s
+publishers are retained until they are acknowledged by this
+durable subscriber or they have expired.</p>
+
+<p>Sessions with durable subscribers must always provide the same
+client identifier. In addition, each client must specify a name that
+uniquely identifies (within client identifier) each durable
+subscription it creates. Only one session at a time can have a
+TopicSubscriber for a particular durable subscription.</p>
+
+<p>A client can change an existing durable subscription by creating
+a durable TopicSubscriber with the same name and a new
+topic and/or
+message selector. Changing a durable subscriber is equivalent to
+unsubscribing (deleting) the old one and creating a new one.</p>
+
+<p>In some cases, a connection may both publish and subscribe to a
+topic. The subscriber NoLocal attribute allows a subscriber
+to inhibit the delivery of messages published by its own connection.
+The default value for this attribute is false.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a subscriber
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid topic is specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMTopicSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createDurableSubscriber:name:messageSelector:noLocal:" title="createDurableSubscriber:name:messageSelector:noLocal:"></a>
+	<h3 class="subsubtitle method-title">createDurableSubscriber:name:messageSelector:noLocal:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a durable subscriber to the specified topic, using a
+message selector or specifying whether messages published by its
+own connection should be delivered to it.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createDurableSubscriber:(KMTopic *)<em>topic</em> name:(NSString *)<em>name</em> messageSelector:(NSString *)<em>messageSelector</em> noLocal:(BOOL)<em>noLocal</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>the non-temporary Topic to subscribe to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name used to identify this subscription</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered.  A value of null or
+an empty string indicates that there is no message selector
+for the message consumer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>noLocal</em></dt>
+			<dd><p>if set, inhibits the delivery of messages published
+by its own connection</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If a client needs to receive all the messages published on a
+topic, including the ones published while the subscriber is inactive,
+it uses a durable TopicSubscriber. The JMS provider
+retains a record of this
+durable subscription and insures that all messages from the topic&rsquo;s
+publishers are retained until they are acknowledged by this
+durable subscriber or they have expired.</p>
+
+<p>Sessions with durable subscribers must always provide the same
+client identifier. In addition, each client must specify a name which
+uniquely identifies (within client identifier) each durable
+subscription it creates. Only one session at a time can have a
+TopicSubscriber for a particular durable subscription.
+An inactive durable subscriber is one that exists but
+does not currently have a message consumer associated with it.</p>
+
+<p>A client can change an existing durable subscription by creating
+a durable TopicSubscriber with the same name and a new
+topic and/or
+message selector. Changing a durable subscriber is equivalent to
+unsubscribing (deleting) the old one and creating a new one.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a subscriber
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid topic is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidSelectorException</em></dt>
+			<dd><p>if the message selector is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMTopicSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createPublisher:" title="createPublisher:"></a>
+	<h3 class="subsubtitle method-title">createPublisher:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a publisher for the specified topic.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicPublisher *)createPublisher:(KMTopic *)<em>topic</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>the Topic to publish to, or null if this is an
+unidentified producer</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A client uses a TopicPublisher object to publish
+messages on a topic.
+Each time a client creates a TopicPublisher on a topic, it
+defines a
+new sequence of messages that have no ordering relationship with the
+messages it has previously sent.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a publisher
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid topic is specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMTopicSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createSubscriber:" title="createSubscriber:"></a>
+	<h3 class="subsubtitle method-title">createSubscriber:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a nondurable subscriber to the specified topic.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createSubscriber:(KMTopic *)<em>topic</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>the Topic to subscribe to</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A client uses a TopicSubscriber object to receive
+messages that have been published to a topic.</p>
+
+<p>Regular TopicSubscriber objects are not durable.
+They receive only messages that are published while they are active.</p>
+
+<p>In some cases, a connection may both publish and subscribe to a
+topic. The subscriber NoLocal attribute allows a subscriber
+to inhibit the delivery of messages published by its own connection.
+The default value for this attribute is false.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a subscriber
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid topic is specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMTopicSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createSubscriber:messageSelector:noLocal:" title="createSubscriber:messageSelector:noLocal:"></a>
+	<h3 class="subsubtitle method-title">createSubscriber:messageSelector:noLocal:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a nondurable subscriber to the specified topic, using a
+message selector or specifying whether messages published by its
+own connection should be delivered to it.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createSubscriber:(KMTopic *)<em>topic</em> messageSelector:(NSString *)<em>messageSelector</em> noLocal:(BOOL)<em>noLocal</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>the Topic to subscribe to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered. A value of null or
+an empty string indicates that there is no message selector
+for the message consumer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>noLocal</em></dt>
+			<dd><p>if set, inhibits the delivery of messages published
+by its own connection</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A client uses a TopicSubscriber object to receive
+messages that have been published to a topic.</p>
+
+<p>Regular TopicSubscriber objects are not durable.
+They receive only messages that are published while they are active.</p>
+
+<p>Messages filtered out by a subscriber&rsquo;s message selector will
+never be delivered to the subscriber. From the subscriber&rsquo;s
+perspective, they do not exist.</p>
+
+<p>In some cases, a connection may both publish and subscribe to a
+topic. The subscriber NoLocal attribute allows a subscriber
+to inhibit the delivery of messages published by its own connection.
+The default value for this attribute is false.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a subscriber
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid topic is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidSelectorException</em></dt>
+			<dd><p>if the message selector is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMTopicSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createTemporaryTopic" title="createTemporaryTopic"></a>
+	<h3 class="subsubtitle method-title">createTemporaryTopic</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a TemporaryTopic object. Its lifetime will be that
+of the TopicConnection unless it is deleted earlier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTemporaryTopic *)createTemporaryTopic</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a temporary topic identity</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a temporary
+topic due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMTopicSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createTopic:" title="createTopic:"></a>
+	<h3 class="subsubtitle method-title">createTopic:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a topic identity given a Topic name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopic *)createTopic:(NSString *)<em>topicName</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topicName</em></dt>
+			<dd><p>the name of this Topic</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a Topic with the given name</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This facility is provided for the rare cases where clients need to
+dynamically manipulate topic identity. This allows the creation of a
+topic identity with a provider-specific name. Clients that depend
+on this ability are not portable.</p>
+
+<p>Note that this method is not for creating the physical topic.
+The physical creation of topics is an administrative task and is not
+to be initiated by the JMS API. The one exception is the
+creation of temporary topics, which is accomplished with the
+<a href="#//api/name/createTemporaryTopic">createTemporaryTopic</a> method.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a topic
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMTopicSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unsubscribe:" title="unsubscribe:"></a>
+	<h3 class="subsubtitle method-title">unsubscribe:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Unsubscribes a durable subscription that has been created by a client.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)unsubscribe:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name used to identify this subscription</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method deletes the state being maintained on behalf of the
+subscriber by its provider.A</p>
+
+<p>It is erroneous for a client to delete a durable subscription
+while there is an active TopicSubscriber for the
+subscription, or while a consumed message is part of a pending
+transaction or has not been acknowledged in the session.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to unsubscribe to the
+durable subscription due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid subscription name
+is specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMTopicSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

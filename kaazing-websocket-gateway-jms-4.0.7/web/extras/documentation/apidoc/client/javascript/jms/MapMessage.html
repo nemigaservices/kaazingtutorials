@@ -1,0 +1,1505 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: MapMessage</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class MapMessage</h2>
+
+
+	Extends <a href="Message.html">Message</a>.<br/>
+
+
+<p>
+A <CODE>MapMessage</CODE> object is used to send a set of name-value pairs.The names are <CODE>String</CODE> objects, and the values are primitivedata types in the Java programming language. The names must have a value thatis not null, and not an empty string. The entries can be accessedsequentially or randomly by name. The order of the entries is undefined.<CODE>MapMessage</CODE> inherits from the <CODE>Message</CODE> interfaceand adds a message body that contains a Map.<P>The primitive types can be read or written explicitly using methodsfor each type.<P>When a client receives a <CODE>MapMessage</CODE>, it is in read-onlymode. If a client attempts to write to the message at this point, a<CODE>MessageNotWriteableException</CODE> is thrown. If<CODE>clearBody</CODE> is called, the message can now be both read from andwritten to.<P><CODE>MapMessage</CODE> objects support the following conversion table.The marked cases must be supported. The unmarked cases must throw a<CODE>JMSException</CODE>. The <CODE>String</CODE>-to-primitive conversionsmay throw a runtime exception if the primitive's <CODE>valueOf()</CODE>method does not accept it as a valid <CODE>String</CODE> representation ofthe primitive.<P>A value written as the row type can be read as the column type.<PRE>|        | boolean byte short char int long float double String byte[]|----------------------------------------------------------------------|boolean |    X                                            X|byte    |          X     X         X   X                  X|short   |                X         X   X                  X|char    |                     X                           X|int     |                          X   X                  X|long    |                              X                  X|float   |                                    X     X      X|double  |                                          X      X|String  |    X     X     X         X   X     X     X      X|byte[]  |                                                        X|----------------------------------------------------------------------</PRE><P>Attempting to read a null value as a primitive type must be treatedas calling the primitive's corresponding <code>valueOf(String)</code>conversion method with a null value. Since <code>char</code> does notsupport a <code>String</code> conversion, attempting to read a null valueas a <code>char</code> must throw a <code>NullPointerException</code>.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#MapMessage">MapMessage</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+A <CODE>MapMessage</CODE> object is used to send a set of name-value pairs.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getByte">getByte</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the <CODE>Number</CODE> representing the integer value of the specified name
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getBytes">getBytes</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the byte array with the specified name
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getChar">getChar</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the <CODE>String</CODE> representing the Unicode character of the specified name
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getDouble">getDouble</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the <CODE>Number</CODE> representing the double value of the specified name.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getFloat">getFloat</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the <CODE>Number</CODE> representing the float value of the specified name
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getLong">getLong</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the <CODE>Number</CODE> representing the long valueof the specified name.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getMapNames">getMapNames</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the array of names in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getObject">getObject</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the object value of the specified name.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getShort">getShort</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the <CODE>Number</CODE> representing the short value of the specified name
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getString">getString</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the <CODE>String</CODE> value of the specified name
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#itemExists">itemExists</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the <CODE>Boolean</CODE> value indicating whether or not specifiedname exists on the map.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setBoolean">setBoolean</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>boolean</CODE> value with the specified name
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setByte">setByte</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>Number</CODE> representing the byte value with the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setBytes">setBytes</a></b>(name, value, offset, length) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the byte array with the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setBytes">setBytes</a></b>(name, value, offset, length) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the byte array with the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setChar">setChar</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>String</CODE> representing the unicode character with the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setDouble">setDouble</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>Number</CODE> representing the double value with the specifiedname in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setFloat">setFloat</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>Number</CODE> representing the float value with the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setInt">setInt</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>Number</CODE> representing the integer value with the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setLong">setLong</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>Number</CODE> representing the long valuewith the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setObject">setObject</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the object value with the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setShort">setShort</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>Number</CODE> representing the short value with the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code></code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setString">setString</a></b>(name, value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the <CODE>String</CODE> value with the specified name in the map message.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+		
+		<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+			<td>
+				<b>Methods inherited from class <a href="Message.html">Message</a></b>
+			</td>
+		</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSMessageID">getJMSMessageID</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSMessageID">setJMSMessageID</a>(id)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSTimestamp">getJMSTimestamp</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSTimestamp">setJMSTimestamp</a>(timestamp)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSCorrelationID">setJMSCorrelationID</a>(correlationID)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSCorrelationID">getJMSCorrelationID</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSReplyTo">getJMSReplyTo</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSReplyTo">setJMSReplyTo</a>(replyTo)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSDestination">getJMSDestination</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSDestination">setJMSDestination</a>(destination)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSDeliveryMode">getJMSDeliveryMode</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSDeliveryMode">setJMSDeliveryMode</a>(deliveryMode)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSRedelivered">getJMSRedelivered</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSRedelivered">setJMSRedelivered</a>(redelivered)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSType">getJMSType</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSType">setJMSType</a>(type)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSExpiration">getJMSExpiration</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSExpiration">setJMSExpiration</a>(expiration)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSPriority">getJMSPriority</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSPriority">setJMSPriority</a>(priority)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#clearProperties">clearProperties</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#propertyExists">propertyExists</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getBooleanProperty">getBooleanProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getByteProperty">getByteProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getShortProperty">getShortProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getIntProperty">getIntProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getLongProperty">getLongProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getFloatProperty">getFloatProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getDoubleProperty">getDoubleProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getStringProperty">getStringProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getObjectProperty">getObjectProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setBooleanProperty">setBooleanProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setByteProperty">setByteProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setShortProperty">setShortProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setIntProperty">setIntProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setLongProperty">setLongProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setFloatProperty">setFloatProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setDoubleProperty">setDoubleProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setStringProperty">setStringProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setObjectProperty">setObjectProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getPropertyNames">getPropertyNames</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#acknowledge">acknowledge</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#clearBody">clearBody</a>()
+				</td>
+			</tr>
+		
+		
+	</table>
+	<br/>
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="MapMessage"> </a>
+<h3>MapMessage</h3>
+
+	<pre><b>MapMessage</b>()</pre>
+	<ul>
+	   
+A <CODE>MapMessage</CODE> object is used to send a set of name-value pairs.The names are <CODE>String</CODE> objects, and the values are primitivedata types in the Java programming language. The names must have a value thatis not null, and not an empty string. The entries can be accessedsequentially or randomly by name. The order of the entries is undefined.<CODE>MapMessage</CODE> inherits from the <CODE>Message</CODE> interfaceand adds a message body that contains a Map.<P>The primitive types can be read or written explicitly using methodsfor each type.<P>When a client receives a <CODE>MapMessage</CODE>, it is in read-onlymode. If a client attempts to write to the message at this point, a<CODE>MessageNotWriteableException</CODE> is thrown. If<CODE>clearBody</CODE> is called, the message can now be both read from andwritten to.<P><CODE>MapMessage</CODE> objects support the following conversion table.The marked cases must be supported. The unmarked cases must throw a<CODE>JMSException</CODE>. The <CODE>String</CODE>-to-primitive conversionsmay throw a runtime exception if the primitive's <CODE>valueOf()</CODE>method does not accept it as a valid <CODE>String</CODE> representation ofthe primitive.<P>A value written as the row type can be read as the column type.<PRE>|        | boolean byte short char int long float double String byte[]|----------------------------------------------------------------------|boolean |    X                                            X|byte    |          X     X         X   X                  X|short   |                X         X   X                  X|char    |                     X                           X|int     |                          X   X                  X|long    |                              X                  X|float   |                                    X     X      X|double  |                                          X      X|String  |    X     X     X         X   X     X     X      X|byte[]  |                                                        X|----------------------------------------------------------------------</PRE><P>Attempting to read a null value as a primitive type must be treatedas calling the primitive's corresponding <code>valueOf(String)</code>conversion method with a null value. Since <code>char</code> does notsupport a <code>String</code> conversion, attempting to read a null valueas a <code>char</code> must throw a <code>NullPointerException</code>.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="getByte"> </a> <h3>getByte</h3>
+		<pre>Number&nbsp;<b>getByte</b>(name)</pre> 
+	<ul>
+		Returns the <CODE>Number</CODE> representing the integer value of the specified name
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>Number<CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>integer value with the specified name. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getBytes"> </a> <h3>getBytes</h3>
+		<pre>&nbsp;<b>getBytes</b>(name)</pre> 
+	<ul>
+		Returns the byte array with the specified name
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>String</CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code></code>byte array 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getChar"> </a> <h3>getChar</h3>
+		<pre>String&nbsp;<b>getChar</b>(name)</pre> 
+	<ul>
+		Returns the <CODE>String</CODE> representing the Unicode character of the specified name
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>Number<CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>representing the Unicode character of the specified name 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getDouble"> </a> <h3>getDouble</h3>
+		<pre>Number&nbsp;<b>getDouble</b>(name)</pre> 
+	<ul>
+		Returns the <CODE>Number</CODE> representing the double value of the specified name.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>Number<CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>double value with the specified name. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getFloat"> </a> <h3>getFloat</h3>
+		<pre>Number&nbsp;<b>getFloat</b>(name)</pre> 
+	<ul>
+		Returns the <CODE>Number</CODE> representing the float value of the specified name
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>Number<CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>float value with the specified name. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getLong"> </a> <h3>getLong</h3>
+		<pre>Number&nbsp;<b>getLong</b>(name)</pre> 
+	<ul>
+		Returns the <CODE>Number</CODE> representing the long valueof the specified name.<p>NOTE: Javascript does not support 64 bit long integer natively.The maximum integer value supported by the Number type rangesfrom -9,007,199,254,740,992 (-2^53) to 9,007,199,254,740,992 (2^53).
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>Number<CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>long value with the specified name. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getMapNames"> </a> <h3>getMapNames</h3>
+		<pre>&nbsp;<b>getMapNames</b>()</pre> 
+	<ul>
+		Returns the array of names in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code></code>the {Array} of names from the map message. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getObject"> </a> <h3>getObject</h3>
+		<pre>&nbsp;<b>getObject</b>(name)</pre> 
+	<ul>
+		Returns the object value of the specified name.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the object value 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code></code>object value with the specified name. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getShort"> </a> <h3>getShort</h3>
+		<pre>Number&nbsp;<b>getShort</b>(name)</pre> 
+	<ul>
+		Returns the <CODE>Number</CODE> representing the short value of the specified name
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>Number<CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>short value with the specified name. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getString"> </a> <h3>getString</h3>
+		<pre>String&nbsp;<b>getString</b>(name)</pre> 
+	<ul>
+		Returns the <CODE>String</CODE> value of the specified name
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the <CODE>String</CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>value with the specified name. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="itemExists"> </a> <h3>itemExists</h3>
+		<pre>Boolean&nbsp;<b>itemExists</b>(name)</pre> 
+	<ul>
+		Returns the <CODE>Boolean</CODE> value indicating whether or not specifiedname exists on the map.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name to check 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Boolean</i>&nbsp;</code>value 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if this type conversion is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setBoolean"> </a> <h3>setBoolean</h3>
+		<pre><b>setBoolean</b>(name, value)</pre> 
+	<ul>
+		Sets the <CODE>boolean</CODE> value with the specified name
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - {Boolean} value 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setByte"> </a> <h3>setByte</h3>
+		<pre><b>setByte</b>(name, value)</pre> 
+	<ul>
+		Sets the <CODE>Number</CODE> representing the byte value with the specified name in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - {Number} representing byte value 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setBytes"> </a> <h3>setBytes</h3>
+		<pre><b>setBytes</b>(name, value, offset, length)</pre> 
+	<ul>
+		Sets the byte array with the specified name in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - byte array 
+		</ul>
+		<ul>
+			<code>offset </code> - {Number} offset the initial offset within the byte array 
+		</ul>
+		<ul>
+			<code>length </code> - {Number} len the number of bytes to use 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setBytes"> </a> <h3>setBytes</h3>
+		<pre><b>setBytes</b>(name, value, offset, length)</pre> 
+	<ul>
+		Sets the byte array with the specified name in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - byte array 
+		</ul>
+		<ul>
+			<code>offset </code> - {Number} offset the initial offset within the byte array 
+		</ul>
+		<ul>
+			<code>length </code> - {Number} len the number of bytes to use 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setChar"> </a> <h3>setChar</h3>
+		<pre><b>setChar</b>(name, value)</pre> 
+	<ul>
+		Sets the <CODE>String</CODE> representing the unicode character with the specified name in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - {String} representing unicode character 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setDouble"> </a> <h3>setDouble</h3>
+		<pre><b>setDouble</b>(name, value)</pre> 
+	<ul>
+		Sets the <CODE>Number</CODE> representing the double value with the specifiedname in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - {Number} representing double value 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setFloat"> </a> <h3>setFloat</h3>
+		<pre><b>setFloat</b>(name, value)</pre> 
+	<ul>
+		Sets the <CODE>Number</CODE> representing the float value with the specified name in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - {Number} representing float value 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setInt"> </a> <h3>setInt</h3>
+		<pre><b>setInt</b>(name, value)</pre> 
+	<ul>
+		Sets the <CODE>Number</CODE> representing the integer value with the specified name in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - {Number} representing integer value 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setLong"> </a> <h3>setLong</h3>
+		<pre><b>setLong</b>(name, value)</pre> 
+	<ul>
+		Sets the <CODE>Number</CODE> representing the long valuewith the specified name in the map message.* <p>NOTE: Javascript does not support 64 bit long integer natively.The maximum integer value supported by the Number type rangesfrom -9,007,199,254,740,992 (-2^53) to 9,007,199,254,740,992 (2^53).
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - {Number} representing long value 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setObject"> </a> <h3>setObject</h3>
+		<pre><b>setObject</b>(name, value)</pre> 
+	<ul>
+		Sets the object value with the specified name in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - object 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setShort"> </a> <h3>setShort</h3>
+		<pre><b>setShort</b>(name, value)</pre> 
+	<ul>
+		Sets the <CODE>Number</CODE> representing the short value with the specified name in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - {Number} representing short value 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setString"> </a> <h3>setString</h3>
+		<pre><b>setString</b>(name, value)</pre> 
+	<ul>
+		Sets the <CODE>String</CODE> value with the specified name in the map message.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>name </code> - the name of the value 
+		</ul>
+		<ul>
+			<code>value </code> - {String} value 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalArgumentException if the name is null or if the name is                                    an empty string. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

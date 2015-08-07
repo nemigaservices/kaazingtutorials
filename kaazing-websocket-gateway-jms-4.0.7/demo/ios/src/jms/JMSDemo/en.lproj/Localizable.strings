@@ -1,0 +1,2 @@
+/* Localized versions of Info.plist keys */
+"GATE_CHANGED" = "Your gate has changed to Gate %@ at %@";

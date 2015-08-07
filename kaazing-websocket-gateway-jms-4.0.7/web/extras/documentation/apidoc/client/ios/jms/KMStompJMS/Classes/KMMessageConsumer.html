@@ -1,0 +1,807 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMMessageConsumer Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMMessageConsumer Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/close">&nbsp;&nbsp;&nbsp;&nbsp;- close</option>
+	
+	<option value="//api/name/messageListener">&nbsp;&nbsp;&nbsp;&nbsp;- messageListener</option>
+	
+	<option value="//api/name/messageSelector">&nbsp;&nbsp;&nbsp;&nbsp;- messageSelector</option>
+	
+	<option value="//api/name/receive">&nbsp;&nbsp;&nbsp;&nbsp;- receive</option>
+	
+	<option value="//api/name/receive:">&nbsp;&nbsp;&nbsp;&nbsp;- receive:</option>
+	
+	<option value="//api/name/receiveNoWait">&nbsp;&nbsp;&nbsp;&nbsp;- receiveNoWait</option>
+	
+	<option value="//api/name/setMessageListener:">&nbsp;&nbsp;&nbsp;&nbsp;- setMessageListener:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/close">close</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageListener">messageListener</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageSelector">messageSelector</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/receive">receive</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/receive:">receive:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/receiveNoWait">receiveNoWait</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setMessageListener:">setMessageListener:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMMessageConsumer Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMMessageConsumer Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMMessageConsumer.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A client uses a MessageConsumer object to <a href="#//api/name/receive">receive</a> messages
+from a destination.  A MessageConsumer object is created by
+passing a Destination object to a message-consumer creation
+method supplied by a session.</p>
+
+<p>MessageConsumer is the parent interface for all message
+consumers.</p>
+
+<p>A message consumer can be created with a message selector. A message
+selector allows
+the client to restrict the messages delivered to the message consumer to
+those that match the selector.</p>
+
+<p>A client may either synchronously <a href="#//api/name/receive">receive</a> a message consumer&rsquo;s messages
+or have the consumer asynchronously deliver them as they arrive.</p>
+
+<p>For synchronous receipt, a client can request the next message from a
+message consumer using one of its <a href="#//api/name/receive">receive</a> methods. There are
+several variations of <a href="#//api/name/receive">receive</a> that allow a
+client to poll or wait for the next message.</p>
+
+<p>For asynchronous delivery, a client can register a
+MessageListener object with a message consumer.
+As messages arrive at the message consumer, it delivers them by calling the
+MessageListener&rsquo;s onMessage method.</p>
+
+<p>It is a client programming error for a MessageListener to
+throw an exception.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messageSelector">&ndash;&nbsp;messageSelector</a></code>
+		<span class="tooltip"><p>Gets this message consumer&rsquo;s message selector expression.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messageListener">&ndash;&nbsp;messageListener</a></code>
+		<span class="tooltip"><p>Gets the message consumer&rsquo;s MessageListener.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMessageListener:">&ndash;&nbsp;setMessageListener:</a></code>
+		<span class="tooltip"><p>Sets the message consumer&rsquo;s MessageListener.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/receive">&ndash;&nbsp;receive</a></code>
+		<span class="tooltip"><p>Receives the next message produced for this message consumer.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/receive:">&ndash;&nbsp;receive:</a></code>
+		<span class="tooltip"><p>Receives the next message that arrives within the specified
+timeout interval.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/receiveNoWait">&ndash;&nbsp;receiveNoWait</a></code>
+		<span class="tooltip"><p>Receives the next message if one is immediately available.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/close">&ndash;&nbsp;close</a></code>
+		<span class="tooltip"><p>Closes the message consumer.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/close" title="close"></a>
+	<h3 class="subsubtitle method-title">close</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Closes the message consumer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)close</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Since a provider may allocate some resources on behalf of a
+MessageConsumer outside the Java virtual machine, clients
+should close them when they
+are not needed. Relying on garbage collection to eventually reclaim
+these resources may not be timely enough.</p>
+
+<p>This call blocks until a <a href="#//api/name/receive">receive</a> or message listener in
+progress has completed. A blocked <a href="#//api/name/receive">receive</a> call
+returns nil when this message consumer is closed.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to close the consumer
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageConsumer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messageListener" title="messageListener"></a>
+	<h3 class="subsubtitle method-title">messageListener</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the message consumer&rsquo;s MessageListener.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;KMMessageListener&gt;)messageListener</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the listener for the message consumer, or null if no listener
+is set</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the message
+listener due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setMessageListener:">&ndash; setMessageListener:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageConsumer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messageSelector" title="messageSelector"></a>
+	<h3 class="subsubtitle method-title">messageSelector</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets this message consumer&rsquo;s message selector expression.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)messageSelector</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>this message consumer&rsquo;s message selector, or null if no
+message selector exists for the message consumer (that is, if
+the message selector was not set or was set to null or the
+empty string)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the message
+selector due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageConsumer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/receive" title="receive"></a>
+	<h3 class="subsubtitle method-title">receive</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Receives the next message produced for this message consumer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMessage *)receive</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the next message produced for this message consumer, or
+null if this message consumer is concurrently closed</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This call blocks indefinitely until a message is produced
+or until this message consumer is closed.</p>
+
+<p>If this receive is done within a transaction, the
+consumer retains the message until the transaction commits.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to receive the next
+message due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageConsumer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/receive:" title="receive:"></a>
+	<h3 class="subsubtitle method-title">receive:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Receives the next message that arrives within the specified
+timeout interval.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMessage *)receive:(long long)<em>timeout</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeout</em></dt>
+			<dd><p>the timeout value (in milliseconds)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the next message produced for this message consumer, or
+null if the timeout expires or this message consumer is concurrently
+closed</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This call blocks until a message arrives, the
+timeout expires, or this message consumer is closed.
+A timeout of zero never expires, and the call blocks
+indefinitely.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to <a href="#//api/name/receive">receive</a> the next
+message due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageConsumer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/receiveNoWait" title="receiveNoWait"></a>
+	<h3 class="subsubtitle method-title">receiveNoWait</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Receives the next message if one is immediately available.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMessage *)receiveNoWait</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the next message produced for this message consumer, or
+null if one is not available</p><p>the next message produced for this message consumer, or
+null if one is not available</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to <a href="#//api/name/receive">receive</a> the next
+message due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageConsumer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setMessageListener:" title="setMessageListener:"></a>
+	<h3 class="subsubtitle method-title">setMessageListener:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the message consumer&rsquo;s MessageListener.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setMessageListener:(id&lt;KMMessageListener&gt;)<em>listener</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>listener</em></dt>
+			<dd><p>the listener to which the messages are to be
+delivered</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Setting the message listener to null is the equivalent of
+unsetting the message listener for the message consumer.</p>
+
+<p>The effect of calling MessageConsumer.setMessageListener
+while messages are being consumed by an existing listener
+or the consumer is being used to consume messages synchronously
+is undefined.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the message
+listener due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/messageListener">&ndash; messageListener</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageConsumer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

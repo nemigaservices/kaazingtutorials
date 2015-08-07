@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#F27A31"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/company"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:text="Intel Corporation"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/stock_info_size" />
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:text="INTC"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/stock_info_size" />
+    
+	<TextView
+	    android:id="@+id/price"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="0.15"
+	    android:text="28.56"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:textColor="@android:color/black"
+	    android:textSize="@dimen/stock_info_size" />
+	
+	<TextView
+	    android:id="@+id/priceDiff"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="0.1"
+	    android:text="-0.5"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:textColor="@android:color/black"
+	    android:textSize="@dimen/stock_info_size" />
+
+</LinearLayout>

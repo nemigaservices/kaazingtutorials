@@ -1,0 +1,336 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: BasicChallengeHandler</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class BasicChallengeHandler</h2>
+
+
+
+<p>
+Challenge handler for Basic authentication as defined in <a href="http://tools.ietf.org/html/rfc2617#section-2">RFC 2617.</a></p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#BasicChallengeHandler">BasicChallengeHandler</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  Challenge handler for Basic authentication as defined in <a href="http://tools.ietf.org/html/rfc2617#section-2">RFC 2617.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#canHandle">canHandle</a></b>(challengeRequest) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Can the presented challenge be potentially handled by this challenge handler?
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#handle">handle</a></b>(challengeRequest, callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Handle the presented challenge by invoking the callback function with achallenge response processed appropriately.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#loginHandler">loginHandler</a></b>(callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; handle HTTP 401 authentication challengeloginHandler will be called when a challenge is received from the server.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setRealmLoginHandler">setRealmLoginHandler</a></b>(realm, loginHandler) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set a Login Handler to be used if and only if a challenge request hasa realm parameter matching the provided realm.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="BasicChallengeHandler"> </a>
+<h3>BasicChallengeHandler</h3>
+
+	<pre><b>BasicChallengeHandler</b>()</pre>
+	<ul>
+	   Challenge handler for Basic authentication as defined in <a href="http://tools.ietf.org/html/rfc2617#section-2">RFC 2617.</a><p>This BasicChallengeHandler can be instantiated using <code>new BasicChallengeHandler()</code>,and registered at a location using <code>DispatchChallengeHandler.register(String, ChallengeHandler)</code>.<p/><p>In addition, one can install general and realm-specific <code>loginHandler</code> functions onto this<code>BasicChallengeHandler</code> to assist in handling challenges associatedwith any or specific realms.<p/><p>After instantiated a BasicChallengeHandler instance, loginHandler function must be implemented to handle challenge.by default, loginHandler will send an empty PasswordAuthentication.<p>The following example loads an instance of a <code>BasicChallengeHandler</code>, sets a loginhandler onto it and registers the basic handler at a URI location.  In this way, all attempts to accessthat URI for which the server issues "Basic" challenges are handled by the registered <code>BasicChallengeHandler</code> .<listing>var factory = new WebSocketFactory();var basicHandler = new BasicChallengeHandler(); basicHandler.loginHandler = function(callback) {       callback(new PasswordAuthentication("global", "credentials"));   };factory.setChallengeHandler(basicHandler);</listing>
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="canHandle"> </a> <h3>canHandle</h3>
+		<pre>boolean&nbsp;<b>canHandle</b>(challengeRequest)</pre> 
+	<ul>
+		Can the presented challenge be potentially handled by this challenge handler?
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>challengeRequest </code> - a challenge request object containing a challenge 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>boolean</i>&nbsp;</code>true, if this challenge handler could potentially respond meaningfully to the challenge;                  otherwise false 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="handle"> </a> <h3>handle</h3>
+		<pre>void&nbsp;<b>handle</b>(challengeRequest, callback)</pre> 
+	<ul>
+		Handle the presented challenge by invoking the callback function with achallenge response processed appropriately.<p>By default, the implementation of this method invokes the callback function using a<code>null</code> challenge response and failing authentication.</p>
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>challengeRequest </code> - a challenge object 
+		</ul>
+		<ul>
+			<code>callback </code> - function that is called when the challenge request handling is completed. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="loginHandler"> </a> <h3>loginHandler</h3>
+		<pre>void&nbsp;<b>loginHandler</b>(callback)</pre> 
+	<ul>
+		handle HTTP 401 authentication challengeloginHandler will be called when a challenge is received from the server. To respond to the challenge,simply invoke the "callback" function with a PasswordAuthentication object as the argument,or invoke the "callback" function with null as the argument if no credentials have been returned.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>callback </code> - the function to be invoked when the credentials are retrieved. To invoke the callback function,use <code>callback(new PasswordAuthentication(username, password));</code> to loginor <code>callback(null)</code> to cancel 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setRealmLoginHandler"> </a> <h3>setRealmLoginHandler</h3>
+		<pre>void&nbsp;<b>setRealmLoginHandler</b>(realm, loginHandler)</pre> 
+	<ul>
+		Set a Login Handler to be used if and only if a challenge request hasa realm parameter matching the provided realm.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>realm </code> - the realm upon which to apply the <code>loginHandler</code>. 
+		</ul>
+		<ul>
+			<code>loginHandler </code> - the login handler to use for the provided realm. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

@@ -1,0 +1,2128 @@
+/**
+ * Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+ */
+
+/* 
+ * Note: We are using 'prefixfree.js' to "fix" prefix issues with the CSS below.
+ * That's why you generally don't see browser-specific versions of some tags.
+ * We are also using 'less.js' because it makes stylesheet development a LOT easier.
+ */
+
+// We 'skin' by putting our constant definitions in a separate file,
+// then including a different version of each file depending on who
+// we are skinning for. Later we may be more flexible.
+
+@import "brand.less"; 
+
+// ################################ CSS Declarations ################################# 
+
+html {
+     -webkit-font-smoothing: antialiased;  /* from css-tricks.com/snippets/css/better-helvetica */
+}
+
+body {
+    font-family: @default-font-family;
+    font-weight: @default-font-weight;
+    font-stretch: @default-font-stretch;
+
+    height:100%;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    color: @default-text-color;
+}
+
+div > span {
+    vertical-align:middle;
+}
+
+// 
+// Some general classes and default settings for standard tags
+//
+button {
+    user-select: none;
+}
+
+select,
+label,
+input[type=checkbox],
+input[type=submit] {
+    cursor:pointer;
+}
+
+select,
+option {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+.yui3-menu-label,
+.yui3-menu-item,
+.yui3-menuitem-content {
+    cursor:pointer !important;
+    text-transform:uppercase;
+}
+
+.unselectable {
+    user-select:none;
+}
+
+.hide-it { 
+     position:absolute;
+     left:-10000px;
+     top:auto;
+}
+
+.floatleft { 
+    float: left; 
+}
+
+.floatright { 
+    float: right; 
+}
+
+.clear {
+    clear:both;
+}
+
+.warningmessage {
+    color: #FF0000;
+}
+
+/* =========================================================== */
+/* Login panel/dialog support                                  */
+/* =========================================================== */
+#loginPanel {
+    border-radius:2px; 
+    height: 410px; 
+    width: 420px;
+    background-image:url('../images/globe-background.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 13px;
+    line-height:28px;
+}
+
+#loginPanel .imageDiv {
+    margin: 25px 10px 0px 10px;
+    display:inline-block;
+    position:relative;
+/*    left:-5px;  // the image has a slight left-side space */
+}
+
+#loginTitle {
+    font-size:28px;
+    text-align:center;
+    color:white;
+}
+
+#loginCentralArea {
+    margin-top:20px;
+}
+
+.loginDiv {
+    position:relative;
+    text-align:center;
+    height:30px;
+    font-size: inherit !important;
+}
+
+.loginFieldLabel {
+    display: inline-block;                 
+    white-space: nowrap;
+    width:115px !important;
+    text-align:right !important;
+    font-weight: bold;
+    padding-right:5px;
+    font-size: inherit !important;
+    line-height:23px;
+}
+
+#loginInvalidMessage {
+    text-align:left;
+    margin:8px 35px 15px 35px;
+    padding:10px;
+    color: #FFFFFF;
+    background-color: #D43D3D;
+    font-weight:bold;
+    line-height: 1.1;
+    overflow:auto;
+}
+
+#loginInvalidMessage img {
+    float:left;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-right:10px;
+    position:relative;
+    top:4px;
+}
+
+#loginInvalidMessage span {
+    line-height:1.1 !important;
+    float:left;
+}
+
+#loginPanel input[type=text], 
+#loginPanel input[type=password] {
+    padding-left:2px;
+    width:225px;
+    font-size: inherit !important;
+    border: 1px solid #C0C0C0;
+}
+
+#loginFooter {
+    position:absolute;
+    bottom:75px;
+    left:0px;
+    right:0px;
+    height:30px;
+}
+
+
+#loginOkay {
+    float:right;
+    width:60px;
+    margin-left:5px;
+    margin-right:35px;
+}
+
+div.yui3-widget-mask {
+    background-color:#444444; 
+    z-index:100;
+    opacity:0.8;
+}
+
+.numericValue {
+    text-align:left;
+}
+
+.textValue {
+    text-align:left;
+}
+
+.yui3-widget-hd {
+    background-color:#FF0000;
+}
+
+// SVG display items
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+ 
+line {
+    stroke: black;
+}
+ 
+.hidden {
+    // being a class, this can be overridden by an ID selector,
+    //   unless we add the 'important'
+    display:none !important;
+}
+
+/* Classes for the read/write combined charts */
+path.line.read {
+    stroke-dasharray:2,2
+}
+
+path.line.write {
+    
+}
+
+/* ========================================================== */
+/* General main-page support                                  */
+/* ========================================================== */
+
+#header {
+    height: @header-height;
+    width:100%;
+    background-color: @header-background-color;
+    line-height: @header-height - 3;
+    overflow:visible;  // Must be 'visible' to show menu dropdown (otherwise see scrollers) 
+    vertical-align:middle;
+}
+
+#headerLogo {
+    float:left;
+    margin-left:5px;
+    cursor:pointer;
+}
+
+#headerLogoImage {
+    vertical-align:middle;
+}
+
+#mainMenuWrapper {
+    float:left;
+    margin-left:@menu-margin;
+    height:@header-height;
+}
+
+#logoutLink {
+    float:right;
+    height: @header-height;
+    line-height: @header-height;
+    white-space: nowrap;
+    margin-right:10px;
+    cursor:pointer;
+
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "TexGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", "Lucida Grande", sans-serif; 
+    font-weight: bold;
+    font-stretch: normal;
+    font-size:90%;
+    text-decoration: none;
+}
+
+#content {
+    position:absolute;
+    top: @content-top;
+    left:0px;
+    right:0px;
+    bottom:30px;
+    overflow:hidden;
+    border-bottom:1px solid #999999;
+    height:auto;
+    background: @content-background;
+}
+
+#footer {
+    height: @footer-height;
+    width:100%;
+    background-color: @footer-background-color;
+    position:fixed;
+    bottom: 0px;
+    line-height: @footer-height - 2;
+    overflow:visible;
+    vertical-align:middle;
+    font-weight: normal;
+    font-size:11px;
+}
+
+#footerLogo {
+    margin-left:5px;
+    float:left;
+}
+
+#footerLogoImage {
+    vertical-align:middle;
+}
+
+#footer .copyrightNotice {
+    margin-left:15px;
+    float:left;
+    text-align:left;
+}
+
+#footerCopyright {
+    vertical-align:middle;
+}
+
+#footerProductTitle {
+    vertical-align:middle;
+}
+
+.productTitle {
+    float: right;
+    margin-right:10px;
+    color: #FFFFFF;
+}
+
+#viewTitleBar {
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+    text-align:left;
+    height:45px;
+    background-color: #FFFFFF;
+    display:table;
+}
+
+#viewTitle {
+    display:table-cell;
+    font-size: 20px;
+    white-space:nowrap;
+    padding-left:10px;
+    padding-right:50px;
+    vertical-align:middle;
+}
+
+#viewTitle > span {
+    position:relative;
+    top: -1px;
+}
+
+// For some reason the title and toolbar keep interacting. I need to force
+// the position to center vertically
+#viewToolBar {
+    display:table-cell;
+    text-align:left;
+    vertical-align:middle;
+    height:27px;
+    width:100%;
+}
+
+// class for view containers, so they behave while in the split panel. (post 4.0)
+.ccViewContainer {
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow:auto;
+}
+
+.commandButton, 
+.toolbarButton {
+    position:relative;
+    white-space:nowrap;
+    text-align:center;
+    display:inline-block;
+    cursor: pointer;
+    margin-left:4px;
+    margin-right:4px;
+    font-family:@toolbar-font-family;
+    font-weight:@toolbar-font-weight;
+    font-stretch:@toolbar-font-stretch;
+    font-size:13px;
+    height: 27px;
+    text-transform: uppercase;
+}
+
+.commandButton {
+    color: #FFFFFF !important;
+    background-color: @command-button-background-color !important;
+    border:0px !important;
+    border-radius:2px !important;
+    box-shadow: none !important; // override YUI button widget
+    padding: 0px 6px;
+    line-height: 25px; // for vertical centering 
+}
+
+// Toolbar buttons are NOT YUI buttons
+.toolbarButton {
+    background-color: @toolbar-button-background-color;
+    color: #FFFFFF;
+    border:0px;
+    border-radius:2px;
+    padding-top: 0px !important;   // needed to get buttons centered vertically in Chrome, FF
+    padding-bottom: 2px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.commandButton:active {
+    background: #3B6E8F !important;
+    color: #FFFFFF !important;
+}
+
+.toolbarSelect {
+    background: url("../images/select-dropdown-arrow.png") right center no-repeat #FFFFFF;
+    height:27px;
+    border:1px solid #C0C0C0;
+    border-radius: 0px;
+    font-size:14px;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #444444;
+    padding: 3px 13px 0px 3px;
+    background-position: 98%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.1px;
+    text-overflow: '';
+    margin-left:5px;
+}
+
+/* ============================== */
+/* The 'Config Overview' page     */
+/* ============================== */
+#configOverviewContainer {
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow:auto;
+}
+
+#configOverviewData {
+    position:relative;
+    margin-bottom:10px;
+}
+
+#configOverviewShowUrls:active {
+    background-color: #3B6E8F;
+    color: #FFFFFF;
+}
+
+#legend {
+    position:absolute;
+    left:10px;
+    top:0px;
+}
+
+
+.graphicRealmContainer {
+    margin-top:10px;
+    margin-bottom:10px;
+    min-height:40px;
+    overflow:visible;
+}
+
+.graphicRealm, 
+.graphicNoRealm {
+    width: 230px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow:visible;  // to see the accept/connect URLs
+}
+
+.graphicRealm {
+    border:2px solid;  // must specify border style, even though overwritten
+    border-image: url("../images/bordersquare.png") 2 2 2 2 repeat;
+    background-color:#F0F0F0;
+    padding-bottom:10px;
+}
+
+.graphicRealmTitleDiv {
+    margin-top:5px;
+    text-align:left;
+    padding-left:8px;
+}
+
+.graphicRealmTitle, 
+.graphicRealmTitleName {
+    font-size:100%;
+    font-weight: bold;
+}
+
+.graphicRealmTitle {
+}
+
+.graphicRealmTitleName {
+    color: @graphic-realm-title-color;
+    margin-left:10px;
+}
+
+.graphicRealmImage {
+    margin-right:5px;
+    width:20px;
+    height:16px;
+    vertical-align:middle;
+}
+
+.graphicNoServiceRealm {
+    margin-top:10px;
+}
+
+.graphicServiceContainer {
+    position:relative;
+    display:block;
+}
+
+.graphicService {
+    position:relative;
+    width:160px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:2px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    min-height:55px;
+    box-shadow: 2px 2px 2px 2px #CCCCCC;
+    display:block;
+}
+
+.graphicServiceTypeImage {
+    margin-top: 5px;
+}
+
+.graphicServiceName, .graphicServiceTypeName {
+    font-size:90%;
+    position:absolute;
+    top:27px;
+    width:130px;
+    left: 50%;
+    margin-left:-65px;
+    line-height:22px;
+}
+
+.graphicServiceName {
+    top:27px;
+    cursor: pointer;
+    font-weight:bold;
+}
+
+.graphicServiceTypeName {
+    top:50px;
+}
+
+.graphicServiceName:hover {
+    text-decoration: underline;
+}
+
+.graphicServiceAcceptContainer {
+    position:absolute;
+    right: 100%;          // left edge of container
+    margin-right: -13px;  // to show the arrow icon in the right place
+    height:26px;
+    white-space:nowrap;
+    text-align:left;
+}
+
+.graphicServiceAcceptLock {
+    position:relative;
+    top:5px;
+    width:18px;
+    height:18px;
+    display:inline-block;
+}
+
+.graphicServiceAcceptUrl {
+    position:relative;
+    top: -7px;
+    display:inline-block;
+    white-space: nowrap;
+    padding-left:3px;
+    padding-right:3px;
+    padding-top:2px;
+    padding-bottom:2px;
+    margin-right:3px;
+    border:1px solid;
+}
+
+.graphicServiceAccept {
+    position:relative;
+    width:26px;
+    height:26px;
+}
+
+.graphicServiceConnectContainer {
+    position:absolute;
+    left: 100%;          // right edge of container
+    margin-left: -13px;  // to show the arrow icon in the right place
+    height:26px;
+    white-space:nowrap;
+    text-align:right;
+}
+
+.graphicServiceConnectLock {
+    position:relative;
+    top:5px;
+    width:18px;
+    height:18px;
+    display:inline-block;
+}
+
+.graphicServiceConnectUrl {
+    position:relative;
+    top: -7px;
+    display:inline-block;
+    white-space: nowrap;
+    padding-left:3px;
+    padding-right:3px;
+    padding-top:2px;
+    padding-bottom:2px;
+    margin-left:3px;
+    border:1px solid;
+}
+
+.graphicServiceConnect {
+    position:relative;
+    width:26px;
+    height:26px;
+}
+
+.graphicServiceWarningIcon {
+    position:absolute;
+    bottom:3px;
+    right: 3px;
+    height: 18px;
+    width: 16px;
+    background:transparent;
+    cursor: pointer;
+}
+
+.graphicServiceWarningIcon:hover {
+}
+
+.wsProtocol {
+    border-color: #E5761A;
+    background-color: #FFC095;
+}
+
+.wssProtocol {
+    border-color: #E5761A;
+    background-color: #FFC095;
+}
+
+.tcpProtocol {
+    border-color: #9900CC;
+    background-color: #E757E7;
+    color: white;
+}
+
+.udpProtocol {
+    border-color: #6E9932;
+    background-color: #A3C648;
+}
+
+.httpProtocol {
+    border-color: #3A6F8F;
+    background-color: #B1CEDF;
+}
+
+.httpsProtocol {
+    border-color: #396F87;
+    background-color: #39D2E1;
+}
+
+.sseProtocol {
+    border-color: #771C0C;
+    background-color: #CF4D37;
+    color: white;
+}
+
+#viewContainer .watermark {
+    position:fixed;
+    // top, left set via code 
+    z-index: -10;
+    font-size:50px;
+    font-weight:bold;
+    color: #E8E8E8;
+    display:inline-block;
+    top:50%;
+    //
+    // Because we really want to be centered within the scrolling area,
+    // not the entire window, our vertical offset is really down about
+    // 90px from the center of the visible screen. The heights of these
+    // items is 90, so rather than -45, we'll use 0.
+    //
+    margin-top: 0px; // adjusts for font height and container height not being top of view area 
+}
+
+#acceptWatermark {
+    left: 25%;
+    margin-left: -151px; // width is 202px, -1/2 = -101, -50 for service container = -151
+}
+
+#connectWatermark {
+    left: 75%;
+    margin-left: -73px; // width is 247px, -1/2 = -123, +50 for service container = -73 
+}
+
+#offscreenData {
+    position:absolute;
+    left:-10000px;
+    top:-10000px;
+}
+
+.configDataTable {
+    border:@config-table-border;
+    border-radius: @config-table-border-radius;
+    background-color: @config-table-background;
+    font-size:100%;
+    box-shadow: @config-table-box-shadow;
+    line-height: @config-table-line-height;
+    border-collapse: collapse;
+}
+
+.configDataTable th {
+    padding:@config-table-padding;
+    min-width:80px;
+    border-bottom: @config-table-header-bottom-border;
+}
+
+.configDataTable td {
+    padding:@config-table-padding;
+    min-width:80px;
+    border-bottom: @config-table-cell-bottom-border;
+    vertical-align:middle;
+}
+
+.configDataTable tr:last-of-type td {
+    border-bottom: 0px;
+}
+
+.configDataTable td {
+    text-align:left;
+    margin-left: 25px;
+}
+
+
+/* ======================================== */
+/* The 'Services' page in Configuration     */
+/* ======================================== */
+.configServicesSection {
+    margin-top:30px;
+}
+
+.configServicesSection h3 {
+    font-size:115%;
+    font-weight:bold;
+    border-bottom:thin solid #999999;
+    text-align:left;
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+
+.configServicesSection h4 {
+    font-size:105%;
+    font-weight:bold;
+    text-align:left;
+    margin-left:25px;
+    margin-top:15px;
+    margin-bottom: 1px;
+}
+
+.configServicesSection .configDataTable {
+    margin-left: 25px;
+    width: 325px;
+}
+
+#configServicesData {
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.configServicesDetailLabel {
+    font-weight: bold;
+    text-align:left;
+    padding-top:10px;
+    padding-right:15px;
+    padding-left:25px;
+    color: #404040;
+    white-space: nowrap;
+}
+
+.configServicesDataLabel {
+    font-weight: bold;
+    text-align:left;
+    color: #404040;
+}
+
+.servicesDataValue {  // this is not only used in a data table
+    color: #383838;
+}
+
+.configServicesNoData {
+    text-align:left;
+    margin-left: 25px;
+}
+
+/* ===================================== */
+/* The 'Licenses' page in Configuration  */
+/* ===================================== */
+.configLicensesSection {
+    margin-top:30px;
+}
+
+.configLicensesSection h3 {
+    font-size:115%;
+    font-weight:bold;
+    border-bottom:thin solid #999999;
+    text-align:left;
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+
+.configLicensesSection h4 {
+    font-size:105%;
+    font-weight:bold;
+    text-align:left;
+    margin-left:25px;
+    margin-top:15px;
+    margin-bottom: 1px;
+}
+
+.configLicenseLabel {
+    color: @config-license-label-color;
+}
+
+#configLicensesData {
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+#configLicensesData table:nth-child(n+2) { 
+    margin-top: 20px;
+}
+
+.configLicensesDataLabel,
+.configSecurityLicenseLabel {
+    font-weight: bold;
+    text-align:left;
+    color: #404040;
+}
+
+.licensesDataValue {  // this is not only used in a data table
+    color: #383838;
+}
+
+.configLicenseTable .configSecurityDetailLabel {
+    font-weight: bold;
+    white-space:nowrap;
+}
+
+/* ============================================= */
+/* The 'Service Defaults' page in Configuration  */
+/* ============================================= */
+.configServiceDefaultsSection {
+    margin-top:30px;
+}
+
+#configServiceDefaultsNoDataSection {
+    white-space: nowrap;
+    display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#configServiceDefaultsGatewaySelector {
+    border:1px solid @std-border-color;
+    display:inline-block;
+}
+
+#configServiceDefaultsGatewaySelector:active {
+    background-color: #3B6E8F;
+    color: #FFFFFF;
+}
+
+.configServiceDefaultsSection h3 {
+    font-size:115%;
+    font-weight:bold;
+    border-bottom:thin solid #999999;
+    text-align:left;
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+
+.configServiceDefaultsSection h4 {
+    font-size:105%;
+    font-weight:bold;
+    text-align:left;
+    margin-left:25px;
+    margin-top:15px;
+    margin-bottom: 1px;
+}
+
+#configServiceDefaultsData {
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.configServiceDefaultsDataLabel {
+    font-weight: bold;
+    text-align:left;
+    color: #404040;
+}
+
+.serviceDefaultsDataValue {  // this is not only used in a data table 
+    color: #383838;
+}
+
+#configServiceDefaultsData .configDataTable {
+    margin-left: 25px;
+}
+
+/* ======================================== */
+/* The 'Security' pages in Configuration    */
+/* ======================================== */
+.configSecuritySection {
+    margin-top:30px;
+    line-height:20px;
+}
+
+.configSecuritySection .toolbarSelect {
+    min-width:160px;
+}
+
+.configSecuritySection h3 {
+    font-size:115%;
+    font-weight:bold;
+    border-bottom:thin solid #999999;
+    text-align:left;
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+
+.configSecuritySection h4 {
+    font-size:105%;
+    font-weight:bold;
+    text-align:left;
+    margin-left:25px;
+    margin-top:15px;
+    margin-bottom: 1px;
+}
+
+#configSecurityRealmsData,
+#configSecurityKeystoreData,
+#configSecurityTruststoreData {
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.configServicesServiceName {
+    color: @config-services-service-name-color;
+}
+
+.configSecurityRealmName,
+.configSecurityTruststoreName {
+    color: @config-security-realm-truststore-name-color;;
+}
+
+.configSecurityRealmTable {
+    line-height:25px;    
+}
+
+.configSecurityRealmTable .configSecurityDetailLabel {
+}
+
+.configSecurityDetailLabel {
+    font-weight: bold;
+    text-align:left;
+    padding-top:4px;
+    padding-left:25px;
+    padding-right:10px;
+    color: #404040;
+    white-space: nowrap;
+}
+
+.configSecurityDataLabel {
+    font-weight: bold;
+    text-align:left;
+    color: #404040;
+}
+
+.securityDataValue {  // this is not only used in a data table
+    color: #383838;
+    word-wrap: break-word;
+}
+
+#configSecurityRealmsData table:nth-child(n+2),
+#configSecurityKeystoreData table:nth-child(n+2),
+#configSecurityTruststoreData table:nth-child(n+2) {
+    margin-top:20px;
+}
+
+.configSecurityDataTable td {
+    padding-left:3px;
+    padding-right:3px;
+    padding-bottom:2px;
+}
+
+.configSecurityNoData {
+    font-size:100%;
+    text-align:left;
+    margin-left: 25px;
+}
+
+.configSecurityCertificateTable,
+#configSecurityLicenseTable,
+#configSecurityLoginModuleTable {
+    margin-top: 3px;
+    table-layout:fixed;
+}
+
+#configSecurityLoginModuleTable {
+    width:400px;
+}
+
+#configSecurityLoginModuleTable th {
+    font-weight: bold;
+}
+
+.configSecurityLoginModuleType,
+.configSecurityLoginModuleSuccess {
+    width: 80px;
+}
+
+.configSecurityCertificateTable {
+    width:650px;
+}
+
+.configSecurityLicenseTable {
+    width:450px;
+}
+
+.configSecurityLoginModuleTable th,
+.configSecurityLoginModuleTable td,
+.configSecurityCertificateTable td,
+.configSecurityLicenseTable td {
+    padding: 2px 3px;
+}
+
+
+.configSecurityCertificateLabel {
+    font-weight: bold;
+    width:160px !important;
+    white-space:nowrap;
+}
+
+.configSecurityCertificateAlias {
+    color: @config-security-certificate-alias-color;
+    font-weight: bold;
+}
+
+.configSecurityCertificateIssuer,
+.configSecurityCertificateSubject {
+    line-height:16px;
+}
+
+/* ============================================== */
+/* Gateway-specific monitoring support            */
+/* ============================================== */
+.monitorGatewaysSection {
+    margin-top:20px;
+}
+
+#monitorGatewaysData {
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.filterSelector {
+    display:inline-block;
+    font-size:14px;
+}
+
+#monitorGatewaysCurrentFilter,
+#monitorServicesCurrentFilter,
+#monitorSessionsCurrentFilter {
+    font-weight: bold;
+    font-size:100%;
+    margin-top:20px;
+    margin-left:15px;
+    margin-bottom:25px;
+    text-align:left;
+    vertical-align:baseline;
+}
+
+.filterValue {
+    color: @monitor-filter-value-color;
+}
+
+// Alignment for the table columns
+.monitorGatewaysGateway,
+.monitorGatewaysConnectionUrl,
+.monitorGatewaysHostAndPID {
+    text-align:left;
+}
+
+.monitorGatewaysStartTime,
+.monitorGatewaysStopTime,
+.monitorGatewaysCurrentSessions,
+.monitorGatewaysBytesReceived,
+.monitorGatewaysBytesSent,
+.monitorGatewaysMessagesReceived,
+.monitorGatewaysMessagesSent {
+    text-align:right;
+}
+
+#monitorGatewaysMaxRows, 
+#monitorGatewaysFilters {
+    margin-left:20px;
+    margin-bottom: 5px;
+}
+
+#monitorGatewaysResults .yui3-datatable-col-connectionUrl, 
+#monitorGatewaysResults .yui3-datatable-col-hostAndPID {
+    text-align:left;
+}
+
+/* ============================================== */
+/* Service-specific monitoring support            */
+/* ============================================== */
+.monitorServicesSection {
+    margin-top:20px;
+}
+
+#monitorServicesData {
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+#monitorServicesViewContainer {
+}
+
+// Alignment for the table columns
+.monitorServicesGateway,
+.monitorServicesService {
+    text-align:left;
+}
+
+.monitorServicesStartTime,
+.monitorServicesStopTime,
+.monitorServicesTotalCurrentSessions,
+.monitorServicesTotalCurrentNativeSessions,
+.monitorServicesTotalCurrentEmulatedSessions,
+.monitorServicesTotalCumulativeSessions,
+.monitorServicesTotalCumulativeNativeSessions,
+.monitorServicesTotalCumulativeEmulatedSessions,
+.monitorServicesTotalBytesReceived,
+.monitorServicesTotalBytesReceivedThroughput,
+.monitorServicesTotalBytesSent,
+.monitorServicesTotalBytesSentThroughput {
+    text-align:right;
+}
+
+#monitorServicesMaxRows, 
+#monitorServicesFilters {
+    margin-left:20px;
+    margin-bottom: 5px;
+}
+
+#monitorServicesResults .yui3-datatable-col-serviceLabel,
+#monitorServicesResults .yui3-datatable-col-gatewayLabel {
+    text-align:left;
+}
+
+/* ============================================== */
+/* Session-specific monitoring support            */
+/* ============================================== */
+.monitorSessionsSection {
+    margin-top:20px;
+}
+
+#monitorSessionsData {
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+#monitorSessionsViewContainer {
+}
+
+#monitorSessionsMaxRows, 
+#monitorSessionsFilters {
+    margin-left:20px;
+    margin-bottom: 5px;
+}
+
+// Alignment for the table columns
+.monitorSessionsSessionDirection,
+.monitorSessionsSessionType {
+    text-align:center;
+}
+
+.monitorSessionsGateway,
+.monitorSessionsService,
+.monitorSessionsRemoteAddress,
+.monitorSessionsPrincipalsType {
+    text-align:left;
+}
+
+.monitorSessionsSessionId,
+.monitorSessionsStartTime,
+.monitorSessionsCloseTime,
+.monitorSessionsBytesRead,
+.monitorSessionsBytesReadThpt,
+.monitorSessionsBytesWritten,
+.monitorSessionsBytesWrittenThpt {
+    text-align:right;
+}
+
+.monitorMaxRowsSelect {
+    color: @std-text-color;
+    background-color: #FFFFFF;
+    border:1px solid @std-border-color;
+    display:inline-block;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.monitorMaxRowsSelect:active {
+    background-color: #3B6E8F;
+    color: #FFFFFF;
+}
+
+.popupMenu {
+    position:fixed;
+    z-index:1000;
+    border:1px solid #888888;
+    background-color:#FFFFFF;
+    padding:2px;
+}
+
+#monitorSessionsMenu {
+}
+
+#monitorSessionsMenu a {
+    padding: 5px;
+    font-size: 90%;
+    text-decoration: none;
+}
+
+/* ============================================== */
+/* Generic monitoring data-table support          */
+/* ============================================== */
+.monitorDataTable {
+    box-sizing: border-box;
+    font-size:100%;
+    border-collapse: collapse;
+    cursor:default;
+    position:absolute;
+    left:15px;
+    bottom:35px;
+    top:60px;
+    width:auto !important;
+}
+
+.monitorDataTable th.yui3-datatable-header {
+    text-align:center;
+}
+
+.monitorDataTable th {
+    padding:3px 5px !important;
+    text-align:center;
+    border-bottom:1px solid gray;
+    border-left:1px solid gray;
+    line-height: 130%;
+}
+
+.monitorDataTable table thead {
+    border:1px solid @std-border-color;
+}
+
+.monitorDataTable tbody tr {
+    line-height:20px;
+}
+
+.monitorDataTable tbody:nth-of-type(2) td:first-of-type {
+    border-1eft: 1px solid @std-border-color !important;
+}
+
+.monitorDataTable tbody:nth-of-type(2) td:last-of-type {
+    border-right: 1px solid @std-border-color !important;
+}
+
+.yui3-datatable tr.yui3-datatable-sel-highlighted td {
+    background-color: #F8B79B !important;
+}
+
+.yui3-datatable tr.yui3-datatable-sel-selected td {
+    background-color: #C9DCE8 !important;
+}
+
+.yui3-datatable-data tr:nth-child(even) td:not(.yui3-datatable-sel-selected) {
+    background-color: #E4E4E4;
+}
+
+.yui3-datatable-data tr:nth-child(odd) td:not(.yui3-datatable-sel-selected) {
+    background-color: #FFFFFF;
+}
+
+.monitorDataTable td {
+    padding:3px 5px !important;
+    white-space:nowrap;
+}
+
+.monitorDataTable td.yui3-datatable-message-content {
+    text-align:left;
+}
+
+
+
+/* ================================================================= */
+/* XXX Old gateway-drawing stuff. We may be able to remove.          */
+/* ================================================================= */
+.giGateway {
+    border:2px solid;  //
+    border-image: url("../images/bordersquare.png") 2 2 2 2 repeat;
+    background-color:#F0F0F0;
+    display: inline-block;
+    width: 220px;
+    background-color: #F0F0F0;
+    margin-top: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    overflow:auto;
+    min-height:200px;
+    vertical-align:top;
+}
+
+.giGatewayTitleDiv {
+    margin-top:5px;
+    text-align:left;
+    padding-left:8px;
+}
+
+.giGatewayTitle, 
+.giGatewayTitleName {
+    font-size:100%;
+    font-weight: bold;
+}
+
+.giGatewayTitleName {
+    color: @overview-gateway-title-name-color !important;
+}
+
+.websocket-service {
+    border-color: #E36F0D;  
+
+    /* Box fill gradient */
+
+    /* Legacy browsers */
+    background: #ff8331;
+    -o-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+
+    /* Recent browsers */
+    background: -webkit-linear-gradient( to left top, #ffB17B, #ff8331 );
+    background: -moz-linear-gradient( to left top, #ffB17B, #ff8331 );
+    background: -o-linear-gradient( to left top, #ffB17B, #ff8331 );
+    background: linear-gradient( to left top, #ffB17B, #ff8331 );
+}
+
+.directory-service {
+    border-color: #3A6F8F; 
+
+    /* Legacy browsers */
+    background: #95BBD3;
+    -o-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+
+    /* Recent browsers */
+    background: -webkit-linear-gradient(to left top, #D2E2EC, #95BBD3 );
+    background: -moz-linear-gradient(to left top, #D2E2EC, #95BBD3 );
+    background: -o-linear-gradient(to left top, #D2E2EC, #95BBD3 );
+    background: linear-gradient(to left top, #D2E2EC, #95BBD3 );
+}
+
+#mainPanel {
+    position:absolute;
+    top: 46px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+/* ========================================================== */
+/* MonitorFilterPanel panel/dialog support                    */
+/* ========================================================== */
+.monitorFilterPanel {
+    margin-left: 2px; 
+    border: 2px solid black;
+    border-radius:2px; 
+    background-color: @monitor-filter-panel-background-color;
+    height: 250px; 
+    width: 625px; 
+}
+
+#monitorFilterPanelDecoration {
+    width:100%;
+    height:20px;
+    border-bottom:1px solid @std-border-color;
+    background-color:@monitor-filter-panel-decoration-color; 
+    color: white;
+    font-weight:bold;
+}
+
+#monitorFilterCentralArea {
+    position:absolute;
+    top:20px;
+    bottom:50px;
+    left: 0px;
+    right:0px;
+    border-bottom:1px solid #A8A8A8;
+}
+
+#monitorFilterListDiv {
+    position:absolute;
+    top:40px;
+    left:20px;
+    right:20px;
+    bottom:25px;
+    overflow-y:scroll;
+}
+
+#monitorFilterPanel .yui3-widget-ft {
+    position:absolute;
+    text-align:right;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:50px;
+}
+
+.monitorFilterOkay, 
+.monitorFilterCancel, 
+.monitorFilterClear {
+    position:absolute;
+    top:10px;
+    width:80px;
+}
+
+.monitorFilterOkay {
+    right:15px;
+}
+
+.monitorFilterCancel {
+    right:105px;
+}
+
+.monitorFilterClear {
+    left:15px;
+}
+
+#monitorFilterFieldNameLabel, 
+#monitorFilterConditionLabel, 
+#monitorFilterValueLabel {
+    position:absolute;
+    top: 20px;
+    margin-left:23px;
+    display:inline-block;
+}
+
+.monitorFilterAnd, 
+.monitorFilterFieldName, 
+.monitorFilterCondition, 
+.monitorFilterValue {
+    position:absolute;
+}
+
+.monitorFilterAnd {
+    left:5px;
+    margin-top:4px;
+    display:inline-block;
+    width:20px;
+    color:black;
+}
+
+.monitorFilterAnd[disabled=true] {
+    color:#AAAAAA;
+}
+
+#monitorFilterFieldNameLabel, 
+.monitorFilterFieldName {
+    left:30px;
+}
+#monitorFilterConditionLabel, 
+.monitorFilterCondition {
+    left:220px;
+}
+#monitorFilterValueLabel, 
+.monitorFilterValue  {
+    left:355px;
+}
+
+.monitorFilterCondition {
+    width:125px;
+}
+
+.monitorFilterValue {
+    width:200px;
+}
+
+input.monitorFilterValue {
+    padding-left:3px;
+}
+
+/* ========================================================== */
+/* Context menu support in session and service monitoring     */
+/* ========================================================== */
+.cmenu {
+    border:1px solid #aaa;
+    border-radius: 4px;
+    width:105px;
+    padding:4px;
+    opacity: 1;
+    background-color: white;
+    box-shadow: 3px 3px 2px rgba(128,128,128, 0.3);
+    cursor:default;
+    text-align:left;
+    margin-left:5px;
+}
+
+.cmenui {
+    padding-left:6px;
+    font-size: 12px;
+    padding-left:5px;
+    margin-top:2px;
+}
+
+div.cmenui:hover {
+   background-color: #d3d3d3;
+   color: white;
+}
+
+// The rest of the menu items below all originally started with .yui3-skin-sam
+
+.yui3-contextmenu-overlay {
+    border:1px solid #aaa;
+    border-radius: 4px;
+    width:105px;
+    padding:4px;
+    opacity: 1;
+    background-color: white;
+} 
+
+.yui3-contextmenu-menuitem {
+    padding-left:8px;
+    font-size: 12px;
+    padding-left:5px;
+    margin-top:2px;
+}
+
+.yui3-contextmenu-menuitem:hover {
+   background-color: #d3d3d3 !important;
+   color: white !important;
+}
+
+// Part of contextmenu
+.yui3-datatable tr.selectTr, 
+.yui3-datatable tr.selectTr td {
+    background-color: #FBD9CB !important;
+}
+
+.goButton {
+    background-image:url('../images/commands.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width:16px;
+    height:16px;
+    border:0px;
+    background-color: transparent;
+    cursor: pointer;
+    position:relative;
+    top:2px;
+}
+
+/* ============================== */
+/* The 'Dashboard' view           */
+/* ============================== */
+
+#dashboardData {
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#dashboardOverall {
+    position:relative;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align:left;
+    line-height: 30px;  // CSS trick so we get vertically aligned text
+}
+
+#dashboardOverall .title {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    text-align:left;
+    margin-left:10px;
+    margin-right:5px;
+    position:relative;
+    top:3px;
+}
+
+#dashboardOverall .label {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 14px;
+    margin-left: 20px;
+    text-align:left;
+    position:relative;
+    top:3px;
+}
+
+#dashboardOverall .value {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align:left;
+    position:relative;
+    top:3px;
+}
+
+#scrollingButton {
+    padding-left: 40px; 
+}
+
+#scrollingButton.scrolling {
+    background-image: url('../images/button-vertical-line.png'), url('../images/pause.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 29px 3px, 8px 5px;
+}
+
+#scrollingButton.paused {
+    background-image: url('../images/button-vertical-line.png'), url('../images/play.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 30px 3px, 8px 5px;
+}
+
+// The charting area of the dashboard
+.dashboardCharts {
+    position:absolute;
+    top:32px;
+    bottom:5px;
+    left:5px;
+    right:200px;
+    background: @dashboard-chart-background;
+}
+
+.dashboardAddChartSelectorDiv {
+    display: inline-block;
+    vertical-align:middle;
+    margin-left:20px;
+    font-size:14px;
+    text-align:left;
+    cursor:pointer;
+    height:27px;
+    line-height:23px;
+}
+
+.dashboardGatewaySelectorDiv {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: bold;
+    text-align:left;
+}
+
+.dashboardLegendDiv {
+    position:absolute;
+    top:32px;
+    bottom:0px;
+    right:0;
+    width:200px;
+    box-sizing: border-box;
+}
+
+.dashboardLegendLabel {
+    position: relative;
+    font-size: 16px;
+    top: 10px;
+    text-align: left;
+    margin-left:10px;
+}
+
+.dashboardLegendInstructions {
+    position: relative;
+    font-size: 12px;
+    text-align: left;
+    margin-left:10px;
+    margin-top: 15px;
+    margin-right:12px;
+}
+
+.dashboardLegendSelectAll {
+    height:20px;
+    margin-top: 5px;
+    text-align:left;
+    position: relative; // need to force it down toward gateways
+    top: 3px;
+}
+
+.dashboardLegendGateway {
+    margin-top:8px;
+}
+
+/* Special graphic checkbox for the legend entries. The real input is hidden,
+   the checkbox itself is two images */
+.dashboardCheckbox {
+    position: relative;
+    font-size: 16px;
+    font-weight: normal;
+    box-sizing: border-box;
+    min-height: 27px;
+    margin-left: 15px;
+    margin-right:15px;
+    padding-top: 4px;
+    padding-left: 2px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align:left;
+    cursor:pointer;
+}
+
+.dashboardCheckbox label {
+    border:0px;
+    background-color: transparent;
+    margin-right:5px;
+}
+
+.dashboardCheckbox label.none {
+    background-image:url('../images/checkbox-background.png');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.dashboardCheckbox label.all {
+    background-image: url('../images/checkbox-checkmark.png'), url('../images/checkbox-background.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 1px top 3px, left 0px top 0px;
+}
+
+.dashboardCheckbox label.some {
+    background-image: url('../images/checkbox-dash.png'), url('../images/checkbox-background.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 1px top 3px, left 0px top 0px;
+}
+
+.dashboardCheckbox input {
+    visibility:hidden;
+}
+
+.dashboardCheckbox span {
+    position: relative;
+    left: 25px;
+    text-overflow:ellipsis;
+}
+
+.dashboardChart {
+    position:relative;
+    display: block;
+    float:left;
+    // width, height set in code
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+.dashboardChartContent {
+    position:relative;                       
+    box-sizing: border-box;
+    background: @dashboard-chart-content-background;
+    border: 4px solid @dashboard-chart-border-background;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    border-radius:3px;  // XXX For rounded borders we need this here, rather than on
+                        // an interior piece, but we need to fix things to not use
+                        // a 3px white border as separation. Instead, use a margin?
+                        // Or does that screw up the size calculations if we still
+                        // use border-box?
+}
+
+.dashboardChart.yui3-dd-dragging {
+    z-index:150;
+}
+
+.dashboardChart.yui3-dd-drop-active-valid {
+    background-color: #C8C8C8;
+}
+
+.dashboardChart .titleDiv {
+    position:absolute;
+    box-sizing: border-box;
+    left:0px;
+    right:0px;
+    top:0px;
+    line-height:25px;
+    height:25px;
+    background-color: @dashboard-chart-title-background-color; 
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+}
+
+.dashboardChart .titleDiv span {
+    font-size:13px;
+    font-weight: bold;
+    color:#FFFFFF;
+}
+
+.dashboardChart .titleDiv .closeBox, 
+.dashboardChart .titleDiv .toggleChartSizeBox {
+    position:relative;
+    top:5px;
+    box-sizing: border-box;
+    width:13px;
+    height:13px;
+    margin-right:8px;
+    float:right;
+}
+
+.dashboardChart .chartArea {
+    position:absolute;
+    box-sizing: border-box;
+    left:0px;
+    right:0px;
+    top:26px;
+    bottom:21px;
+    background-color: #FFFFFF;
+}
+
+// Various stuff for the summary DIV at the bottom of the charts
+
+.dashboardChart .summaryDiv {
+    position:absolute;
+    box-sizing: border-box;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    height:21px;
+    font-size:100%;
+    font-weight: bold;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #FFFFFF;
+}
+
+.dashboardChart .summaryLabel {
+    display:inline-block;
+    font-weight: bold;
+}
+
+.dashboardChart .summaryValue {
+    display:inline-block;
+    padding-left:4px;
+    font-weight: normal;
+}
+
+// In the R/W charts we need to draw explanatory SVG lines
+.dashboardChart .summaryDiv .rwThptSummary {
+    overflow:hidden;
+    display:inline-block;
+}
+.dashboardChart .summaryDiv .rwThptSummary line {
+    stroke: @std-stroke-color;
+    stroke-width: 1.5px;
+}
+
+.dashboardChart .summaryDiv .rwThptSummary div.readThpt {
+    float:left;
+    display:inline-block;
+}
+
+.dashboardChart .summaryDiv .rwThptSummary .readThptLine {
+    float:left;
+    display:inline-block;
+    width:40px;
+}
+
+.dashboardChart .summaryDiv .rwThptSummary .readThptLine svg {
+    width:100%;
+    height:5px;
+    stroke-dasharray:2,2
+}
+
+.dashboardChart .summaryDiv .rwThptSummary div.writeThpt {
+    float:left;
+    margin-left:10px;
+    display:inline-block;
+}
+
+.dashboardChart .summaryDiv .rwThptSummary .writeThptLine {
+    float:left;
+    display:inline-block;
+    width:40px;
+}
+
+.dashboardChart .summaryDiv .rwThptSummary .writeThptLine svg {
+    width:100%;
+    height:5px;
+}
+
+.dashboardChart .summaryDiv .rwThptSummary .rwThptMaxAverage {
+    float:left;
+    display:inline-block;
+    margin-left:10px;
+}
+
+.dashboardChart .chartArea svg {
+    height:100%;
+}
+
+/* 
+ * Data within individual charts 
+ */
+.axis path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.0px;
+}
+
+.axis line {
+  fill: none;
+  stroke: @std-stroke-color;
+  stroke-width: 1.0px;
+}
+
+path.line {
+  fill: none;
+  stroke: @std-stroke-color;
+  stroke-width: 0.8px;
+}
+
+rect.pane {
+  cursor: move;
+  fill: none;
+  pointer-events: all;
+}
+
+// grids for the graph
+.grid .tick {
+    stroke: #C8C8C8;
+    stroke-width:0.15px;
+    opacity: 0.9;
+}
+
+.grid path {
+    stroke-width: 0;
+}
+
+text.domainLabel {
+    text-anchor: middle;
+    font-weight:bold;
+    font-size: 105%;
+}
+
+/* ============================= */
+/* AboutPanel panel support      */
+/* ============================= */
+
+#aboutPanel {
+    height: 340px; 
+    background-image:url('../images/globe-background.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0px 0px 25px #888888;
+    position:relative;
+    line-height:28px;
+    padding:10px;
+}
+
+#aboutLogoImage {
+    margin: 10px auto 15px auto;
+    display:block;
+    padding-left:25px;
+    padding-right:25px;
+}
+
+#aboutTitle {
+    font-size:28px;
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+    margin-top:15px;
+}
+
+#aboutPanelCentralArea {
+    margin-left:20px;
+    margin-right:20px;
+}
+
+
+#aboutPanel .data {
+    text-align:left;
+    white-space:nowrap;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+#aboutPanel .label {
+    font-family: @about-panel-label-font-family;
+    font-weight: @about-panel-label-font-weight;
+    font-stretch: @about-panel-label-font-stretch;
+
+    display:inline-block;
+}
+
+#aboutPanel .field {
+    font-family: @about-panel-field-font-family;
+    font-weight: @about-panel-field-font-weight;
+    font-stretch: @about-panel-field-font-stretch;
+
+    display:inline-block;
+    margin-left:5px;
+}
+
+#aboutPanel .yui3-widget-ft {
+    position:absolute;
+    bottom: 100px;
+    width:100%;
+    text-align:center;
+}
+
+#aboutPanel .copyrightNotice,
+#loginPanel .copyrightNotice,
+#footer .copyrightNotice {
+    font-family: @about-login-copyright-font-family;
+    font-weight: @about-login-copyright-font-weight;
+    font-stretch: @about-login-copyright-font-stretch;
+    font-size:11px;
+    color: #FFFFFF;
+
+}
+
+#loginPanel .copyrightNotice,
+#aboutPanel .copyrightNotice {
+    background-color:#000000;
+    height:20px;
+    left: 0px;
+    text-align:center;
+    vertical-align:middle;
+    width:100%;
+    position:absolute;
+    bottom:0px;
+    line-height:19px;
+}
+
+.aboutOkay {
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:1px !important;
+    padding-left:1.5em !important; //  override yui3-button
+    padding-right:1.5em !important; // override yui3-button 
+    background-image: linear-gradient(0deg,#009DE8,#008DD0) !important;
+    height:30px !important;
+    box-shadow: 0px 1px 3px #888888 !important; // override yui3-button
+}
+
+#cliprect {
+    stroke: red;
+    stroke-width: 1px;
+    fill: none;
+}
+
+
+/* Dashboard chart canvases */
+.canvas {
+    position:relative;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+}
+
+// Class to force a div containing only an image to size correctly
+.imageDiv {
+    overflow:auto;
+}
+
+// Fix for positioning issues with Firefox for inputs and buttons
+@-moz-document url-prefix('http://) {
+    input::-moz-focus-inner,
+    button::-moz-focus-inner {
+        border:0;
+        padding:0;
+    }
+}

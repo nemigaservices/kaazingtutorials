@@ -1,0 +1,264 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: JmsConnectionProperties</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class JmsConnectionProperties</h2>
+
+
+
+<p>
+The class defines the JMS Connection properties.<pre><code><B>Example Usage - Configure maximum reconnect attempts to 5</B>var connectionProperties = new JmsConnectionProperties();connectionProperties.reconnectAttemptsMax = 5;// connectionProperties should be provided while creating JmsConnectionFactory objectvar connectionFactory = new JmsConnectionFactory(url, connectionProperties);</code></pre></p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<a name="field_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Field Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#connectionTimeout">connectionTimeout</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time to wait on initial connection before closing in milliseconds.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#reconnectAttemptsMax">reconnectAttemptsMax</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum number of reconnect attempts.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#reconnectDelay">reconnectDelay</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time to wait between reconnect attempts in milliseconds.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>&lt;static&gt;&nbsp;Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#shutdownDelay">shutdownDelay</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time to wait for server to close socket after sending DISCONNECT before closing in milliseconds.
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#JmsConnectionProperties">JmsConnectionProperties</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+The class defines the JMS Connection properties.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<a name="field_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Field Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<!-- One single method detail entry -->
+	<a name="connectionTimeout">
+	<!-- -->
+	</a> <h3>connectionTimeout</h3>
+		<pre>&lt;static&gt;&nbsp;Number <b>connectionTimeout</b></pre> 
+	<ul>
+		Time to wait on initial connection before closing in milliseconds. The default value is 5000ms. Set to 0 for no timeout (wait indefinitely for connection).
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="reconnectAttemptsMax">
+	<!-- -->
+	</a> <h3>reconnectAttemptsMax</h3>
+		<pre>&lt;static&gt;&nbsp;Number <b>reconnectAttemptsMax</b></pre> 
+	<ul>
+		Maximum number of reconnect attempts.  The default value is -1 which means infinite retries.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="reconnectDelay">
+	<!-- -->
+	</a> <h3>reconnectDelay</h3>
+		<pre>&lt;static&gt;&nbsp;Number <b>reconnectDelay</b></pre> 
+	<ul>
+		Time to wait between reconnect attempts in milliseconds. The default value is 3000ms
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="shutdownDelay">
+	<!-- -->
+	</a> <h3>shutdownDelay</h3>
+		<pre>&lt;static&gt;&nbsp;Number <b>shutdownDelay</b></pre> 
+	<ul>
+		Time to wait for server to close socket after sending DISCONNECT before closing in milliseconds. The default value is 5000ms.
+	</ul>
+	<hr>
+
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="JmsConnectionProperties"> </a>
+<h3>JmsConnectionProperties</h3>
+
+	<pre><b>JmsConnectionProperties</b>()</pre>
+	<ul>
+	   
+The class defines the JMS Connection properties.<pre><code><B>Example Usage - Configure maximum reconnect attempts to 5</B>var connectionProperties = new JmsConnectionProperties();connectionProperties.reconnectAttemptsMax = 5;// connectionProperties should be provided while creating JmsConnectionFactory objectvar connectionFactory = new JmsConnectionFactory(url, connectionProperties);</code></pre>
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

@@ -1,0 +1,380 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: MessageConsumer</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class MessageConsumer</h2>
+
+
+
+<p>
+A client uses a <CODE>MessageConsumer</CODE> object to receive messagesfrom a destination.  A <CODE>MessageConsumer</CODE> object is created bypassing a <CODE>Destination</CODE> object to a message-consumer creationmethod supplied by a session.<P><CODE>MessageConsumer</CODE> is the parent interface for all messageconsumers.<P>A client may either synchronously receive a message consumer's messagesor have the consumer asynchronously deliver them as they arrive.<P>For synchronous receipt, a client can request the next message from amessage consumer using the <CODE>receive</CODE> method.<P>For asynchronous delivery, a client can register a<CODE>MessageListener</CODE> object with a message consumer.As messages arrive at the message consumer, it delivers them by calling the<CODE>MessageListener</CODE>'s <CODE>onMessage</CODE> method.<P>It is a client programming error for a <CODE>MessageListener</CODE> tothrow an exception.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#MessageConsumer">MessageConsumer</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+A client uses a <CODE>MessageConsumer</CODE> object to receive messagesfrom a destination.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;VoidFuture
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#close">close</a></b>(callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Closes the message consumer.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;MessageListener
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getMessageListener">getMessageListener</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the message consumer's <CODE>MessageListener</CODE>.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getMessageSelector">getMessageSelector</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets this message consumer's message selector expression.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Message
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#receiveNoWait">receiveNoWait</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Receives the next message if one is immediately available.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setMessageListener">setMessageListener</a></b>(listener) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the message consumer's <CODE>MessageListener</CODE>.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="MessageConsumer"> </a>
+<h3>MessageConsumer</h3>
+
+	<pre><b>MessageConsumer</b>()</pre>
+	<ul>
+	   
+A client uses a <CODE>MessageConsumer</CODE> object to receive messagesfrom a destination.  A <CODE>MessageConsumer</CODE> object is created bypassing a <CODE>Destination</CODE> object to a message-consumer creationmethod supplied by a session.<P><CODE>MessageConsumer</CODE> is the parent interface for all messageconsumers.<P>A client may either synchronously receive a message consumer's messagesor have the consumer asynchronously deliver them as they arrive.<P>For synchronous receipt, a client can request the next message from amessage consumer using the <CODE>receive</CODE> method.<P>For asynchronous delivery, a client can register a<CODE>MessageListener</CODE> object with a message consumer.As messages arrive at the message consumer, it delivers them by calling the<CODE>MessageListener</CODE>'s <CODE>onMessage</CODE> method.<P>It is a client programming error for a <CODE>MessageListener</CODE> tothrow an exception.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="close"> </a> <h3>close</h3>
+		<pre>VoidFuture&nbsp;<b>close</b>(callback)</pre> 
+	<ul>
+		Closes the message consumer.<P>Since a provider may allocate some resources on behalf of a<CODE>MessageConsumer</CODE>, clients should close them when theyare not needed.<P>This is an asynchronous call.  The call returns immediately, but theoperation continues until outstanding message listeners or receives havecompleted.  The optional callback passed to <CODE>close</CODE> is calledwhen the consumer is finally closed.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Function</i>&nbsp;callback </code> - the callback to invoke when the close operation                           has completed. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>VoidFuture</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to close the consumer                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getMessageListener"> </a> <h3>getMessageListener</h3>
+		<pre>MessageListener&nbsp;<b>getMessageListener</b>()</pre> 
+	<ul>
+		Gets the message consumer's <CODE>MessageListener</CODE>.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>MessageListener</i>&nbsp;</code>the listener for the message consumer, or null if no listeneris set 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the message                        listener due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getMessageSelector"> </a> <h3>getMessageSelector</h3>
+		<pre>String&nbsp;<b>getMessageSelector</b>()</pre> 
+	<ul>
+		Gets this message consumer's message selector expression.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>this message consumer's message selector, or null if no        message selector exists for the message consumer (that is, if        the message selector was not set or was set to null or the        empty string) 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the message                        selector due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="receiveNoWait"> </a> <h3>receiveNoWait</h3>
+		<pre>Message&nbsp;<b>receiveNoWait</b>()</pre> 
+	<ul>
+		Receives the next message if one is immediately available.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Message</i>&nbsp;</code>the next message produced for this message consumer, ornull if one is not available 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to receive the next                        message due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setMessageListener"> </a> <h3>setMessageListener</h3>
+		<pre>void&nbsp;<b>setMessageListener</b>(listener)</pre> 
+	<ul>
+		Sets the message consumer's <CODE>MessageListener</CODE>.The message listener can either be a function or <CODE>MessageListener</CODE>.A function passed as a message listener will act as a callback invoked withincoming messages as the first parameter.<P>Setting the message listener to null is the equivalent ofunsetting the message listener for the message consumer.<P>The effect of calling <CODE>MessageConsumer.setMessageListener</CODE>while messages are being consumed by an existing listeneror the consumer is being used to consume messages synchronouslyis undefined.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Function, MessageListener</i>&nbsp;listener </code> - the listener to which the messages are to be                delivered 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the message                        listener due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

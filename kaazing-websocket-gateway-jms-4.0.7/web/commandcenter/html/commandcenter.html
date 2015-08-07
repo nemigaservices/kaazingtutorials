@@ -1,0 +1,243 @@
+<!--
+
+    Copyright (c) 2007-2014, Kaazing Corporation. All rights reserved.
+
+-->
+
+<!DOCTYPE HTML>
+<!-- NOTE: the doctype must be the first line in the file, or IE9 will go into Quirks mode -->
+
+<!--
+
+    Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+
+-->
+
+<HTML>
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <!--  Mobile Viewport Fix
+     j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
+     device-width : Occupy full width of the screen in its current orientation
+     initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+     maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+    -->
+<!--
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">    
+-->
+
+    <LINK rel="shortcut icon" href="../images/favicon.ico">
+    <LINK rel="stylesheet" href="../css/reset.css" 
+          type="text/css" media="screen" title="no title" charset="utf-8">
+
+    <!-- The LESS-enabled stylesheets. Note that you MUST NOT specify 'media' here,
+         as less.js does not recognize the file that way. -->
+    <LINK rel="stylesheet/less" id="commandcenter_constants_stylesheet" href="../css/constants.less"
+          type="text/css" charset="utf-8">
+    <LINK rel="stylesheet/less" id="commandcenter_constants_stylesheet" href="../css/brand.less"
+          type="text/css" charset="utf-8">
+    <LINK rel="stylesheet/less" id="commandcenter_stylesheet" href="../css/commandcenter.less" 
+          type="text/css" charset="utf-8">
+
+    <!-- The menu CSS isn't working with LESS right now, so switched back to .css -->
+    <LINK rel="stylesheet" id="commandcenter_menu_stylesheet" href="../css/menu.css" 
+          type="text/css" charset="utf-8">
+
+  </HEAD>
+  <BODY onload="command_center_setup()"> 
+
+    <DIV id="header">
+      <A id="headerLogo"><IMG id="headerLogoImage" /></A>
+      <NAV id="mainMenuWrapper"></NAV>
+      <DIV id="logoutLink" class="logoutLink">LOG OUT</DIV>
+    </DIV>
+
+    <DIV id="content">
+      <DIV id="viewTitleBar">
+        <DIV id="viewTitle"></DIV>
+        <DIV id="viewToolBar"></DIV>
+      </DIV>
+      <DIV id="mainPanel">
+        <DIV id="viewContainer"></DIV>
+      </DIV>
+    </DIV>
+
+    <DIV id="footer">
+      <DIV id="footerLogo"><IMG id="footerLogoImage" /></DIV>
+      <DIV class="copyrightNotice"><span id="footerCopyright"></span></DIV>
+      <DIV class="productTitle"><span id="footerProductTitle"></span></DIV>
+    </DIV>
+
+    <DIV id="offscreenData" style="visibility:hidden">
+
+      <DIV id="loginPanel" >
+        <DIV class="imageDiv" ><IMG id="loginLogoImage" /></DIV>
+        <DIV id="loginTitle">Command Center</DIV>
+        <DIV id="loginCentralArea">
+          <DIV class="loginDiv">
+            <span class="loginFieldLabel">Management URL: </span><INPUT type="text" id="connectionUrl" size="12" value="" />
+          </DIV>
+          <DIV class="loginDiv">
+            <span class="loginFieldLabel">Username: </span><INPUT type="text" id="loginUsername" size="12" value="" />
+          </DIV>
+          <DIV class="loginDiv">
+            <span class="loginFieldLabel">Password: </span><INPUT type="password" id="loginPassword" size="12"  value="" />
+          </DIV>
+        </DIV>
+        <DIV id="loginInvalidMessage" class="hidden"><img src="../images/x.png"/><div>Login failed. Invalid username/password for the Management URL, or the URL is unreachable.</div></DIV>
+        <DIV id="loginFooter">
+          <BUTTON id="loginOkay" class="commandButton">OK</BUTTON>
+        </DIV>
+        <DIV class="copyrightNotice"><span></span></DIV>
+      </DIV>
+
+      <DIV id="dashboardViewContainer" class="ccViewContainer">
+        <DIV id="dashboardData">
+        </DIV>
+      </DIV>
+
+      <DIV id="monitorFilterPanel" class="monitorFilterPanel">
+        <DIV id="monitorFilterPanelDecoration">Edit Filter</DIV>
+        <DIV id="monitorFilterCentralArea">
+          <span id="monitorFilterFieldNameLabel">Field</span>
+          <span id="monitorFilterConditionLabel">Condition</span>
+          <span id="monitorFilterValueLabel">Value</span>
+          <DIV id="monitorFilterListDiv">
+          </DIV>
+        </DIV>
+      </DIV>
+
+      <DIV id="aboutPanel" class="aboutPanel">
+        <IMG id="aboutLogoImage" />
+        <DIV id="aboutTitle">Command Center</DIV>
+        <DIV id="aboutPanelCentralArea">
+          <DIV class="data"><SPAN class="label">Product:</SPAN><SPAN class="field" id="aboutProduct"></SPAN></DIV>
+          <DIV class="data"><SPAN class="label">Version:</SPAN><SPAN class="field" id="aboutVersion"></SPAN></DIV>
+          <DIV class="data"><SPAN class="label">Build:</SPAN><SPAN class="field" id="aboutBuild"></SPAN></DIV>
+
+          <DIV class="copyrightNotice"><span></span></DIV>
+        </DIV>
+      </DIV>
+
+      <DIV id="configOverviewContainer" class="ccViewContainer">
+        <DIV id="configOverviewData">
+          <img id="legend" src="../images/legend.png" class="hidden">
+          <DIV id="acceptWatermark" class="watermark">ACCEPT</DIV>
+          <DIV id="connectWatermark" class="watermark">CONNECT</DIV>
+          <DIV id="configOverviewRealmData"></DIV>
+          <DIV id="configOverviewNoRealmData"></DIV>
+        </DIV>
+      </DIV>
+
+      <DIV id="configServiceDefaultsContainer" class="ccViewContainer">
+        <DIV id="configServiceDefaultsData"></DIV>
+      </DIV>
+
+      <DIV id="configServicesViewContainer" class="ccViewContainer">
+        <DIV id="configServicesData"></DIV>
+      </DIV>
+
+      <DIV id="configLicensesViewContainer" class="ccViewContainer">
+        <DIV id="configLicensesData"></DIV>
+      </DIV>
+
+      <DIV id="configSecurityRealmsViewContainer" class="ccViewContainer">
+        <DIV id="configSecurityRealmsData"></DIV>
+      </DIV>
+
+      <DIV id="configSecurityKeystoreViewContainer" class="ccViewContainer">
+        <DIV id="configSecurityKeystoreData"></DIV>
+      </DIV>
+
+      <DIV id="configSecurityTruststoreViewContainer" class="ccViewContainer">
+        <DIV id="configSecurityTruststoreData"></DIV>
+      </DIV>
+
+      <DIV id="monitorGatewaysViewContainer" class="ccViewContainer">
+        <DIV id="monitorGatewaysData">
+          <DIV id="monitorGatewaysCurrentFilter"></DIV>
+          <DIV id="monitorGatewaysResultsSection" class="monitorGatewaysSection yui3-skin-sam">
+            <DIV id="monitorGatewaysResults" class="monitorDataTable"></DIV>
+          </DIV>
+        </DIV>
+      </DIV>
+
+      <DIV id="monitorServicesViewContainer" class="ccViewContainer">
+        <DIV id="monitorServicesData">
+          <DIV id="monitorServicesCurrentFilter"></DIV>
+          <DIV id="monitorServicesResultsSection" class="monitorServicesSection yui3-skin-sam">
+            <DIV id="monitorServicesResults" class="monitorDataTable"></DIV>
+          </DIV>
+        </DIV>
+      </DIV>
+
+      <DIV id="monitorSessionsViewContainer" class="ccViewContainer">
+        <DIV id="monitorSessionsData">
+          <DIV id="monitorSessionsCurrentFilter"></DIV>
+          <DIV id="monitorSessionsResultsSection" class="monitorSessionsSection yui3-skin-sam">
+            <DIV id="monitorSessionsResults" class="monitorDataTable"></DIV>
+          </DIV>
+        </DIV>
+      </DIV>
+
+    </DIV>
+
+    <!-- Do enough browser detection to figure out if we can run the CC at all.
+         Loading and running this will cause the browser to leave the site immediately
+         if the browser is not supported -->
+    <SCRIPT src="../js/browser_detect.js" type="text/javascript"></SCRIPT>
+
+    <!-- To use the LESS stylesheet-enhancement functionality. Must go AFTER stylesheets. -->
+    <SCRIPT src="../js/less.js" type="text/javascript"></SCRIPT>
+
+    <!-- To let us clean up stylesheets for things like border-radius -->
+    <SCRIPT src="../js/prefixfree.min.js" type="text/javascript"></SCRIPT>  
+
+    <!-- The Yahoo UI seed file reference, from our local copy of YUI -->
+    <SCRIPT src="../yui/yui/yui-min.js" type="text/javascript"></SCRIPT> 
+
+    <SCRIPT src="../js/general.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="../js/models.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="../js/panels.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="../js/views.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="../js/charts.js" type="text/javascript"></SCRIPT>
+
+    <SCRIPT src="../js/PostMessage.js" type="text/javascript"></SCRIPT>
+    <SCRIPT src="../js/WebSocket.js" type="text/javascript"></SCRIPT>
+
+    <!-- The company-specific branding -->
+    <SCRIPT src="../js/brand.js" type="text/javascript"></SCRIPT>
+
+    <SCRIPT type="text/javascript">
+      function command_center_setup() {
+          // Here is a default challenge-handler creator function.
+          // For each gateway, this function is called to create a challenge
+          // handler specific to the management URL for that gateway.
+          // The parameters to the creator function are:
+          //   loginPanel - an optional modal dialog you may use to gather a 
+          //                username and password.
+          //   connectionUrl - the URL of the SNMP management service on the gateway
+          //                   that is being connected to.
+          // Note: you may use or ignore the loginPanel--it's provided
+          // as a convenience to pop up a modal dialog and gather a username
+          // and password.
+
+          var CHALLENGE_HANDLER_CREATOR_FN = function(loginPanel, connectionUrl) {
+              return new CommandCenterChallengeHandler(loginPanel, connectionUrl);
+          };
+
+          // You may replace the following value for your own custom challenge 
+          // handling. See the default above for the function signature.
+          var challengeHandlerCreatorFn = CHALLENGE_HANDLER_CREATOR_FN;
+      
+          start(challengeHandlerCreatorFn);
+      }
+    </SCRIPT>
+
+<!-- For internal test runs. Not useful for customers.
+    <SCRIPT src="../js/test_support.js" type="text/javascript"></SCRIPT> 
+-->
+  </BODY>
+</HTML>
+

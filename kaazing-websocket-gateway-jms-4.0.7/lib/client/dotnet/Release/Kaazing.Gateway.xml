@@ -1,0 +1,1498 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kaazing.Gateway</name>
+    </assembly>
+    <members>
+        <member name="T:Kaazing.HTML5.Util.Logger">
+            <summary>
+            Logger implements client-side logging support
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.Util.Logger.LoggerCallback">
+            <summary>
+            Provides callback for development access to Debug messages
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.Util.Logger.Log(System.String)">
+            <summary>
+            Logs a message to debug or application-defined logging
+            </summary>
+            <param name="message">The message to be logged</param>
+        </member>
+        <member name="M:Kaazing.HTML5.Util.Logger.log(System.String)">
+            <summary>
+            Logs a message to debug or application-defined logging
+            </summary>
+            <param name="message">The message to be logged</param>
+        </member>
+        <member name="T:Kaazing.HTML5.Util.Logger.Callback">
+            <summary>
+            Callback delegate for handling logged messages
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.ByteBuffer">
+            <summary>
+            ByteBuffer provides an auto-expanding buffer.
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.#ctor">
+            <summary>
+            Creates a new ByteBuffer
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.#ctor(System.Int32)">
+            <summary>
+            Creates a new ByteBuffer with the specified initial capacity
+            </summary>
+            <param name="capacity">Initial capacity</param>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.#ctor(System.Byte[])">
+            <summary>
+            Creates a new ByteBuffer from the provided byte array
+            </summary>
+            <param name="bytes"></param>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.#ctor(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Creates a new Bytebuffer from a subset of the provided byte array
+            </summary>
+            <param name="bytes">The byte array</param>
+            <param name="offset">The starting index</param>
+            <param name="length">The number of bytes to copy into the ByteBuffer</param>
+        </member>
+        <member name="F:Kaazing.HTML5.ByteBuffer.Limit">
+            <summary>
+            The last byte available for reading.
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.ByteBuffer.Position">
+            <summary>
+            The Position property indicates the progress through the buffer,
+            and indicates the position within the underlying array that
+            subsequent data will be read from or written to.
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.ByteBuffer.AutoExpand">
+            <summary>
+            The AutoExpand property enables writing variable length data and is true
+            by default.
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.ByteBuffer.Order">
+            <summary>
+            Byte Order for marshalling.  BigEndian by default (most significant byte first).
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Array">
+            <summary>
+            The underlying storage for the ByteBuffer
+            </summary>
+            <returns>The underlying byte array</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Allocate(System.Int32)">
+            <summary>
+            Allocates a new ByteBuffer instance
+            </summary>
+            <param name="capacity">Initial capacity</param>
+            <returns>The created ByteBuffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Wrap(System.Byte[])">
+            <summary>
+            Wraps a byte array as a new ByteBuffer instance
+            </summary>
+            <param name="bytes">An array of bytes</param>
+            <returns>The created ByteBuffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Wrap(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Wraps a partial byte array as a new ByteBuffer instance.
+            </summary>
+            <param name="bytes">An array of bytes</param>
+            <param name="offset">Starting index in byte array</param>
+            <param name="length">Number of bytes to copy into the ByteBuffer</param>
+            <returns></returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Mark">
+            <summary>
+            Marks a position in the buffer
+            </summary>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.MarkValue">
+            <summary>
+            Returns the mark position
+            </summary>
+            <returns>The mark position</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Reset">
+            <summary>
+            Resets the buffer position using the mark
+            </summary>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Flip">
+            <summary>
+            Flips the buffer. The limit is set to the current position,
+            the position is set to zero, and the mark is reset.
+            </summary>
+            <returns>The flipped buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.SetOrder(Kaazing.HTML5.ByteOrder)">
+            <summary>
+            Sets the byte endianness of the buffer.
+            </summary>
+            <param name="o">The new byte order</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Skip(System.Int32)">
+            <summary>
+            Skips the specified number of bytes from the current position.
+            </summary>
+            <param name="size">Number of bytes to skip.</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Compact">
+            <summary>
+            Compacts the buffer by removing leading bytes up to the
+            buffer position and decrements the limit and position
+            values accordingly.
+            </summary>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Fill(System.Int32)">
+            <summary>
+            Fills the buffer with a repeated number of zeros.
+            </summary>
+            <param name="size">Number of zeros to repeat</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.FillWith(System.Byte,System.Int32)">
+            <summary>
+            Fills the buffer with a number of repeated bytes.
+            </summary>
+            <param name="b">The byte value to repeat</param>
+            <param name="size">The number of bytes to repeat</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Duplicate">
+            <summary>
+            Creates a copy of the buffer.
+            </summary>
+            <returns>The duplicate buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Remaining">
+            <summary>
+            Returns the number of bytes remaining from the current position to the limit.
+            </summary>
+            <returns>The number of bytes remaining</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.HasRemaining">
+            <summary>
+            Returns true if this buffer has remaining bytes, false otherwise
+            </summary>
+            <returns>Whether this buffer has remaining bytes</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.IndexOf(System.Byte)">
+            <summary>
+            Returns the index of the specified byte in the buffer.
+            </summary>
+            <param name="c">The byte value to find</param>
+            <returns>The index of the byte in the buffer or -1 if not found</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Put(System.Byte)">
+            <summary>
+            Puts a single byte  into the buffer at the current position.
+            </summary>
+            <param name="b">The byte value</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutAt(System.Int32,System.Byte)">
+            <summary>
+            Puts a single byte into the buffer at ths specified index.
+            </summary>
+            <param name="i">The byte value</param>
+            <param name="b">The index</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutShort(System.Int16)">
+            <summary>
+            Puts a two-byte number into the buffer at the current position
+            </summary>
+            <param name="v">The two-byte number</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutShortAt(System.Int32,System.Int16)">
+            <summary>
+            Puts a two-byte number into the buffer at the specified index
+            </summary>
+            <param name="position">The two-byte number</param>
+            <param name="v">The index</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutMediumInt(System.Int32)">
+            <summary>
+            Puts a three-byte number into the buffer at the current position
+            </summary>
+            <param name="v">The three-byte number</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutMediumIntAt(System.Int32,System.Int32)">
+            <summary>
+            Puts a three-byte number into the buffer at the specified index
+            </summary>
+            <param name="position">The index</param>
+            <param name="v">The three-byte number</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutInt(System.Int32)">
+            <summary>
+            Puts a four-byte number into the buffer at the current position
+            </summary>
+            <param name="v">The four-byte number</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutIntAt(System.Int32,System.Int32)">
+            <summary>
+            Puts a four-byte number into the buffer at the specified index
+            </summary>
+            <param name="position">The index</param>
+            <param name="v">The four-byte number</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutLong(System.Int64)">
+            <summary>
+            Puts an eight-byte number into the buffer at the current position
+            </summary>
+            <param name="v">The eight-byte number</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutLongAt(System.Int32,System.Int64)">
+            <summary>
+            Puts an eight-byte number into the buffer at the specified index
+            </summary>
+            <param name="position">The index</param>
+            <param name="v">The eight-byte number</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutBuffer(Kaazing.HTML5.ByteBuffer)">
+            <summary>
+            Puts a ByteBuffer into the buffer at the current position
+            </summary>
+            <param name="b">The second buffer</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutBuffer(Kaazing.HTML5.ByteBuffer,System.Int32)">
+            <summary>
+            Puts a ByteBuffer into the buffer at the current position with specified maximum length
+            </summary>
+            <param name="b">The source buffer</param>
+            <param name="len">Maximum length copied</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutBufferAt(System.Int32,Kaazing.HTML5.ByteBuffer)">
+            <summary>
+            Puts a ByteBuffer into the buffer at the specified index
+            </summary>
+            <param name="i">The index</param>
+            <param name="b">The source buffer</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutBufferAt(System.Int32,Kaazing.HTML5.ByteBuffer,System.Int32)">
+            <summary>
+            Puts a ByteBuffer into the buffer at the specified index
+            </summary>
+            <param name="i">The index</param>
+            <param name="b">The source buffer</param>
+            <param name="len">Maximum length copied</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutPrefixedString(System.Int32,System.String,System.Text.Encoding)">
+            <summary>
+            Puts a length-prefixed string into the buffer at the current position
+            </summary>
+            <param name="fieldSize">Size of the length prefix field</param>
+            <param name="v">The string</param>
+            <param name="e">The character set</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutString(System.String,System.Text.Encoding)">
+            <summary>
+            Puts a string into the buffer at the specified index, using the
+            character set to encode the string as bytes.
+            </summary>
+            <param name="v">The string</param>
+            <param name="e">The character set</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutBytes(System.Byte[])">
+            <summary>
+            Puts a byte array into the buffer at the current position
+            </summary>
+            <param name="bytes">The byte array</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Puts a byte array into the buffer at the current position
+            </summary>
+            <param name="bytes">The byte array</param>
+            <param name="offset">Offset in the byte array</param>
+            <param name="length">Number of bytes to copy</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutBytesAt(System.Int32,System.Byte[])">
+            <summary>
+            Puts a byte array into the buffer at the specified index
+            </summary>
+            <param name="i">The index</param>
+            <param name="bytes">The byte array</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutUnsignedShort(System.UInt16)">
+            <summary>
+            Put an Unsigned Short integer into the ByteBuffer
+            </summary>
+            <param name="v"></param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.PutUnsignedInt(System.UInt32)">
+            <summary>
+            Put an Unsigned Int into the ByteBuffer
+            </summary>
+            <param name="value"></param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Get">
+            <summary>
+            Returns a single byte from the buffer at the current position
+            </summary>
+            <returns>The single byte</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetAt(System.Int32)">
+            <summary>
+            Returns a single byte from the buffer at the specified index
+            </summary>
+            <param name="i">The index</param>
+            <returns>The single byte</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetShort">
+            <summary>
+            Returns a two-byte number from the buffer at the current position
+            </summary>
+            <returns>The two-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetShortAt(System.Int32)">
+            <summary>
+            Returns a two-byte number from the buffer at the specified index
+            </summary>
+            <param name="i">The index</param>
+            <returns>The two-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetMediumInt">
+            <summary>
+            Returns a three-byte number from the buffer at the current position
+            </summary>
+            <returns>The three-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetMediumIntAt(System.Int32)">
+            <summary>
+            Returns a three-byte number from the buffer at the specified index
+            </summary>
+            <param name="i">The index</param>
+            <returns>The three-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetInt">
+            <summary>
+            Returns a four-byte number from the buffer at the current position
+            </summary>
+            <returns>The four-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetIntAt(System.Int32)">
+            <summary>
+            Returns a four-byte number from the buffer at the specified index
+            </summary>
+            <param name="i">The index</param>
+            <returns>The four-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetLong">
+            <summary>
+            Returns an eight-byte number from the buffer at the current position
+            </summary>
+            <returns>The eight-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetLongAt(System.Int32)">
+            <summary>
+            Returns an eight-byte number from the buffer at the specified index
+            </summary>
+            <param name="i">The index</param>
+            <returns>The eight-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetUnsigned">
+            <summary>
+            Returns an unsigned one-byte number from the buffer at the current position
+            </summary>
+            <returns>The unsigned byte</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetUnsignedShort">
+            <summary>
+            Returns an unsigned two-byte number from the buffer at the current position
+            </summary>
+            <returns>The unsigned two-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetUnsignedMediumInt">
+            <summary>
+            Returns an unsigned three-byte number from the buffer at the current position
+            </summary>
+            <returns>The unsigned three-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetUnsignedInt">
+            <summary>
+            Returns an unsigned four-byte number from the buffer at the current position
+            </summary>
+            <returns>The unsigned four-byte number</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetPrefixedString(System.Int32,System.Text.Encoding)">
+            <summary>
+            Returns a length-prefixed string from the buffer at the current position
+            </summary>
+            <param name="fieldSize">The width in bytes of the prefixed length field</param>
+            <param name="cs">The character set</param>
+            <returns>The length-prefixed string</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetString(System.Text.Encoding)">
+            <summary>
+            Returns a null-terminated string from the buffer at the current position. 
+            If the end of buffer if reached before discovering a null terminator byte,
+            then the decoded string includes all bytes up to the end of the buffer.
+            </summary>
+            <param name="cs">The character set</param>
+            <returns>The null-terminated string</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads specified number of bytes to the target array
+            </summary>
+            <param name="buffer">The target buffer</param>
+            <param name="offset">The offset in the buffer</param>
+            <param name="length">The number of bytes to read</param>
+            <returns>The single byte</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Slice">
+            <summary>
+            Returns a sliced buffer, setting the position to zero, and decrementing
+            the limit accordingly.
+            </summary>
+            <returns>The sliced buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Rewind">
+            <summary>
+            Rewinds the buffer. The position is set to zero and the mark is reset.
+            
+            </summary>
+            <returns>The buffer</returns>        
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.ToString">
+            <summary>
+            Returns the string representation of the buffer.
+            </summary>
+            <returns>The string representation</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.GetHexDump">
+            <summary>
+            Returns a hex dump of this buffer.
+            </summary>
+            <returns>The hex dump</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.Expand(System.Int32)">
+            <summary>
+            Expands the buffer to support the expected number of remaining bytes
+            after the current position.
+            </summary>
+            <param name="expectedRemaining">The expected number of remaining bytes</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteBuffer.ExpandAt(System.Int32,System.Int32)">
+            <summary>
+            Expands the buffer to support the expected number of remaining bytes
+            after the specified index.
+            </summary>
+            <param name="i">The index</param>
+            <param name="expectedRemaining">The expected number of remaining bytes</param>
+            <returns>The buffer</returns>
+        </member>
+        <member name="P:Kaazing.HTML5.ByteBuffer.Capacity">
+            <summary>
+            The number of bytes of storage available.
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.ByteMessageEventHandler">
+            <summary>
+            Delegate type for handling ByteMessage events
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Kaazing.HTML5.ByteMessageEventArgs">
+            <summary>
+            Event arguments when binary messages are received
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteMessageEventArgs.#ctor(Kaazing.HTML5.ByteBuffer,Kaazing.HTML5.Origin,System.String)">
+            <summary>
+            Event arguments when binary messages are received
+            </summary>
+            <param name="data"></param>
+            <param name="origin"></param>
+            <param name="eventId"></param>
+        </member>
+        <member name="P:Kaazing.HTML5.ByteMessageEventArgs.Data">
+            <summary>
+            Content of the message.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.ByteMessageEventArgs.Origin">
+            <summary>
+            Origin of the message
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.ByteMessageEventArgs.EventId">
+            <summary>
+            Event Id of the message
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.ByteOrder">
+            <summary>
+            Abstract class to represent BigEndian or LittleEndian byte order
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.ByteOrder.BIG_ENDIAN">
+            <summary>
+            Singleton representing BigEndian byte order (most significant byte first)
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.ByteOrder.LITTLE_ENDIAN">
+            <summary>
+            Singleton representing LittleEndian byte order (least significant byte first)
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteOrder.ToString">
+            <summary>
+            Returns a string representing ByteOrder
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="T:Kaazing.HTML5.BigEndian">
+            <summary>
+            Class to represent BigEndian byte order (most significant byte first)
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.LittleEndian">
+            <summary>
+            Class to represent LittleEndian byte order (least significant byte first)
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.ByteSocket">
+            <summary>
+            ByteSocket provies a full-duplex binary communications channel.
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.ByteSocket.CONNECTING">
+            <summary>
+            ReadyState status while attempting to establish a connection
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.ByteSocket.OPEN">
+            <summary>
+            ReadyState status while connection is open.
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.ByteSocket.CLOSED">
+            <summary>
+            ReadyState status when connection has been closed.
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteSocket.#ctor">
+            <summary>
+            Initializes a new instance of the class com.kaazing.gateway.client.html5.ByteSocket
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteSocket.Connect(System.String)">
+            <summary>
+            Connect to a remote ByteSocket server.
+            </summary>
+            <param name="location">URI string such as "ws://example.com:8000/path"</param>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteSocket.Connect(System.String,System.String)">
+            <summary>
+            Connect to a remote ByteSocket server.
+            </summary>
+            <param name="location">URI string such as "ws://example.com:8000/path"</param>
+            <param name="protocol">Subprotocol to be communicated over the ByteSocket</param>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteSocket.Send(Kaazing.HTML5.ByteBuffer)">
+            <summary>
+            Send binary data over a ByteSocket connection.
+            </summary>
+            <param name="message">Message payload.</param>
+        </member>
+        <member name="M:Kaazing.HTML5.ByteSocket.Close">
+            <summary>
+            Closes the full-duplex connection.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.ByteSocket.ReadyState">
+            <summary>
+            The current connection state.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.ByteSocket.URL">
+            <summary>
+            The URL with which the WebSocket was constructed.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.ByteSocket.ConnectTimeout">
+            <summary>
+            Connect timeout in milliseconds. The timeout will expire if 
+            there is no exchange of packets(for example, 100% packet loss) while 
+            establishing the connection. A timeout value of zero indicates 
+            no timeout.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.ByteSocket.BufferedAmount">
+            <summary>
+            The number of bytes that are queued to send.
+            </summary>
+        </member>
+        <member name="E:Kaazing.HTML5.ByteSocket.OpenEvent">
+            <summary>
+            Occurs when the connection has opened.
+            </summary>
+        </member>
+        <member name="E:Kaazing.HTML5.ByteSocket.MessageEvent">
+            <summary>
+            Occurs when a message has been received.
+            </summary>
+        </member>
+        <member name="E:Kaazing.HTML5.ByteSocket.CloseEvent">
+            <summary>
+            Occurs when the connection has closed.
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.CloseEventArgs">
+            <summary>
+            Event representing Close of a channel
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.CloseEventHandler">
+            <summary>
+            Delegate type for handling Close events
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Kaazing.HTML5.ErrorEventArgs">
+            <summary>
+            Event representing an error while receiving HttpRequest response
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.ErrorEventArgs.#ctor">
+            <summary>
+            Event representing error for a channel
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.ErrorEventArgs.#ctor(System.String)">
+            <summary>
+            Event representing error for a channel
+            </summary>
+            <param name="message">
+            Message representing the type of error
+            </param>
+        </member>
+        <member name="M:Kaazing.HTML5.ErrorEventArgs.#ctor(System.Exception)">
+            <summary>
+            Event representing error for a channel
+            </summary>
+            <param name="message">
+            exception representing the type of error
+            </param>
+        </member>
+        <member name="P:Kaazing.HTML5.ErrorEventArgs.Message">
+            <summary>
+            Get Message representing the type of error
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.ErrorEventArgs.Exception">
+            <summary>
+            Get Exception representing the error
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.ErrorEventHandler">
+            <summary>
+            Delegate type for handling Error events
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Kaazing.HTML5.EventSource">
+            <summary>
+            EventSource provides access to remote Server-sent event streams.
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.EventSource.#ctor">
+            <summary>
+            Initializes a new instance of an EventSource
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.EventSource.Connect(System.String)">
+            <summary>
+            Connect to a remote event stream.
+            </summary>
+            <param name="url">Represents the URI of the remote event stream.</param>
+        </member>
+        <member name="M:Kaazing.HTML5.EventSource.Disconnect">
+            <summary>
+            Stop the EventStream.
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.EventSource.Process(System.String)">
+            <summary>
+            http://www.whatwg.org/specs/web-apps/current-work/#event-stream-interpretation
+            (ported from JavaScript->ActionScript->C#)
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.EventSource.dispatch">
+            <summary>
+            Takes an associated block of sse lines, determines the type,
+            parses out the payload, and performs the resulting action
+            (change reconnect time or dispatch an event).
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.EventSource.ReadyState">
+            <summary>
+            The current connection state.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.EventSource.URL">
+            <summary>
+            The location string with which the EventSource was constructed.
+            </summary>
+        </member>
+        <member name="E:Kaazing.HTML5.EventSource.MessageEvent">
+            <summary>
+            Occurs when a message is received from the remote event target.
+            </summary>
+        </member>
+        <member name="E:Kaazing.HTML5.EventSource.OpenEvent">
+            <summary>
+            Occurs when the EventSource has established a connection with the server.
+            </summary>
+        </member>
+        <member name="E:Kaazing.HTML5.EventSource.ErrorEvent">
+            <summary>
+            Occurs when the EventSource has closed due to an error.
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.LoadEventArgs">
+            <summary>
+            Event representing completion (load) of HttpRequest
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.LoadEventArgs.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            Event representing progress for a channel
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.LoadEventArgs.StatusCode">
+            <summary>
+            Status Code of the event
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.LoadEventHandler">
+            <summary>
+            Delegate type for handling Load events
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Kaazing.HTML5.MessageEventArgs">
+            <summary>
+            Event arguments when text-based messages are received
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.MessageEventArgs.#ctor(System.String,Kaazing.HTML5.Origin,System.String)">
+            <summary>
+            Event arguments when text-based messages are received
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.MessageEventArgs.Data">
+            <summary>
+            Content of the message.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.MessageEventArgs.Origin">
+            <summary>
+            Origin of the message
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.MessageEventArgs.EventId">
+            <summary>
+            Event Id of the message
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.MessageEventHandler">
+            <summary>
+            Delegate type for handling Message events
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Kaazing.HTML5.OpenEventArgs">
+            <summary>
+            Event representing open of HttpRequest
+            </summary>
+        </member>
+        <member name="T:Kaazing.HTML5.OpenEventHandler">
+            <summary>
+            Delegate type for handling Open events
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Kaazing.HTML5.Origin">
+            <summary>
+            Origin is security domain boundary for HTML 5 applications. It it composed of the
+            scheme, host, and port of a URI.
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.Origin.#ctor(System.String)">
+            <summary>
+            Construct a new Origin using the scheme, host, and port of a URI.
+            </summary>
+            <param name="uriString">URI</param>
+        </member>
+        <member name="M:Kaazing.HTML5.Origin.ToString">
+            <summary>
+            http://www.whatwg.org/specs/web-apps/current-work/#ascii-serialization-of-an-origin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Kaazing.HTML5.Origin.GetSourceOrigin">
+            <summary>
+            Returns the source origin of the application
+            </summary>
+            <returns>Origin</returns>
+        </member>
+        <member name="T:Kaazing.HTML5.WebSocket">
+            <summary>
+            WebSocket provides a full-duplex text communications channel.
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.WebSocket.CONNECTING">
+            <summary>
+            ReadyState status while attempting to establish a connection
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.WebSocket.OPEN">
+            <summary>
+            ReadyState status while connection is open.
+            </summary>
+        </member>
+        <member name="F:Kaazing.HTML5.WebSocket.CLOSED">
+            <summary>
+            ReadyState status when connection has been closed.
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.WebSocket.#ctor">
+            <summary>
+            Initializes a new instance of the com.kaazing.gateway.client.html5.WebSocket class.
+            </summary>
+        </member>
+        <member name="M:Kaazing.HTML5.WebSocket.Connect(System.String)">
+            <summary>
+            Connect to a remote WebSocket server.
+            </summary>
+            <param name="location">URI string such as "ws://example.com:8000/path"</param>
+        </member>
+        <member name="M:Kaazing.HTML5.WebSocket.Connect(System.String,System.String)">
+            <summary>
+            Connect to a remote WebSocket server.
+            </summary>
+            <param name="location">URI string such as "ws://example.com:8000/path"</param>
+            <param name="protocol">Subprotocol to be communicated over the WebSocket</param>
+        </member>
+        <member name="M:Kaazing.HTML5.WebSocket.Send(System.String)">
+            <summary>
+            Sends text-based data to the remote socket location.
+            </summary>
+            <param name="message">Message payload</param>
+        </member>
+        <member name="M:Kaazing.HTML5.WebSocket.Close">
+            <summary>
+            Closes the full-duplex connection.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.WebSocket.ReadyState">
+            <summary>
+            The current connection state.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.WebSocket.URL">
+            <summary>
+            The URL with which the WebSocket was constructed.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.WebSocket.ConnectTimeout">
+            <summary>
+            Connect timeout in milliseconds. The timeout will expire if 
+            there is no exchange of packets(for example, 100% packet loss) while 
+            establishing the connection. A timeout value of zero indicates 
+            no timeout.
+            </summary>
+        </member>
+        <member name="P:Kaazing.HTML5.WebSocket.BufferedAmount">
+            <summary>
+            The number of bytes that are queued to send.
+            </summary>
+        </member>
+        <member name="E:Kaazing.HTML5.WebSocket.OpenEvent">
+            <summary>
+            Occurs when the connection has opened.
+            </summary>
+        </member>
+        <member name="E:Kaazing.HTML5.WebSocket.MessageEvent">
+            <summary>
+            Occurs when a message has been received.
+            </summary>
+        </member>
+        <member name="E:Kaazing.HTML5.WebSocket.CloseEvent">
+            <summary>
+            Occurs when the connection has closed.
+            </summary>
+        </member>
+        <member name="T:Kaazing.Security.BasicChallengeHandler">
+             <summary>
+            
+             Challenge handler for Basic authentication as defined in <a href="http://tools.ietf.org/html/rfc2617#section-2">RFC 2617.</a>
+             <para>
+             This BasicChallengeHandler can be loaded and instantiated using ChallengeHandlers.Load(),
+             and registered at a location using DispatchChallengeHandler.Register(String, ChallengeHandler)}.
+             </para>
+             <para>
+             In addition, one can install general and realm-specific LoginHandler objects onto this
+             BasicChallengeHandler to assist in handling challenges associated
+             with any or specific realms.  This can be achieved using 'setLoginHandler(LoginHandler)' and
+             'setRealmLoginHandler(String, LoginHandler)' methods.
+             </para>
+             <para>
+             The following example loads an instance of a BasicChallengeHandler, sets a login
+             handler onto it and registers the basic handler at a URI location.  In this way, all attempts to access
+             that URI for which the server issues "Basic" challenges are handled by the registered BasicChallengeHandler.
+             </para>
+             <code>
+             public class MyLoginHandler : LoginHandler {
+               public PasswordAuthentication GetCredentials() {
+                 return new PasswordAuthentication("global", "credentials".ToCharArray());
+               }
+             }
+             BasicChallengeHandler basicHandler = ChallengeHandlers.Load&lt;BasicChallengeHandler&gt;(typeof(BasicChallengeHandler));
+             basicHandler.LoginHandler = new MyLoginHandler();
+             ChallengeHandlers.Default = basicHandler;
+             </code>
+             
+             <para>
+             <see href="http://tools.ietf.org/html/rfc2616">RFC 2616 - HTTP 1.1</see>
+             </para>
+             <para>
+             <see href="http://tools.ietf.org/html/rfc2617#section-2">RFC 2617 Section 2 - Basic Authentication</see>
+             </para>
+             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Kaazing.Security.ChallengeHandler" -->
+        <member name="M:Kaazing.Security.ChallengeHandler.CanHandle(Kaazing.Security.ChallengeRequest)">
+             <summary>
+            
+             Can the presented challenge be potentially handled by this challenge handler?
+            
+             <param name="challengeRequest">a challenge request object containing a challenge</param>
+             <returns>true iff this challenge handler could potentially respond meaningfully to the challenge.</returns>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.ChallengeHandler.Handle(Kaazing.Security.ChallengeRequest)">
+             <summary>
+            
+             Handle the presented challenge by creating a challenge response or returning NULL.
+             This responsibility is usually achieved
+             by using the associated <c>LoginHandler</c> to obtain user credentials, and transforming those credentials
+             into a <c>ChallengeResponse</c>.
+             <para>
+             When it is not possible to create a <c>ChallengeResponse</c>, this method MUST return NULL.
+             </para>
+            
+             <param name="challengeRequest">a challenge object</param>
+             <returns>a challenge response object or NULL if no response is possible.</returns>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.BasicChallengeHandler.SetRealmLoginHandler(System.String,Kaazing.Security.LoginHandler)">
+             <summary>
+            
+             Set a Login Handler to be used if and only if a challenge request has
+             a realm parameter matching the provided realm.
+            
+             <param name="realm">the realm upon which to apply the loginHandler.</param>
+             <param name="loginHandler">the login handler to use for the provided realm.</param>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.BasicChallengeHandler.LoginHandler">
+             <summary>
+            
+             Get the general (non-realm-specific) login handler associated with this challenge handler.
+             A login handler is used to assist in obtaining credentials to respond to challenge requests.
+            
+             <returns>a login handler to assist in providing credentials, or NULL if none has been established yet.</returns>
+             </summary>
+        </member>
+        <member name="T:Kaazing.Security.DispatchChallengeHandler">
+             <summary>
+            
+             A DispatchChallengeHandler is responsible for dispatching challenge requests
+             to appropriate challenge handlers when challenges
+             arrive from specific URI locations in the authentication responses.
+             <para>
+             This allows clients to use specific challenge handlers to handle specific
+             types of challenges at different URI locations.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.DispatchChallengeHandler.Register(System.String,Kaazing.Security.ChallengeHandler)">
+             <summary>
+            
+             Register a challenge handler to respond to challenges at one or more locations.
+             <para>
+             When a challenge is received for a protected URI, the {@code locationDescription}
+             matches against elements of the protected URI; if a match is found, one
+             consults the challenge handler(s) registered at that {@code locationDescription} to find
+             a challenge handler suitable to respond to the challenge.
+             </para>
+             <para>
+             A {@code locationDescription} comprises a username, password, host, port and paths,
+             any of which can be wild-carded with the "*" character to match any number of request URIs.
+             If no port is explicitly mentioned in a {@code locationDescription}, a default port will be inferred
+             based on the scheme mentioned in the location description, according to the following table:
+             <code>
+             | scheme  |   default port   |   Sample locationDescription   
+             +---------+------------------+-----------------------------
+             | http    |        80        |   foo.example.com or http://foo.example.com
+             | ws      |        80        |   foo.example.com or ws://foo.example.com
+             | https   |       443        |   https://foo.example.com
+             | wss     |       443        |   wss://foo.example.com
+             +---------+------------------+-----------------------------
+             </code>
+             </para>
+             <para>
+             The protocol scheme (e.g. http or ws) if present in {@code locationDescription} will not be used to
+             match {@code locationDescription} with the protected URI, because authentication challenges are
+             implemented on top of one of the HTTP/s protocols always, whether one is initiating web socket
+             connections or regular HTTP connections.  That is to say for example, the locationDescription {@code "foo.example.com"}
+             matches both URIs {@code http://foo.example.com} and {@code ws://foo.example.com}.
+             </para>
+             <para>
+             Some examples of {@code locationDescription} values with wildcards are:
+             <list type="number">
+                 <item>{@code *}&#047; -- matches all requests to any host on port 80 (default port), with no user info or path specified.  </item>
+                 <item>{@code *.hostname.com:8000}  -- matches all requests to port 8000 on any sub-domain of {@code hostname.com},
+                     but not {@code hostname.com} itself.</item>
+                 <item>{@code server.hostname.com:*}&#047;{@code *} -- matches all requests to a particular server on any port on any path but not the empty path. </item>
+             </list>
+             </para>
+             <param name="locationDescription">the (possibly wild-carded) location(s) at which to register a handler.</param>
+             <param name="challengeHandler">the challenge handler to register at the location(s).</param>
+            
+             <returns>a reference to this challenge handler for chained calls</returns>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.DispatchChallengeHandler.Unregister(System.String,Kaazing.Security.ChallengeHandler)">
+             <summary>
+            
+             <para>
+             If the provided challengeHandler is registered at the provided location, clear that
+             association such that any future challenge requests matching the location will never
+             be handled by the provided challenge handler.
+             </para>
+             If no such location or challengeHandler registration exists, this method silently succeeds.
+             <param name="locationDescription">the exact location description at which the challenge handler was originally registered</param>
+             <param name="challengeHandler">the challenge handler to de-register.</param>
+            
+             <returns>a reference to this object for chained call support</returns>
+             </summary>
+        </member>
+        <member name="T:Kaazing.Security.ChallengeHandlers">
+             <summary>
+            
+             <para>
+             Responsible for both loading fresh <c>ChallengeHandler</c> instances
+             and managing a concept of a default challenge handler.
+             </para>
+             <para>
+             Managing the Default Challenge Handler: 
+             This class provides a way to get and set a default challenge handler, which is always defined (never NULL).
+             The internal default handler cannot handle any challenges - it is up to the application to install its own
+             default challenge handler for any authentication challenge management to operate at all.
+             </para>
+             <para>
+             Clients with a single challenge handling strategy for all authentication challenges can simply set
+             a specific challenge handler as the default using <c>SetDefault(ChallengeHandler)</c>.
+             For example, to register a <c>BasicChallengeHandler</c>
+             object to handle all authentication requests by default, one can code:
+             </para>
+             <code>
+             LoginHandler loginHandler = ...
+             BasicChallengeHandler basicHandler = ChallengeHandlers.Load&lt;BasicChallengeHandler&gt;(typeof(BasicChallengeHandler));
+             basicHandler.LoginHandler = loginHandler;
+             ChallengeHandlers.Default = basicHandler;
+             </code>
+             <para>
+             Clients with location-specific challenge handling strategies for location-dependent 401 challenges can
+             register a <c>DispatchChallengeHandler</c> object, upon which location-specific <c>ChallengeHandler</c>
+             objects are then registered. This arrangement means that
+             whenever a request that matches one of the specific locations encounters a 401 challenge from the server,
+             the corresponding <c>ChallengeHandler</c>
+             object is invoked to handle the challenge.
+             </para>
+             <code>
+             DispatchChallengeHandler dispatchHandler = ChallengeHandlers.Load&lt;DispatchChallengeHandler&gt;(typeof(DispatchChallengeHandler));
+             ChallengeHandlers.Default = dispatchHandler;
+             LoginHandler loginHandler = ...
+             
+             //set a loginHandler for this location
+             BasicChallengeHandler basicHandler = ChallengeHandlers.Load&lt;BasicChallengeHandler&gt;(typeof(BasicChallengeHandler));
+             basicHandler.LoginHandler = loginHandler;
+             dispatchHandler.Register("ws://myserver.com/*", basicHandler);
+             </code>
+            
+             <see href="http://download.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html">ServiceLoader</see>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.ChallengeHandlers.Load``1(System.Type)">
+             <summary>
+            
+             Find and instantiate a challenge handler by the class of <c>ChallengeHandler</c>.
+             <param name="clazz">the desired class of challenge handler</param>
+             <returns>the appropriate <c>ChallengeHandler</c>, or <c>null</c> if no such handler can be found.</returns>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.ChallengeHandlers.Load``1(System.Type,System.String)">
+             <summary>
+            
+             Find and instantiate a challenge handler by the class of <c>ChallengeHandler</c> using the provided <c>ClassLoader</c>.
+             <param name="clazz">the desired class of challenge handler</param>
+             <param name="clazzLoader">the class loader to load the challenge handler</param>
+             <returns>the appropriate ChallengeHandler, or NULL if no such handler can be found.</returns>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.ChallengeHandlers.Default">
+             <summary>
+            
+             Define the default challenge handler to be used for all the requests.
+            
+             <param name="challengeHandler">use this challenge handler as the default for all the requests.</param>
+            
+             Get a reference to the default challenge handler to be used for all the requests
+             <returns>a reference to the default challenge handler to be used for all the requests.</returns>
+             </summary>
+        </member>
+        <member name="T:Kaazing.Security.ChallengeRequest">
+             <summary>
+            
+             <para>
+             An immutable object representing the challenge presented by the server when the client accessed
+             the URI represented by a location.
+             </para>
+             According to <a href="http://tools.ietf.org/html/rfc2617#section-1.2">RFC 2617</a>,
+             <pre>
+                 challenge   = auth-scheme 1*SP 1#auth-param
+             </pre>
+             so we model the authentication scheme and parameters in this class.
+             <para>
+             This class is also responsible for detecting and adapting the <c>Application Basic</c>
+             and <c>Application Negotiate</c> authentication schemes into their <c>Basic</c> and <c>Negotiate</c>
+             counterpart authentication schemes.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.ChallengeRequest.#ctor(System.String,System.String)">
+             <summary>
+            
+             Constructor from the protected URI location triggering the challenge,
+             and an entire server-provided 'WWW-Authenticate:' string.
+            
+             <param name="location">the protected URI location triggering the challenge</param>
+             <param name="challenge">an entire server-provided 'WWW-Authenticate:' string</param>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.ChallengeRequest.Location">
+             <summary>
+            
+             Return the protected URI the access of which triggered this challenge as a {@code String}.
+             <para>
+             For some authentication schemes, the production of a response to the challenge may require
+             access to the location of the URI triggering the challenge.
+             </para>
+            
+             <returns>the protected URI the access of which triggered this challenge as a String</returns>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.ChallengeRequest.AuthenticationScheme">
+             <summary>
+            
+             Return the authentication scheme with which the server is challenging.
+            
+             <returns>the authentication scheme with which the server is challenging.</returns>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.ChallengeRequest.AuthenticationParameters">
+             <summary>
+            
+             Return the string after the space separator, not including the authentication scheme nor the space itself,
+             or NULL if no such string exists.
+            
+             <returns>the string after the space separator, not including the authentication scheme nor the space itself,
+             or NULL if no such string exists.</returns>
+             </summary>
+        </member>
+        <member name="T:Kaazing.Security.ChallengeResponse">
+             <summary>
+            
+             A challenge response contains a character array representing the response to the server,
+             and a reference to the next challenge handler to handle any further challenges for the request.
+            
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.ChallengeResponse.#ctor(System.Char[],Kaazing.Security.ChallengeHandler)">
+             <summary>
+            
+             Constructor from a set of credentials to send to the server in an 'Authorization:' header
+             and the next challenge handler responsible for handling any further authentication challenges for the request.
+            
+             <param name="credentials">a set of credentials to send to the server in an 'Authorization:' header</param>
+             <param name="nextChallengeHandler">the next challenge handler responsible for handling any further authentication challenges for the request.</param>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.ChallengeResponse.ClearCredentials">
+             <summary>
+            
+             Clear the credentials of this response.
+             <para>
+             Calling this method once the credentials have been communicated to the network layer
+             protects credentials in memory.
+             </para>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.ChallengeResponse.NextChallengeHandler">
+             <summary>
+            
+             Return the next challenge handler responsible for handling any further authentication challenges for the request.
+            
+             <returns>the next challenge handler responsible for handling any further authentication challenges for the request.</returns>
+             </summary>
+             <summary>
+            
+             Establish the next challenge handler responsible for handling any further authentication challenges for the request.
+            
+             <param name="nextChallengeHandler">the next challenge handler responsible for handling any further authentication challenges for the request.</param>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.ChallengeResponse.Credentials">
+             <summary>
+            
+             Establish the credentials for this response.
+            
+             <param name="credentials">the credentials to be used for this challenge response.</param>
+             </summary>
+        </member>
+        <member name="T:Kaazing.Security.LoginHandler">
+             <summary>
+            
+             A login handler is responsible for obtaining credentials from an arbitrary
+             source.
+             <para>
+             Login Handlers can be associated with one or more <c>ChallengeHandler</c>
+             objects, to ensure that when a Challenge Handler requires credentials for a <c>ChallengeResponse</c>,
+             the work is delegated to a <c>LoginHandler</c>.
+             </para>
+             At client configuration time, a <c>LoginHandler</c> can be associated with a <c>ChallengeHandler</c> as follows:
+             <code>
+             public class MyLoginHandler : LoginHandler {
+               public PasswordAuthentication GetCredentials() {
+                 // Obtain credentials in an application-specific manner
+                 ...
+               }
+             }
+            
+             BasicChallengeHandler basicHandler = ChallengeHandlers.Load&lt;BasicChallengeHandler&gt;(typeof(BasicChallengeHandler));
+             basicHandler.LoginHandler = new MyLoginHandler();
+             ChallengeHandlers.Default = basicHandler;
+            
+             </code>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.LoginHandler.GetCredentials">
+             <summary>
+            
+             Gets the password authentication credentials from an arbitrary source.
+             <returns>the password authentication obtained.</returns>
+             </summary>
+        </member>
+        <member name="T:Kaazing.Security.NegotiableChallengeHandler">
+             <summary>
+            
+             A NegotiableChallengeHandler can be used to directly respond to
+             "Negotiate" challenges, and in addition, can be used indirectly in conjunction
+             with a NegotiateChallengeHandler}
+             to assist in the construction of a challenge response using object identifiers.
+             
+             <see href="http://tools.ietf.org/html/rfc4178#section-4.2.1">See RFC 4178 Section 4.2.1 for details
+                 about how the supported object identifiers contribute towards the initial context token in the challenge response.</see>
+            
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.NegotiableChallengeHandler.SupportedOids">
+             <summary>
+            
+             Return a collection of string representations of object identifiers
+             supported by this challenge handler implementation, in dot-separated notation.
+             For example: 1.3.5.1.5.2
+            
+             <returns>a collection of string representations of object identifiers
+                     supported by this challenge handler implementation.</returns>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.NegotiableChallengeHandler.LoginHandler">
+             <summary>
+            
+             Provide a general login handler to be used in association with this challenge handler.
+             The login handler is used to assist in obtaining credentials to respond to any
+             challenge requests when this challenge handler handles the request.
+            
+             <param name="loginHandler">a login handler for credentials.</param>
+            
+             <returns>this challenge handler object, to support chained calls</returns>
+             </summary>
+             <summary>
+            
+             Get the general login handler associated with this challenge handler.
+             A login handler is used to assist in obtaining credentials to respond to challenge requests.
+            
+             <returns>a login handler to assist in providing credentials, or {@code null} if none has been established yet.</returns>
+             </summary>
+        </member>
+        <member name="T:Kaazing.Security.NegotiateChallengeHandler">
+             <summary>
+            
+             <para>
+             A Negotiate Challenge Handler handles initial empty "Negotiate" challenges from the
+             server.  It uses other "candidate" challenger handlers to assemble an initial context token
+             to send to the server, and is responsible for creating a challenge response that can delegate
+             to the winning candidate.
+             </para>
+             <para>
+             This NegotiateChallengeHandler can be loaded and instantiated using <c>ChallengeHandlers.Load(Class)</c>,
+             and registered at a location using <c>DispatchChallengeHandler.Register(String, ChallengeHandler)</c>.
+             </para>
+             <para>
+             In addition, one can register more specific <c>NegotiableChallengeHandler</c> objects with
+             this initial <c>NegotiateChallengeHandler</c> to handle initial Negotiate challenges and subsequent challenges associated
+             with specific Negotiation <a href="http://tools.ietf.org/html/rfc4178#section-4.1">mechanism types / object identifiers</a>.
+             </para>
+             The following example establishes a Negotiation strategy at a specific URL location.
+             We show the use of a <c>DispatchChallengeHandler</c> to register a <c>NegotiateChallengeHandler</c> at
+             a specific location.  The <c>NegotiateChallengeHandler</c> has a <c>NegotiableChallengeHandler</c>
+             instance registered as one of the potential negotiable alternative challenge handlers.
+             <code>
+             LoginHandler someServerLoginHandler = ...
+             DispatchChallengeHandler dispatchHandler = ChallengeHandlers.Load&lt;DispatchChallengeHandler&gt;(typeof(DispatchChallengeHandler));
+             ChallengeHandlers.Default = dispatchHandler;
+             
+             //set a loginHandler for this location
+             NegotiateChallengeHandler negotiateChallengeHandler = ChallengeHandlers.Load&lt;NegotiateChallengeHandler&gt;(typeof(NegotiateChallengeHandler));
+             basicHandler.LoginHandler = someServerLoginHandler;
+             dispatchHandler.Register("ws://myserver.com/*", negotiateChallengeHandler);
+             </code>
+            
+             <para>
+             <see href="http://tools.ietf.org/html/rfc4559">RFC 4559 - Microsoft SPNEGO</see>
+             </para>
+             <para>
+             <see href="http://tools.ietf.org/html/rfc4178">RFC 4178 - GSS-API SPNEGO</see>
+             </para>
+             <para>
+             <see href="http://tools.ietf.org/html/rfc2743">RFC 2743 - GSS-API</see>
+             </para>
+             <para>
+             <see href="http://tools.ietf.org/html/rfc4121">RFC 4121 - Kerberos v5 GSS-API (version 2)</see>
+             </para>
+             <para>
+             <see href="http://tools.ietf.org/html/rfc2616">RFC 2616 - HTTP 1.1</see>
+             </para>
+             <para>
+             <see href="http://tools.ietf.org/html/rfc2617">RFC 2617 - HTTP Authentication</see>
+             </para>
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.NegotiateChallengeHandler.Register(Kaazing.Security.NegotiableChallengeHandler)">
+             <summary>
+            
+             Register a candidate negotiable challenge handler that will be used to respond
+             to an initial "Negotiate" server challenge and can then potentially be
+             a winning candidate in the race to handle the subsequent server challenge.
+            
+             <param name="handler">the mechanism-type-specific challenge handler.</param>
+            
+             <returns>a reference to this handler, to support chained calls</returns>
+             </summary>
+        </member>
+        <member name="T:Kaazing.Security.PasswordAuthentication">
+             <summary>
+            
+             This immutable class is a data structure that encapsulates username and
+             password.
+            
+             </summary>
+        </member>
+        <member name="M:Kaazing.Security.PasswordAuthentication.#ctor(System.String,System.Char[])">
+             <summary>
+            
+             Creates a new <c>PasswordAuthentication</c> object from the given
+             user name and password.
+            
+             <para> Note that the given user password is cloned before it is stored in
+             the new <c>PasswordAuthentication</c> object.
+             </para>
+            
+             <param name="userName">the user name</param>
+             <param name="password">the user's password</param>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.PasswordAuthentication.UserName">
+             <summary>
+            
+             Returns the user name.
+            
+             <returns>the user name</returns>
+             </summary>
+        </member>
+        <member name="P:Kaazing.Security.PasswordAuthentication.Password">
+             <summary>
+            
+             Returns the user password.
+            
+             <para> Note that this method returns a reference to the password. It is
+             the caller's responsibility to zero out the password information after
+             it is no longer needed.
+             </para>
+            
+             <returns>the password</returns>
+             </summary>
+        </member>
+    </members>
+</doc>

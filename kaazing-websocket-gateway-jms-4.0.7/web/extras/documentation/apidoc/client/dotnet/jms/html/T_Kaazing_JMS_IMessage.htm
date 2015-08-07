@@ -1,0 +1,333 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>IMessage Interface</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="IMessage interface" />
+    <meta name="System.Keywords" content="Kaazing.JMS.IMessage interface" />
+    <meta name="System.Keywords" content="IMessage interface, about IMessage interface" />
+    <meta name="Microsoft.Help.F1" content="Kaazing.JMS.IMessage" />
+    <meta name="Microsoft.Help.Id" content="T:Kaazing.JMS.IMessage" />
+    <meta name="Description" content="The Message interface is the root interface of all JMS messages. It defines the message header and the acknowledge method used for all messages." />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="Kaazing.JMS" />
+    <meta name="file" content="T_Kaazing_JMS_IMessage" />
+    <meta name="guid" content="T_Kaazing_JMS_IMessage" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="T:Kaazing.JMS.IMessage" />
+      <MSHelp:TOCTitle Title="IMessage Interface" />
+      <MSHelp:RLTitle Title="IMessage Interface (Kaazing.JMS)" />
+      <MSHelp:Keyword Index="A" Term="T:Kaazing.JMS.IMessage" />
+      <MSHelp:Keyword Index="A" Term="frlrfKaazingJMSIMessageClassTopic" />
+      <MSHelp:Keyword Index="K" Term="IMessage interface" />
+      <MSHelp:Keyword Index="K" Term="Kaazing.JMS.IMessage interface" />
+      <MSHelp:Keyword Index="K" Term="IMessage interface, about IMessage interface" />
+      <MSHelp:Keyword Index="F" Term="Kaazing.JMS.IMessage" />
+      <MSHelp:Attr Name="HelpPriority" Value="2" />
+      <MSHelp:Attr Name="APIType" Value="Managed" />
+      <MSHelp:Attr Name="APILocation" Value="Kaazing.JMS.dll" />
+      <MSHelp:Attr Name="APIName" Value="Kaazing.JMS.IMessage" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="Abstract" Value="The Message interface is the root interface of all JMS messages. It defines the message header and the acknowledge method used for all messages. Most message-oriented middleware ..." />
+      <MSHelp:Attr Name="AssemblyVersion" Value="4.0.0.69" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="devlangsDropdown" class="filter" tabindex="0">
+              <img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuVisualBasicLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual Basic </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuManagedCPlusPlusLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual C++ </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="VisualBasicCheckbox" type="checkbox" data="VisualBasic,vb,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="VisualBasicCheckbox">Visual Basic</label>
+        <br />
+        <input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="CSharpCheckbox">C#</label>
+        <br />
+        <input id="ManagedCPlusPlusCheckbox" type="checkbox" data="ManagedCPlusPlus,cpp,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="ManagedCPlusPlusCheckbox">Visual C++</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">.NET Framework Class Library</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">IMessage Interface</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="AllMembers_T_Kaazing_JMS_IMessage.htm">Members</a>  <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a>  </td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <font color="DarkGray"></font>
+        <p /> <div class="summary">
+             The Message interface is the root interface of all JMS 
+             messages. It defines the message header and the acknowledge 
+             method used for all messages.
+            
+             <p>Most message-oriented middleware (MOM) products treat messages as 
+             lightweight entities that consist
+             of a header and a payload. The header contains fields used for message
+             routing and identification; the payload contains the application data
+             being sent.</p><p>Within this general form, the definition of a message varies
+             significantly across products. It would be quite difficult for the JMS API
+             to support all of these message models.</p><p>With this in mind, the JMS message model has the following goals:
+             <ul><li>Provide a single, unified message API</li><li>Provide an API suitable for creating messages that match the
+                   format used by provider-native messaging applications</li><li>Support the development of heterogeneous applications that span
+                   operating systems, machine architectures, and computer languages</li><li>Support messages containing objects
+                   ("objects")</li><li>Support messages containing Extensible Markup Language (XML) pages</li></ul></p><p>JMS messages are composed of the following parts:
+             <ul><li>Header - All messages support the same set of header fields. 
+                   Header fields contain values used by both clients and providers to 
+                   identify and route messages.</li><li>Properties - Each message contains a built-in facility for supporting
+                   application-defined property values. Properties provide an efficient 
+                   mechanism for supporting application-defined message filtering.</li><li>Body - The JMS API defines several types of message body, which cover
+                   the majority of messaging styles currently in use.</li></ul></p>Message Bodies<p>The JMS API defines five types of message body:
+             <ul><li>Stream - A StreamMessage object's message body contains 
+                   a stream of primitive values in the Java programming 
+                   language ("Java primitives"). It is filled and read sequentially.</li><li>Map - A MapMessage object's message body contains a set 
+                   of name-value pairs, where names are String 
+                   objects, and values are Java primitives. The entries can be accessed 
+                   sequentially or randomly by name. The order of the entries is 
+                   undefined.</li><li>Text - A ITextMessage object's message body contains a 
+                   String object. This message type can be used
+                   to transport plain-text messages, and XML messages.</li><li>Object - An ObjectMessage object's message body contains 
+                   a Serializable object.</li><li>Bytes - A BytesMessage object's message body contains a 
+                   stream of uninterpreted bytes. This message type is for 
+                   literally encoding a body to match an existing message format. In 
+                   many cases, it is possible to use one of the other body types, 
+                   which are easier to use. Although the JMS API allows the use of  
+                   message properties with byte messages, they are typically not used,
+                   since the inclusion of properties may affect the format.</li></ul></p>Message Headers<p>The JMSCorrelationID header field is used for linking one 
+             message with
+             another. It typically links a reply message with its requesting message.</p><p>JMSCorrelationID can hold a provider-specific message ID,
+             an application-specific String object, or a provider-native 
+             byte[] value.</p>Message Properties<p>A Message object contains a built-in facility for supporting
+             application-defined property values. In effect, this provides a mechanism 
+             for adding application-specific header fields to a message.</p><p>Properties allow an application, via message selectors, to have a JMS 
+             provider select, or filter, messages on its behalf using 
+             application-specific criteria.</p><p>Property names must obey the rules for a message selector identifier. 
+             Property names must not be null, and must not be empty strings. If a property
+             name is set and it is either null or an empty string, an 
+             ArgumentException must be thrown.</p><p>Property values can be boolean, byte, 
+             short, int, long, float,
+             double, and String.</p><p>Property values are set prior to sending a message. When a client 
+             receives a message, its properties are in read-only mode. If a 
+             client attempts to set properties at this point, a 
+             MessageNotWriteableException is thrown. If 
+             clearProperties is called, the properties can now be both
+             read from and written to. Note that header fields are distinct from 
+             properties. Header fields are never in read-only mode. </p><p>A property value may duplicate a value in a message's body, or it may 
+             not. Although JMS does not define a policy for what should or should not 
+             be made a property, application developers should note that JMS providers 
+             will likely handle data in a message's body more efficiently than data in 
+             a message's properties. For best performance, applications should use
+             message properties only when they need to customize a message's header. 
+             The primary reason for doing this is to support customized message 
+             selection.</p><p>Message properties support the following conversion table. The marked 
+             cases must be supported. The unmarked cases must throw a 
+             JMSException. The String-to-primitive conversions 
+             may throw a runtime exception if the
+             primitive's valueOf method does not accept the 
+             String as a valid representation of the primitive.</p><p>A value written as the row type can be read as the column type.</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             |        | boolean byte short int long float double String 
+             |----------------------------------------------------------
+             |boolean |    X                                       X
+             |byte    |          X     X    X   X                  X 
+             |short   |                X    X   X                  X 
+             |int     |                     X   X                  X 
+             |long    |                         X                  X 
+             |float   |                               X     X      X 
+             |double  |                                     X      X 
+             |String  |    X     X     X    X   X     X     X      X 
+             |----------------------------------------------------------
+             </pre></td></tr></table></span></div><p>In addition to the type-specific set/get methods for properties, JMS 
+             provides the SetObjectProperty and 
+             GetObjectProperty methods. These support the same set of 
+             property types using the objectified primitive values. Their purpose is 
+             to allow the decision of property type to made at execution time rather 
+             than at compile time. They support the same property value conversions.</p><p>The SetObjectProperty method accepts values of class 
+             Boolean, Byte, Short, 
+             Integer, Long, Float, 
+             Double, and String. An attempt 
+             to use any other class must throw a JMSException.</p><p>The getObjectProperty method only returns values of class 
+             Boolean, Byte, Short, 
+             Integer, Long, Float, 
+             Double, and String.</p><p>The order of property values is not defined. To iterate through a 
+             message's property values, use getPropertyNames to retrieve 
+             a property name enumeration and then use the various property get methods 
+             to retrieve their values.</p><p>A message's properties are deleted by the clearProperties
+             method. This leaves the message with an empty set of properties.</p><p>Getting a property value for a name which has not been set returns a 
+             null value. Only the getStringProperty and 
+             getObjectProperty methods can return a null value. 
+             Attempting to read a null value as a primitive type must be treated as 
+             calling the primitive's corresponding valueOf(String) 
+             conversion method with a null value.</p><p>The JMS API reserves the JMSX property name prefix for JMS 
+             defined properties.
+             The full set of these properties is defined in the Java Message Service
+             specification. New JMS defined properties may be added in later versions 
+             of the JMS API.  Support for these properties is optional. The 
+             String[] ConnectionMetaData.getJMSXPropertyNames method 
+             returns the names of the JMSX properties supported by a connection.</p><p>JMSX properties may be referenced in message selectors whether or not
+             they are supported by a connection. If they are not present in a
+             message, they are treated like any other absent property.</p><p>JMSX properties defined in the specification as "set by provider on 
+             send" are available to both the producer and the consumers of the message. 
+             JMSX properties defined in the specification as "set by provider on 
+             receive" are available only to the consumers.</p><p>JMSXGroupID and JMSXGroupSeq are standard 
+             properties that clients 
+             should use if they want to group messages. All providers must support them.
+             Unless specifically noted, the values and semantics of the JMSX properties 
+             are undefined.</p><p>The JMS API reserves the JMS_vendor_name property 
+             name prefix for provider-specific properties. Each provider defines its own 
+             value for vendor_name. This is the mechanism a JMS 
+             provider uses to make its special per-message services available to a JMS 
+             client.</p><p>The purpose of provider-specific properties is to provide special 
+             features needed to integrate JMS clients with provider-native clients in a 
+             single JMS application. They should not be used for messaging between JMS 
+             clients.</p>Provider Implementations of JMS Message Interfaces<p>The JMS API provides a set of message interfaces that define the JMS 
+             message 
+             model. It does not provide implementations of these interfaces.</p><p>Each JMS provider supplies a set of message factories with its 
+             Session object for creating instances of messages. This allows 
+             a provider to use message implementations tailored to its specific needs.</p><p>A provider must be prepared to accept message implementations that are 
+             not its own. They may not be handled as efficiently as its own 
+             implementation; however, they must be handled.</p><p>Note the following exception case when a provider is handling a foreign 
+             message implementation. If the foreign message implementation contains a 
+             JMSReplyTo header field that is set to a foreign destination 
+             implementation, the provider is not required to handle or preserve the 
+             value of this header field. </p>Message Selectors<p>A JMS message selector allows a client to specify, by
+             header field references and property references, the
+             messages it is interested in. Only messages whose header 
+             and property values
+             match the 
+             selector are delivered. What it means for a message not to be delivered
+             depends on the MessageConsumer being used (see 
+             {@link Kaazing.JMS.IQueueReceiver QueueReceiver} and 
+             {@link Kaazing.JMS.ITopicSubscriber TopicSubscriber}).</p><p>Message selectors cannot reference message body values.</p><p>A message selector matches a message if the selector evaluates to 
+             true when the message's header field values and property values are 
+             substituted for their corresponding identifiers in the selector.</p><p>A message selector is a String whose syntax is based on a 
+             subset of 
+             the SQL92 conditional expression syntax. If the value of a message selector 
+             is an empty string, the value is treated as a null and indicates that there 
+             is no message selector for the message consumer. </p><p>The order of evaluation of a message selector is from left to right 
+             within precedence level. Parentheses can be used to change this order.</p><p>Predefined selector literals and operator names are shown here in 
+             uppercase; however, they are case insensitive.</p><p>A selector can contain:</p><ul><li>Literals:</li><li>Identifiers:</li><li>White space is the same as that defined for the Java programming
+                   language: space, horizontal tab, form feed, and line terminator.</li><li>Expressions: </li><li>Standard bracketing () for ordering expression evaluation
+                  is supported.</li><li>Logical operators in precedence order: NOT, 
+                   AND, OR</li><li>Comparison operators: =, &gt;, &gt;=,
+                   &lt;, &lt;=, &lt;&gt; (not equal)</li><li>Arithmetic operators in precedence order:</li><li>arithmetic-expr1 [NOT] BETWEEN arithmetic-expr2 
+                   AND arithmetic-expr3 (comparison operator)</li><li>identifier [NOT] IN (string-literal1, 
+                   string-literal2,...) (comparison operator where 
+                   identifier has a String or 
+                   NULL value)</li><li>identifier [NOT] LIKE pattern-value [ESCAPE 
+                   escape-character] (comparison operator, where 
+                   identifier has a String value; 
+                   pattern-value is a string literal where 
+                   '_' stands for any single character; '%' 
+                   stands for any sequence of characters, including the empty sequence; 
+                   and all other characters stand for themselves. The optional 
+                   escape-character is a single-character string 
+                   literal whose character is used to escape the special meaning of the 
+                   '_' and '%' in 
+                   pattern-value.)</li><li>identifier IS NULL (comparison operator that tests
+                   for a null header field value or a missing property value)</li><li>identifier IS NOT NULL (comparison operator that
+                   tests for the existence of a non-null header field value or a property
+                   value)</li></ul><p>JMS providers are required to verify the syntactic correctness of a 
+                message selector at the time it is presented. A method that provides a 
+              syntactically incorrect selector must result in a JMSException.
+             JMS providers may also optionally provide some semantic checking at the time
+             the selector is presented. Not all semantic checking can be performed at
+             the time a message selector is presented, because property types are not known.</p><p>The following message selector selects messages with a message type 
+             of car and color of blue and weight greater than 2500 pounds:</p>Null Values<p>As noted above, property values may be NULL. The evaluation 
+             of selector expressions containing NULL values is defined by 
+             SQL92 NULL semantics. A brief description of these semantics 
+             is provided here.</p><p>SQL treats a NULL value as unknown. Comparison or arithmetic
+             with an unknown value always yields an unknown value.</p><p>The IS NULL and IS NOT NULL operators convert 
+             an unknown value into the respective TRUE and 
+             FALSE values.</p><p>The boolean operators use three-valued logic as defined by the 
+             following tables:</p><p>The definition of the AND operator</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             | AND  |   T   |   F   |   U
+             +------+-------+-------+-------
+             |  T   |   T   |   F   |   U
+             |  F   |   F   |   F   |   F
+             |  U   |   U   |   F   |   U
+             +------+-------+-------+-------
+             </pre></td></tr></table></span></div><p>The definition of the OR operator</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             | OR   |   T   |   F   |   U
+             +------+-------+-------+--------
+             |  T   |   T   |   T   |   T
+             |  F   |   T   |   F   |   U
+             |  U   |   T   |   U   |   U
+             +------+-------+-------+------- 
+             </pre></td></tr></table></span></div><p>The definition of the NOT operator</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><th> </th><th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy Code</span></th></tr><tr><td colspan="2"><pre>
+             | NOT
+             +------+------
+             |  T   |   F
+             |  F   |   T
+             |  U   |   U
+             +------+-------
+             </pre></td></tr></table></span></div>Special Notes<p>When used in a message selector, the JMSDeliveryMode header 
+                field is treated as having the values 'PERSISTENT' and 
+                'NON_PERSISTENT'.</p><p>Date and time values should use the standard long 
+                millisecond value. When a date or time literal is included in a message 
+                selector, it should be an integer literal for a millisecond value.</p><p>Although SQL supports fixed decimal comparison and arithmetic, JMS 
+                message selectors do not. This is the reason for restricting exact 
+                numeric literals to those without a decimal (and the addition of 
+                numerics with a decimal as an alternate representation for 
+                approximate numeric values).</p><p>SQL comments are not supported.</p></div><p />
+    <b>Namespace:</b> 
+   <a href="N_Kaazing_JMS.htm">Kaazing.JMS</a><br />
+    <b>Assembly:</b>
+   <span sdata="assembly">Kaazing.JMS</span> (in Kaazing.JMS.dll)<h1 class="heading"><span onclick="ExpandCollapse(syntaxToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(syntaxToggle, event)" tabindex="0"><img id="syntaxToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Syntax</span></h1><div id="syntaxSection" class="section" name="collapseableSection" style=""><div id="syntaxCodeBlocks" class="code"><span codeLanguage="VisualBasicDeclaration"><table><tr><th>Visual Basic</th></tr><tr><td><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Interface</span> <span class="identifier">IMessage</span></pre></td></tr></table></span><span codeLanguage="CSharp"><table><tr><th>C#</th></tr><tr><td><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="identifier">IMessage</span></pre></td></tr></table></span><span codeLanguage="ManagedCPlusPlus"><table><tr><th>Visual C++</th></tr><tr><td><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">interface class</span> <span class="identifier">IMessage</span></pre></td></tr></table></span></div></div><h1 class="heading"><span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0"><img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span></h1><div id="seeAlsoSection" class="section" name="collapseableSection" style=""><div class="seeAlsoStyle"><a href="AllMembers_T_Kaazing_JMS_IMessage.htm">IMessage Members</a></div><div class="seeAlsoStyle"><a href="N_Kaazing_JMS.htm">Kaazing.JMS Namespace</a></div><div class="seeAlsoStyle"><a href="M_Kaazing_JMS_IMessageConsumer_Receive.htm">IMessageConsumer<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Receive<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a></div><div class="seeAlsoStyle"><a href="M_Kaazing_JMS_IMessageConsumer_Receive_1_5f4f955f.htm">IMessageConsumer<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Receive(Int64)</a></div><div class="seeAlsoStyle"><a href="M_Kaazing_JMS_IMessageConsumer_ReceiveNoWait.htm">IMessageConsumer<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>ReceiveNoWait<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a></div><div class="seeAlsoStyle"><a href="M_Kaazing_JMS_IMessageListener_OnMessage_1_dfb63d7c.htm">IMessageListener<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>OnMessage(IMessage)</a></div><div class="seeAlsoStyle"><a href="T_Kaazing_JMS_IBytesMessage.htm">Kaazing.JMS<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>IBytesMessage</a></div><div class="seeAlsoStyle"><a href="T_Kaazing_JMS_IMapMessage.htm">Kaazing.JMS<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>IMapMessage</a></div><div class="seeAlsoStyle"><a href="T_Kaazing_JMS_IObjectMessage.htm">Kaazing.JMS<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>IObjectMessage</a></div><div class="seeAlsoStyle"><a href="T_Kaazing_JMS_IStreamMessage.htm">Kaazing.JMS<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>IStreamMessage</a></div><div class="seeAlsoStyle"><a href="T_Kaazing_JMS_ITextMessage.htm">Kaazing.JMS<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>ITextMessage</a></div></div></div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KGBasicChallengeHandler Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KGBasicChallengeHandler Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/loginHandler">&nbsp;&nbsp;&nbsp;&nbsp;- loginHandler</option>
+	
+	<option value="//api/name/setLoginHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- setLoginHandler:</option>
+	
+	<option value="//api/name/setRealmLoginHandler:loginHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- setRealmLoginHandler:loginHandler:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loginHandler">loginHandler</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLoginHandler:">setLoginHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setRealmLoginHandler:loginHandler:">setRealmLoginHandler:loginHandler:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KGBasicChallengeHandler Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KGBasicChallengeHandler Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KGChallengeHandler.html">KGChallengeHandler</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KGBasicChallengeHandler.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Challenge handler for Basic authentication as defined in <a href="http://tools.ietf.org/html/rfc2617#section-2">RFC 2617.</a></p>
+
+<p><p/>
+This BasicChallengeHandler can be loaded and instantiated using KGChallengeHandlers load,
+and registered at a location using <a href="../Classes/KGDispatchChallengeHandler.html">KGDispatchChallengeHandler</a> register.
+<p/>
+In addition, one can install general and realm-specific <a href="../Classes/KGLoginHandler.html">KGLoginHandler</a> objects onto this
+KGBasicChallengeHandler to assist in handling challenges associated
+with any or specific realms.  This can be achieved using <a href="#//api/name/setLoginHandler:"><code>setLoginHandler:</code></a>(LoginHandler*) and
+<code>setRealmLoginHandler:(NSString *)realm loginHandler:(</code>KGLoginHandler<code> *)</code>loginHandler<code></code> methods.
+<p/>
+The following example loads an instance of a KGBasicChallengeHandler, sets a login
+handler onto it and registers the basic handler at a URI location.  In this way, all attempts to access
+that URI for which the server issues &ldquo;Basic&rdquo; challenges are handled by the registered KGBasicChallengeHandler.</p>
+
+<pre><code>@interface MyLoginHandler : KGLoginHandler
+@end
+
+@implementation MyLoginHandler
+
+-(NSURLCredential*) credentials {
+    return [[NSURLCredential alloc] initWithUser:@"global" password:@"credentials" persistence:NSURLCredentialPersistenceNone];
+}
+@end
+
+-(void)initChallenge {
+    // set up Login Handler:
+    MyLoginHandler* loginHandler = [[MyLoginHandler alloc] init];
+
+    KGBasicChallengeHandler* challengeHandler = [KGBasicChallengeHandler create];
+    [challengeHandler setLoginHandler:loginHandler];
+
+    // Attach the challenge handler as a default challenge handler to the KGWebSocketFactory
+    // It can also be attached to the KGWebSocket created using [KGWebSocket setChallengeHandler:]
+    [webSocketFactory setDefaultChallengeHandler:challengeHandler];
+}
+</code></pre>
+
+<p>see <a href="http://tools.ietf.org/html/rfc2616">RFC 2616 &ndash; HTTP 1.1</a>
+see <a href="http://tools.ietf.org/html/rfc2617#section-2">RFC 2617 Section 2 &ndash; Basic Authentication</a></p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setRealmLoginHandler:loginHandler:">&ndash;&nbsp;setRealmLoginHandler:loginHandler:</a></code>
+		<span class="tooltip"><p>Set a Login Handler to be used if and only if a challenge request has
+a realm parameter matching the provided realm.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLoginHandler:">&ndash;&nbsp;setLoginHandler:</a></code>
+		<span class="tooltip"><p>Provide a general (non-realm-specific) login handler to be used in association with this challenge handler.
+The login handler is used to assist in obtaining credentials to respond to any Basic
+challenge requests when no realm-specific login handler matches the realm parameter of the request (if any).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loginHandler">&ndash;&nbsp;loginHandler</a></code>
+		<span class="tooltip"><p>Get the general (non-realm-specific) login handler associated with this challenge handler.
+A login handler is used to assist in obtaining credentials to respond to challenge requests.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/loginHandler" title="loginHandler"></a>
+	<h3 class="subsubtitle method-title">loginHandler</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the general (non-realm-specific) login handler associated with this challenge handler.
+A login handler is used to assist in obtaining credentials to respond to challenge requests.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KGLoginHandler *)loginHandler</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a login handler to assist in providing credentials, or nil if none has been established yet.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGBasicChallengeHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLoginHandler:" title="setLoginHandler:"></a>
+	<h3 class="subsubtitle method-title">setLoginHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Provide a general (non-realm-specific) login handler to be used in association with this challenge handler.
+The login handler is used to assist in obtaining credentials to respond to any Basic
+challenge requests when no realm-specific login handler matches the realm parameter of the request (if any).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KGChallengeHandler *)setLoginHandler:(KGLoginHandler *)<em>loginHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>loginHandler</em></dt>
+			<dd><p>a login handler for credentials.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGBasicChallengeHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setRealmLoginHandler:loginHandler:" title="setRealmLoginHandler:loginHandler:"></a>
+	<h3 class="subsubtitle method-title">setRealmLoginHandler:loginHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set a Login Handler to be used if and only if a challenge request has
+a realm parameter matching the provided realm.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setRealmLoginHandler:(NSString *)<em>realm</em> loginHandler:(KGLoginHandler *)<em>loginHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>realm</em></dt>
+			<dd><p>the realm upon which to apply the <a href="#//api/name/loginHandler">loginHandler</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>loginHandler</em></dt>
+			<dd><p>the login handler to use for the provided realm.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGBasicChallengeHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

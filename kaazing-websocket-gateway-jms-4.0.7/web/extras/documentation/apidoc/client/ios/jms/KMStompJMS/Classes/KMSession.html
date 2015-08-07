@@ -1,0 +1,2742 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMSession Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMSession Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/acknowledgeMode">&nbsp;&nbsp;&nbsp;&nbsp;- acknowledgeMode</option>
+	
+	<option value="//api/name/close">&nbsp;&nbsp;&nbsp;&nbsp;- close</option>
+	
+	<option value="//api/name/commit">&nbsp;&nbsp;&nbsp;&nbsp;- commit</option>
+	
+	<option value="//api/name/createBrowser:">&nbsp;&nbsp;&nbsp;&nbsp;- createBrowser:</option>
+	
+	<option value="//api/name/createBrowser:messageSelector:">&nbsp;&nbsp;&nbsp;&nbsp;- createBrowser:messageSelector:</option>
+	
+	<option value="//api/name/createBytesMessage">&nbsp;&nbsp;&nbsp;&nbsp;- createBytesMessage</option>
+	
+	<option value="//api/name/createConsumer:">&nbsp;&nbsp;&nbsp;&nbsp;- createConsumer:</option>
+	
+	<option value="//api/name/createConsumer:messageSelector:">&nbsp;&nbsp;&nbsp;&nbsp;- createConsumer:messageSelector:</option>
+	
+	<option value="//api/name/createConsumer:messageSelector:noLocal:">&nbsp;&nbsp;&nbsp;&nbsp;- createConsumer:messageSelector:noLocal:</option>
+	
+	<option value="//api/name/createDurableSubscriber:name:">&nbsp;&nbsp;&nbsp;&nbsp;- createDurableSubscriber:name:</option>
+	
+	<option value="//api/name/createDurableSubscriber:name:messageSelector:noLocal:">&nbsp;&nbsp;&nbsp;&nbsp;- createDurableSubscriber:name:messageSelector:noLocal:</option>
+	
+	<option value="//api/name/createMapMessage">&nbsp;&nbsp;&nbsp;&nbsp;- createMapMessage</option>
+	
+	<option value="//api/name/createMessage">&nbsp;&nbsp;&nbsp;&nbsp;- createMessage</option>
+	
+	<option value="//api/name/createObjectMessage">&nbsp;&nbsp;&nbsp;&nbsp;- createObjectMessage</option>
+	
+	<option value="//api/name/createObjectMessage:">&nbsp;&nbsp;&nbsp;&nbsp;- createObjectMessage:</option>
+	
+	<option value="//api/name/createProducer:">&nbsp;&nbsp;&nbsp;&nbsp;- createProducer:</option>
+	
+	<option value="//api/name/createQueue:">&nbsp;&nbsp;&nbsp;&nbsp;- createQueue:</option>
+	
+	<option value="//api/name/createStreamMessage">&nbsp;&nbsp;&nbsp;&nbsp;- createStreamMessage</option>
+	
+	<option value="//api/name/createTemporaryQueue">&nbsp;&nbsp;&nbsp;&nbsp;- createTemporaryQueue</option>
+	
+	<option value="//api/name/createTemporaryTopic">&nbsp;&nbsp;&nbsp;&nbsp;- createTemporaryTopic</option>
+	
+	<option value="//api/name/createTextMessage">&nbsp;&nbsp;&nbsp;&nbsp;- createTextMessage</option>
+	
+	<option value="//api/name/createTextMessage:">&nbsp;&nbsp;&nbsp;&nbsp;- createTextMessage:</option>
+	
+	<option value="//api/name/createTopic:">&nbsp;&nbsp;&nbsp;&nbsp;- createTopic:</option>
+	
+	<option value="//api/name/messageListener">&nbsp;&nbsp;&nbsp;&nbsp;- messageListener</option>
+	
+	<option value="//api/name/recover">&nbsp;&nbsp;&nbsp;&nbsp;- recover</option>
+	
+	<option value="//api/name/rollback">&nbsp;&nbsp;&nbsp;&nbsp;- rollback</option>
+	
+	<option value="//api/name/run">&nbsp;&nbsp;&nbsp;&nbsp;- run</option>
+	
+	<option value="//api/name/setMessageListener:">&nbsp;&nbsp;&nbsp;&nbsp;- setMessageListener:</option>
+	
+	<option value="//api/name/transacted">&nbsp;&nbsp;&nbsp;&nbsp;- transacted</option>
+	
+	<option value="//api/name/unsubscribe:">&nbsp;&nbsp;&nbsp;&nbsp;- unsubscribe:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/acknowledgeMode">acknowledgeMode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/close">close</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/commit">commit</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createBrowser:">createBrowser:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createBrowser:messageSelector:">createBrowser:messageSelector:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createBytesMessage">createBytesMessage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createConsumer:">createConsumer:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createConsumer:messageSelector:">createConsumer:messageSelector:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createConsumer:messageSelector:noLocal:">createConsumer:messageSelector:noLocal:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createDurableSubscriber:name:">createDurableSubscriber:name:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createDurableSubscriber:name:messageSelector:noLocal:">createDurableSubscriber:name:messageSelector:noLocal:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createMapMessage">createMapMessage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createMessage">createMessage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createObjectMessage">createObjectMessage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createObjectMessage:">createObjectMessage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createProducer:">createProducer:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createQueue:">createQueue:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createStreamMessage">createStreamMessage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createTemporaryQueue">createTemporaryQueue</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createTemporaryTopic">createTemporaryTopic</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createTextMessage">createTextMessage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createTextMessage:">createTextMessage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createTopic:">createTopic:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/messageListener">messageListener</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recover">recover</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rollback">rollback</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/run">run</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setMessageListener:">setMessageListener:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/transacted">transacted</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unsubscribe:">unsubscribe:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMSession Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMSession Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMSession.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A Session object is a single-threaded context for producing and consuming
+messages. Although it may allocate provider resources outside the Java
+virtual machine (JVM), it is considered a lightweight JMS object.</p>
+
+<p>A session serves several purposes:</p>
+
+<ul>
+<li>It is a factory for its message producers and consumers.</li>
+<li>It supplies provider-optimized message factories.</li>
+<li>It is a factory for TemporaryTopics and TemporaryQueues.</li>
+<li>It provides a way to create Queue or Topic
+objects for those clients that need to dynamically manipulate
+provider-specific destination names.</li>
+<li>It supports a single series of transactions that combine work
+spanning its producers and consumers into atomic units.</li>
+<li>It defines a serial order for the messages it consumes and
+the messages it produces.</li>
+<li>It retains messages it consumes until they have been
+acknowledged.</li>
+<li>It serializes execution of message listeners registered with
+its message consumers.</li>
+<li>It is a factory for QueueBrowsers.</li>
+</ul>
+
+
+<p>A session can create and service multiple message producers and
+consumers.</p>
+
+<p>One typical use is to have a thread block on a synchronous
+MessageConsumer until a message arrives. The thread may then
+use one or more of the Session&rsquo;s MessageProducers.</p>
+
+<p>If a client desires to have one thread produce messages while others
+consume them, the client should use a separate session for its producing
+thread.</p>
+
+<p>Once a connection has been started, any session with one or more
+registered message listeners is dedicated to the thread of control that
+delivers messages to it. It is erroneous for client code to use this session
+or any of its constituent objects from another thread of control. The
+only exception to this rule is the use of the session or connection
+<a href="#//api/name/close">close</a> method.</p>
+
+<p>It should be easy for most clients to partition their work naturally
+into sessions. This model allows clients to start simply and incrementally
+add message processing complexity as their need for concurrency grows.</p>
+
+<p>The <a href="#//api/name/close">close</a> method is the only session method that can be
+called while some other session method is being executed in another thread.</p>
+
+<p>A session may be specified as <a href="#//api/name/transacted">transacted</a>. Each <a href="#//api/name/transacted">transacted</a>
+session supports a single series of transactions. Each transaction groups
+a set of message sends and a set of message receives into an atomic unit
+of work. In effect, transactions organize a session&rsquo;s input message
+stream and output message stream into series of atomic units. When a
+transaction commits, its atomic unit of input is acknowledged and its
+associated atomic unit of output is sent. If a transaction <a href="#//api/name/rollback">rollback</a> is
+done, the transaction&rsquo;s sent messages are destroyed and the session&rsquo;s input
+is automatically recovered.</p>
+
+<p>The content of a transaction&rsquo;s input and output units is simply those
+messages that have been produced and consumed within the session&rsquo;s current
+transaction.</p>
+
+<p>A transaction is completed using either its session&rsquo;s <a href="#//api/name/commit">commit</a>
+method or its session&rsquo;s <a href="#//api/name/rollback">rollback</a> method. The completion of a
+session&rsquo;s current transaction automatically begins the next. The result is
+that a <a href="#//api/name/transacted">transacted</a> session always has a current transaction within which its
+work is done.</p>
+
+<p>The Java Transaction Service (JTS) or some other transaction monitor may
+be used to combine a session&rsquo;s transaction with transactions on other
+resources (databases, other JMS sessions, etc.). Since Java distributed
+transactions are controlled via the Java Transaction API (JTA), use of the
+session&rsquo;s <a href="#//api/name/commit">commit</a> and <a href="#//api/name/rollback">rollback</a> methods in
+this context is prohibited.</p>
+
+<p>The JMS API does not require support for JTA; however, it does define
+how a provider supplies this support.</p>
+
+<p>Although it is also possible for a JMS client to handle distributed
+transactions directly, it is unlikely that many JMS clients will do this.
+Support for JTA in the JMS API is targeted at systems vendors who will be
+integrating the JMS API into their application server products.</p>
+
+<H2>Session Constants</H2>
+
+
+<p><em>KMSessionAutoAcknowledge</em></p>
+
+<p>With this acknowledgment mode, the session automatically acknowledges
+a client&rsquo;s receipt of a message either when the session has successfully
+returned from a call to receive or when the message
+listener the session has called to process the message successfully
+returns.</p>
+
+<p><em>KMSessionClientAcknowledge</em></p>
+
+<p>With this acknowledgment mode, the client acknowledges a consumed
+message by calling the message&rsquo;s acknowledge method.
+Acknowledging a consumed message acknowledges all messages that the
+session has consumed.</p>
+
+<p>When client acknowledgment mode is used, a client may build up a
+large number of unacknowledged messages while attempting to process
+them. A JMS provider should provide administrators with a way to
+limit client over<a href="#//api/name/run">run</a> so that clients are not driven to resource
+exhaustion and ensuing failure when some resource they are using
+is temporarily blocked.</p>
+
+<p><em>KMSessionDupsOKAcknowledge</em></p>
+
+<p>This acknowledgment mode instructs the session to lazily acknowledge
+the delivery of messages. This is likely to result in the delivery of
+some duplicate messages if the JMS provider fails, so it should only be
+used by consumers that can tolerate duplicate messages. Use of this
+mode can reduce session overhead by minimizing the work the
+session does to prevent duplicates.</p>
+
+<p><em>KMSessionNotifyAcknowledge</em></p>
+
+<p>With this acknowledgement mode, a notifying-session is created that
+allows creation of durable notifications using the device-token and the
+bundle-identifier so that APNS can send notification to the device
+for the specified app when it&rsquo;s not connected to the Gateway and the
+app is not in the foreground.</p>
+
+<p><em>KMSessionTransacted</em></p>
+
+<p>This value is returned from <a href="#//api/name/acknowledgeMode">acknowledgeMode</a> if the session is <a href="#//api/name/transacted">transacted</a>.
+If a Session is <a href="#//api/name/transacted">transacted</a>, the acknowledgement mode is ignored.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createBytesMessage">&ndash;&nbsp;createBytesMessage</a></code>
+		<span class="tooltip"><p>Creates a BytesMessage object. A BytesMessage
+object is used to send a message containing a stream of uninterpreted
+bytes.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createMapMessage">&ndash;&nbsp;createMapMessage</a></code>
+		<span class="tooltip"><p>Creates a MapMessage object. A MapMessage
+object is used to send a self-defining set of name-value pairs, where
+names are String objects and values are primitive values
+.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createMessage">&ndash;&nbsp;createMessage</a></code>
+		<span class="tooltip"><p>Creates a Message object. The Message
+interface is the root interface of all JMS messages. A
+Message object holds all the
+standard message header information. It can be sent when a message
+containing only header information is sufficient.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createObjectMessage">&ndash;&nbsp;createObjectMessage</a></code>
+		<span class="tooltip"><p>Creates an ObjectMessage object. An
+ObjectMessage object is used to send a message
+that contains a serializable object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createObjectMessage:">&ndash;&nbsp;createObjectMessage:</a></code>
+		<span class="tooltip"><p>Creates an initialized ObjectMessage object. An
+ObjectMessage object is used
+to send a message that contains a serializable object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createStreamMessage">&ndash;&nbsp;createStreamMessage</a></code>
+		<span class="tooltip"><p>Creates a <a href="../Classes/KMStreamMessage.html">KMStreamMessage</a> object. A <a href="../Classes/KMStreamMessage.html">KMStreamMessage</a> object is used to send a
+self-defining stream of primitive values.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createTextMessage">&ndash;&nbsp;createTextMessage</a></code>
+		<span class="tooltip"><p>Creates a TextMessage object. A TextMessage
+object is used to send a message containing a String
+object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createTextMessage:">&ndash;&nbsp;createTextMessage:</a></code>
+		<span class="tooltip"><p>Creates an initialized TextMessage object. A
+TextMessage object is used to send
+a message containing a String.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/transacted">&ndash;&nbsp;transacted</a></code>
+		<span class="tooltip"><p>Indicates whether the session is in transacted mode.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/acknowledgeMode">&ndash;&nbsp;acknowledgeMode</a></code>
+		<span class="tooltip"><p>Returns the acknowledgement mode of the session. The acknowledgement
+mode is set at the time that the session is created. If the session is
+<a href="#//api/name/transacted">transacted</a>, the acknowledgement mode is ignored.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/commit">&ndash;&nbsp;commit</a></code>
+		<span class="tooltip"><p>Commits all messages done in this transaction and releases any locks
+currently held.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rollback">&ndash;&nbsp;rollback</a></code>
+		<span class="tooltip"><p>Rolls back any messages done in this transaction and releases any locks
+currently held.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/close">&ndash;&nbsp;close</a></code>
+		<span class="tooltip"><p>Closes the session.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/recover">&ndash;&nbsp;recover</a></code>
+		<span class="tooltip"><p>Stops message delivery in this session, and restarts message delivery
+with the oldest unacknowledged message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/messageListener">&ndash;&nbsp;messageListener</a></code>
+		<span class="tooltip"><p>Returns the session&rsquo;s distinguished message listener (optional).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMessageListener:">&ndash;&nbsp;setMessageListener:</a></code>
+		<span class="tooltip"><p>Sets the session&rsquo;s distinguished message listener (optional).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/run">&ndash;&nbsp;run</a></code>
+		<span class="tooltip"><p>Optional operation, intended to be used only by Application Servers,
+not by ordinary JMS clients.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createProducer:">&ndash;&nbsp;createProducer:</a></code>
+		<span class="tooltip"><p>Creates a MessageProducer to send messages to the specified
+destination.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createConsumer:">&ndash;&nbsp;createConsumer:</a></code>
+		<span class="tooltip"><p>Creates a MessageConsumer for the specified destination.
+Since Queue and Topic
+both inherit from Destination, they can be used in
+the destination parameter to create a MessageConsumer.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createConsumer:messageSelector:">&ndash;&nbsp;createConsumer:messageSelector:</a></code>
+		<span class="tooltip"><p>Creates a <a href="../Classes/KMMessageConsumer.html">KMMessageConsumer</a> for the specified destination,
+using a message selector. Since Queue and Topic
+both inherit from Destination, they can be used in
+the destination parameter to create a MessageConsumer.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createConsumer:messageSelector:noLocal:">&ndash;&nbsp;createConsumer:messageSelector:noLocal:</a></code>
+		<span class="tooltip"><p>Creates MessageConsumer for the specified destination, using a
+message selector. This method can specify whether messages published by
+its own connection should be delivered to it, if the destination is a
+topic.
+Since Queue and Topic
+both inherit from Destination, they can be used in
+the destination parameter to create a MessageConsumer.
+A client uses a MessageConsumer object to receive
+messages that have been published to a destination.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createQueue:">&ndash;&nbsp;createQueue:</a></code>
+		<span class="tooltip"><p>Creates a queue identity given a Queue name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createTopic:">&ndash;&nbsp;createTopic:</a></code>
+		<span class="tooltip"><p>Creates a topic identity given a Topic name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createDurableSubscriber:name:">&ndash;&nbsp;createDurableSubscriber:name:</a></code>
+		<span class="tooltip"><p>Creates a durable subscriber to the specified topic.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createDurableSubscriber:name:messageSelector:noLocal:">&ndash;&nbsp;createDurableSubscriber:name:messageSelector:noLocal:</a></code>
+		<span class="tooltip"><p>Creates a durable subscriber to the specified topic, using a
+message selector and specifying whether messages published by its
+own connection should be delivered to it.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createBrowser:">&ndash;&nbsp;createBrowser:</a></code>
+		<span class="tooltip"><p>Creates a QueueBrowser object to peek at the messages on
+the specified queue.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createBrowser:messageSelector:">&ndash;&nbsp;createBrowser:messageSelector:</a></code>
+		<span class="tooltip"><p>Creates a QueueBrowser object to peek at the messages on
+the specified queue using a message selector.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createTemporaryQueue">&ndash;&nbsp;createTemporaryQueue</a></code>
+		<span class="tooltip"><p>Creates a TemporaryQueue object. Its lifetime will be that
+of the Connection unless it is deleted earlier.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createTemporaryTopic">&ndash;&nbsp;createTemporaryTopic</a></code>
+		<span class="tooltip"><p>Creates a TemporaryTopic object. Its lifetime will be that
+of the Connection unless it is deleted earlier.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unsubscribe:">&ndash;&nbsp;unsubscribe:</a></code>
+		<span class="tooltip"><p>Unsubscribes a durable subscription that has been created by a client.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/acknowledgeMode" title="acknowledgeMode"></a>
+	<h3 class="subsubtitle method-title">acknowledgeMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the acknowledgement mode of the session. The acknowledgement
+mode is set at the time that the session is created. If the session is
+<a href="#//api/name/transacted">transacted</a>, the acknowledgement mode is ignored.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)acknowledgeMode</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>If the session is not <a href="#//api/name/transacted">transacted</a>, returns the
+current acknowledgement mode for the session.
+If the session
+is <a href="#//api/name/transacted">transacted</a>, returns KMSessionTransacted.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to return the
+acknowledgment mode due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMConnection.html#//api/name/createSession:transacted:">[KMConnection createSession:transacted:]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/close" title="close"></a>
+	<h3 class="subsubtitle method-title">close</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Closes the session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)close</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Since a provider may allocate some resources on behalf of a session
+outside the JVM, clients should close the resources when they are not
+needed.
+Relying on garbage collection to eventually reclaim these resources
+may not be timely enough.</p>
+
+<p>There is no need to close the producers and consumers
+of a closed session.</p>
+
+<p>This call will block until a receive call or message
+listener in progress has completed. A blocked message consumer
+receive call returns null when this session
+is closed.</p>
+
+<p>Closing a <a href="#//api/name/transacted">transacted</a> session must roll back the transaction
+in progress.</p>
+
+<p>This method is the only Session method that can
+be called concurrently.</p>
+
+<p>Invoking any other Session method on a closed session
+must throw a <a href="../Classes/KMIllegalStateException.html">KMIllegalStateException</a>. Closing a
+closed session must <em>not</em> throw an exception.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to close the
+session due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/commit" title="commit"></a>
+	<h3 class="subsubtitle method-title">commit</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Commits all messages done in this transaction and releases any locks
+currently held.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)commit</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to commit the
+transaction due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMTransactionRolledBackException</em></dt>
+			<dd><p>if the transaction
+is rolled back due to some internal error
+during commit.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMIllegalStateException</em></dt>
+			<dd><p>if the method is not called by a
+<a href="#//api/name/transacted">transacted</a> session.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createBrowser:" title="createBrowser:"></a>
+	<h3 class="subsubtitle method-title">createBrowser:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a QueueBrowser object to peek at the messages on
+the specified queue.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMQueueBrowser *)createBrowser:(KMQueue *)<em>queue</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>queue</em></dt>
+			<dd><p>the queue to access</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a browser
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid destination
+is specified</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createBrowser:messageSelector:" title="createBrowser:messageSelector:"></a>
+	<h3 class="subsubtitle method-title">createBrowser:messageSelector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a QueueBrowser object to peek at the messages on
+the specified queue using a message selector.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMQueueBrowser *)createBrowser:(KMQueue *)<em>queue</em> messageSelector:(NSString *)<em>messageSelector</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>queue</em></dt>
+			<dd><p>the queue to access</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered. A value of null or
+an empty string indicates that there is no message selector
+for the message consumer.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a browser
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid destination
+is specified</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidSelectorException</em></dt>
+			<dd><p>if the message selector is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createBytesMessage" title="createBytesMessage"></a>
+	<h3 class="subsubtitle method-title">createBytesMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a BytesMessage object. A BytesMessage
+object is used to send a message containing a stream of uninterpreted
+bytes.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMBytesMessage *)createBytesMessage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to create this message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createConsumer:" title="createConsumer:"></a>
+	<h3 class="subsubtitle method-title">createConsumer:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a MessageConsumer for the specified destination.
+Since Queue and Topic
+both inherit from Destination, they can be used in
+the destination parameter to create a MessageConsumer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMessageConsumer *)createConsumer:(KMDestination *)<em>destination</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the Destination to access.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a consumer
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid destination
+is specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createConsumer:messageSelector:" title="createConsumer:messageSelector:"></a>
+	<h3 class="subsubtitle method-title">createConsumer:messageSelector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a <a href="../Classes/KMMessageConsumer.html">KMMessageConsumer</a> for the specified destination,
+using a message selector. Since Queue and Topic
+both inherit from Destination, they can be used in
+the destination parameter to create a MessageConsumer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMessageConsumer *)createConsumer:(KMDestination *)<em>destination</em> messageSelector:(NSString *)<em>messageSelector</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the <a href="../Classes/KMDestination.html">KMDestination</a> to access</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered. A value of null or
+an empty string indicates that there is no message selector
+for the message consumer.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A client uses a <a href="../Classes/KMMessageConsumer.html">KMMessageConsumer</a> object to receive
+messages that have been sent to a destination.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a consumer
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid destination
+is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidSelectorException</em></dt>
+			<dd><p>if the message selector is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createConsumer:messageSelector:noLocal:" title="createConsumer:messageSelector:noLocal:"></a>
+	<h3 class="subsubtitle method-title">createConsumer:messageSelector:noLocal:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates MessageConsumer for the specified destination, using a
+message selector. This method can specify whether messages published by
+its own connection should be delivered to it, if the destination is a
+topic.
+Since Queue and Topic
+both inherit from Destination, they can be used in
+the destination parameter to create a MessageConsumer.
+A client uses a MessageConsumer object to receive
+messages that have been published to a destination.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMessageConsumer *)createConsumer:(KMDestination *)<em>destination</em> messageSelector:(NSString *)<em>messageSelector</em> noLocal:(BOOL)<em>noLocal</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the Destination to access</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered. A value of null or
+an empty string indicates that there is no message selector
+for the message consumer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>noLocal</em></dt>
+			<dd><p>if true, and the destination is a topic,
+inhibits the delivery of messages published
+by its own connection.  The behavior for
+NoLocal is not specified if the destination is a queue.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In some cases, a connection may both publish and subscribe to a
+topic. The consumer NoLocal attribute allows a consumer
+to inhibit the delivery of messages published by its own connection.
+The default value for this attribute is False. The noLocal
+value must be supported by destinations that are topics.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a MessageConsumer
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid destination
+is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidSelectorException</em></dt>
+			<dd><p>if the message selector is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createDurableSubscriber:name:" title="createDurableSubscriber:name:"></a>
+	<h3 class="subsubtitle method-title">createDurableSubscriber:name:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a durable subscriber to the specified topic.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createDurableSubscriber:(KMTopic *)<em>topic</em> name:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>the non-temporary Topic to subscribe to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name used to identify this subscription</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If a client needs to receive all the messages published on a
+topic, including the ones published while the subscriber is inactive,
+it uses a durable TopicSubscriber. The JMS provider
+retains a record of this
+durable subscription and insures that all messages from the topic&rsquo;s
+publishers are retained until they are acknowledged by this
+durable subscriber or they have expired.</p>
+
+<p>Sessions with durable subscribers must always provide the same
+client identifier. In addition, each client must specify a name that
+uniquely identifies (within client identifier) each durable
+subscription it creates. Only one session at a time can have a
+TopicSubscriber for a particular durable subscription.</p>
+
+<p>A client can change an existing durable subscription by creating
+a durable TopicSubscriber with the same name and a new
+topic and/or
+message selector. Changing a durable subscriber is equivalent to
+unsubscribing (deleting) the old one and creating a new one.</p>
+
+<p>In some cases, a connection may both publish and subscribe to a
+topic. The subscriber NoLocal attribute allows a subscriber
+to inhibit the delivery of messages published by its own connection.
+The default value for this attribute is false.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a subscriber
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid topic is specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createDurableSubscriber:name:messageSelector:noLocal:" title="createDurableSubscriber:name:messageSelector:noLocal:"></a>
+	<h3 class="subsubtitle method-title">createDurableSubscriber:name:messageSelector:noLocal:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a durable subscriber to the specified topic, using a
+message selector and specifying whether messages published by its
+own connection should be delivered to it.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopicSubscriber *)createDurableSubscriber:(KMTopic *)<em>topic</em> name:(NSString *)<em>name</em> messageSelector:(NSString *)<em>messageSelector</em> noLocal:(BOOL)<em>noLocal</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>the non-temporary Topic to subscribe to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name used to identify this subscription</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered.  A value of null or
+an empty string indicates that there is no message selector
+for the message consumer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>noLocal</em></dt>
+			<dd><p>if set, inhibits the delivery of messages published
+by its own connection</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If a client needs to receive all the messages published on a
+topic, including the ones published while the subscriber is inactive,
+it uses a durable TopicSubscriber. The JMS provider
+retains a record of this
+durable subscription and insures that all messages from the topic&rsquo;s
+publishers are retained until they are acknowledged by this
+durable subscriber or they have expired.</p>
+
+<p>Sessions with durable subscribers must always provide the same
+client identifier. In addition, each client must specify a name which
+uniquely identifies (within client identifier) each durable
+subscription it creates. Only one session at a time can have a
+TopicSubscriber for a particular durable subscription.
+An inactive durable subscriber is one that exists but
+does not currently have a message consumer associated with it.</p>
+
+<p>A client can change an existing durable subscription by creating
+a durable TopicSubscriber with the same name and a new
+topic and/or
+message selector. Changing a durable subscriber is equivalent to
+unsubscribing (deleting) the old one and creating a new one.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a subscriber
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid topic is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidSelectorException</em></dt>
+			<dd><p>if the message selector is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createMapMessage" title="createMapMessage"></a>
+	<h3 class="subsubtitle method-title">createMapMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a MapMessage object. A MapMessage
+object is used to send a self-defining set of name-value pairs, where
+names are String objects and values are primitive values
+.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMapMessage *)createMapMessage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to create this message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createMessage" title="createMessage"></a>
+	<h3 class="subsubtitle method-title">createMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a Message object. The Message
+interface is the root interface of all JMS messages. A
+Message object holds all the
+standard message header information. It can be sent when a message
+containing only header information is sufficient.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMessage *)createMessage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to create this message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createObjectMessage" title="createObjectMessage"></a>
+	<h3 class="subsubtitle method-title">createObjectMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an ObjectMessage object. An
+ObjectMessage object is used to send a message
+that contains a serializable object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMObjectMessage *)createObjectMessage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to create this message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createObjectMessage:" title="createObjectMessage:"></a>
+	<h3 class="subsubtitle method-title">createObjectMessage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an initialized ObjectMessage object. An
+ObjectMessage object is used
+to send a message that contains a serializable object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMObjectMessage *)createObjectMessage:(id&lt;KCSerializable&gt;)<em>object</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>the object to use to initialize this message</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to create this message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createProducer:" title="createProducer:"></a>
+	<h3 class="subsubtitle method-title">createProducer:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a MessageProducer to send messages to the specified
+destination.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMMessageProducer *)createProducer:(KMDestination *)<em>destination</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the Destination to send to,
+or null if this is a producer which does not have a specified
+destination.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A client uses a MessageProducer object to send
+messages to a destination. Since Queue and Topic
+both inherit from Destination, they can be used in
+the destination parameter to create a MessageProducer object.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a MessageProducer
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid destination
+is specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createQueue:" title="createQueue:"></a>
+	<h3 class="subsubtitle method-title">createQueue:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a queue identity given a Queue name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMQueue *)createQueue:(NSString *)<em>queueName</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>queueName</em></dt>
+			<dd><p>the name of this Queue</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a Queue with the given name</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This facility is provided for the rare cases where clients need to
+dynamically manipulate queue identity. It allows the creation of a
+queue identity with a provider-specific name. Clients that depend
+on this ability are not portable.</p>
+
+<p>Note that this method is not for creating the physical queue.
+The physical creation of queues is an administrative task and is not
+to be initiated by the JMS API. The one exception is the
+creation of temporary queues, which is accomplished with the
+<a href="#//api/name/createTemporaryQueue">createTemporaryQueue</a> method.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a queue
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createStreamMessage" title="createStreamMessage"></a>
+	<h3 class="subsubtitle method-title">createStreamMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a <a href="../Classes/KMStreamMessage.html">KMStreamMessage</a> object. A <a href="../Classes/KMStreamMessage.html">KMStreamMessage</a> object is used to send a
+self-defining stream of primitive values.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMStreamMessage *)createStreamMessage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to create this message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createTemporaryQueue" title="createTemporaryQueue"></a>
+	<h3 class="subsubtitle method-title">createTemporaryQueue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a TemporaryQueue object. Its lifetime will be that
+of the Connection unless it is deleted earlier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTemporaryQueue *)createTemporaryQueue</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a temporary queue identity</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a temporary queue
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createTemporaryTopic" title="createTemporaryTopic"></a>
+	<h3 class="subsubtitle method-title">createTemporaryTopic</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a TemporaryTopic object. Its lifetime will be that
+of the Connection unless it is deleted earlier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTemporaryTopic *)createTemporaryTopic</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a temporary topic identity</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a temporary
+topic due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createTextMessage" title="createTextMessage"></a>
+	<h3 class="subsubtitle method-title">createTextMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a TextMessage object. A TextMessage
+object is used to send a message containing a String
+object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTextMessage *)createTextMessage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to create this message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createTextMessage:" title="createTextMessage:"></a>
+	<h3 class="subsubtitle method-title">createTextMessage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an initialized TextMessage object. A
+TextMessage object is used to send
+a message containing a String.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTextMessage *)createTextMessage:(NSString *)<em>text</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>text</em></dt>
+			<dd><p>the string used to initialize this message</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to create this message
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createTopic:" title="createTopic:"></a>
+	<h3 class="subsubtitle method-title">createTopic:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a topic identity given a Topic name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMTopic *)createTopic:(NSString *)<em>topicName</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topicName</em></dt>
+			<dd><p>the name of this Topic</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a Topic with the given name</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This facility is provided for the rare cases where clients need to
+dynamically manipulate topic identity. This allows the creation of a
+topic identity with a provider-specific name. Clients that depend
+on this ability are not portable.</p>
+
+<p>Note that this method is not for creating the physical topic.
+The physical creation of topics is an administrative task and is not
+to be initiated by the JMS API. The one exception is the
+creation of temporary topics, which is accomplished with the
+<a href="#//api/name/createTemporaryTopic">createTemporaryTopic</a> method.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to create a topic
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/messageListener" title="messageListener"></a>
+	<h3 class="subsubtitle method-title">messageListener</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the session&rsquo;s distinguished message listener (optional).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;KMMessageListener&gt;)messageListener</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the message listener associated with this session</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the message
+listener due to an internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setMessageListener:">&ndash; setMessageListener:</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMMessageConsumer.html#//api/name/messageListener">[KMMessageConsumer messageListener]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/recover" title="recover"></a>
+	<h3 class="subsubtitle method-title">recover</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops message delivery in this session, and restarts message delivery
+with the oldest unacknowledged message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)recover</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>All consumers deliver messages in a serial order.
+Acknowledging a received message automatically acknowledges all
+messages that have been delivered to the client.</p>
+
+<p>Restarting a session causes it to take the following actions:</p>
+
+<ul>
+<li>Stop message delivery</li>
+<li>Mark all messages that might have been delivered but not
+acknowledged as &ldquo;redelivered&rdquo;</li>
+<li>Restart the delivery sequence including all unacknowledged
+messages that had been previously delivered. Redelivered messages
+do not have to be delivered in
+exactly their original delivery order.</li>
+</ul>
+
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to stop and restart
+message delivery due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMIllegalStateException</em></dt>
+			<dd><p>if the method is called by a
+<a href="#//api/name/transacted">transacted</a> session.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rollback" title="rollback"></a>
+	<h3 class="subsubtitle method-title">rollback</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Rolls back any messages done in this transaction and releases any locks
+currently held.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)rollback</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to roll back the
+transaction due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMIllegalStateException</em></dt>
+			<dd><p>if the method is not called by a
+<a href="#//api/name/transacted">transacted</a> session.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/run" title="run"></a>
+	<h3 class="subsubtitle method-title">run</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Optional operation, intended to be used only by Application Servers,
+not by ordinary JMS clients.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)run</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setMessageListener:" title="setMessageListener:"></a>
+	<h3 class="subsubtitle method-title">setMessageListener:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the session&rsquo;s distinguished message listener (optional).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setMessageListener:(id&lt;KMMessageListener&gt;)<em>listener</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>listener</em></dt>
+			<dd><p>the message listener</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>When the distinguished message listener is set, no other form of
+message receipt in the session can
+be used; however, all forms of sending messages are still supported.</p>
+
+<p>This is an expert facility not used by regular JMS clients.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the message
+listener due to an internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/messageListener">&ndash; messageListener</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMMessageConsumer.html#//api/name/messageListener">[KMMessageConsumer messageListener]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/transacted" title="transacted"></a>
+	<h3 class="subsubtitle method-title">transacted</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates whether the session is in transacted mode.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)transacted</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if the session is in transacted mode</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to return the
+transaction mode due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unsubscribe:" title="unsubscribe:"></a>
+	<h3 class="subsubtitle method-title">unsubscribe:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Unsubscribes a durable subscription that has been created by a client.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)unsubscribe:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name used to identify this subscription</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method deletes the state being maintained on behalf of the
+subscriber by its provider.</p>
+
+<p>It is erroneous for a client to delete a durable subscription
+while there is an active MessageConsumer or TopicSubscriber for the
+subscription, or while a consumed message is part of a pending
+transaction or has not been acknowledged in the session.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the session fails to unsubscribe to the
+durable subscription due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid subscription name
+is specified.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

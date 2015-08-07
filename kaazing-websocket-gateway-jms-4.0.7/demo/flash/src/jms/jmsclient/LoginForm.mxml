@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+
+-->
+
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml"
+                title="Enter login information"
+                borderAlpha="1"
+                showCloseButton="true"
+                close="processClose();">
+    
+    <mx:Script>
+        <![CDATA[
+            import mx.managers.PopUpManager;
+            
+            public var continuation:Function = null;
+            
+            private function processLogin():void {                
+                PopUpManager.removePopUp(this);
+                if (continuation != null) {
+                    continuation(username.text, password.text);
+                }
+            }
+
+            private function processClose():void {                
+                PopUpManager.removePopUp(this);
+                if (continuation != null) {
+                    continuation(null, null);
+                }
+            }
+        ]]>
+    </mx:Script>
+
+    <mx:Form>
+        <mx:FormItem label="User Name">
+            <mx:TextInput id="username" width="100%" toolTip="Enter Kerberos username as user@KERBEROS.DOMAIN (e.g.: joe@ATHENA.MIT.EDU)"/>
+        </mx:FormItem> 
+        <mx:FormItem label="Password">
+            <mx:TextInput id="password" displayAsPassword="true" width="100%" enter="processLogin();"/>
+        </mx:FormItem> 
+    </mx:Form>
+    <mx:HBox> 
+        <mx:Button label="OK" click="processLogin();"/> 
+        <mx:Button label="Cancel" click="processClose();"/> 
+    </mx:HBox> 
+</mx:TitleWindow>

@@ -1,0 +1,311 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: JmsConnectionFactory</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class JmsConnectionFactory</h2>
+
+
+
+<p>
+JmsConnectionFactory provides an interface for creating new JMS connectionsvia a WebSocket connection to a JMS provider.<p>Creates a new JmsConnectionFactory to create connections to the target <I>url</I> specified.A WebSocket is used to establish the connection.  The url should specify a protocol such as<B>ws:</B> or <B>wss:</B>.  For example: <B>ws://localhost:8000/jms</B></p></p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#JmsConnectionFactory">JmsConnectionFactory</a></b>(location, connectionProperties)
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+JmsConnectionFactory provides an interface for creating new JMS connectionsvia a WebSocket connection to a JMS provider.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ConnectionFuture
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createConnection">createConnection</a></b>(username, password, clientID, callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates the actual JMS Connection via WebSocket, using the <I>username</I> and <I>password</I>specified as credentials to authenticate with the Gateway, and using the given clientID to distinguish the durable subscribers for this connection from those of other users.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;WebSocketFactory
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getWebSocketFactory">getWebSocketFactory</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get WebSocketFactory instance that is used to create WebSocket Connections.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setWebSocketFactory">setWebSocketFactory</a></b>(webSocketFactory) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set WebSocketFactory instance that is used to create WebSocket connections.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="JmsConnectionFactory"> </a>
+<h3>JmsConnectionFactory</h3>
+
+	<pre><b>JmsConnectionFactory</b>(location, connectionProperties)</pre>
+	<ul>
+	   
+JmsConnectionFactory provides an interface for creating new JMS connectionsvia a WebSocket connection to a JMS provider.<p>Creates a new JmsConnectionFactory to create connections to the target <I>url</I> specified.A WebSocket is used to establish the connection.  The url should specify a protocol such as<B>ws:</B> or <B>wss:</B>.  For example: <B>ws://localhost:8000/jms</B></p>
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<ul>
+		<b>Parameters:</b>
+		
+		<ul>
+			<code><i>String</i>&nbsp;location</code> - The Gateway location to connect to. 
+		</ul>
+		
+		<ul>
+			<code><i>JmsConnectionProperties</i>&nbsp;connectionProperties</code> - The connection properties. <B>(Optional)</B> 
+		</ul>
+		
+	</ul>
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="createConnection"> </a> <h3>createConnection</h3>
+		<pre>ConnectionFuture&nbsp;<b>createConnection</b>(username, password, clientID, callback)</pre> 
+	<ul>
+		Creates the actual JMS Connection via WebSocket, using the <I>username</I> and <I>password</I>specified as credentials to authenticate with the Gateway, and using the given clientID to distinguish the durable subscribers for this connection from those of other users.<p>Once the callback is invoked, client applications should use ConnectionFuture.getValue() to fetch theactual connection.</p>
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;username </code> - The username for authentication or null. <B>(Optional)</B> 
+		</ul>
+		<ul>
+			<code><i>String</i>&nbsp;password </code> - The password for authentication or null. <B>(Optional)</B> 
+		</ul>
+		<ul>
+			<code><i>String</i>&nbsp;clientID </code> - Client identifier. <B>(Optional)</B> <BR />                         This is combined with durable subscriber names, using                          the format specified for "jms" service parameter "client.durable.name.format",                          to make them unique for the current user. 
+		</ul>
+		<ul>
+			<code><i>Function</i>&nbsp;callback </code> - The callback to invoke when the connection has been created or an exception is thrown. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ConnectionFuture</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getWebSocketFactory"> </a> <h3>getWebSocketFactory</h3>
+		<pre>WebSocketFactory&nbsp;<b>getWebSocketFactory</b>()</pre> 
+	<ul>
+		get WebSocketFactory instance that is used to create WebSocket Connections. use this webSocketFactory instance to set WebSocket related properties  (i.e. extensions and challenge handlers).
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>WebSocketFactory</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setWebSocketFactory"> </a> <h3>setWebSocketFactory</h3>
+		<pre>void&nbsp;<b>setWebSocketFactory</b>(webSocketFactory)</pre> 
+	<ul>
+		set WebSocketFactory instance that is used to create WebSocket connections.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>WebSocketFactory</i>&nbsp;webSocketFactory </code> - The WebSocketFacotry instance to used to create WebSocket connections. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

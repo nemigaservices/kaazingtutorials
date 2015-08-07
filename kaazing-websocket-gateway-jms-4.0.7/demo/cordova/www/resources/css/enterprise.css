@@ -1,0 +1,12 @@
+/**
+ * Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+ */
+
+#menu a.enterprise {
+        color:#FFFFFF;
+        }
+        
+#menu a.enterprise:hover {
+        color:#FFFF00;
+        }       
+

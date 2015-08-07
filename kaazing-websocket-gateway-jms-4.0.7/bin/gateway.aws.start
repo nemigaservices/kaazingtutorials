@@ -1,0 +1,68 @@
+#!/bin/bash
+#
+# Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+#
+
+PRG="$0"
+
+while [ -h "$PRG" ] ; do
+  ls=`ls -ld "$PRG"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=`dirname "$PRG"`/"$link"
+  fi
+done
+
+PRGDIR=`dirname "$PRG"`
+
+# A temporary variable for the location of the gateway installation,
+# to allow determining the conf and lib subdirectories (assumed to 
+# be siblings to this script's 'bin' directory).
+GW_HOME=`cd "$PRGDIR/.." ; pwd`
+
+# Indicate whether or not we are running from an installed Linux
+# version of the Gateway or an unzipped, self-contained version.
+# The value controls where the Gateway looks for certain files
+# it needs to operate.  Do not change this value!
+INSTALLED_LINUX=false
+
+# This is cloud specific, so grab the hostname from the metadata
+# and use it for a -D command line parameter to allow the Gateway
+# to start on the correct host
+HOSTNAME=`wget -q -O - http://169.254.169.254/latest/meta-data/public-hostname | tr -d '\n'`
+# If it is on vpc, hostname is used in lieu of public-hostname
+if [ "$HOSTNAME" == "" ]; then
+  HOSTNAME=`wget -q -O - http://169.254.169.254/latest/meta-data/hostname | tr -d '\n'`
+fi
+
+#Check to see if AWS parameters where successfully obtained
+if [ "$HOSTNAME" == "" ]; then
+    echo "AWS Hostname could not be resolved via AWS EC2 user-data api"
+    echo "This startup script must be run from an EC2 instance"
+    echo "Exiting..."
+    exit 1;
+fi
+
+# You can define various Java system properties by setting the value
+# of the GATEWAY_OPTS environment variable before calling this script.
+# The script itself should not be changed. For example, the setting
+# below sets the Java maximum memory to 512MB.
+[ -z "$GATEWAY_OPTS" ] && GATEWAY_OPTS="-Xmx512m"
+
+CP=""
+
+for LIBFILE in "$GW_HOME"/lib/*.jar
+do
+  CP="$CP:$LIBFILE"
+done
+
+# Add a directory for management support
+JAVA_LIBRARY_PATH="$GW_HOME/lib/sigar"
+
+if [ $INSTALLED_LINUX == "true" ]; then
+    java $GATEWAY_OPTS -Djava.library.path="$JAVA_LIBRARY_PATH" -Dgateway.hostname=$HOSTNAME -cp "$CP" com.kaazing.gateway.server.InstalledLinuxMain $*
+else
+    java $GATEWAY_OPTS -Djava.library.path="$JAVA_LIBRARY_PATH" -Dgateway.hostname=$HOSTNAME -cp "$CP" com.kaazing.gateway.server.Main $*
+fi

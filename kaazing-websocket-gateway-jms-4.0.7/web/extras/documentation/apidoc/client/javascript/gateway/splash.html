@@ -1,0 +1,22 @@
+<!--
+
+    Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+
+-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<title>JsDoc</title>
+</head>
+<body>
+<script type="text/javascript">
+var qs = parent.location.search;
+var clazz = "WebSocket";
+if (qs && qs.indexOf("?") == 0) {
+    clazz = qs.slice(1);
+}
+window.location.replace("./"+clazz+".html");
+</script>
+</body>
+</html>

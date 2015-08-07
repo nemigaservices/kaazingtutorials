@@ -1,0 +1,115 @@
+<!--
+
+    Copyright (c) 2007-2014, Kaazing Corporation. All rights reserved.
+
+-->
+
+<!DOCTYPE HTML>
+<!-- NOTE: the doctype must be the first line in the file, or IE9 will go into Quirks mode -->
+
+<!--
+
+    Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+
+-->
+
+
+<HMTL>
+  <HEAD>
+    <META charset="utf-8">
+    <STYLE type="text/css">
+      body {
+        font-family: Arial, Verdana, sans-serif;
+        font-size: 11pt;
+        color: #000000;
+        background-color: #E8E8E8;
+      }
+
+      #mainText {
+        display: block;
+        position: relative;
+        border: solid 2px #ff6600;
+        border-radius: 1em;
+        -webkit-border-radius: 1em;
+        -moz-border-radius: 1em;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 40px;
+        margin-bottom: 0px;
+        background-color: #FFFFFF;
+      }
+
+      #header {
+        color: #44687D;
+      }
+
+      .location {
+        color: #000000;
+      }
+
+      a:link, a:visited, a:active {
+        color: #3c708f;
+        text-decoration: none
+      }
+
+      a:hover {
+        color: #3c708f;
+        text-decoration: underline;
+      }
+    </STYLE>
+
+    <SCRIPT type="text/javascript">
+        // the vars.browser value is the actual string from the browser-detection code.
+        // For those that we know about, modify the initial string to show "nicely"
+        var BROWSER_LABELS = {
+            'Explorer': 'Internet Explorer',
+            'Chrome' : 'Google Chrome',
+            'Firefox' : 'Mozilla Firefox',
+            'Safari' : 'Apple Safari',
+            'iCab': 'iCab',
+            'Konqueror': 'KDE Konqueror',
+            'Netscape': 'Netscape',
+            'Mozilla': 'Mozilla',
+            'Opera':  'Opera'
+        };
+
+        var PRODUCT_NAME = 'Command Center';
+
+        function showError() {
+            // get the query params - 'os', 'browser', 'version', 'min'
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+                                                     function(m,key,value) {
+                                                         vars[key] = value;
+                                                     });
+            var errorMessage;
+
+            var browser = BROWSER_LABELS[vars.browser];
+            if (!browser) {
+                browser = vars.browser;
+            }
+
+            if (vars.min == -1) {
+                errorMessage = "Sorry, the " + PRODUCT_NAME + 
+                               " is not supported on " + browser + 
+                               " on " + vars.os + ".";
+            } else {
+                errorMessage = "The " + PRODUCT_NAME + " supports " + browser + 
+                               " version " + vars.min + " and later releases on " + vars.os +
+                               ". You are running " + browser + " version " + vars.version + ".";
+            }
+
+            var span = document.getElementById('errorMessage');
+            span.innerHTML = errorMessage;
+        }
+    </SCRIPT>
+
+  </HEAD>
+
+  <BODY onload="showError()">
+  <DIV id="mainText" float="center">
+      <H2 id="header">Unsupported Browser</H2>
+    <P><span id="errorMessage"></span></P>  
+  </DIV>
+  </BODY>
+</HTML>

@@ -1,0 +1,513 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: Connection</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class Connection</h2>
+
+
+
+<p>
+A Connection object is a client's active connection to its JMSprovider.<P>A connection serves several purposes:<UL>  <LI>It encapsulates an open connection with a JMS provider via WebSocket.  <LI>Its creation is where client authentication takes place.  <LI>It provides a <CODE>ConnectionMetaData</CODE> object.  <LI>It supports an optional <CODE>ExceptionListener</CODE> object.</UL><P>Because the creation of a connection involves setting up authenticationand communication, a connection is a relatively heavyweightobject. Most clients will do all their messaging with a single connection.Other more advanced applications may use several connections. The JMS APIdoes not architect a reason for using multiple connections; however, theremay be operational reasons for doing so.<P>A JMS client typically creates a connection, one or more sessions,and a number of message producers and consumers. When a connection iscreated, it is in stopped mode. That means that no messages are beingdelivered.<P>It is typical to leave the connection in stopped mode until setupis complete (that is, until all message consumers have beencreated).  At that point, the client callsthe connection's <CODE>start</CODE> method, and messages begin arriving atthe connection's consumers. This setupconvention minimizes any client confusion that may result fromasynchronous message delivery while the client is still in the processof setting itself up.<P>A connection can be started immediately, and the setup can be doneafterwards. Clients that do this must be prepared to handle asynchronousmessage delivery while they are still in the process of setting up.<P>A message producer can send messages while a connection is stopped.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#Connection">Connection</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  Use <code>JmsConnectionFactory.createConnection()</code>
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;VoidFuture
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#close">close</a></b>(callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Closes the connection.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Session
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createSession">createSession</a></b>(transacted, acknowledgeMode) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a <CODE>Session</CODE> object.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getClientID">getClientID</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the client identifier for this connection.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ExceptionListener
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getExceptionListener">getExceptionListener</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the <CODE>ExceptionListener</CODE> object for this connection.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;ConnectionMetaData
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getMetaData">getMetaData</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fetches the metadata associated with the connection.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setClientID">setClientID</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the client identifier for this connection.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setExceptionListener">setExceptionListener</a></b>(listener) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets an exception listener for this connection.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;VoidFuture
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#start">start</a></b>(callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Starts (or restarts) a connection's delivery of incoming messages.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;VoidFuture
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#stop">stop</a></b>(callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temporarily stops a connection's delivery of incoming messages.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="Connection"> </a>
+<h3>Connection</h3>
+
+	<pre><b>Connection</b>()</pre>
+	<ul>
+	   Use <code>JmsConnectionFactory.createConnection()</code>
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="close"> </a> <h3>close</h3>
+		<pre>VoidFuture&nbsp;<b>close</b>(callback)</pre> 
+	<ul>
+		Closes the connection.<P>Since a provider typically allocates significant resources outsidethe JVM on behalf of a connection, clients should close these resourceswhen they are not needed. Relying on garbage collection to eventuallyreclaim these resources may not be timely enough.<P>There is no need to close the sessions, producers, and consumersof a closed connection.<P>Closing a connection causes all temporary destinations to bedeleted.<P>When this method is invoked, it should not return until messageprocessing has been shut down in an orderly fashion. This means that allmessagelisteners that may have been running have returned, and that all pendingreceives have returned. A close terminates all pending message receiveson the connection's sessions' consumers. The receives may return with amessage or with null, depending on whether there was a message availableat the time of the close. If one or more of the connection's sessions'message listeners is processing a message at the time when connection<CODE>close</CODE> is invoked, all the facilities of the connection andits sessions must remain available to those listeners until they returncontrol to the JMS provider.<P>Closing a connection causes any of its sessions' transactionsin progress to be rolled back. In the case where a session'swork is coordinated by an external transaction manager, a session's<CODE>commit</CODE> and <CODE>rollback</CODE> methods arenot used and the result of a closed session's work is determinedlater by the transaction manager.Closing a connection does NOT force anacknowledgment of client-acknowledged sessions.<P>Invoking the <CODE>acknowledge</CODE> method of a received messagefrom a closed connection's session must throw an<CODE>IllegalStateException</CODE>.  Closing a closed connection mustNOT throw an exception.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>callback </code> - called when the operation has completed or thrown an exception 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>VoidFuture</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to close the                        connection due to some internal error. For                        example, a failure to release resources                        or to close a socket connection can cause                        this exception to be thrown. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createSession"> </a> <h3>createSession</h3>
+		<pre>Session&nbsp;<b>createSession</b>(transacted, acknowledgeMode)</pre> 
+	<ul>
+		Creates a <CODE>Session</CODE> object.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>transacted </code> - indicates whether the session is transacted 
+		</ul>
+		<ul>
+			<code>acknowledgeMode </code> - indicates whether the consumer or the  client will acknowledge any messages it receives; ignored if the session  is transacted. Legal values are <code>Session.AUTO_ACKNOWLEDGE</code>,  <code>Session.CLIENT_ACKNOWLEDGE</code>, and  <code>Session.DUPS_OK_ACKNOWLEDGE</code>. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Session</i>&nbsp;</code>a newly created session 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the <CODE>Connection</CODE> object fails                        to create a session due to some internal error or                        lack of support for the specific transaction                        and acknowledgement mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getClientID"> </a> <h3>getClientID</h3>
+		<pre>String&nbsp;<b>getClientID</b>()</pre> 
+	<ul>
+		Gets the client identifier for this connection.<P>This value is specific to the JMS provider.  It is either preconfiguredby an administrator in a <CODE>ConnectionFactory</CODE> objector assigned dynamically by the application by calling the<code>setClientID</code> method.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>the unique client identifier 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getExceptionListener"> </a> <h3>getExceptionListener</h3>
+		<pre>ExceptionListener&nbsp;<b>getExceptionListener</b>()</pre> 
+	<ul>
+		Gets the <CODE>ExceptionListener</CODE> object for this connection.Not every <CODE>Connection</CODE> has an <CODE>ExceptionListener</CODE>associated with it.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ExceptionListener</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getMetaData"> </a> <h3>getMetaData</h3>
+		<pre>ConnectionMetaData&nbsp;<b>getMetaData</b>()</pre> 
+	<ul>
+		Fetches the metadata associated with the connection.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>ConnectionMetaData</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setClientID"> </a> <h3>setClientID</h3>
+		<pre>void&nbsp;<b>setClientID</b>()</pre> 
+	<ul>
+		Sets the client identifier for this connection.Not currently supported.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setExceptionListener"> </a> <h3>setExceptionListener</h3>
+		<pre>void&nbsp;<b>setExceptionListener</b>(listener)</pre> 
+	<ul>
+		Sets an exception listener for this connection.<P>If a JMS provider detects a serious problem with a connection, itinforms the connection's <CODE>ExceptionListener</CODE>, if one has beenregistered. It does this by invoking the listener function passing it a<CODE>JMSException</CODE>object describing the problem.<P>A function can be passed as the listener function, or an object with afunction defined on the <CODE>onException</CODE> property.</P><P>An exception listener allows a client to be notified of a problemasynchronously.Some connections only consume messages, so they would have no otherway to learn their connection has failed.<P>A connection serializes execution of its<CODE>ExceptionListener</CODE>.<P>A JMS provider should attempt to resolve connection problemsitself before it notifies the client of them.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Function, ExceptionListener</i>&nbsp;listener </code> - the exception listener 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="start"> </a> <h3>start</h3>
+		<pre>VoidFuture&nbsp;<b>start</b>(callback)</pre> 
+	<ul>
+		Starts (or restarts) a connection's delivery of incoming messages.A call to <CODE>start</CODE> on a connection that has already beenstarted is ignored.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>callback </code> - called when the operation has completed or thrown an exception 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>VoidFuture</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="stop"> </a> <h3>stop</h3>
+		<pre>VoidFuture&nbsp;<b>stop</b>(callback)</pre> 
+	<ul>
+		Temporarily stops a connection's delivery of incoming messages.Delivery can be restarted using the connection's <CODE>start</CODE>method. When the connection is stopped,delivery to all the connection's message consumers is inhibited:synchronous receives block, and messages are not delivered to messagelisteners.<P>This call blocks until receives and/or message listeners in progresshave completed.<P>Stopping a connection has no effect on its ability to send messages.A call to <CODE>stop</CODE> on a connection that has already beenstopped is ignored.<P>A call to <CODE>stop</CODE> must not return until delivery of messageshas paused. This means that a client can rely on the fact that none ofits message listeners will be called and that all threads of controlwaiting for <CODE>receive</CODE> calls to return will not return with amessage until theconnection is restarted. The receive timers for a stopped connectioncontinue to advance, so receives may time out while the connection isstopped.<P>If message listeners are running when <CODE>stop</CODE> is invoked,the <CODE>stop</CODE> call mustwait until all of them have returned before it may return. While thesemessage listeners are completing, they must have the full services of theconnection available to them.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>callback </code> - called when the operation has completed or thrown an exception 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>VoidFuture</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

@@ -1,0 +1,728 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: MessageProducer</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class MessageProducer</h2>
+
+
+
+<p>
+A client uses a <CODE>MessageProducer</CODE> object to send messages to adestination. A <CODE>MessageProducer</CODE> object is created by passing a<CODE>Destination</CODE> object to a message-producer creation methodsupplied by a session.<P><CODE>MessageProducer</CODE> is the parent interface for all messageproducers.<P>A client also has the option of creating a message producer withoutsupplying a destination. In this case, a destination must be provided withevery send operation. A typical use for this kind of message producer isto send replies to requests using the request's <CODE>JMSReplyTo</CODE>destination.<P>A client can specify a default delivery mode, priority, and time to livefor messages sent by a message producer. It can also specify the deliverymode, priority, and time to live for an individual message.<P>A client can specify a time-to-live value in milliseconds for eachmessage it sends. This value defines a message expiration time thatis the sum of the message's time-to-live and the GMT when it is sent (fortransacted sends, this is the time the client sends the message, notthe time the transaction is committed).<P>A JMS provider should do its best to expire messages accurately;however, the JMS API does not define the accuracy provided.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#MessageProducer">MessageProducer</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+A client uses a <CODE>MessageProducer</CODE> object to send messages to adestination.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#close">close</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Closes the message producer.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getDeliveryMode">getDeliveryMode</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the producer's default delivery mode.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Destination
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getDestination">getDestination</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the destination associated with this <CODE>MessageProducer</CODE>.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getDisableMessageID">getDisableMessageID</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets an indication of whether message IDs are disabled.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getDisableMessageTimestamp">getDisableMessageTimestamp</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets an indication of whether message timestamps are disabled.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getPriority">getPriority</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the producer's default priority.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getTimeToLive">getTimeToLive</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the default length of time in milliseconds from its dispatch timethat a produced message should be retained by the message system.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;VoidFuture
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#send">send</a></b>(destination, message, deliveryMode, priority, timeToLive, callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sends a message to a destination for an "unidentified" message producer,specifying the destination in the send method directly, as well asdelivery mode, priority and time to live.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setDeliveryMode">setDeliveryMode</a></b>(deliveryMode) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the producer's default delivery mode.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setDisableMessageID">setDisableMessageID</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets whether message IDs are disabled.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setDisableMessageTimestamp">setDisableMessageTimestamp</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets whether message timestamps are disabled.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setPriority">setPriority</a></b>(defaultPriority) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the producer's default priority.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setTimeToLive">setTimeToLive</a></b>(timeToLive) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the default length of time in milliseconds from its dispatch timethat a produced message should be retained by the message system.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="MessageProducer"> </a>
+<h3>MessageProducer</h3>
+
+	<pre><b>MessageProducer</b>()</pre>
+	<ul>
+	   
+A client uses a <CODE>MessageProducer</CODE> object to send messages to adestination. A <CODE>MessageProducer</CODE> object is created by passing a<CODE>Destination</CODE> object to a message-producer creation methodsupplied by a session.<P><CODE>MessageProducer</CODE> is the parent interface for all messageproducers.<P>A client also has the option of creating a message producer withoutsupplying a destination. In this case, a destination must be provided withevery send operation. A typical use for this kind of message producer isto send replies to requests using the request's <CODE>JMSReplyTo</CODE>destination.<P>A client can specify a default delivery mode, priority, and time to livefor messages sent by a message producer. It can also specify the deliverymode, priority, and time to live for an individual message.<P>A client can specify a time-to-live value in milliseconds for eachmessage it sends. This value defines a message expiration time thatis the sum of the message's time-to-live and the GMT when it is sent (fortransacted sends, this is the time the client sends the message, notthe time the transaction is committed).<P>A JMS provider should do its best to expire messages accurately;however, the JMS API does not define the accuracy provided.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="close"> </a> <h3>close</h3>
+		<pre>void&nbsp;<b>close</b>()</pre> 
+	<ul>
+		Closes the message producer.<P>Since a provider may allocate some resources on behalf of a<CODE>MessageProducer</CODE>, clients should close them when theyare not needed.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to close the producer                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getDeliveryMode"> </a> <h3>getDeliveryMode</h3>
+		<pre>Number&nbsp;<b>getDeliveryMode</b>()</pre> 
+	<ul>
+		Gets the producer's default delivery mode.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the message delivery mode for this message producer 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the delivery                        mode due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getDestination"> </a> <h3>getDestination</h3>
+		<pre>Destination&nbsp;<b>getDestination</b>()</pre> 
+	<ul>
+		Gets the destination associated with this <CODE>MessageProducer</CODE>.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Destination</i>&nbsp;</code>this producer's <CODE>Destination/<CODE> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the destination for                        this <CODE>MessageProducer</CODE>                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getDisableMessageID"> </a> <h3>getDisableMessageID</h3>
+		<pre>boolean&nbsp;<b>getDisableMessageID</b>()</pre> 
+	<ul>
+		Gets an indication of whether message IDs are disabled.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>boolean</i>&nbsp;</code>an indication of whether message IDs are disabled 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to determine if                        message IDs are disabled due to some internal                        error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getDisableMessageTimestamp"> </a> <h3>getDisableMessageTimestamp</h3>
+		<pre>boolean&nbsp;<b>getDisableMessageTimestamp</b>()</pre> 
+	<ul>
+		Gets an indication of whether message timestamps are disabled. (Not Implemented.)
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>boolean</i>&nbsp;</code>an indication of whether message timestamps are disabled 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to determine if                        timestamps are disabled due to some internal                        error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getPriority"> </a> <h3>getPriority</h3>
+		<pre>Number&nbsp;<b>getPriority</b>()</pre> 
+	<ul>
+		Gets the producer's default priority.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the message priority for this message producer 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the priority                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getTimeToLive"> </a> <h3>getTimeToLive</h3>
+		<pre>Number&nbsp;<b>getTimeToLive</b>()</pre> 
+	<ul>
+		Gets the default length of time in milliseconds from its dispatch timethat a produced message should be retained by the message system.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the message time to live in milliseconds; zero is unlimited 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the time to                        live due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="send"> </a> <h3>send</h3>
+		<pre>VoidFuture&nbsp;<b>send</b>(destination, message, deliveryMode, priority, timeToLive, callback)</pre> 
+	<ul>
+		Sends a message to a destination for an "unidentified" message producer,specifying the destination in the send method directly, as well asdelivery mode, priority and time to live.<P>Typically, a message producer is assigned a destination at creationtime; however, the JMS API also supports unidentified message producers,which require that the destination be supplied every time a message issent.  If the optional destination parameter is not supplied or its valueis <CODE>null</CODE> then the producer's default destination is used.<P>This is an asynchronous call.  The call returns immediately, but theoperation continues until the message has been sent by the connected Gateway.The optional callback passed to <CODE>send</CODE> is calledwhen the message is finally confirmed as sent. Note that even though this isan asyncrhonous call, invoking this function again while a prior call to<CODE>send</CODE> is still not complete will result in IllegalStateException.Use the callback function with <CODE>send</CODE> to fetch outbound messages offa queue so that only one outbound message is being sent at a time.<P>Note that deliveryMode, priority, and timeToLive parameters must eitherall be present or none.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>destination </code> - the destination to send this message to (optional) 
+		</ul>
+		<ul>
+			<code>message </code> - the message to send 
+		</ul>
+		<ul>
+			<code>deliveryMode </code> - the delivery mode to use (optional) 
+		</ul>
+		<ul>
+			<code>priority </code> - the priority for this message (optional) 
+		</ul>
+		<ul>
+			<code>timeToLive </code> - the message's lifetime (in milliseconds) (optional) 
+		</ul>
+		<ul>
+			<code>callback </code> - called when the operation has completed or thrown an exception 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>VoidFuture</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to send the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if an invalid message is specified. 
+		</ul>
+		<ul>
+			<code></code> IllegalStateException while a message send is in progress, if                                 an application tries to invoke this                                 function again 
+		</ul>
+		<ul>
+			<code></code> InvalidDestinationException if a client uses                        this method with an invalid destination. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setDeliveryMode"> </a> <h3>setDeliveryMode</h3>
+		<pre>void&nbsp;<b>setDeliveryMode</b>(deliveryMode)</pre> 
+	<ul>
+		Sets the producer's default delivery mode.<P>Delivery mode is set to <CODE>PERSISTENT</CODE> by default.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>deliveryMode </code> - the message delivery mode for this messageproducer; legal values are <code>DeliveryMode.NON_PERSISTENT</code>and <code>DeliveryMode.PERSISTENT</code> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the delivery                        mode due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setDisableMessageID"> </a> <h3>setDisableMessageID</h3>
+		<pre>void&nbsp;<b>setDisableMessageID</b>(value)</pre> 
+	<ul>
+		Sets whether message IDs are disabled.<P>Since message IDs take some effort to create and increase amessage's size, some JMS providers may be able to optimize messageoverhead if they are given a hint that the message ID is not used byan application. By calling the <CODE>setDisableMessageID</CODE>method on this message producer, a JMS client enables this potentialoptimization for all messages sent by this message producer. If the JMSprovider accepts this hint,these messages must have the message ID set to null; if the providerignores the hint, the message ID must be set to its normal unique value.<P>Message IDs are enabled by default.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>value </code> - indicates if message IDs are disabled 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set message ID to                        disabled due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setDisableMessageTimestamp"> </a> <h3>setDisableMessageTimestamp</h3>
+		<pre>void&nbsp;<b>setDisableMessageTimestamp</b>(value)</pre> 
+	<ul>
+		Sets whether message timestamps are disabled.<P>Since timestamps take some effort to create and increase amessage's size, some JMS providers may be able to optimize messageoverhead if they are given a hint that the timestamp is not used by anapplication. By calling the <CODE>setDisableMessageTimestamp</CODE>method on this message producer, a JMS client enables this potentialoptimization for all messages sent by this message producer.  If theJMS provider accepts this hint,these messages must have the timestamp set to zero; if the providerignores the hint, the timestamp must be set to its normal value.<P>Message timestamps are enabled by default.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>value </code> - indicates if message timestamps are disabled 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set timestamps to                        disabled due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setPriority"> </a> <h3>setPriority</h3>
+		<pre>void&nbsp;<b>setPriority</b>(defaultPriority)</pre> 
+	<ul>
+		Sets the producer's default priority.<P>The JMS API defines ten levels of priority value, with 0 as thelowest priority and 9 as the highest. Clients should consider priorities0-4 as gradations of normal priority and priorities 5-9 as gradationsof expedited priority. Priority is set to 4 by default.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;defaultPriority </code> - the message priority for this message producer;                       must be a value between 0 and 9 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the priority                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setTimeToLive"> </a> <h3>setTimeToLive</h3>
+		<pre>void&nbsp;<b>setTimeToLive</b>(timeToLive)</pre> 
+	<ul>
+		Sets the default length of time in milliseconds from its dispatch timethat a produced message should be retained by the message system.<P>Time to live is set to zero by default.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>timeToLive </code> - the message time to live in milliseconds; zero isunlimited 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the time to                        live due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

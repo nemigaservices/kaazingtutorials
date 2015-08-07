@@ -1,0 +1,1138 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: Session</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class Session</h2>
+
+
+
+<p>
+A <CODE>Session</CODE> object is a single-threaded context for producing and consuming messages.<P>A session serves several purposes:<UL>  <LI>It is a factory for its message producers and consumers.  <LI>It supplies provider-optimized message factories.  <LI>It is a factory for <CODE>TemporaryTopics</CODE> and       <CODE>TemporaryQueues</CODE>.  <LI> It provides a way to create <CODE>Queue</CODE> or <CODE>Topic</CODE>     objects for those clients that need to dynamically manipulate     provider-specific destination names.  <LI>It supports a single series of transactions that combine work      spanning its producers and consumers into atomic units.  <LI>It defines a serial order for the messages it consumes and      the messages it produces.  <LI>It retains messages it consumes until they have been      acknowledged.  <LI>It serializes execution of message listeners registered with      its message consumers.  <LI> It is a factory for <CODE>QueueBrowsers</CODE>.</UL><P>A session can create and service multiple message producers andconsumers.<P>One typical use is to have a thread block on a synchronous<CODE>MessageConsumer</CODE> until a message arrives. The thread may thenuse one or more of the <CODE>Session</CODE>'s <CODE>MessageProducer</CODE>s.<P>Once a connection has been started, any session with one or moreregistered message listeners is dedicated to the thread of control thatdelivers messages to it. It is erroneous for client code to use this sessionor any of its constituent objects from another thread of control. Theonly exception to this rule is the use of the session or connection<CODE>close</CODE> method.<P>It should be easy for most clients to partition their work naturallyinto sessions. This model allows clients to start simply and incrementallyadd message processing complexity.<P>The <CODE>close</CODE> method is the only session method that can becalled while some other session method is being executed in another thread.<P>A session may be specified as transacted. Each transactedsession supports a single series of transactions. Each transaction groupsa set of message sends and a set of message receives into an atomic unitof work. In effect, transactions organize a session's input messagestream and output message stream into series of atomic units. When atransaction commits, its atomic unit of input is acknowledged and itsassociated atomic unit of output is sent. If a transaction rollback isdone, the transaction's sent messages are destroyed and the session's inputis automatically recovered.<P>The content of a transaction's input and output units is simply thosemessages that have been produced and consumed within the session's currenttransaction.<P>A transaction is completed using either its session's <CODE>commit</CODE>method or its session's <CODE>rollback</CODE> method. The completion of asession's current transaction automatically begins the next. The result isthat a transacted session always has a current transaction within which itswork is done.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<a name="field_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Field Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#AUTO_ACKNOWLEDGE">AUTO_ACKNOWLEDGE</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With this acknowledgment mode, the system processes acknowledgements when the consumerhas successfully returned from its message handler.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#CLIENT_ACKNOWLEDGE">CLIENT_ACKNOWLEDGE</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With this acknowledgment mode, the client acknowledges a consumed message by callingthe message's acknowledge method.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#DUPS_OK_ACKNOWLEDGE">DUPS_OK_ACKNOWLEDGE</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This acknowledgment mode instructs the session to lazily acknowledge the delivery of messages.
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>Number</code></font>
+			</td>
+			<td>
+				<code><b><a href="#SESSION_TRANSACTED">SESSION_TRANSACTED</a></b></code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This acknowledgement mode is used for transacted sessions.
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#Session">Session</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+A <CODE>Session</CODE> object is a single-threaded context for producing and consuming messages.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;VoidFuture
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#close">close</a></b>(callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Closes the session.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;VoidFuture
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#commit">commit</a></b>(callback) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Commits all messages done in this transaction and releases any lockscurrently held.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;BytesMessage
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createBytesMessage">createBytesMessage</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a <CODE>BytesMessage</CODE> object.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;MessageConsumer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createConsumer">createConsumer</a></b>(destination, messageSelector) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates <CODE>MessageConsumer</CODE> for the specified destination.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;TopicSubscriber
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createDurableSubscriber">createDurableSubscriber</a></b>(topic, durableName, messageSelector, noLocal) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a durable subscriber to the specified topic, using amessage selector and specifying whether messages published by itsown connection should be delivered to it.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;MapMessage
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createMapMessage">createMapMessage</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a <CODE>MapMessage</CODE> object.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Message
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createMessage">createMessage</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a <CODE>Message</CODE> object.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;MessageProducer
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createProducer">createProducer</a></b>(destination) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a <CODE>MessageProducer</CODE> to send messages to the specifieddestination.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Queue
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createQueue">createQueue</a></b>(queueName) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a queue identity given a <CODE>Queue</CODE> name.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;TemporaryQueue
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createTemporaryQueue">createTemporaryQueue</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a <CODE>TemporaryQueue</CODE> object.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;TemporaryTopic
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createTemporaryTopic">createTemporaryTopic</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a <CODE>TemporaryTopic</CODE> object.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;TextMessage
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createTextMessage">createTextMessage</a></b>(text) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates an initialized <CODE>TextMessage</CODE> object.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Topic
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#createTopic">createTopic</a></b>(topicName) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creates a topic identity given a <CODE>Topic</CODE> name.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getAcknowledgeMode">getAcknowledgeMode</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the acknowledgement mode of the session.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;MessageListener
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getMessageListener">getMessageListener</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the session's distinguished message listener (optional).
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getTransacted">getTransacted</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indicates whether the session is in transacted mode.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#recover">recover</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stops message delivery in this session, and restarts message deliverywith the oldest unacknowledged message.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;VoidFuture
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#rollback">rollback</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rolls back any messages done in this transaction and releases any lockscurrently held.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#setMessageListener">setMessageListener</a></b>(listener) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sets the session's distinguished message listener (optional).
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#unsubscribe">unsubscribe</a></b>(name) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unsubscribes a durable subscription that has been created by a client.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<a name="field_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Field Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<!-- One single method detail entry -->
+	<a name="AUTO_ACKNOWLEDGE">
+	<!-- -->
+	</a> <h3>AUTO_ACKNOWLEDGE</h3>
+		<pre>Number <b>AUTO_ACKNOWLEDGE</b></pre> 
+	<ul>
+		With this acknowledgment mode, the system processes acknowledgements when the consumerhas successfully returned from its message handler.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="CLIENT_ACKNOWLEDGE">
+	<!-- -->
+	</a> <h3>CLIENT_ACKNOWLEDGE</h3>
+		<pre>Number <b>CLIENT_ACKNOWLEDGE</b></pre> 
+	<ul>
+		With this acknowledgment mode, the client acknowledges a consumed message by callingthe message's acknowledge method.  When any message is acknowledgedThe system processesmessage acknowledgements as if all messages consumed from the channel were acknowledged.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="DUPS_OK_ACKNOWLEDGE">
+	<!-- -->
+	</a> <h3>DUPS_OK_ACKNOWLEDGE</h3>
+		<pre>Number <b>DUPS_OK_ACKNOWLEDGE</b></pre> 
+	<ul>
+		This acknowledgment mode instructs the session to lazily acknowledge the delivery of messages.Some acknowledgements messages may be redelivered with this mode as a tradeoff for fasterperformance and higher scalability.
+	</ul>
+	<hr>
+
+	<!-- One single method detail entry -->
+	<a name="SESSION_TRANSACTED">
+	<!-- -->
+	</a> <h3>SESSION_TRANSACTED</h3>
+		<pre>Number <b>SESSION_TRANSACTED</b></pre> 
+	<ul>
+		This acknowledgement mode is used for transacted sessions.
+	</ul>
+	<hr>
+
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="Session"> </a>
+<h3>Session</h3>
+
+	<pre><b>Session</b>()</pre>
+	<ul>
+	   
+A <CODE>Session</CODE> object is a single-threaded context for producing and consuming messages.<P>A session serves several purposes:<UL>  <LI>It is a factory for its message producers and consumers.  <LI>It supplies provider-optimized message factories.  <LI>It is a factory for <CODE>TemporaryTopics</CODE> and       <CODE>TemporaryQueues</CODE>.  <LI> It provides a way to create <CODE>Queue</CODE> or <CODE>Topic</CODE>     objects for those clients that need to dynamically manipulate     provider-specific destination names.  <LI>It supports a single series of transactions that combine work      spanning its producers and consumers into atomic units.  <LI>It defines a serial order for the messages it consumes and      the messages it produces.  <LI>It retains messages it consumes until they have been      acknowledged.  <LI>It serializes execution of message listeners registered with      its message consumers.  <LI> It is a factory for <CODE>QueueBrowsers</CODE>.</UL><P>A session can create and service multiple message producers andconsumers.<P>One typical use is to have a thread block on a synchronous<CODE>MessageConsumer</CODE> until a message arrives. The thread may thenuse one or more of the <CODE>Session</CODE>'s <CODE>MessageProducer</CODE>s.<P>Once a connection has been started, any session with one or moreregistered message listeners is dedicated to the thread of control thatdelivers messages to it. It is erroneous for client code to use this sessionor any of its constituent objects from another thread of control. Theonly exception to this rule is the use of the session or connection<CODE>close</CODE> method.<P>It should be easy for most clients to partition their work naturallyinto sessions. This model allows clients to start simply and incrementallyadd message processing complexity.<P>The <CODE>close</CODE> method is the only session method that can becalled while some other session method is being executed in another thread.<P>A session may be specified as transacted. Each transactedsession supports a single series of transactions. Each transaction groupsa set of message sends and a set of message receives into an atomic unitof work. In effect, transactions organize a session's input messagestream and output message stream into series of atomic units. When atransaction commits, its atomic unit of input is acknowledged and itsassociated atomic unit of output is sent. If a transaction rollback isdone, the transaction's sent messages are destroyed and the session's inputis automatically recovered.<P>The content of a transaction's input and output units is simply thosemessages that have been produced and consumed within the session's currenttransaction.<P>A transaction is completed using either its session's <CODE>commit</CODE>method or its session's <CODE>rollback</CODE> method. The completion of asession's current transaction automatically begins the next. The result isthat a transacted session always has a current transaction within which itswork is done.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="close"> </a> <h3>close</h3>
+		<pre>VoidFuture&nbsp;<b>close</b>(callback)</pre> 
+	<ul>
+		Closes the session.<P>Since a provider may allocate some resources on behalf of a session,clients should close the resources when they are not needed.<P>There is no need to close the producers and consumersof a closed session.<P>This is an asynchronous call.  The call returns immediately, but theoperation continues until outstanding message listeners or receives havecompleted.  The optional callback passed to <CODE>close</CODE> is calledwhen the session is finally closed.<P>Closing a transacted session must roll back the transactionin progress.<P>This method is the only <CODE>Session</CODE> method that canbe called concurrently.<P>Invoking any other <CODE>Session</CODE> method on a closed sessionmust throw a <CODE>JMSException.IllegalStateException</CODE>. Closing aclosed session must <I>not</I> throw an exception.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Function</i>&nbsp;callback </code> - the callback to invoke when the close operation                           has completed. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>VoidFuture</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to close the                        session due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="commit"> </a> <h3>commit</h3>
+		<pre>VoidFuture&nbsp;<b>commit</b>(callback)</pre> 
+	<ul>
+		Commits all messages done in this transaction and releases any lockscurrently held.<P>This is an asynchronous call.  The call returns immediately, but theoperation continues until client is notified that the broker has processedthe commit or an error has occurred.  The optional callback passed to<CODE>commit</CODE> is called when the operation has completed with successor an exception.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Function</i>&nbsp;callback </code> - the callback to invoke when the close operation                           has completed. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>VoidFuture</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to commit the                        transaction due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> TransactionRolledBackException if the transaction                        is rolled back due to some internal error                        during commit. 
+		</ul>
+		<ul>
+			<code></code> IllegalStateException if the method is not called by a                        transacted session. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createBytesMessage"> </a> <h3>createBytesMessage</h3>
+		<pre>BytesMessage&nbsp;<b>createBytesMessage</b>()</pre> 
+	<ul>
+		Creates a <CODE>BytesMessage</CODE> object. A <CODE>BytesMessage</CODE>object is used to send a message containing a stream of uninterpretedbytes.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>BytesMessage</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to create this message                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createConsumer"> </a> <h3>createConsumer</h3>
+		<pre>MessageConsumer&nbsp;<b>createConsumer</b>(destination, messageSelector)</pre> 
+	<ul>
+		Creates <CODE>MessageConsumer</CODE> for the specified destination.<P>Since <CODE>Queue</CODE> and <CODE>Topic</CODE>both inherit from <CODE>Destination</CODE>, they can be used inthe destination parameter to create a <CODE>MessageConsumer</CODE>.<P>A client uses a <CODE>MessageConsumer</CODE> object to receivemessages that have been published to a destination.<P>The messageSelector parameter is optional.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>destination </code> - the <CODE>Destination</CODE> to access 
+		</ul>
+		<ul>
+			<code>messageSelector </code> - only messages with properties matching the                       message selector expression are delivered. A value                       of null or an empty string indicates that there is                       no message selector for the message consumer. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>MessageConsumer</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the session fails to create a MessageConsumer                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> InvalidDestinationException if an invalid destination                                       is specified. 
+		</ul>
+		<ul>
+			<code></code> InvalidSelectorException if the message selector is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createDurableSubscriber"> </a> <h3>createDurableSubscriber</h3>
+		<pre>TopicSubscriber&nbsp;<b>createDurableSubscriber</b>(topic, durableName, messageSelector, noLocal)</pre> 
+	<ul>
+		Creates a durable subscriber to the specified topic, using amessage selector and specifying whether messages published by itsown connection should be delivered to it.<P>If a client needs to receive all the messages published on atopic, including the ones published while the subscriber is inactive,it uses a durable <CODE>TopicSubscriber</CODE>. The JMS providerretains a record of thisdurable subscription and insures that all messages from the topic'spublishers are retained until they are acknowledged by thisdurable subscriber or they have expired.<P>Sessions with durable subscribers must always provide the sameclient identifier. In addition, each client must specify a name whichuniquely identifies (within client identifier) each durablesubscription it creates. Only one session at a time can have a<CODE>TopicSubscriber</CODE> for a particular durable subscription.An inactive durable subscriber is one that exists butdoes not currently have a message consumer associated with it.<P>A client can change an existing durable subscription by creatinga durable <CODE>TopicSubscriber</CODE> with the same name and a newtopic and/ormessage selector. Changing a durable subscriber is equivalent tounsubscribing (deleting) the old one and creating a new one.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>topic </code> - - the non-temporary <CODE>Topic</CODE> to subscribe to 
+		</ul>
+		<ul>
+			<code>durableName </code> - - the name used to identify this subscription 
+		</ul>
+		<ul>
+			<code>messageSelector </code> - - only messages with properties matching the       message selector expression are delivered. A value of null or       an empty string indicates that there is no message selector       for the message consumer. Optional parameter with null default. 
+		</ul>
+		<ul>
+			<code>noLocal </code> - - if true, inhibits the delivery of messages published       by its own connection. Optional parameter. Default value is false. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>TopicSubscriber</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the session fails to create a subscriber                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> InvalidDestinationException if an invalid topic is specified. 
+		</ul>
+		<ul>
+			<code></code> InvalidSelectorException if the message selector is invalid. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createMapMessage"> </a> <h3>createMapMessage</h3>
+		<pre>MapMessage&nbsp;<b>createMapMessage</b>()</pre> 
+	<ul>
+		Creates a <CODE>MapMessage</CODE> object. A <CODE>MapMessage</CODE>object is used to send a self-defining set of name-value pairs, wherenames are <CODE>String</CODE> objects and values are primitive values.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>MapMessage</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to create this message                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createMessage"> </a> <h3>createMessage</h3>
+		<pre>Message&nbsp;<b>createMessage</b>()</pre> 
+	<ul>
+		Creates a <CODE>Message</CODE> object. The <CODE>Message</CODE>interface is the root interface of all JMS messages. A<CODE>Message</CODE> object holds all thestandard message header information. It can be sent when a messagecontaining only header information is sufficient.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Message</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to create this message                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createProducer"> </a> <h3>createProducer</h3>
+		<pre>MessageProducer&nbsp;<b>createProducer</b>(destination)</pre> 
+	<ul>
+		Creates a <CODE>MessageProducer</CODE> to send messages to the specifieddestination.<P>A client uses a <CODE>MessageProducer</CODE> object to sendmessages to a destination. Since <CODE>Queue</CODE> and <CODE>Topic</CODE>both inherit from <CODE>Destination</CODE>, they can be used inthe destination parameter to create a <CODE>MessageProducer</CODE> object.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>destination </code> - the <CODE>Destination</CODE> to send to,or null if this is a producer which does not have a specifieddestination. 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>MessageProducer</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the session fails to create a MessageProducer                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> InvalidDestinationException if an invalid destinationis specified. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createQueue"> </a> <h3>createQueue</h3>
+		<pre>Queue&nbsp;<b>createQueue</b>(queueName)</pre> 
+	<ul>
+		Creates a queue identity given a <CODE>Queue</CODE> name.<P>This facility is provided where clients need todynamically manipulate queue identity. It allows the creation of aqueue identity with a provider-specific name.<P>Note that this method is not for creating the physical queue.The physical creation of queues is an administrative task and is notto be initiated by the JMS API. The one exception is thecreation of temporary queues, which is accomplished with the<CODE>createTemporaryQueue</CODE> method.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>queueName </code> - the name of this <CODE>Queue</CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Queue</i>&nbsp;</code>a <CODE>Queue</CODE> with the given name 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the session fails to create a queue                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createTemporaryQueue"> </a> <h3>createTemporaryQueue</h3>
+		<pre>TemporaryQueue&nbsp;<b>createTemporaryQueue</b>()</pre> 
+	<ul>
+		Creates a <CODE>TemporaryQueue</CODE> object. Its lifetime will be thatof the <CODE>Connection</CODE> unless it is deleted earlier.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>TemporaryQueue</i>&nbsp;</code>a temporary queue identity 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the session fails to create a temporary queue                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createTemporaryTopic"> </a> <h3>createTemporaryTopic</h3>
+		<pre>TemporaryTopic&nbsp;<b>createTemporaryTopic</b>()</pre> 
+	<ul>
+		Creates a <CODE>TemporaryTopic</CODE> object. Its lifetime will be thatof the <CODE>Connection</CODE> unless it is deleted earlier.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>TemporaryTopic</i>&nbsp;</code>a temporary topic identity 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the session fails to create a temporary                        topic due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createTextMessage"> </a> <h3>createTextMessage</h3>
+		<pre>TextMessage&nbsp;<b>createTextMessage</b>(text)</pre> 
+	<ul>
+		Creates an initialized <CODE>TextMessage</CODE> object. A<CODE>TextMessage</CODE> object is used to senda message containing a <CODE>String</CODE>.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>text </code> - the string used to initialize this message 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>TextMessage</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to create this message                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="createTopic"> </a> <h3>createTopic</h3>
+		<pre>Topic&nbsp;<b>createTopic</b>(topicName)</pre> 
+	<ul>
+		Creates a topic identity given a <CODE>Topic</CODE> name.<P>This facility is provided where clients need todynamically manipulate topic identity. This allows the creation of atopic identity with a provider-specific name.<P>Note that this method is not for creating the physical topic.The physical creation of topics is an administrative task and is notto be initiated by the JMS API. The one exception is thecreation of temporary topics, which is accomplished with the<CODE>createTemporaryTopic</CODE> method.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>topicName </code> - the name of this <CODE>Topic</CODE> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Topic</i>&nbsp;</code>a <CODE>Topic</CODE> with the given name 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the session fails to create a topic                        due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getAcknowledgeMode"> </a> <h3>getAcknowledgeMode</h3>
+		<pre>Number&nbsp;<b>getAcknowledgeMode</b>()</pre> 
+	<ul>
+		Returns the acknowledgement mode of the session. The acknowledgementmode is set at the time that the session is created. If the session istransacted, the acknowledgement mode is ignored.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>If the session is not transacted, returns the                 current acknowledgement mode for the session.                 If the session                 is transacted, returns SESSION_TRANSACTED. 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to return the                        acknowledgment mode due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getMessageListener"> </a> <h3>getMessageListener</h3>
+		<pre>MessageListener&nbsp;<b>getMessageListener</b>()</pre> 
+	<ul>
+		Returns the session's distinguished message listener (optional).
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>MessageListener</i>&nbsp;</code>the message listener associated with this session 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to get the message                        listener due to an internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="getTransacted"> </a> <h3>getTransacted</h3>
+		<pre>boolean&nbsp;<b>getTransacted</b>()</pre> 
+	<ul>
+		Indicates whether the session is in transacted mode.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>boolean</i>&nbsp;</code>true if the session is in transacted mode 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to return the                        transaction mode due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="recover"> </a> <h3>recover</h3>
+		<pre>void&nbsp;<b>recover</b>()</pre> 
+	<ul>
+		Stops message delivery in this session, and restarts message deliverywith the oldest unacknowledged message.<P>All consumers deliver messages in a serial order.Acknowledging a received message automatically acknowledges allmessages that have been delivered to the client.<P>Restarting a session causes it to take the following actions:<UL>  <LI>Stop message delivery  <LI>Mark all messages that might have been delivered but not      acknowledged as "redelivered"  <LI>Restart the delivery sequence including all unacknowledged      messages that had been previously delivered. Redelivered messages      do not have to be delivered in      exactly their original delivery order.</UL>
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to stop and restart                        message delivery due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalStateException if the method is called by a                        transacted session. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="rollback"> </a> <h3>rollback</h3>
+		<pre>VoidFuture&nbsp;<b>rollback</b>()</pre> 
+	<ul>
+		Rolls back any messages done in this transaction and releases any lockscurrently held.<P>This is an asynchronous call.  The call returns immediately, but theoperation continues until the rollback has completed or an error has occurred.The optional callback passed to <CODE>rollback</CODE> is called when theoperation has completed with success or an exception.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>VoidFuture</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to roll back the                        transaction due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> IllegalStateException if the method is not called by a                        transacted session. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="setMessageListener"> </a> <h3>setMessageListener</h3>
+		<pre>void&nbsp;<b>setMessageListener</b>(listener)</pre> 
+	<ul>
+		Sets the session's distinguished message listener (optional).<P>When the distinguished message listener is set, no other form ofmessage receipt in the session canbe used; however, all forms of sending messages are still supported.<P>This is an expert facility not used by regular JMS clients.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Function, MessageListener</i>&nbsp;listener </code> - the message listener to associate with this session 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to set the message                        listener due to an internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="unsubscribe"> </a> <h3>unsubscribe</h3>
+		<pre>void&nbsp;<b>unsubscribe</b>(name)</pre> 
+	<ul>
+		Unsubscribes a durable subscription that has been created by a client.<P>This method deletes the state being maintained on behalf of thesubscriber by its provider.<P>It is erroneous for a client to delete a durable subscriptionwhile there is an active <CODE>MessageConsumer</CODE>or <CODE>TopicSubscriber</CODE> for thesubscription, or while a consumed message is part of a pendingtransaction or has not been acknowledged in the session.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;name </code> - the name used to identify this subscription 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the session fails to unsubscribe to the                        durable subscription due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> InvalidDestinationException if an invalid subscription name                                       is specified. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

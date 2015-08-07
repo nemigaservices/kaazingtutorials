@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+
+    Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+
+-->
+
+<gateway-config xmlns="http://xmlns.kaazing.com/2012/09/gateway">
+
+  
+  <!-- 
+  #############################################################################
+  #############################################################################
+                Kaazing WebSocket Gateway Configuration File
+
+  This configuration file identifies a minimal configuration for
+  Kaazing WebSocket Gateway. For information on using or configuring the Gateway,
+  please download the full version of the product, which contains the demos and
+  documentation.
+  #############################################################################
+  #############################################################################
+  -->
+
+  <!--
+  Property defaults
+
+  Specify the default values for properties which will be substituted when
+  the Gateway starts. You can replace any values in this configuration file
+  with a property using the dollar-sign and curly brace format demonstrated
+  in the <accept> tag of the directory service below. Starting the Gateway
+  replaces all instances of property-name with the value you specify in this
+  section.
+
+  You can supersede property default values by using an environment variable
+  when starting the Gateway. See the "Setting Up Kaazing WebSocket Gateway"
+  guide in the documentation for more information.
+  -->
+  <properties>
+    <property>
+      <name>gateway.hostname</name>
+      <value>localhost</value>
+    </property>
+    <property>
+      <name>gateway.base.port</name>
+      <value>8000</value>
+    </property>
+  </properties>
+
+  <!--
+  Directory service
+
+  The directory service is used to serve static files from the embedded web server
+  within Kaazing WebSocket Gateway. For example, you access the Kaazing 'home'
+  page using this service.
+
+  The <directory> tag specifies the path of your static files relative
+  to GATEWAY_HOME/web, where GATEWAY_HOME is the directory where you
+  installed Kaazing WebSocket Gateway.
+
+  Note: You cannot specify an absolute path in the <directory> tag.
+
+  In this default directory service configuration, the <accept> tag uses two
+  parameters: gateway.hostname and gateway.port.
+
+  You can set parameter definitions in the <properties> section or pass
+  parameters on the command line when starting the Gateway, for example:
+  -Dgateway.hostname=<host or ip address>
+  -->
+  
+  <service>
+    <name>base-directory</name>
+    <description>Directory service for base files</description>
+    <accept>http://${gateway.hostname}:${gateway.base.port}/</accept>
+
+    <type>directory</type>
+    <properties>
+      <directory>/base</directory>
+      <welcome-file>index.html</welcome-file>
+      <error-pages-directory>/error-pages</error-pages-directory>
+      <options>indexes</options>
+    </properties>
+  </service>
+
+  <service>
+    <name>commandcenter-directory</name>
+    <description>Directory service for the Command Center files</description>
+    <accept>http://${gateway.hostname}:${gateway.base.port}/commandcenter</accept>
+
+    <type>directory</type>
+    <properties>
+      <directory>/commandcenter</directory>
+      <welcome-file>index.html</welcome-file>
+      <error-pages-directory>/error-pages</error-pages-directory>
+      <options>indexes</options>
+    </properties>
+  </service>
+
+  <!-- 
+  #############################################################################
+  #############################################################################
+                       Security configuration
+  #############################################################################
+  #############################################################################
+  -->  
+
+  <!-- Security configuration -->
+  <security>
+    <!--
+    The keystore element is used to configure the keystore that contains 
+    encryption keys for secure communications with Kaazing WebSocket Gateway.
+    -->
+    <keystore>
+      <type>JCEKS</type>
+      <file>keystore.db</file>
+      <password-file>keystore.pw</password-file>
+    </keystore>
+    
+    <!--
+    The truststore element is used to configure the truststore that 
+    contains digital certificates for certificate authorities 
+    trusted by Kaazing WebSocket Gateway.
+    -->
+    <truststore>
+      <file>truststore.db</file>
+    </truststore>
+    
+    <!-- 
+    The realm used by the Command Center for authentication. The SNMP
+     management service should be the only one to use this realm. 
+    -->
+    <realm>
+      <name>commandcenter</name>
+      <description>Command Center</description>
+
+      <authentication>
+        <http-challenge-scheme>Application Basic</http-challenge-scheme>
+
+        <http-cookie>kaazingCommandCenter</http-cookie>
+
+        <authorization-timeout>1800</authorization-timeout>
+
+        <login-modules>
+          <!--
+          The login module communicates with a user database to
+          validate user's credentials and to determine a set of
+          authorized roles. By default, the file-based module is used.
+          -->
+          <login-module>
+            <type>file</type>
+            <success>required</success>
+            <options>
+              <file>jaas-config.xml</file>
+            </options>
+          </login-module>
+        </login-modules>
+      </authentication>
+    </realm>
+  </security>
+  
+  <!-- 
+  SNMP Management service.
+  -->
+  <service>
+    <name>SNMP Management</name>
+    <description>SNMP management service</description>
+    <accept>ws://${gateway.hostname}:${gateway.base.port}/snmp</accept>
+
+    <type>management.snmp</type>
+
+    <!-- secure the management using a security realm -->
+    <realm-name>commandcenter</realm-name>
+
+    <!-- configure the authorized user roles -->
+    <authorization-constraint>
+      <require-role>ADMINISTRATOR</require-role>
+    </authorization-constraint>
+
+    <cross-site-constraint>
+      <allow-origin>*</allow-origin>
+    </cross-site-constraint>
+  </service>
+    
+  <!--
+  #############################################################################
+  #############################################################################
+                            Do not remove closing element
+  #############################################################################
+  #############################################################################
+  -->
+
+</gateway-config>

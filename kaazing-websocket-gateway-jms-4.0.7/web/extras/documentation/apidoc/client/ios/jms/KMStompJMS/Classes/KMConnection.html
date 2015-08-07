@@ -1,0 +1,1341 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMConnection Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMConnection Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/clientID">&nbsp;&nbsp;&nbsp;&nbsp;- clientID</option>
+	
+	<option value="//api/name/close">&nbsp;&nbsp;&nbsp;&nbsp;- close</option>
+	
+	<option value="//api/name/createConnectionConsumer:messageSelector:sessionPool:maxMessages:">&nbsp;&nbsp;&nbsp;&nbsp;- createConnectionConsumer:messageSelector:sessionPool:maxMessages:</option>
+	
+	<option value="//api/name/createDurableConnectionConsumer:subscriptionName:messageSelector:sessionPool:maxMessages:">&nbsp;&nbsp;&nbsp;&nbsp;- createDurableConnectionConsumer:subscriptionName:messageSelector:sessionPool:maxMessages:</option>
+	
+	<option value="//api/name/createSession:transacted:">&nbsp;&nbsp;&nbsp;&nbsp;- createSession:transacted:</option>
+	
+	<option value="//api/name/exceptionListener">&nbsp;&nbsp;&nbsp;&nbsp;- exceptionListener</option>
+	
+	<option value="//api/name/metaData">&nbsp;&nbsp;&nbsp;&nbsp;- metaData</option>
+	
+	<option value="//api/name/setClientID:">&nbsp;&nbsp;&nbsp;&nbsp;- setClientID:</option>
+	
+	<option value="//api/name/setExceptionListener:">&nbsp;&nbsp;&nbsp;&nbsp;- setExceptionListener:</option>
+	
+	<option value="//api/name/start">&nbsp;&nbsp;&nbsp;&nbsp;- start</option>
+	
+	<option value="//api/name/stop">&nbsp;&nbsp;&nbsp;&nbsp;- stop</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clientID">clientID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/close">close</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createConnectionConsumer:messageSelector:sessionPool:maxMessages:">createConnectionConsumer:messageSelector:sessionPool:maxMessages:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createDurableConnectionConsumer:subscriptionName:messageSelector:sessionPool:maxMessages:">createDurableConnectionConsumer:subscriptionName:messageSelector:sessionPool:maxMessages:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createSession:transacted:">createSession:transacted:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/exceptionListener">exceptionListener</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/metaData">metaData</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setClientID:">setClientID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setExceptionListener:">setExceptionListener:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/start">start</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stop">stop</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMConnection Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMConnection Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMConnection.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A KMConnection object is a client&rsquo;s active connection to its JMS
+provider.</p>
+
+<p>Connections support concurrent use.</p>
+
+<p>A connection serves several purposes:</p>
+
+<ul>
+<li>It encapsulates an open connection with a JMS provider. It
+typically represents an open TCP/IP socket between a client and
+the service provider software.</li>
+<li>Its creation is where client authentication takes place.</li>
+<li>It can specify a unique client identifier.</li>
+<li>It provides a <a href="../Classes/KMConnectionMetaData.html">KMConnectionMetaData</a> object.</li>
+<li>It supports an optional <a href="../Protocols/KMExceptionListener.html">KMExceptionListener</a> object.</li>
+</ul>
+
+
+<p>Because the creation of a connection involves setting up authentication
+and communication, a connection is a relatively heavyweight
+object. Most clients will do all their messaging with a single connection.
+Other more advanced applications may use several connections. The JMS API
+does not architect a reason for using multiple connections; however, there
+may be operational reasons for doing so.</p>
+
+<p>A JMS client typically creates a connection, one or more sessions,
+and a number of message producers and consumers. When a connection is
+created, it is in stopped mode. That means that no messages are being
+delivered.</p>
+
+<p>It is typical to leave the connection in stopped mode until setup
+is complete (that is, until all message consumers have been
+created).  At that point, the client calls
+the connection&rsquo;s <a href="#//api/name/start">start</a> method, and messages begin arriving at
+the connection&rsquo;s consumers. This setup
+convention minimizes any client confusion that may result from
+asynchronous message delivery while the client is still in the process
+of setting itself up.</p>
+
+<p>A connection can be started immediately, and the setup can be done
+afterwards. Clients that do this must be prepared to handle asynchronous
+message delivery while they are still in the process of setting up.</p>
+
+<p>A message producer can send messages while a connection is stopped.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createSession:transacted:">&ndash;&nbsp;createSession:transacted:</a></code>
+		<span class="tooltip"><p>Creates a Session object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clientID">&ndash;&nbsp;clientID</a></code>
+		<span class="tooltip"><p>Gets the client identifier for this connection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setClientID:">&ndash;&nbsp;setClientID:</a></code>
+		<span class="tooltip"><p>Sets the client identifier for this connection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/metaData">&ndash;&nbsp;metaData</a></code>
+		<span class="tooltip"><p>Gets the metadata for this connection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/exceptionListener">&ndash;&nbsp;exceptionListener</a></code>
+		<span class="tooltip"><p>Gets the ExceptionListener object for this connection.
+Not every Connection has an ExceptionListener
+associated with it.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setExceptionListener:">&ndash;&nbsp;setExceptionListener:</a></code>
+		<span class="tooltip"><p>Sets an exception listener for this connection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/start">&ndash;&nbsp;start</a></code>
+		<span class="tooltip"><p>Starts (or restarts) a connection&rsquo;s delivery of incoming messages.
+A call to start on a connection that has already been
+started is ignored.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
+		<span class="tooltip"><p>Temporarily stops a connection&rsquo;s delivery of incoming messages.
+Delivery can be restarted using the connection&rsquo;s <a href="#//api/name/start">start</a>
+method. When the connection is stopped,
+delivery to all the connection&rsquo;s message consumers is inhibited:
+synchronous receives block, and messages are not delivered to message
+listeners.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/close">&ndash;&nbsp;close</a></code>
+		<span class="tooltip"><p>Closes the connection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createConnectionConsumer:messageSelector:sessionPool:maxMessages:">&ndash;&nbsp;createConnectionConsumer:messageSelector:sessionPool:maxMessages:</a></code>
+		<span class="tooltip"><p>Creates a connection consumer for this connection (optional operation).
+This is an expert facility not used by regular JMS clients.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createDurableConnectionConsumer:subscriptionName:messageSelector:sessionPool:maxMessages:">&ndash;&nbsp;createDurableConnectionConsumer:subscriptionName:messageSelector:sessionPool:maxMessages:</a></code>
+		<span class="tooltip"><p>Create a durable connection consumer for this connection (optional operation).
+This is an expert facility not used by regular JMS clients.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/clientID" title="clientID"></a>
+	<h3 class="subsubtitle method-title">clientID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the client identifier for this connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)clientID</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the unique client identifier</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value is specific to the JMS provider.  It is either preconfigured
+by an administrator in a ConnectionFactory object
+or assigned dynamically by the application by calling the
+setClientID method.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to return
+the client ID for this connection due
+to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/close" title="close"></a>
+	<h3 class="subsubtitle method-title">close</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Closes the connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)close</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Since a provider typically allocates significant resources outside
+the JVM on behalf of a connection, clients should close these resources
+when they are not needed. Relying on garbage collection to eventually
+reclaim these resources may not be timely enough.</p>
+
+<p>There is no need to close the sessions, producers, and consumers
+of a closed connection.</p>
+
+<p>Closing a connection causes all temporary destinations to be
+deleted.</p>
+
+<p>When this method is invoked, it should not return until message
+processing has been shut down in an orderly fashion. This means that all
+message
+listeners that may have been running have returned, and that all pending
+receives have returned. A close terminates all pending message receives
+on the connection&rsquo;s sessions' consumers. The receives may return with a
+message or with null, depending on whether there was a message available
+at the time of the close. If one or more of the connection&rsquo;s sessions'
+message listeners is processing a message at the time when connection
+close is invoked, all the facilities of the connection and
+its sessions must remain available to those listeners until they return
+control to the JMS provider.</p>
+
+<p>Closing a connection causes any of its sessions' transactions
+in progress to be rolled back. In the case where a session&rsquo;s
+work is coordinated by an external transaction manager, a session&rsquo;s
+commit and rollback methods are
+not used and the result of a closed session&rsquo;s work is determined
+later by the transaction manager.</p>
+
+<p>Closing a connection does NOT force an
+acknowledgment of client-acknowledged sessions.</p>
+
+<p>Invoking the acknowledge method of a received message
+from a closed connection&rsquo;s session must throw a
+<a href="../Classes/KMIllegalStateException.html">KMIllegalStateException</a>.  Closing a closed connection must
+NOT throw an exception.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to close the
+connection due to some internal error. For
+example, a failure to release resources
+or to close a socket connection can cause
+this exception to be thrown.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createConnectionConsumer:messageSelector:sessionPool:maxMessages:" title="createConnectionConsumer:messageSelector:sessionPool:maxMessages:"></a>
+	<h3 class="subsubtitle method-title">createConnectionConsumer:messageSelector:sessionPool:maxMessages:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a connection consumer for this connection (optional operation).
+This is an expert facility not used by regular JMS clients.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMConnectionConsumer *)createConnectionConsumer:(KMDestination *)<em>destination</em> messageSelector:(NSString *)<em>messageSelector</em> sessionPool:(KMServerSessionPool *)<em>sessionPool</em> maxMessages:(int)<em>maxMessages</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the destination to access</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered.  A value of null or
+an empty string indicates that there is no message selector
+for the message consumer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sessionPool</em></dt>
+			<dd><p>the server session pool to associate with this
+connection consumer</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxMessages</em></dt>
+			<dd><p>the maximum number of messages that can be
+assigned to a server session at one time</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the connection consumer</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the Connection object fails
+to create a connection consumer due to some
+internal error or invalid arguments for
+sessionPool and
+messageSelector.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid destination is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidSelectorException</em></dt>
+			<dd><p>if the message selector is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMConnectionConsumer.html">KMConnectionConsumer</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createDurableConnectionConsumer:subscriptionName:messageSelector:sessionPool:maxMessages:" title="createDurableConnectionConsumer:subscriptionName:messageSelector:sessionPool:maxMessages:"></a>
+	<h3 class="subsubtitle method-title">createDurableConnectionConsumer:subscriptionName:messageSelector:sessionPool:maxMessages:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a durable connection consumer for this connection (optional operation).
+This is an expert facility not used by regular JMS clients.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMConnectionConsumer *)createDurableConnectionConsumer:(KMTopic *)<em>topic</em> subscriptionName:(NSString *)<em>subscriptionName</em> messageSelector:(NSString *)<em>messageSelector</em> sessionPool:(KMServerSessionPool *)<em>sessionPool</em> maxMessages:(int)<em>maxMessages</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>topic</em></dt>
+			<dd><p>topic to access</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>subscriptionName</em></dt>
+			<dd><p>durable subscription name</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageSelector</em></dt>
+			<dd><p>only messages with properties matching the
+message selector expression are delivered.  A value of null or
+an empty string indicates that there is no message selector
+for the message consumer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sessionPool</em></dt>
+			<dd><p>the server session pool to associate with this
+durable connection consumer</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxMessages</em></dt>
+			<dd><p>the maximum number of messages that can be
+assigned to a server session at one time</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the durable connection consumer</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the Connection object fails
+to create a connection consumer due to some
+internal error or invalid arguments for
+sessionPool and
+messageSelector.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if an invalid destination
+is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidSelectorException</em></dt>
+			<dd><p>if the message selector is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMConnectionConsumer.html">KMConnectionConsumer</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createSession:transacted:" title="createSession:transacted:"></a>
+	<h3 class="subsubtitle method-title">createSession:transacted:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a Session object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMSession *)createSession:(int)<em>acknowledgeMode</em> transacted:(BOOL)<em>transacted</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>acknowledgeMode</em></dt>
+			<dd><p>indicates whether the consumer or the
+client will acknowledge any messages it receives; ignored if the session
+is transacted. Legal values are KMSessionAutoAcknowledge,
+KMSessionClientAcknowledge, and KMSessionDupsOKAcknowledge.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>transacted</em></dt>
+			<dd><p>indicates whether the session is transacted</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a newly created session</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the Connection object fails
+to create a session due to some internal error or
+lack of support for the specific transaction
+and acknowledgement mode.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMSession.html">KMSession</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/exceptionListener" title="exceptionListener"></a>
+	<h3 class="subsubtitle method-title">exceptionListener</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the ExceptionListener object for this connection.
+Not every Connection has an ExceptionListener
+associated with it.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;KMExceptionListener&gt;)exceptionListener</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the ExceptionListener for this connection, or null.
+if no ExceptionListener is associated
+with this connection.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to
+get the ExceptionListener for this
+connection.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setExceptionListener:">&ndash; setExceptionListener:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/metaData" title="metaData"></a>
+	<h3 class="subsubtitle method-title">metaData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the metadata for this connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMConnectionMetaData *)metaData</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the connection metadata</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to
+get the connection metadata for this connection.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMConnectionMetaData.html">KMConnectionMetaData</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setClientID:" title="setClientID:"></a>
+	<h3 class="subsubtitle method-title">setClientID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the client identifier for this connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setClientID:(NSString *)<em>clientID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>clientID</em></dt>
+			<dd><p>the unique client identifier</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The preferred way to assign a JMS client&rsquo;s client identifier is for
+it to be configured in a client-specific ConnectionFactory
+object and transparently assigned to the Connection object
+it creates.</p>
+
+<p>Alternatively, a client can set a connection&rsquo;s client identifier
+using a provider-specific value. The facility to set a connection&rsquo;s
+client identifier explicitly is not a mechanism for overriding the
+identifier that has been administratively configured. It is provided
+for the case where no administratively specified identifier exists.
+If one does exist, an attempt to change it by setting it must throw a
+<a href="../Classes/KMIllegalStateException.html">KMIllegalStateException</a>. If a client sets the client identifier
+explicitly, it must do so immediately after it creates the connection
+and before any other
+action on the connection is taken. After this point, setting the
+client identifier is a programming error that should throw a
+<a href="../Classes/KMIllegalStateException.html">KMIllegalStateException</a>.</p>
+
+<p>The purpose of the client identifier is to associate a connection and
+its objects with a state maintained on behalf of the client by a
+provider. The only such state identified by the JMS API is that required
+to support durable subscriptions.</p>
+
+<p>If another connection with the same <a href="#//api/name/clientID">clientID</a> is already running when
+this method is called, the JMS provider should detect the duplicate ID and throw
+a <a href="../Classes/KMInvalidClientIDException.html">KMInvalidClientIDException</a>.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to
+set the client ID for this connection due
+to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidClientIDException</em></dt>
+			<dd><p>if the JMS client specifies an
+invalid or duplicate client ID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMIllegalStateException</em></dt>
+			<dd><p>if the JMS client attempts to set
+a connection&rsquo;s client ID at the wrong time or
+when it has been administratively configured.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setExceptionListener:" title="setExceptionListener:"></a>
+	<h3 class="subsubtitle method-title">setExceptionListener:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets an exception listener for this connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setExceptionListener:(id&lt;KMExceptionListener&gt;)<em>listener</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>listener</em></dt>
+			<dd><p>the exception listener</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If a JMS provider detects a serious problem with a connection, it
+informs the connection&rsquo;s ExceptionListener, if one has been
+registered. It does this by calling the listener&rsquo;s
+onException method, passing it a <a href="../Classes/KMJMSException.html">KMJMSException</a>
+object describing the problem.</p>
+
+<p>An exception listener allows a client to be notified of a problem
+asynchronously.
+Some connections only consume messages, so they would have no other
+way to learn their connection has failed.</p>
+
+<p>A connection serializes execution of its
+ExceptionListener.</p>
+
+<p>A JMS provider should attempt to resolve connection problems
+itself before it notifies the client of them.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to
+set the exception listener for this connection.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/exceptionListener">&ndash; exceptionListener</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/start" title="start"></a>
+	<h3 class="subsubtitle method-title">start</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts (or restarts) a connection&rsquo;s delivery of incoming messages.
+A call to start on a connection that has already been
+started is ignored.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)start</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to start
+message delivery due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/stop">&ndash; stop</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stop" title="stop"></a>
+	<h3 class="subsubtitle method-title">stop</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Temporarily stops a connection&rsquo;s delivery of incoming messages.
+Delivery can be restarted using the connection&rsquo;s <a href="#//api/name/start">start</a>
+method. When the connection is stopped,
+delivery to all the connection&rsquo;s message consumers is inhibited:
+synchronous receives block, and messages are not delivered to message
+listeners.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stop</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This call blocks until receives and/or message listeners in progress
+have completed.</p>
+
+<p>Stopping a connection has no effect on its ability to send messages.
+A call to stop on a connection that has already been
+stopped is ignored.</p>
+
+<p>A call to stop must not return until delivery of messages
+has paused. This means that a client can rely on the fact that none of
+its message listeners will be called and that all threads of control
+waiting for receive calls to return will not return with a
+message until the
+connection is restarted. The receive timers for a stopped connection
+continue to advance, so receives may time out while the connection is
+stopped.</p>
+
+<p>If message listeners are running when stop is invoked,
+the stop call must
+wait until all of them have returned before it may return. While these
+message listeners are completing, they must have the full services of the
+connection available to them.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to stop
+message delivery due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/start">&ndash; start</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

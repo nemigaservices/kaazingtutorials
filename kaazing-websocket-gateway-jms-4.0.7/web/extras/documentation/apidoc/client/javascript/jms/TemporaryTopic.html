@@ -1,0 +1,244 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: TemporaryTopic</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class TemporaryTopic</h2>
+
+
+	Extends <a href="Topic.html">Topic</a>.<br/>
+
+
+<p>
+A <CODE>TemporaryTopic</CODE> object is a unique <CODE>Topic</CODE> objectcreated for the duration of a <CODE>Connection</CODE>. It is asystem-defined topic that can be consumed only by the<CODE>Connection</CODE> that created it.<P>A <CODE>TemporaryTopic</CODE> object can be created either at the<CODE>Session</CODE> or <CODE>TopicSession</CODE> level. Creating it at the<CODE>Session</CODE> level allows the <CODE>TemporaryTopic</CODE> to participatein the same transaction with objects from the PTP domain.If a <CODE>TemporaryTopic</CODE> is  created at the<CODE>TopicSession</CODE>, it will onlybe able participate in transactions with objects from the Pub/Sub domain.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#TemporaryTopic">TemporaryTopic</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+A <CODE>TemporaryTopic</CODE> object is a unique <CODE>Topic</CODE> objectcreated for the duration of a <CODE>Connection</CODE>.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#deleteTopic">deleteTopic</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deletes this temporary topic.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+		
+		<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+			<td>
+				<b>Methods inherited from class <a href="Topic.html">Topic</a></b>
+			</td>
+		</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Topic.html#getTopicName">getTopicName</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Topic.html#toString">toString</a>()
+				</td>
+			</tr>
+		
+		
+	</table>
+	<br/>
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="TemporaryTopic"> </a>
+<h3>TemporaryTopic</h3>
+
+	<pre><b>TemporaryTopic</b>()</pre>
+	<ul>
+	   
+A <CODE>TemporaryTopic</CODE> object is a unique <CODE>Topic</CODE> objectcreated for the duration of a <CODE>Connection</CODE>. It is asystem-defined topic that can be consumed only by the<CODE>Connection</CODE> that created it.<P>A <CODE>TemporaryTopic</CODE> object can be created either at the<CODE>Session</CODE> or <CODE>TopicSession</CODE> level. Creating it at the<CODE>Session</CODE> level allows the <CODE>TemporaryTopic</CODE> to participatein the same transaction with objects from the PTP domain.If a <CODE>TemporaryTopic</CODE> is  created at the<CODE>TopicSession</CODE>, it will onlybe able participate in transactions with objects from the Pub/Sub domain.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="deleteTopic"> </a> <h3>deleteTopic</h3>
+		<pre>void&nbsp;<b>deleteTopic</b>()</pre> 
+	<ul>
+		Deletes this temporary topic. If there are existing subscribersstill using it, a <CODE>JMSException</CODE> will be thrown.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to delete the                        temporary topic due to some internal error. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

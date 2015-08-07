@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../../print.css" type="text/css" media="print">
+<title>com.kaazing.gateway.client.security Summary</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'com.kaazing.gateway.client.security Package - API Documentation';
+				var baseRef = '../../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../all-classes.html')" href="../../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../../index-list.html')" href="../../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../../index.html?com/kaazing/gateway/client/security/package-detail.html&amp;com/kaazing/gateway/client/security/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Package&nbsp;com.kaazing.gateway.client.security</td><td align="right" id="subNav" class="titleTableSubNav"><a href="package-detail.html#classSummary">Classes</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Package com.kaazing.gateway.client.security"); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,true,false);}
+--></script>
+<div class="MainContent">
+<br>
+<br>
+<hr>
+<a name="classSummary"></a>
+<div class="summaryTableTitle">Classes</div>
+<table class="summaryTable" cellspacing="0" cellpadding="3">
+<tr>
+<th>&nbsp;</th><th width="30%">Class</th><th width="70%">Description</th>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="BasicChallengeHandler.html">BasicChallengeHandler</a></td><td class="summaryTableLastCol">
+ Challenge handler for Basic authentication as defined in <a href="http://tools.ietf.org/html/rfc2617#section-2">RFC 2617.</a>
+  <p>This BasicChallengeHandler can be loaded and instantiated using <code>ChallengeHandlers.load(clazz:Class)</code>,
+ and registered at a location using <code>DispatchChallengeHandler.register(String, ChallengeHandler)</code>.<p/>
+ 
+ <p>In addition, one can install general and realm-specific <code>LoginHandler</code> objects onto this
+ <code>BasicChallengeHandler</code> to assist in handling challenges associated
+ with any or specific realms.<p/>
+  <p>The following example loads an instance of a <code>BasicChallengeHandler</code>, sets a login
+ handler onto it and registers the basic handler at a URI location.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ChallengeHandler.html">ChallengeHandler</a></td><td class="summaryTableLastCol">
+ A ChallengeHandler is responsible for producing responses to HTTP 401 authentication challenges.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ChallengeHandlers.html">ChallengeHandlers</a></td><td class="summaryTableLastCol">
+ Responsible for both loading fresh <code>ChallengeHandler</code> instances
+ and managing a concept of a default challenge handler.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ChallengeRequest.html">ChallengeRequest</a></td><td class="summaryTableLastCol">
+ An immutable object representing the challenge presented by the server when the client accessed
+ the URI represented by a location.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ChallengeResponse.html">ChallengeResponse</a></td><td class="summaryTableLastCol">
+ A challenge response contains a byte array representing the response to the server,
+ and a reference to the next challenge handler to handle any further challenges for the request.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="ChallengeResponseFuture.html">ChallengeResponseFuture</a></td><td class="summaryTableLastCol">
+  Future-based support for asynchronous functions returning a value.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="DispatchChallengeHandler.html">DispatchChallengeHandler</a></td><td class="summaryTableLastCol">
+ A <code>DispatchChallengeHandler</code> is responsible for dispatching challenge requests
+ to appropriate challenge handlers when challenges
+ arrive from specific URI locations in HTTP 401 responses.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="KerberosChallengeHandler.html">KerberosChallengeHandler</a></td><td class="summaryTableLastCol">
+ A <code>KerberosChallengeHandler</code>, when registered with the <code>DispatchChallengeHandler</code>
+ can be used to directly respond to "Negotiate" challenges where Kerberos-generated authentication
+ credentials are required.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="LoginHandler.html">LoginHandler</a></td><td class="summaryTableLastCol">
+ A login handler is responsible for obtaining credentials from an arbitrary
+ source.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="NegotiableChallengeHandler.html">NegotiableChallengeHandler</a></td><td class="summaryTableLastCol">
+ A <code>NegotiableChallengeHandler</code> can be used to directly respond to
+ "Negotiate" challenges, and in addition, can be used indirectly in conjunction
+ with a <code>NegotiateChallengeHandler</code>
+ to assist in the construction of a challenge response using object identifiers.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="NegotiateChallengeHandler.html">NegotiateChallengeHandler</a></td><td class="summaryTableLastCol">
+ A Negotiate Challenge Handler handles initial empty "Negotiate" challenges from the
+ server.</td>
+</tr>
+</table>
+<p></p>
+<div>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</div>
+</body>
+</html>
+<!-- -->

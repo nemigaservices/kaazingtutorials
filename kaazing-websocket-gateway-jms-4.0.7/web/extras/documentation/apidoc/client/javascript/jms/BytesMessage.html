@@ -1,0 +1,1533 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JsDoc: BytesMessage</title>
+	<style type="text/css">
+		body { background-color: #FFFFFF; }
+		.TableHeadingColor { background: #CCCCFF; }
+		.TableSubHeadingColor { background: #EEEEFF; }
+		.TableRowColor { background: #FFFFFF; }
+		
+		.FrameTitleFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameHeadingFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.FrameItemFont
+		{
+			font-size: 10pts;
+			font-family: Helvetica, Arial, san-serif;
+		}
+		
+		.NavBar
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #FFFFFF;
+		}
+		
+		.jsdoc_ctime
+		{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 9pt;
+			text-align: right;
+		}
+	</style>
+</head>
+
+<body>
+
+<table style="width: 100%">
+<tr>
+<td class="NavBar" valign="top"><font size="-2">SUMMARY:&nbsp;<a href="#field_summary">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_summary">CONSTR</a>&nbsp;|&nbsp;<a href="#method_summary">METHOD</a></font></td>
+<td class="NavBar" valign="top"><font size="-2">DETAIL:&nbsp;<a href="#field_detail">FIELD</a>&nbsp;|&nbsp;<a href="#constructor_detail">CONSTR</a>&nbsp;|&nbsp;<a href="#method_detail">METHOD</a></font></td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Class BytesMessage</h2>
+
+
+	Extends <a href="Message.html">Message</a>.<br/>
+
+
+<p>
+A <CODE>BytesMessage</CODE> object is used to send a message containing astream of uninterpreted bytes. It inherits from the <CODE>Message</CODE>interface and adds a bytesmessage body. The receiver of the message supplies the interpretationof the bytes.<P>This message type is for client encoding of existing message formats.<P>Although the JMS API allows the use of message properties with bytemessages, they are typically not used, since the inclusion of propertiesmay affect the format.<P>When the message is first created, and when <CODE>clearBody</CODE>is called, the body of the message is in write-only mode. After thefirst call to <CODE>reset</CODE> has been made, the message body is inread-only mode.After a message has been sent, the client that sent it can retain andmodify it without affecting the message that has been sent. The same messageobject can be sent multiple times.When a message has been received, the provider has called<CODE>reset</CODE> so that the message body is in read-only mode for the client.<P>If <CODE>clearBody</CODE> is called on a message in read-only mode,the message body is cleared and the message is in write-only mode.<P>If a client attempts to read a message in write-only mode, a<CODE>MessageNotReadableException</CODE> is thrown.<P>If a client attempts to write a message in read-only mode, a<CODE>MessageNotWriteableException</CODE> is thrown.</p>
+
+
+
+
+<hr>
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<a name="constructor_summary"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+	<td colspan=2><font size="+2"><b>Constructor Summary</b></font></td>
+</tr>
+
+	<tr bgcolor="white" class="TableRowColor">
+	   <td>
+	
+		<code>
+		<b><a href="#BytesMessage">BytesMessage</a></b>()
+		</code>
+		  <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  
+A <CODE>BytesMessage</CODE> object is used to send a message containing astream of uninterpreted bytes.
+		  </td>
+	</tr>
+
+</table>
+&nbsp;
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=2>
+			<font size="+2"> <b>Method Summary</b></font>
+		</td>
+	</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#getBodyLength">getBodyLength</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gets the number of bytes of the message body when the messageis in read-only mode.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;boolean
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readBoolean">readBoolean</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a <code>boolean</code> from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readByte">readByte</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a signed 8-bit value from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readBytes">readBytes</a></b>(value, len) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a portion of the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readChar">readChar</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a Unicode character value from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readDouble">readDouble</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a <code>double</code> from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readFloat">readFloat</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a <code>float</code> from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readInt">readInt</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a signed 32-bit integer from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readLong">readLong</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a signed 64-bit integer from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readShort">readShort</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a signed 16-bit number from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readUnsignedByte">readUnsignedByte</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads an unsigned 8-bit number from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;Number
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readUnsignedShort">readUnsignedShort</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads an unsigned 16-bit number from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;String
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#readUTF">readUTF</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reads a string that has been encoded using a modified UTF-8format from the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#reset">reset</a></b>() </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Puts the message body in read-only mode and repositions the stream ofbytes to the beginning.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeBoolean">writeBoolean</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes a <code>boolean</code> to the bytes message stream as a 1-bytevalue.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeByte">writeByte</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes a <code>byte</code> to the bytes message stream as a 1-bytevalue.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeBytes">writeBytes</a></b>(value, offset, len) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes a portion of a byte array to the bytes message stream.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeChar">writeChar</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes a <code>char</code> to the bytes message stream as a 2-bytevalue, high byte first.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeDouble">writeDouble</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes the <code>double</code> value to the bytes messagestream as an 8-byte quantity.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeFloat">writeFloat</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes a <code>float</code> value to the bytes messagestream as a 4-byte quantity.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeInt">writeInt</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes an <code>int</code> to the bytes message stream as four bytes,high byte first.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeLong">writeLong</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes a <code>long</code> to the bytes message stream as eight bytes,high byte first.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeShort">writeShort</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes a <code>short</code> to the bytes message stream as two bytes,high byte first.
+ 
+			</td>
+		</tr>
+	
+		<tr bgcolor="white" class="TableRowColor">
+			<td align="right" valign="top" width="1%">
+				<font size="-1"><code>
+				&nbsp;void
+				</code></font> 
+			</td>
+			<td>
+				<code> <b> <a href="#writeUTF">writeUTF</a></b>(value) </code> 
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writes a string to the bytes message stream using UTF-8 encoding in amachine-independent manner.
+ 
+			</td>
+		</tr>
+	
+</table>
+&nbsp;
+
+<!-- ========== EVENT SUMMARY =========== -->
+
+
+
+<!-- ========== INHERITED METHODS SUMMARY =========== -->
+
+	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+		
+		<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+			<td>
+				<b>Methods inherited from class <a href="Message.html">Message</a></b>
+			</td>
+		</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSMessageID">getJMSMessageID</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSMessageID">setJMSMessageID</a>(id)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSTimestamp">getJMSTimestamp</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSTimestamp">setJMSTimestamp</a>(timestamp)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSCorrelationID">setJMSCorrelationID</a>(correlationID)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSCorrelationID">getJMSCorrelationID</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSReplyTo">getJMSReplyTo</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSReplyTo">setJMSReplyTo</a>(replyTo)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSDestination">getJMSDestination</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSDestination">setJMSDestination</a>(destination)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSDeliveryMode">getJMSDeliveryMode</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSDeliveryMode">setJMSDeliveryMode</a>(deliveryMode)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSRedelivered">getJMSRedelivered</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSRedelivered">setJMSRedelivered</a>(redelivered)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSType">getJMSType</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSType">setJMSType</a>(type)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSExpiration">getJMSExpiration</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSExpiration">setJMSExpiration</a>(expiration)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getJMSPriority">getJMSPriority</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setJMSPriority">setJMSPriority</a>(priority)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#clearProperties">clearProperties</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#propertyExists">propertyExists</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getBooleanProperty">getBooleanProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getByteProperty">getByteProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getShortProperty">getShortProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getIntProperty">getIntProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getLongProperty">getLongProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getFloatProperty">getFloatProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getDoubleProperty">getDoubleProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getStringProperty">getStringProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getObjectProperty">getObjectProperty</a>(name)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setBooleanProperty">setBooleanProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setByteProperty">setByteProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setShortProperty">setShortProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setIntProperty">setIntProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setLongProperty">setLongProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setFloatProperty">setFloatProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setDoubleProperty">setDoubleProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setStringProperty">setStringProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#setObjectProperty">setObjectProperty</a>(name, value)
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#getPropertyNames">getPropertyNames</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#acknowledge">acknowledge</a>()
+				</td>
+			</tr>
+		
+			<tr bgcolor="#EEEEFF" class="TableSubHeadingColor">
+				<td>
+				<a href="Message.html#clearBody">clearBody</a>()
+				</td>
+			</tr>
+		
+		
+	</table>
+	<br/>
+
+<br/>
+
+<!-- ========== END INHERITED METHODS SUMMARY =========== -->
+
+<!-- ============ FIELD DETAIL START ========= -->
+
+<!-- ============ FIELD DETAIL END ========== -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL START ======== -->
+<a name="constructor_detail"> </a>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+   <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+      <td colspan=1>
+      <font size="+2"><b>Constructor Detail</b></font>
+      </td>
+   </tr>
+
+</table>
+
+<a name="BytesMessage"> </a>
+<h3>BytesMessage</h3>
+
+	<pre><b>BytesMessage</b>()</pre>
+	<ul>
+	   
+A <CODE>BytesMessage</CODE> object is used to send a message containing astream of uninterpreted bytes. It inherits from the <CODE>Message</CODE>interface and adds a bytesmessage body. The receiver of the message supplies the interpretationof the bytes.<P>This message type is for client encoding of existing message formats.<P>Although the JMS API allows the use of message properties with bytemessages, they are typically not used, since the inclusion of propertiesmay affect the format.<P>When the message is first created, and when <CODE>clearBody</CODE>is called, the body of the message is in write-only mode. After thefirst call to <CODE>reset</CODE> has been made, the message body is inread-only mode.After a message has been sent, the client that sent it can retain andmodify it without affecting the message that has been sent. The same messageobject can be sent multiple times.When a message has been received, the provider has called<CODE>reset</CODE> so that the message body is in read-only mode for the client.<P>If <CODE>clearBody</CODE> is called on a message in read-only mode,the message body is cleared and the message is in write-only mode.<P>If a client attempts to read a message in write-only mode, a<CODE>MessageNotReadableException</CODE> is thrown.<P>If a client attempts to write a message in read-only mode, a<CODE>MessageNotWriteableException</CODE> is thrown.
+	</ul>
+	
+	<!-- PARAMETERS START -->
+	
+	<!-- PARAMETERS END -->
+
+<hr/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ======= -->
+
+<a name="method_detail"> </a> 
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+		<td colspan=1>
+			<font size="+2"> <b>Method Detail</b></font> 
+		</td>
+	</tr>
+</table>
+
+
+	<a name="getBodyLength"> </a> <h3>getBodyLength</h3>
+		<pre>Number&nbsp;<b>getBodyLength</b>()</pre> 
+	<ul>
+		Gets the number of bytes of the message body when the messageis in read-only mode. The value returned can be used to allocatea byte array. The value returned is the entire length of the messagebody, regardless of where the pointer for reading the messageis currently located.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>number of bytes in the message 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readBoolean"> </a> <h3>readBoolean</h3>
+		<pre>boolean&nbsp;<b>readBoolean</b>()</pre> 
+	<ul>
+		Reads a <code>boolean</code> from the bytes message stream.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>boolean</i>&nbsp;</code>the <code>boolean</code> value read 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readByte"> </a> <h3>readByte</h3>
+		<pre>Number&nbsp;<b>readByte</b>()</pre> 
+	<ul>
+		Reads a signed 8-bit value from the bytes message stream.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the next byte from the bytes message stream as a signed 8-bit<code>byte</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readBytes"> </a> <h3>readBytes</h3>
+		<pre>Number&nbsp;<b>readBytes</b>(value, len)</pre> 
+	<ul>
+		Reads a portion of the bytes message stream.<P>If the length of array <code>value</code> is less than the number ofbytes remaining to be read from the stream, the array shouldbe filled. A subsequent call reads the next increment, and so on.<P>If the number of bytes remaining in the stream is less than thelength ofarray <code>value</code>, the bytes should be read into the array.The return value of the total number of bytes read will be less thanthe length of the array, indicating that there are no more bytes leftto be read from the stream. The next read of the stream returns -1.<p> If <code>length</code> is negative, or<code>length</code> is greater than the length of the array<code>value</code>, then an <code>IndexOutOfBoundsException</code> isthrown. No bytes will be read from the stream for this exception case.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Array</i>&nbsp;value </code> - the buffer into which the data is read 
+		</ul>
+		<ul>
+			<code><i>Number</i>&nbsp;len </code> - the number of bytes to read; must be less than or equal to       <code>value.length</code> 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the total number of bytes read into the buffer, or -1 ifthere is no more data because the end of the stream has been reached 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readChar"> </a> <h3>readChar</h3>
+		<pre>String&nbsp;<b>readChar</b>()</pre> 
+	<ul>
+		Reads a Unicode character value from the bytes message stream.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>a character encoded as a String representing the next two bytesfrom the bytes message stream as a Unicode character 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readDouble"> </a> <h3>readDouble</h3>
+		<pre>Number&nbsp;<b>readDouble</b>()</pre> 
+	<ul>
+		Reads a <code>double</code> from the bytes message stream. (Not Implemented.)
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the next eight bytes from the bytes message stream, interpretedas a <code>double</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readFloat"> </a> <h3>readFloat</h3>
+		<pre>Number&nbsp;<b>readFloat</b>()</pre> 
+	<ul>
+		Reads a <code>float</code> from the bytes message stream. (Not Implemented.)
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the next four bytes from the bytes message stream, interpretedas a <code>float</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readInt"> </a> <h3>readInt</h3>
+		<pre>Number&nbsp;<b>readInt</b>()</pre> 
+	<ul>
+		Reads a signed 32-bit integer from the bytes message stream.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the next four bytes from the bytes message stream, interpretedas an <code>int</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readLong"> </a> <h3>readLong</h3>
+		<pre>Number&nbsp;<b>readLong</b>()</pre> 
+	<ul>
+		Reads a signed 64-bit integer from the bytes message stream. (Not Implemented.)
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the next eight bytes from the bytes message stream, interpretedas a <code>long</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readShort"> </a> <h3>readShort</h3>
+		<pre>Number&nbsp;<b>readShort</b>()</pre> 
+	<ul>
+		Reads a signed 16-bit number from the bytes message stream.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the next two bytes from the bytes message stream, interpreted asa signed 16-bit number 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readUnsignedByte"> </a> <h3>readUnsignedByte</h3>
+		<pre>Number&nbsp;<b>readUnsignedByte</b>()</pre> 
+	<ul>
+		Reads an unsigned 8-bit number from the bytes message stream.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the next byte from the bytes message stream, interpreted as anunsigned 8-bit number 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readUnsignedShort"> </a> <h3>readUnsignedShort</h3>
+		<pre>Number&nbsp;<b>readUnsignedShort</b>()</pre> 
+	<ul>
+		Reads an unsigned 16-bit number from the bytes message stream.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;</code>the next two bytes from the bytes message stream, interpreted asan unsigned 16-bit integer 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="readUTF"> </a> <h3>readUTF</h3>
+		<pre>String&nbsp;<b>readUTF</b>()</pre> 
+	<ul>
+		Reads a string that has been encoded using a modified UTF-8format from the bytes message stream.<P>For more information on the UTF-8 format, see "File System SafeUCS Transformation Format (FSS_UTF)", X/Open Preliminary Specification,X/Open Company Ltd., Document Number: P316. This information alsoappears in ISO/IEC 10646, Annex P.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>String</i>&nbsp;</code>a Unicode string from the bytes message stream 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to read the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageEOFException if unexpected end of bytes stream has                               been reached. 
+		</ul>
+		<ul>
+			<code></code> MessageNotReadableException if the message is in write-only                                       mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="reset"> </a> <h3>reset</h3>
+		<pre>void&nbsp;<b>reset</b>()</pre> 
+	<ul>
+		Puts the message body in read-only mode and repositions the stream ofbytes to the beginning.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to reset the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageFormatException if the message has an invalid                        format. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeBoolean"> </a> <h3>writeBoolean</h3>
+		<pre>void&nbsp;<b>writeBoolean</b>(value)</pre> 
+	<ul>
+		Writes a <code>boolean</code> to the bytes message stream as a 1-bytevalue.The value <code>true</code> is written as the value<code>(byte)1</code>; the value <code>false</code> is written asthe value <code>(byte)0</code>.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code>value </code> - the <code>boolean</code> value to be written 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeByte"> </a> <h3>writeByte</h3>
+		<pre>void&nbsp;<b>writeByte</b>(value)</pre> 
+	<ul>
+		Writes a <code>byte</code> to the bytes message stream as a 1-bytevalue.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;value </code> - the <code>byte</code> value to be written 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeBytes"> </a> <h3>writeBytes</h3>
+		<pre>void&nbsp;<b>writeBytes</b>(value, offset, len)</pre> 
+	<ul>
+		Writes a portion of a byte array to the bytes message stream.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Array</i>&nbsp;value </code> - the byte array value to be written 
+		</ul>
+		<ul>
+			<code><i>Number</i>&nbsp;offset </code> - the initial offset within the byte array 
+		</ul>
+		<ul>
+			<code><i>Number</i>&nbsp;len </code> - the number of bytes to use 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeChar"> </a> <h3>writeChar</h3>
+		<pre>void&nbsp;<b>writeChar</b>(value)</pre> 
+	<ul>
+		Writes a <code>char</code> to the bytes message stream as a 2-bytevalue, high byte first.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;value </code> - the <code>char</code> value to be written 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeDouble"> </a> <h3>writeDouble</h3>
+		<pre>void&nbsp;<b>writeDouble</b>(value)</pre> 
+	<ul>
+		Writes the <code>double</code> value to the bytes messagestream as an 8-byte quantity. (Not Implemented.)
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;value </code> - the <code>double</code> value to be written 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeFloat"> </a> <h3>writeFloat</h3>
+		<pre>void&nbsp;<b>writeFloat</b>(value)</pre> 
+	<ul>
+		Writes a <code>float</code> value to the bytes messagestream as a 4-byte quantity. (Not Implemented.)
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;value </code> - the <code>float</code> value to be written 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeInt"> </a> <h3>writeInt</h3>
+		<pre>void&nbsp;<b>writeInt</b>(value)</pre> 
+	<ul>
+		Writes an <code>int</code> to the bytes message stream as four bytes,high byte first.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;value </code> - the <code>int</code> to be written 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeLong"> </a> <h3>writeLong</h3>
+		<pre>void&nbsp;<b>writeLong</b>(value)</pre> 
+	<ul>
+		Writes a <code>long</code> to the bytes message stream as eight bytes,high byte first. (Not Implemented.)
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;value </code> - the <code>long</code> to be written 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeShort"> </a> <h3>writeShort</h3>
+		<pre>void&nbsp;<b>writeShort</b>(value)</pre> 
+	<ul>
+		Writes a <code>short</code> to the bytes message stream as two bytes,high byte first.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>Number</i>&nbsp;value </code> - the <code>short</code> to be written 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+	<a name="writeUTF"> </a> <h3>writeUTF</h3>
+		<pre>void&nbsp;<b>writeUTF</b>(value)</pre> 
+	<ul>
+		Writes a string to the bytes message stream using UTF-8 encoding in amachine-independent manner.<P>For more information on the UTF-8 format, see "File System SafeUCS Transformation Format (FSS_UTF)", X/Open Preliminary Specification,X/Open Company Ltd., Document Number: P316. This information alsoappears in ISO/IEC 10646, Annex P.
+	</ul>
+	<!-- METHOD PARAMETERS START -->
+	<ul>
+		<b>Parameters:</b>
+		<ul>
+			<code><i>String</i>&nbsp;value </code> - the <code>String</code> value to be written 
+		</ul>
+	</ul>
+	<!-- METHOD PARAMETERS END -->
+	<!-- ADDITIONAL ATTRIBUTES START -->
+	<ul>
+		<b>Returns:</b>
+		<ul>
+			<code><i>void</i>&nbsp;</code> 
+		</ul>
+	</ul>
+	<ul>
+		<b>Throws:</b>
+		<ul>
+			<code></code> JMSException if the JMS provider fails to write the message                        due to some internal error. 
+		</ul>
+		<ul>
+			<code></code> MessageNotWriteableException if the message is in read-only                                        mode. 
+		</ul>
+	</ul>
+	<!-- ADDITIONAL ATTRIBUTES  END -->
+	<hr>
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+
+
+<!-- ============ EVENT DETAIL START ======= -->
+
+
+
+<!-- ============ EVENT DETAIL END ========== -->
+</body>
+</html>

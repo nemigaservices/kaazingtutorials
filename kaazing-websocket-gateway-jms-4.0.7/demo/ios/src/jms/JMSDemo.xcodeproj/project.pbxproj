@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4082CC0E172B3798009A755F /* KMStompJMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082CC0D172B3798009A755F /* KMStompJMS.framework */; };
+		4082CC10172B37A1009A755F /* KGWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4082CC0F172B37A1009A755F /* KGWebSocket.framework */; };
+		5CA474D3164D85CD00F2F2CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA474D2164D85CD00F2F2CF /* Default-568h@2x.png */; };
+		5CA474D8164D872D00F2F2CF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA474D6164D872D00F2F2CF /* Default.png */; };
+		5CA474D9164D872D00F2F2CF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA474D7164D872D00F2F2CF /* Default@2x.png */; };
+		B54E668815FFB8050078655B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54E668715FFB8050078655B /* CFNetwork.framework */; };
+		B5FA9A8C15F6797B0045ADCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA9A8B15F6797B0045ADCC /* UIKit.framework */; };
+		B5FA9A8E15F6797B0045ADCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA9A8D15F6797B0045ADCC /* Foundation.framework */; };
+		B5FA9A9015F6797B0045ADCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA9A8F15F6797B0045ADCC /* CoreGraphics.framework */; };
+		B5FA9A9615F6797B0045ADCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5FA9A9415F6797B0045ADCC /* InfoPlist.strings */; };
+		B5FA9A9815F6797B0045ADCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FA9A9715F6797B0045ADCC /* main.m */; };
+		B5FA9A9C15F6797B0045ADCC /* JMSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FA9A9B15F6797B0045ADCC /* JMSAppDelegate.m */; };
+		B5FA9A9F15F6797B0045ADCC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FA9A9D15F6797B0045ADCC /* MainStoryboard_iPhone.storyboard */; };
+		B5FA9AA215F6797B0045ADCC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FA9AA015F6797B0045ADCC /* MainStoryboard_iPad.storyboard */; };
+		B5FA9AA515F6797B0045ADCC /* JMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FA9AA415F6797B0045ADCC /* JMSViewController.m */; };
+		B5FA9AB115F67BA30045ADCC /* Kaazing.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FA9AAF15F67BA30045ADCC /* Kaazing.png */; };
+		B5FA9AB215F67BA30045ADCC /* Kaazing2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FA9AB015F67BA30045ADCC /* Kaazing2.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4082CC0D172B3798009A755F /* KMStompJMS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KMStompJMS.framework; path = usr/JMS/KMStompJMS.framework; sourceTree = "<group>"; };
+		4082CC0F172B37A1009A755F /* KGWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KGWebSocket.framework; path = usr/KGWebSocket/KGWebSocket.framework; sourceTree = "<group>"; };
+		5CA474D2164D85CD00F2F2CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5CA474D6164D872D00F2F2CF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5CA474D7164D872D00F2F2CF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B54E668715FFB8050078655B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B5FA9A8715F6797B0045ADCC /* JMSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FA9A8B15F6797B0045ADCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B5FA9A8D15F6797B0045ADCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5FA9A8F15F6797B0045ADCC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B5FA9A9315F6797B0045ADCC /* JMSDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JMSDemo-Info.plist"; sourceTree = "<group>"; };
+		B5FA9A9515F6797B0045ADCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5FA9A9715F6797B0045ADCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5FA9A9915F6797B0045ADCC /* JMSDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JMSDemo-Prefix.pch"; sourceTree = "<group>"; };
+		B5FA9A9A15F6797B0045ADCC /* JMSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMSAppDelegate.h; sourceTree = "<group>"; };
+		B5FA9A9B15F6797B0045ADCC /* JMSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSAppDelegate.m; sourceTree = "<group>"; };
+		B5FA9A9E15F6797B0045ADCC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		B5FA9AA115F6797B0045ADCC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		B5FA9AA315F6797B0045ADCC /* JMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMSViewController.h; sourceTree = "<group>"; };
+		B5FA9AA415F6797B0045ADCC /* JMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSViewController.m; sourceTree = "<group>"; };
+		B5FA9AAF15F67BA30045ADCC /* Kaazing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Kaazing.png; path = ../Kaazing.png; sourceTree = "<group>"; };
+		B5FA9AB015F67BA30045ADCC /* Kaazing2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Kaazing2.png; path = ../Kaazing2.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5FA9A8415F6797B0045ADCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B54E668815FFB8050078655B /* CFNetwork.framework in Frameworks */,
+				B5FA9A8C15F6797B0045ADCC /* UIKit.framework in Frameworks */,
+				B5FA9A8E15F6797B0045ADCC /* Foundation.framework in Frameworks */,
+				B5FA9A9015F6797B0045ADCC /* CoreGraphics.framework in Frameworks */,
+				4082CC0E172B3798009A755F /* KMStompJMS.framework in Frameworks */,
+				4082CC10172B37A1009A755F /* KGWebSocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5FA9A7C15F6797B0045ADCC = {
+			isa = PBXGroup;
+			children = (
+				B5FA9A9115F6797B0045ADCC /* JMSDemo */,
+				B5FA9A8A15F6797B0045ADCC /* Frameworks */,
+				B5FA9A8815F6797B0045ADCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5FA9A8815F6797B0045ADCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5FA9A8715F6797B0045ADCC /* JMSDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5FA9A8A15F6797B0045ADCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4082CC0F172B37A1009A755F /* KGWebSocket.framework */,
+				4082CC0D172B3798009A755F /* KMStompJMS.framework */,
+				B54E668715FFB8050078655B /* CFNetwork.framework */,
+				B5FA9A8B15F6797B0045ADCC /* UIKit.framework */,
+				B5FA9A8D15F6797B0045ADCC /* Foundation.framework */,
+				B5FA9A8F15F6797B0045ADCC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5FA9A9115F6797B0045ADCC /* JMSDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B5FA9A9A15F6797B0045ADCC /* JMSAppDelegate.h */,
+				B5FA9A9B15F6797B0045ADCC /* JMSAppDelegate.m */,
+				B5FA9AA315F6797B0045ADCC /* JMSViewController.h */,
+				B5FA9AA415F6797B0045ADCC /* JMSViewController.m */,
+				B5FA9AA015F6797B0045ADCC /* MainStoryboard_iPad.storyboard */,
+				B5FA9A9D15F6797B0045ADCC /* MainStoryboard_iPhone.storyboard */,
+				B5FA9A9215F6797B0045ADCC /* Supporting Files */,
+			);
+			path = JMSDemo;
+			sourceTree = "<group>";
+		};
+		B5FA9A9215F6797B0045ADCC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CA474D6164D872D00F2F2CF /* Default.png */,
+				5CA474D7164D872D00F2F2CF /* Default@2x.png */,
+				5CA474D2164D85CD00F2F2CF /* Default-568h@2x.png */,
+				B5FA9AAF15F67BA30045ADCC /* Kaazing.png */,
+				B5FA9AB015F67BA30045ADCC /* Kaazing2.png */,
+				B5FA9A9315F6797B0045ADCC /* JMSDemo-Info.plist */,
+				B5FA9A9415F6797B0045ADCC /* InfoPlist.strings */,
+				B5FA9A9715F6797B0045ADCC /* main.m */,
+				B5FA9A9915F6797B0045ADCC /* JMSDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5FA9A8615F6797B0045ADCC /* JMSDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5FA9AA815F6797B0045ADCC /* Build configuration list for PBXNativeTarget "JMSDemo" */;
+			buildPhases = (
+				B5FA9A8315F6797B0045ADCC /* Sources */,
+				B5FA9A8415F6797B0045ADCC /* Frameworks */,
+				B5FA9A8515F6797B0045ADCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JMSDemo;
+			productName = JMSDemo;
+			productReference = B5FA9A8715F6797B0045ADCC /* JMSDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5FA9A7E15F6797B0045ADCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JMS;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = B5FA9A8115F6797B0045ADCC /* Build configuration list for PBXProject "JMSDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B5FA9A7C15F6797B0045ADCC;
+			productRefGroup = B5FA9A8815F6797B0045ADCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5FA9A8615F6797B0045ADCC /* JMSDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5FA9A8515F6797B0045ADCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FA9A9615F6797B0045ADCC /* InfoPlist.strings in Resources */,
+				B5FA9A9F15F6797B0045ADCC /* MainStoryboard_iPhone.storyboard in Resources */,
+				B5FA9AA215F6797B0045ADCC /* MainStoryboard_iPad.storyboard in Resources */,
+				B5FA9AB115F67BA30045ADCC /* Kaazing.png in Resources */,
+				B5FA9AB215F67BA30045ADCC /* Kaazing2.png in Resources */,
+				5CA474D3164D85CD00F2F2CF /* Default-568h@2x.png in Resources */,
+				5CA474D8164D872D00F2F2CF /* Default.png in Resources */,
+				5CA474D9164D872D00F2F2CF /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5FA9A8315F6797B0045ADCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FA9A9815F6797B0045ADCC /* main.m in Sources */,
+				B5FA9A9C15F6797B0045ADCC /* JMSAppDelegate.m in Sources */,
+				B5FA9AA515F6797B0045ADCC /* JMSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B5FA9A9415F6797B0045ADCC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5FA9A9515F6797B0045ADCC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B5FA9A9D15F6797B0045ADCC /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5FA9A9E15F6797B0045ADCC /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B5FA9AA015F6797B0045ADCC /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5FA9AA115F6797B0045ADCC /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5FA9AA615F6797B0045ADCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5FA9AA715F6797B0045ADCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5FA9AA915F6797B0045ADCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/usr/JMS\"",
+					"\"$(SRCROOT)/usr/KGWebSocket\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JMSDemo/JMSDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "JMSDemo/JMSDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B5FA9AAA15F6797B0045ADCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/usr/JMS\"",
+					"\"$(SRCROOT)/usr/KGWebSocket\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JMSDemo/JMSDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "JMSDemo/JMSDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5FA9A8115F6797B0045ADCC /* Build configuration list for PBXProject "JMSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5FA9AA615F6797B0045ADCC /* Debug */,
+				B5FA9AA715F6797B0045ADCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5FA9AA815F6797B0045ADCC /* Build configuration list for PBXNativeTarget "JMSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5FA9AA915F6797B0045ADCC /* Debug */,
+				B5FA9AAA15F6797B0045ADCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5FA9A7E15F6797B0045ADCC /* Project object */;
+}

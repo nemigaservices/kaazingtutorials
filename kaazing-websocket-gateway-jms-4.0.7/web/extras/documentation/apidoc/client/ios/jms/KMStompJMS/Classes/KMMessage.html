@@ -1,0 +1,4597 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMMessage Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMMessage Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/JMSCorrelationID">&nbsp;&nbsp;&nbsp;&nbsp;- JMSCorrelationID</option>
+	
+	<option value="//api/name/JMSCorrelationIDAsBytes">&nbsp;&nbsp;&nbsp;&nbsp;- JMSCorrelationIDAsBytes</option>
+	
+	<option value="//api/name/JMSDeliveryMode">&nbsp;&nbsp;&nbsp;&nbsp;- JMSDeliveryMode</option>
+	
+	<option value="//api/name/JMSDestination">&nbsp;&nbsp;&nbsp;&nbsp;- JMSDestination</option>
+	
+	<option value="//api/name/JMSExpiration">&nbsp;&nbsp;&nbsp;&nbsp;- JMSExpiration</option>
+	
+	<option value="//api/name/JMSMessageID">&nbsp;&nbsp;&nbsp;&nbsp;- JMSMessageID</option>
+	
+	<option value="//api/name/JMSPriority">&nbsp;&nbsp;&nbsp;&nbsp;- JMSPriority</option>
+	
+	<option value="//api/name/JMSRedelivered">&nbsp;&nbsp;&nbsp;&nbsp;- JMSRedelivered</option>
+	
+	<option value="//api/name/JMSReplyTo">&nbsp;&nbsp;&nbsp;&nbsp;- JMSReplyTo</option>
+	
+	<option value="//api/name/JMSTimestamp">&nbsp;&nbsp;&nbsp;&nbsp;- JMSTimestamp</option>
+	
+	<option value="//api/name/JMSType">&nbsp;&nbsp;&nbsp;&nbsp;- JMSType</option>
+	
+	<option value="//api/name/acknowledge">&nbsp;&nbsp;&nbsp;&nbsp;- acknowledge</option>
+	
+	<option value="//api/name/clearBody">&nbsp;&nbsp;&nbsp;&nbsp;- clearBody</option>
+	
+	<option value="//api/name/clearProperties">&nbsp;&nbsp;&nbsp;&nbsp;- clearProperties</option>
+	
+	<option value="//api/name/getBooleanProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- getBooleanProperty:</option>
+	
+	<option value="//api/name/getByteProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- getByteProperty:</option>
+	
+	<option value="//api/name/getDoubleProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- getDoubleProperty:</option>
+	
+	<option value="//api/name/getFloatProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- getFloatProperty:</option>
+	
+	<option value="//api/name/getIntProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- getIntProperty:</option>
+	
+	<option value="//api/name/getLongProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- getLongProperty:</option>
+	
+	<option value="//api/name/getObjectProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- getObjectProperty:</option>
+	
+	<option value="//api/name/getShortProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- getShortProperty:</option>
+	
+	<option value="//api/name/getStringProperty:">&nbsp;&nbsp;&nbsp;&nbsp;- getStringProperty:</option>
+	
+	<option value="//api/name/propertyExists:">&nbsp;&nbsp;&nbsp;&nbsp;- propertyExists:</option>
+	
+	<option value="//api/name/propertyNames">&nbsp;&nbsp;&nbsp;&nbsp;- propertyNames</option>
+	
+	<option value="//api/name/setBooleanProperty:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setBooleanProperty:value:</option>
+	
+	<option value="//api/name/setByteProperty:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setByteProperty:value:</option>
+	
+	<option value="//api/name/setDoubleProperty:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setDoubleProperty:value:</option>
+	
+	<option value="//api/name/setFloatProperty:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setFloatProperty:value:</option>
+	
+	<option value="//api/name/setIntProperty:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setIntProperty:value:</option>
+	
+	<option value="//api/name/setJMSCorrelationID:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSCorrelationID:</option>
+	
+	<option value="//api/name/setJMSCorrelationIDAsBytes:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSCorrelationIDAsBytes:</option>
+	
+	<option value="//api/name/setJMSDeliveryMode:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSDeliveryMode:</option>
+	
+	<option value="//api/name/setJMSDestination:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSDestination:</option>
+	
+	<option value="//api/name/setJMSExpiration:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSExpiration:</option>
+	
+	<option value="//api/name/setJMSMessageID:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSMessageID:</option>
+	
+	<option value="//api/name/setJMSPriority:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSPriority:</option>
+	
+	<option value="//api/name/setJMSRedelivered:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSRedelivered:</option>
+	
+	<option value="//api/name/setJMSReplyTo:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSReplyTo:</option>
+	
+	<option value="//api/name/setJMSTimestamp:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSTimestamp:</option>
+	
+	<option value="//api/name/setJMSType:">&nbsp;&nbsp;&nbsp;&nbsp;- setJMSType:</option>
+	
+	<option value="//api/name/setLongProperty:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setLongProperty:value:</option>
+	
+	<option value="//api/name/setObjectProperty:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setObjectProperty:value:</option>
+	
+	<option value="//api/name/setShortProperty:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setShortProperty:value:</option>
+	
+	<option value="//api/name/setStringProperty:value:">&nbsp;&nbsp;&nbsp;&nbsp;- setStringProperty:value:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSCorrelationIDAsBytes">JMSCorrelationIDAsBytes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSDeliveryMode">JMSDeliveryMode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSDestination">JMSDestination</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSExpiration">JMSExpiration</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSMessageID">JMSMessageID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSPriority">JMSPriority</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSRedelivered">JMSRedelivered</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSReplyTo">JMSReplyTo</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSTimestamp">JMSTimestamp</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JMSType">JMSType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/acknowledge">acknowledge</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearBody">clearBody</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearProperties">clearProperties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getBooleanProperty:">getBooleanProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getByteProperty:">getByteProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getDoubleProperty:">getDoubleProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getFloatProperty:">getFloatProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getIntProperty:">getIntProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getLongProperty:">getLongProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getObjectProperty:">getObjectProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getShortProperty:">getShortProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getStringProperty:">getStringProperty:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/propertyExists:">propertyExists:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/propertyNames">propertyNames</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBooleanProperty:value:">setBooleanProperty:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setByteProperty:value:">setByteProperty:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDoubleProperty:value:">setDoubleProperty:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setFloatProperty:value:">setFloatProperty:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setIntProperty:value:">setIntProperty:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSCorrelationID:">setJMSCorrelationID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSCorrelationIDAsBytes:">setJMSCorrelationIDAsBytes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSDeliveryMode:">setJMSDeliveryMode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSDestination:">setJMSDestination:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSExpiration:">setJMSExpiration:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSMessageID:">setJMSMessageID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSPriority:">setJMSPriority:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSRedelivered:">setJMSRedelivered:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSReplyTo:">setJMSReplyTo:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSTimestamp:">setJMSTimestamp:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setJMSType:">setJMSType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLongProperty:value:">setLongProperty:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setObjectProperty:value:">setObjectProperty:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setShortProperty:value:">setShortProperty:value:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setStringProperty:value:">setStringProperty:value:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMMessage Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMMessage Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMMessage.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The KMMessage interface is the root interface of all JMS
+messages. It defines the message header and the acknowledge
+method used for all messages.</p>
+
+<p>Most message-oriented middleware (MOM) products treat messages as
+lightweight entities that consist
+of a header and a payload. The header contains fields used for message
+routing and identification; the payload contains the application data
+being sent.</p>
+
+<p>Within this general form, the definition of a message varies
+significantly across products. It would be quite difficult for the JMS API
+to support all of these message models.</p>
+
+<p>With this in mind, the JMS message model has the following goals:</p>
+
+<ul>
+<li>Provide a single, unified message API</li>
+<li>Provide an API suitable for creating messages that match the
+format used by provider-native messaging applications</li>
+<li>Support the development of heterogeneous applications that span
+operating systems, machine architectures, and computer languages</li>
+<li>Support messages containing objects
+(&ldquo;objects&rdquo;)</li>
+<li>Support messages containing Extensible Markup Language (XML) pages</li>
+</ul>
+
+
+<p>JMS messages are composed of the following parts:</p>
+
+<ul>
+<li>Header &ndash; All messages support the same set of header fields.
+Header fields contain values used by both clients and providers to
+identify and route messages.</li>
+<li>Properties &ndash; Each message contains a built-in facility for supporting
+application-defined property values. Properties provide an efficient
+mechanism for supporting application-defined message filtering.</li>
+<li>Body &ndash; The JMS API defines several types of message body, which cover
+the majority of messaging styles currently in use.</li>
+</ul>
+
+
+<H4>Message Bodies</H4>
+
+
+<p>The JMS API defines five types of message body:</p>
+
+<ul>
+<li>Stream &ndash; A StreamMessage object&rsquo;s message body contains
+a stream of primitive values in the Java programming
+language (&ldquo;Java primitives&rdquo;). It is filled and read sequentially.</li>
+<li>Map &ndash; A MapMessage object&rsquo;s message body contains a set
+of name-value pairs, where names are String
+objects, and values are Java primitives. The entries can be accessed
+sequentially or randomly by name. The order of the entries is
+undefined.</li>
+<li>Text &ndash; A KMTextMessage object&rsquo;s message body contains a
+String object. This message type can be used
+to transport plain-text messages, and XML messages.</li>
+<li>Object &ndash; An ObjectMessage object&rsquo;s message body contains
+a Serializable object.</li>
+<li>Bytes &ndash; A BytesMessage object&rsquo;s message body contains a
+stream of uninterpreted bytes. This message type is for
+literally encoding a body to match an existing message format. In
+many cases, it is possible to use one of the other body types,
+which are easier to use. Although the JMS API allows the use of
+message properties with byte messages, they are typically not used,
+since the inclusion of properties may affect the format.</li>
+</ul>
+
+
+<H4>Message Headers</H4>
+
+
+<p>The JMSCorrelationID header field is used for linking one message with
+another. It typically links a reply message with its requesting message.</p>
+
+<p>JMSCorrelationID can hold a provider-specific message ID,
+an application-specific String object, or a provider-native
+byte[] value.</p>
+
+<H4>Message Properties</H4>
+
+
+<p>A Message object contains a built-in facility for supporting
+application-defined property values. In effect, this provides a mechanism
+for adding application-specific header fields to a message.</p>
+
+<p>Properties allow an application, via message selectors, to have a JMS
+provider select, or filter, messages on its behalf using
+application-specific criteria.</p>
+
+<p>Property names must obey the rules for a message selector identifier.
+Property names must not be null, and must not be empty strings. If a property
+name is set and it is either null or an empty string, an
+exception must be thrown.</p>
+
+<p>Property values can be boolean, byte, short, int, long, float,
+double, and String.</p>
+
+<p>Property values are set prior to sending a message. When a client
+receives a message, its properties are in read-only mode. If a
+client attempts to set properties at this point, a
+KMMessageNotWriteableException is thrown. If
+clearProperties is called, the properties can now be both
+read from and written to. Note that header fields are distinct from
+properties. Header fields are never in read-only mode.</p>
+
+<p>A property value may duplicate a value in a message&rsquo;s body, or it may
+not. Although JMS does not define a policy for what should or should not
+be made a property, application developers should note that JMS providers
+will likely handle data in a message&rsquo;s body more efficiently than data in
+a message&rsquo;s properties. For best performance, applications should use
+message properties only when they need to customize a message&rsquo;s header.
+The primary reason for doing this is to support customized message
+selection.</p>
+
+<p>Message properties support the following conversion table. The marked
+cases must be supported. The unmarked cases must throw a
+KMJMSException. The String-to-primitive conversions
+may throw a runtime exception if the
+primitive&rsquo;s valueOf method does not accept the
+String as a valid representation of the primitive.</p>
+
+<p>A value written as the row type can be read as the column type.</p>
+
+<pre><code>
+|        | boolean byte short int long float double String
+|----------------------------------------------------------
+|boolean |    X                                       X
+|byte    |          X     X    X   X                  X
+|short   |                X    X   X                  X
+|int     |                     X   X                  X
+|long    |                         X                  X
+|float   |                               X     X      X
+|double  |                                     X      X
+|String  |    X     X     X    X   X     X     X      X
+|----------------------------------------------------------
+</code></pre>
+
+
+<p>In addition to the type-specific set/get methods for properties, JMS
+provides the setObjectProperty and
+getObjectProperty methods. These support the same set of
+property types using the objectified primitive values. Their purpose is
+to allow the decision of property type to made at execution time rather
+than at compile time. They support the same property value conversions.</p>
+
+<p>The setObjectProperty method accepts values of class
+Boolean, Byte, Short, Integer, Long, Float, Double, and String. An attempt
+to use any other class must throw a KMJMSException.</p>
+
+<p>The getObjectProperty method only returns values of class
+Boolean, Byte, Short, Integer, Long, Float, Double, and String.</p>
+
+<p>The order of property values is not defined. To iterate through a
+message&rsquo;s property values, use getPropertyNames to retrieve
+a property name enumeration and then use the various property get methods
+to retrieve their values.</p>
+
+<p>A message&rsquo;s properties are deleted by the clearProperties
+method. This leaves the message with an empty set of properties.</p>
+
+<p>Getting a property value for a name which has not been set returns a
+null value. Only the getStringProperty and
+getObjectProperty methods can return a null value.
+Attempting to read a null value as a primitive type will convert to
+a numeric or string value where possible.</p>
+
+<p>The JMS API reserves the JMSX property name prefix for JMS
+defined properties.
+The full set of these properties is defined in the Java Message Service
+specification. New JMS defined properties may be added in later versions
+of the JMS API.  Support for these properties is optional. The
+<a href="../Classes/KMConnectionMetaData.html#//api/name/JMSXPropertyNames">[KMConnectionMetaData JMSXPropertyNames]</a> method
+returns the names of the JMSX properties supported by a connection.</p>
+
+<p>JMSX properties may be referenced in message selectors whether or not
+they are supported by a connection. If they are not present in a
+message, they are treated like any other absent property.</p>
+
+<p>JMSX properties defined in the specification as &ldquo;set by provider on
+send&rdquo; are available to both the producer and the consumers of the message.
+JMSX properties defined in the specification as &ldquo;set by provider on
+receive&rdquo; are available only to the consumers.</p>
+
+<p>JMSXGroupID and JMSXGroupSeq are standard properties that clients
+should use if they want to group messages. All providers must support them.
+Unless specifically noted, the values and semantics of the JMSX properties
+are undefined.</p>
+
+<p>The JMS API reserves the <em>JMS_vendor_name</em> property
+name prefix for provider-specific properties. Each provider defines its own
+value for <em>vendor_name</em>. This is the mechanism a JMS
+provider uses to make its special per-message services available to a JMS
+client.</p>
+
+<p>The purpose of provider-specific properties is to provide special
+features needed to integrate JMS clients with provider-native clients in a
+single JMS application. They should not be used for messaging between JMS
+clients.</p>
+
+<H4>Provider Implementations of JMS Message Interfaces</H4>
+
+
+<p>The JMS API provides a set of message interfaces that define the JMS
+message model. It does not provide implementations of these interfaces.</p>
+
+<p>Each JMS provider supplies a set of message factories with its
+Session object for creating instances of messages. This allows
+a provider to use message implementations tailored to its specific needs.</p>
+
+<p>A provider must be prepared to accept message implementations that are
+not its own. They may not be handled as efficiently as its own
+implementation; however, they must be handled.</p>
+
+<p>Note the following exception case when a provider is handling a foreign
+message implementation. If the foreign message implementation contains a
+<a href="#//api/name/JMSReplyTo">JMSReplyTo</a> header field that is set to a foreign destination
+implementation, the provider is not required to handle or preserve the
+value of this header field.</p>
+
+<H4>Message Selectors</H4>
+
+
+<p>A JMS message selector allows a client to specify, by
+header field references and property references, the
+messages it is interested in. Only messages whose header
+and property values match the selector are delivered.</p>
+
+<p>Message selectors cannot reference message body values.</p>
+
+<p>A message selector matches a message if the selector evaluates to
+true when the message&rsquo;s header field values and property values are
+substituted for their corresponding identifiers in the selector.</p>
+
+<p>A message selector is a String whose syntax is based on a subset of
+the SQL92 conditional expression syntax. If the value of a message selector
+is an empty string, the value is treated as a null and indicates that there
+is no message selector for the message consumer.</p>
+
+<p>The order of evaluation of a message selector is from left to right
+within precedence level. Parentheses can be used to change this order.</p>
+
+<p>Predefined selector literals and operator names are shown here in
+uppercase; however, they are case insensitive.</p>
+
+<p>A selector can contain:</p>
+
+<p><em>Literals</em></p>
+
+<ul>
+<li>A string literal is enclosed in single quotes, with a single quote
+represented by doubled single quote; for example,
+&lsquo;literal&rsquo; and &lsquo;literal&rsquo;&rsquo;s'. Like
+string literals, these use the
+Unicode character encoding.</li>
+<li>An exact numeric literal is a numeric value without a decimal
+point, such as 57, -957, and
++62; numbers in the range of long are
+supported.</li>
+<li>An approximate numeric literal is a numeric value in scientific
+notation, such as 7E3 and -57.9E2, or a
+numeric value with a decimal, such as 7.,
+-95.7, and +6.2; numbers in the range of
+double are supported.</li>
+<li>The boolean literals TRUE and FALSE.</li>
+</ul>
+
+
+<p><em>Identifiers</em></p>
+
+<ul>
+<li>An identifier is an unlimited-length sequence of letters
+and digits, the first of which must be a letter. A letter is any
+character for which the method Character.isJavaLetter
+returns true. This includes &lsquo;_&rsquo; and &lsquo;$&rsquo;.
+A letter or digit is any character for which the method
+Character.isJavaLetterOrDigit returns true.</li>
+<li>Identifiers cannot be the names NULL,
+TRUE, and FALSE.</li>
+<li>Identifiers cannot be NOT, AND,
+OR, BETWEEN, LIKE,
+IN, IS, or ESCAPE.</li>
+<li>Identifiers are either header field references or property
+references.  The type of a property value in a message selector
+corresponds to the type used to set the property. If a property
+that does not exist in a message is referenced, its value is
+NULL.</li>
+<li>The conversions that apply to the get methods for properties do not
+apply when a property is used in a message selector expression.
+For example, suppose you set a property as a string value, as in the
+following:
+<code>myMessage.setStringProperty("NumberOfOrders", "2");</code>
+The following expression in a message selector would evaluate to
+false, because a string cannot be used in an arithmetic expression:
+<code>"NumberOfOrders &gt; 1"</code></li>
+<li>Identifiers are case-sensitive.</li>
+<li>Message header field references are restricted to
+<a href="#//api/name/JMSDeliveryMode">JMSDeliveryMode</a>, <a href="#//api/name/JMSPriority">JMSPriority</a>,
+<a href="#//api/name/JMSMessageID">JMSMessageID</a>, <a href="#//api/name/JMSTimestamp">JMSTimestamp</a>,
+<a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a>, and <a href="#//api/name/JMSType">JMSType</a>.
+<a href="#//api/name/JMSMessageID">JMSMessageID</a>, <a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a>, and
+<a href="#//api/name/JMSType">JMSType</a> values may be null and if so are treated as a
+NULL value.</li>
+<li>Any name beginning with &lsquo;JMSX&rsquo; is a JMS defined
+property name.</li>
+<li>Any name beginning with &lsquo;JMS_&rsquo; is a provider-specific
+property name.</li>
+<li>Any name that does not begin with &lsquo;JMS&rsquo; is an
+application-specific property name.</li>
+<li>White space is the same as that defined for the Java programming
+language: space, horizontal tab, form feed, and line terminator.</li>
+</ul>
+
+
+<p><em>Expressions</em></p>
+
+<ul>
+<li>A selector is a conditional expression; a selector that evaluates
+to true matches; a selector that evaluates to
+false or unknown does not match.</li>
+<li>Arithmetic expressions are composed of themselves, arithmetic
+operations, identifiers (whose value is treated as a numeric
+literal), and numeric literals.</li>
+<li>Conditional expressions are composed of themselves, comparison
+operations, and logical operations.</li>
+<li>Standard bracketing () for ordering expression evaluation
+is supported.</li>
+</ul>
+
+
+<p><em>Logical operators</em></p>
+
+<ul>
+<li>Logical operators in precedence order: NOT, AND, O_</li>
+</ul>
+
+
+<p><em>Comparison operators</em></p>
+
+<ul>
+<li>Comparison operators: =, &gt;, &gt;=, &lt;, &lt;=, &lt;&gt; (not equal)</li>
+<li>Only like type values can be compared. One exception is that it
+is valid to compare exact numeric values and approximate numeric
+values; the type conversion required is defined by the rules of
+numeric promotion. If the
+comparison of non-like type values is attempted, the value of the
+operation is false. If either of the type values evaluates to
+NULL, the value of the expression is unknown.</li>
+<li>String and boolean comparison is restricted to = and
+&lt;&gt;. Two strings are equal
+if and only if they contain the same sequence of characters.</li>
+</ul>
+
+
+<p><em>Arithmetic operators</em></p>
+
+<ul>
+<li>+, &ndash; (unary) &ndash; highest precedence</li>
+<li>*, / (multiplication and division)</li>
+<li>+, &ndash; (addition and subtraction)</li>
+<li>Arithmetic operations must use numeric promotion as in the Java
+programming language.</li>
+<li>arithmetic-expr1 [NOT] BETWEEN arithmetic-expr2 AND arithmetic-expr3 (comparison operator)</li>
+<li>&ldquo;age BETWEEN 15 AND 19&rdquo; is equivalent to
+&ldquo;age&gt;= 15 AND age &lt;= 19&rdquo;</li>
+<li>&ldquo;age NOT BETWEEN 15 AND 19&rdquo; is equivalent to
+&ldquo;age &lt; 15 OR age &gt; 19&rdquo;</li>
+</ul>
+
+
+<p><em>Identifiers</em></p>
+
+<ul>
+<li>identifier [NOT] IN (string-literal1,
+string-literal2,&hellip;) (comparison operator where
+identifier has a String or
+NULL value)</li>
+<li>&ldquo;Country IN (&lsquo; UK&rsquo;, &lsquo;US&rsquo;, &lsquo;France&rsquo;)&rdquo;
+is true for
+&lsquo;UK&rsquo; and false for &lsquo;Peru&rsquo;; it is
+equivalent to the expression
+&ldquo;(Country= &lsquo; UK&rsquo;) OR (Country = &lsquo; US&rsquo;) OR (Country = &lsquo; France&rsquo;)&rdquo;</li>
+<li>&ldquo;Country NOT IN (&lsquo; UK&rsquo;, &lsquo;US&rsquo;, &lsquo;France&rsquo;)&rdquo;
+is false for &lsquo;UK&rsquo; and true for &lsquo;Peru&rsquo;; it
+is equivalent to the expression
+&ldquo;NOT((Country = &lsquo; UK&rsquo;) OR (Country = &lsquo; US&rsquo;) OR (Country = &lsquo; France&rsquo;))&rdquo;</li>
+<li>If identifier of an IN or NOT IN
+operation is NULL, the value of the operation is
+unknown.</li>
+<li>identifier [NOT] LIKE pattern-value [ESCAPE escape-character]
+(comparison operator, where
+identifier has a String value;
+pattern-value is a string literal where
+&lsquo;<em>&rsquo; stands for any single character; &lsquo;%&rsquo;
+stands for any sequence of characters, including the empty sequence;
+and all other characters stand for themselves. The optional
+escape-character is a single-character string
+literal whose character is used to escape the special meaning of the
+&lsquo;</em>&rsquo; and &lsquo;%&rsquo; in
+pattern-value.)</li>
+<li>&ldquo;phone LIKE &lsquo;12%3&rsquo;&rdquo; is true for
+&lsquo;123&rsquo; or &lsquo;12993&rsquo; and false for
+&lsquo;1234&rsquo;</li>
+<li>&ldquo;word LIKE &lsquo;l_se&rsquo;&rdquo; is true for
+&lsquo;lose&rsquo; and false for &lsquo;loose&rsquo;</li>
+<li>&ldquo;underscored LIKE &lsquo;_%&rsquo; ESCAPE &lsquo;\&rsquo;&rdquo;
+is true for &lsquo;_foo&rsquo; and false for &lsquo;bar&rsquo;</li>
+<li>&ldquo;phone NOT LIKE &lsquo;12%3&rsquo;&rdquo; is false for
+&lsquo;123&rsquo; or &lsquo;12993&rsquo; and true for
+&lsquo;1234&rsquo;</li>
+<li>If identifier of a LIKE or
+NOT LIKE operation is NULL, the value
+of the operation is unknown.</li>
+<li>identifier IS NULL (comparison operator that tests
+for a null header field value or a missing property value)</li>
+<li>&ldquo;prop_name IS NULL&rdquo;</li>
+<li>identifier IS NOT NULL (comparison operator that
+tests for the existence of a non-null header field value or a property
+value)</li>
+<li>&ldquo;prop_name IS NOT NULL&rdquo;</li>
+</ul>
+
+
+<p>JMS providers are required to verify the syntactic correctness of a
+message selector at the time it is presented. A method that provides a
+syntactically incorrect selector must result in a <a href="../Classes/KMJMSException.html">KMJMSException</a>.</p>
+
+<p>JMS providers may also optionally provide some semantic checking at the time
+the selector is presented. Not all semantic checking can be performed at
+the time a message selector is presented, because property types are not known.</p>
+
+<H4>Null Values</H4>
+
+
+<p>As noted above, property values may be NULL. The evaluation
+of selector expressions containing NULL values is defined by
+SQL92 NULL semantics. A brief description of these semantics
+is provided here.</p>
+
+<p>SQL treats a NULL value as unknown. Comparison or arithmetic
+with an unknown value always yields an unknown value.</p>
+
+<p>The IS NULL and IS NOT NULL operators convert
+an unknown value into the respective TRUE and
+FALSE values.</p>
+
+<p>The boolean operators use three-valued logic as defined by the
+following tables:</p>
+
+<p><em>The definition of the AND operator</em></p>
+
+<pre><code>
+| AND  |   T   |   F   |   U
++------+-------+-------+-------
+|  T   |   T   |   F   |   U
+|  F   |   F   |   F   |   F
+|  U   |   U   |   F   |   U
++------+-------+-------+-------
+</code></pre>
+
+
+<p><em>The definition of the OR operator</em></p>
+
+<pre><code>
+| OR   |   T   |   F   |   U
++------+-------+-------+--------
+|  T   |   T   |   T   |   T
+|  F   |   T   |   F   |   U
+|  U   |   T   |   U   |   U
++------+-------+-------+-------
+</code></pre>
+
+
+<p><em>The definition of the NOT operator</em></p>
+
+<pre><code>
+| NOT
++------+------
+|  T   |   F
+|  F   |   T
+|  U   |   U
++------+-------
+</code></pre>
+
+
+
+
+<H4>Special Notes</H4>
+
+
+<p>When used in a message selector, the <a href="#//api/name/JMSDeliveryMode">JMSDeliveryMode</a> header
+field is treated as having the values &lsquo;PERSISTENT&rsquo; and
+&lsquo;NON_PERSISTENT&rsquo;.</p>
+
+<p>Date and time values should use the standard long
+millisecond value. When a date or time literal is included in a message
+selector, it should be an integer literal for a millisecond value.</p>
+
+<p>Although SQL supports fixed decimal comparison and arithmetic, JMS
+message selectors do not. This is the reason for restricting exact
+numeric literals to those without a decimal (and the addition of
+numerics with a decimal as an alternate representation for
+approximate numeric values).</p>
+
+<p>SQL comments are not supported.</p>
+
+<H2>Message Constants</H2>
+
+
+<p><em>KMMessageDefaultDeliveryMode</em></p>
+
+<p>Default Delivery Mode (PERSISTENT)</p>
+
+<p><em>KMMessageDefaultPriority</em></p>
+
+<p>Default Message Priority (4)</p>
+
+<p><em>KMMessageDefaultTimeToLive</em></p>
+
+<p>Default Time To Live (never expires)</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSMessageID">&ndash;&nbsp;JMSMessageID</a></code>
+		<span class="tooltip"><p>Gets the message ID.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSMessageID:">&ndash;&nbsp;setJMSMessageID:</a></code>
+		<span class="tooltip"><p>Sets the message ID.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSTimestamp:">&ndash;&nbsp;setJMSTimestamp:</a></code>
+		<span class="tooltip"><p>Sets the message timestamp.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSTimestamp">&ndash;&nbsp;JMSTimestamp</a></code>
+		<span class="tooltip"><p>Gets the message timestamp.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSCorrelationIDAsBytes">&ndash;&nbsp;JMSCorrelationIDAsBytes</a></code>
+		<span class="tooltip"><p>Gets the correlation ID as an array of bytes for the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSCorrelationIDAsBytes:">&ndash;&nbsp;setJMSCorrelationIDAsBytes:</a></code>
+		<span class="tooltip"><p>Sets the correlation ID as an array of bytes for the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSCorrelationID:">&ndash;&nbsp;setJMSCorrelationID:</a></code>
+		<span class="tooltip"><p>Sets the correlation ID for the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSCorrelationID">&ndash;&nbsp;JMSCorrelationID</a></code>
+		<span class="tooltip"><p>Gets the correlation ID for the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSReplyTo">&ndash;&nbsp;JMSReplyTo</a></code>
+		<span class="tooltip"><p>Gets the Destination object to which a reply to this
+message should be sent.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSReplyTo:">&ndash;&nbsp;setJMSReplyTo:</a></code>
+		<span class="tooltip"><p>Sets the Destination object to which a reply to this
+message should be sent.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSDestination">&ndash;&nbsp;JMSDestination</a></code>
+		<span class="tooltip"><p>Gets the Destination object for this message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSDestination:">&ndash;&nbsp;setJMSDestination:</a></code>
+		<span class="tooltip"><p>Sets the Destination object for this message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSDeliveryMode">&ndash;&nbsp;JMSDeliveryMode</a></code>
+		<span class="tooltip"><p>Gets the DeliveryMode value specified for this message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSDeliveryMode:">&ndash;&nbsp;setJMSDeliveryMode:</a></code>
+		<span class="tooltip"><p>Sets the DeliveryMode value for this message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSRedelivered">&ndash;&nbsp;JMSRedelivered</a></code>
+		<span class="tooltip"><p>Gets an indication of whether this message is being redelivered.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSRedelivered:">&ndash;&nbsp;setJMSRedelivered:</a></code>
+		<span class="tooltip"><p>Specifies whether this message is being redelivered.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSType">&ndash;&nbsp;JMSType</a></code>
+		<span class="tooltip"><p>Gets the message type identifier supplied by the client when the
+message was sent.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSType:">&ndash;&nbsp;setJMSType:</a></code>
+		<span class="tooltip"><p>Sets the message type.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSExpiration">&ndash;&nbsp;JMSExpiration</a></code>
+		<span class="tooltip"><p>Gets the message&rsquo;s expiration value.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSExpiration:">&ndash;&nbsp;setJMSExpiration:</a></code>
+		<span class="tooltip"><p>Sets the message&rsquo;s expiration value.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JMSPriority">&ndash;&nbsp;JMSPriority</a></code>
+		<span class="tooltip"><p>Gets the message priority level.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setJMSPriority:">&ndash;&nbsp;setJMSPriority:</a></code>
+		<span class="tooltip"><p>Sets the priority level for this message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clearProperties">&ndash;&nbsp;clearProperties</a></code>
+		<span class="tooltip"><p>Clears a message&rsquo;s properties.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/propertyExists:">&ndash;&nbsp;propertyExists:</a></code>
+		<span class="tooltip"><p>Indicates whether a property value exists.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getBooleanProperty:">&ndash;&nbsp;getBooleanProperty:</a></code>
+		<span class="tooltip"><p>Returns the value of the boolean property with the
+specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getByteProperty:">&ndash;&nbsp;getByteProperty:</a></code>
+		<span class="tooltip"><p>Returns the value of the byte property with the specified
+name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getShortProperty:">&ndash;&nbsp;getShortProperty:</a></code>
+		<span class="tooltip"><p>Returns the value of the short property with the specified
+name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getIntProperty:">&ndash;&nbsp;getIntProperty:</a></code>
+		<span class="tooltip"><p>Returns the value of the int property with the specified
+name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getLongProperty:">&ndash;&nbsp;getLongProperty:</a></code>
+		<span class="tooltip"><p>Returns the value of the long property with the specified
+name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getFloatProperty:">&ndash;&nbsp;getFloatProperty:</a></code>
+		<span class="tooltip"><p>Returns the value of the float property with the specified
+name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getDoubleProperty:">&ndash;&nbsp;getDoubleProperty:</a></code>
+		<span class="tooltip"><p>Returns the value of the double property with the specified
+name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getStringProperty:">&ndash;&nbsp;getStringProperty:</a></code>
+		<span class="tooltip"><p>Returns the value of the String property with the specified
+name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getObjectProperty:">&ndash;&nbsp;getObjectProperty:</a></code>
+		<span class="tooltip"><p>Returns the value of the object property with the specified name.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/propertyNames">&ndash;&nbsp;propertyNames</a></code>
+		<span class="tooltip"><p>Returns an Enumeration of all the property names.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBooleanProperty:value:">&ndash;&nbsp;setBooleanProperty:value:</a></code>
+		<span class="tooltip"><p>Sets a boolean property value with the specified name into
+the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setByteProperty:value:">&ndash;&nbsp;setByteProperty:value:</a></code>
+		<span class="tooltip"><p>Sets a byte property value with the specified name into
+the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setShortProperty:value:">&ndash;&nbsp;setShortProperty:value:</a></code>
+		<span class="tooltip"><p>Sets a short property value with the specified name into
+the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setIntProperty:value:">&ndash;&nbsp;setIntProperty:value:</a></code>
+		<span class="tooltip"><p>Sets an int property value with the specified name into
+the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLongProperty:value:">&ndash;&nbsp;setLongProperty:value:</a></code>
+		<span class="tooltip"><p>Sets a long property value with the specified name into
+the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setFloatProperty:value:">&ndash;&nbsp;setFloatProperty:value:</a></code>
+		<span class="tooltip"><p>Sets a float property value with the specified name into
+the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDoubleProperty:value:">&ndash;&nbsp;setDoubleProperty:value:</a></code>
+		<span class="tooltip"><p>Sets a double property value with the specified name into
+the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setStringProperty:value:">&ndash;&nbsp;setStringProperty:value:</a></code>
+		<span class="tooltip"><p>Sets a String property value with the specified name into
+the message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setObjectProperty:value:">&ndash;&nbsp;setObjectProperty:value:</a></code>
+		<span class="tooltip"><p>Sets a object property value with the specified name into the
+message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/acknowledge">&ndash;&nbsp;acknowledge</a></code>
+		<span class="tooltip"><p>Acknowledges all consumed messages of the session of this consumed
+message.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clearBody">&ndash;&nbsp;clearBody</a></code>
+		<span class="tooltip"><p>Clears out the message body. Clearing a message&rsquo;s body does not clear
+its header values or property entries.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSCorrelationID" title="JMSCorrelationID"></a>
+	<h3 class="subsubtitle method-title">JMSCorrelationID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the correlation ID for the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)JMSCorrelationID</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the correlation ID of a message as a String</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is used to return correlation ID values that are
+either provider-specific message IDs or application-specific
+String values.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the correlation
+ID due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSCorrelationID:">&ndash; setJMSCorrelationID:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/JMSCorrelationIDAsBytes">&ndash; JMSCorrelationIDAsBytes</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSCorrelationIDAsBytes" title="JMSCorrelationIDAsBytes"></a>
+	<h3 class="subsubtitle method-title">JMSCorrelationIDAsBytes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the correlation ID as an array of bytes for the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSData *)JMSCorrelationIDAsBytes</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the correlation ID of a message as an array of bytes</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The use of a byte[] value for
+<a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a> is non-portable.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the correlation
+ID due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSCorrelationID:">&ndash; setJMSCorrelationID:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/JMSCorrelationID">&ndash; JMSCorrelationID</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/setJMSCorrelationIDAsBytes:">&ndash; setJMSCorrelationIDAsBytes:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSDeliveryMode" title="JMSDeliveryMode"></a>
+	<h3 class="subsubtitle method-title">JMSDeliveryMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the DeliveryMode value specified for this message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)JMSDeliveryMode</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the delivery mode for this message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the
+delivery mode due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSDeliveryMode:">&ndash; setJMSDeliveryMode:</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMDeliveryMode.html">KMDeliveryMode</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSDestination" title="JMSDestination"></a>
+	<h3 class="subsubtitle method-title">JMSDestination</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the Destination object for this message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMDestination *)JMSDestination</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the destination of this message</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The JMSDestination header field contains the
+destination to which the message is being sent.</p>
+
+<p>When a message is sent, this field is ignored. After completion
+of the send or publish method, the field
+holds the destination specified by the method.</p>
+
+<p>When a message is received, its JMSDestination value
+must be equivalent to the value assigned when it was sent.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the destination
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSDestination:">&ndash; setJMSDestination:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSExpiration" title="JMSExpiration"></a>
+	<h3 class="subsubtitle method-title">JMSExpiration</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the message&rsquo;s expiration value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (long long)JMSExpiration</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the time the message expires, which is the sum of the
+time-to-live value specified by the client and the GMT at the
+time of the send</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>When a message is sent, the JMSExpiration header field
+is left unassigned. After completion of the send or
+publish method, it holds the expiration time of the
+message. This is the sum of the time-to-live value specified by the
+client and the GMT at the time of the send or
+publish.</p>
+
+<p>If the time-to-live is specified as zero, JMSExpiration
+is set to zero to indicate that the message does not expire.</p>
+
+<p>When a message&rsquo;s expiration time is reached, a provider should
+discard it. The JMS API does not define any form of notification of
+message expiration.</p>
+
+<p>Clients should not receive messages that have expired; however,
+the JMS API does not guarantee that this will not happen.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the message
+expiration due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSExpiration:">&ndash; setJMSExpiration:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSMessageID" title="JMSMessageID"></a>
+	<h3 class="subsubtitle method-title">JMSMessageID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the message ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)JMSMessageID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The JMSMessageID header field contains a value that
+uniquely identifies each message sent by a provider.</p>
+
+<p>When a message is sent, JMSMessageID can be ignored.
+When the send or publish method returns, it
+contains a provider-assigned value.</p>
+
+<p>A JMSMessageID is a String value that
+should function as a
+unique key for identifying messages in a historical repository.
+The exact scope of uniqueness is provider-defined. It should at
+least cover all messages for a specific installation of a
+provider, where an installation is some connected set of message
+routers.</p>
+
+<p>All JMSMessageID values must start with the prefix &lsquo;ID:&rsquo;.
+Uniqueness of message ID values across different providers is
+not required.</p>
+
+<p>Since message IDs take some effort to create and increase a
+message&rsquo;s size, some JMS providers may be able to optimize message
+overhead if they are given a hint that the message ID is not used by
+an application. By calling the
+MessageProducer.setDisableMessageID method, a JMS client
+enables this potential optimization for all messages sent by that
+message producer. If the JMS provider accepts this
+hint, these messages must have the message ID set to null; if the
+provider ignores the hint, the message ID must be set to its normal
+unique value.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the message ID
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSMessageID:">&ndash; setJMSMessageID:</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMMessageProducer.html#//api/name/disableMessageID">[KMMessageProducer disableMessageID]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSPriority" title="JMSPriority"></a>
+	<h3 class="subsubtitle method-title">JMSPriority</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the message priority level.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)JMSPriority</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the default message priority</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The JMS API defines ten levels of priority value, with 0 as the
+lowest
+priority and 9 as the highest. In addition, clients should consider
+priorities 0-4 as gradations of normal priority and priorities 5-9
+as gradations of expedited priority.</p>
+
+<p>The JMS API does not require that a provider strictly implement
+priority
+ordering of messages; however, it should do its best to deliver
+expedited messages ahead of normal messages.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the message
+priority due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSPriority:">&ndash; setJMSPriority:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSRedelivered" title="JMSRedelivered"></a>
+	<h3 class="subsubtitle method-title">JMSRedelivered</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets an indication of whether this message is being redelivered.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)JMSRedelivered</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if this message is being redelivered</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If a client receives a message with the JMSRedelivered
+field set,
+it is likely, but not guaranteed, that this message was delivered
+earlier but that its receipt was not acknowledged
+at that time.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the redelivered
+state due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSRedelivered:">&ndash; setJMSRedelivered:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSReplyTo" title="JMSReplyTo"></a>
+	<h3 class="subsubtitle method-title">JMSReplyTo</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the Destination object to which a reply to this
+message should be sent.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMDestination *)JMSReplyTo</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Destination to which to send a response to this
+message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the
+JMSReplyTo destination due to some
+internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSReplyTo:">&ndash; setJMSReplyTo:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSTimestamp" title="JMSTimestamp"></a>
+	<h3 class="subsubtitle method-title">JMSTimestamp</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the message timestamp.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (long long)JMSTimestamp</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the message timestamp</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The JMSTimestamp header field contains the time a
+message was
+handed off to a provider to be sent. It is not the time the
+message was actually transmitted, because the actual send may occur
+later due to transactions or other client-side queueing of messages.</p>
+
+<p>When a message is sent, JMSTimestamp is ignored. When
+the send or publish
+method returns, it contains a time value somewhere in the interval
+between the call and the return. The value is in the format of a normal
+millis time value.</p>
+
+<p>Since timestamps take some effort to create and increase a
+message&rsquo;s size, some JMS providers may be able to optimize message
+overhead if they are given a hint that the timestamp is not used by an
+application. By calling the
+MessageProducer.setDisableMessageTimestamp method, a JMS
+client enables this potential optimization for all messages sent by
+that message producer. If the JMS provider accepts this
+hint, these messages must have the timestamp set to zero; if the
+provider ignores the hint, the timestamp must be set to its normal
+value.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the timestamp
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSTimestamp:">&ndash; setJMSTimestamp:</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMMessageProducer.html#//api/name/disableMessageTimestamp">[KMMessageProducer disableMessageTimestamp]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/JMSType" title="JMSType"></a>
+	<h3 class="subsubtitle method-title">JMSType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the message type identifier supplied by the client when the
+message was sent.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)JMSType</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the message type</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the message
+type due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setJMSType:">&ndash; setJMSType:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/acknowledge" title="acknowledge"></a>
+	<h3 class="subsubtitle method-title">acknowledge</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Acknowledges all consumed messages of the session of this consumed
+message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)acknowledge</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>All consumed JMS messages support the acknowledge
+method for use when a client has specified that its JMS session&rsquo;s
+consumed messages are to be explicitly acknowledged, for example,
+when <a href="../Classes/KMSession.html#//api/name/acknowledgeMode">[KMSession acknowledgeMode]</a> is set to <em>KMSessionClientAcknowledge</em>.
+By invoking acknowledge on a consumed message, a client acknowledges
+all messages consumed by the session that the message was delivered to.</p>
+
+<p>Calls to acknowledge are ignored for both transacted
+sessions and sessions specified to use implicit acknowledgement modes.</p>
+
+<p>A client may individually acknowledge each message as it is consumed,
+or it may choose to acknowledge messages as an application-defined group
+(which is done by calling acknowledge on the last received message of the group,
+thereby acknowledging all messages consumed by the session.)</p>
+
+<p>Messages that have been received but not acknowledged may be
+redelivered.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to acknowledge the
+messages due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMIllegalStateException</em></dt>
+			<dd><p>if this method is called on a closed
+session.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMConnection.html#//api/name/createSession:transacted:">[KMConnection createSession:transacted:]</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMSession.html">KMSession</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/clearBody" title="clearBody"></a>
+	<h3 class="subsubtitle method-title">clearBody</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Clears out the message body. Clearing a message&rsquo;s body does not clear
+its header values or property entries.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)clearBody</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If this message body was read-only, calling this method leaves
+the message body in the same state as an empty body in a newly
+created message.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to clear the message
+body due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/clearProperties" title="clearProperties"></a>
+	<h3 class="subsubtitle method-title">clearProperties</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Clears a message&rsquo;s properties.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)clearProperties</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The message&rsquo;s header fields and body are not cleared.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to clear the message
+properties due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getBooleanProperty:" title="getBooleanProperty:"></a>
+	<h3 class="subsubtitle method-title">getBooleanProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the boolean property with the
+specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)getBooleanProperty:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the boolean property</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the boolean property value for the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+value due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getByteProperty:" title="getByteProperty:"></a>
+	<h3 class="subsubtitle method-title">getByteProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the byte property with the specified
+name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (Byte)getByteProperty:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the byte property</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the byte property value for the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+value due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getDoubleProperty:" title="getDoubleProperty:"></a>
+	<h3 class="subsubtitle method-title">getDoubleProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the double property with the specified
+name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (double)getDoubleProperty:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the double property</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the double property value for the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+value due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getFloatProperty:" title="getFloatProperty:"></a>
+	<h3 class="subsubtitle method-title">getFloatProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the float property with the specified
+name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (float)getFloatProperty:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the float property</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the float property value for the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+value due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getIntProperty:" title="getIntProperty:"></a>
+	<h3 class="subsubtitle method-title">getIntProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the int property with the specified
+name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)getIntProperty:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the int property</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the int property value for the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+value due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getLongProperty:" title="getLongProperty:"></a>
+	<h3 class="subsubtitle method-title">getLongProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the long property with the specified
+name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (long long)getLongProperty:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the long property</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the long property value for the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+value due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getObjectProperty:" title="getObjectProperty:"></a>
+	<h3 class="subsubtitle method-title">getObjectProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the object property with the specified name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSObject *)getObjectProperty:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the object property</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the object property value with the specified name, in
+objectified format (for example, if the property was set as an
+int, an Integer is
+returned); if there is no property by this name, a null value
+is returned</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method can be used to return, in objectified format,
+an object that has been stored as a property in the message with the
+equivalent SetObjectProperty method call, or its equivalent
+primitive Set<I>type</I>Property method.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+value due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getShortProperty:" title="getShortProperty:"></a>
+	<h3 class="subsubtitle method-title">getShortProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the short property with the specified
+name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (short)getShortProperty:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the short property</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the short property value for the specified name</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+value due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getStringProperty:" title="getStringProperty:"></a>
+	<h3 class="subsubtitle method-title">getStringProperty:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the value of the String property with the specified
+name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)getStringProperty:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the String property</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the String property value for the specified name;
+if there is no property by this name, a null value is returned</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+value due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if this type conversion is invalid.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/propertyExists:" title="propertyExists:"></a>
+	<h3 class="subsubtitle method-title">propertyExists:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates whether a property value exists.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)propertyExists:(NSString *)<em>name</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the property to test</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if the property exists</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to determine if the
+property exists due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/propertyNames" title="propertyNames"></a>
+	<h3 class="subsubtitle method-title">propertyNames</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an Enumeration of all the property names.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSEnumerator *)propertyNames</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>an enumeration of all the names of property values</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Note that JMS standard header fields are not considered
+properties and are not returned in this enumeration.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the property
+names due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setBooleanProperty:value:" title="setBooleanProperty:value:"></a>
+	<h3 class="subsubtitle method-title">setBooleanProperty:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a boolean property value with the specified name into
+the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setBooleanProperty:(NSString *)<em>name</em> value:(BOOL)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the boolean property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the boolean property value to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the property
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if properties are read-only</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setByteProperty:value:" title="setByteProperty:value:"></a>
+	<h3 class="subsubtitle method-title">setByteProperty:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a byte property value with the specified name into
+the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setByteProperty:(NSString *)<em>name</em> value:(Byte)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the byte property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the byte property value to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the property
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if properties are read-only</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDoubleProperty:value:" title="setDoubleProperty:value:"></a>
+	<h3 class="subsubtitle method-title">setDoubleProperty:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a double property value with the specified name into
+the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDoubleProperty:(NSString *)<em>name</em> value:(double)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the double property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the double property value to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the property
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if properties are read-only</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setFloatProperty:value:" title="setFloatProperty:value:"></a>
+	<h3 class="subsubtitle method-title">setFloatProperty:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a float property value with the specified name into
+the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setFloatProperty:(NSString *)<em>name</em> value:(float)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the float property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the float property value to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the property
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if properties are read-only</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setIntProperty:value:" title="setIntProperty:value:"></a>
+	<h3 class="subsubtitle method-title">setIntProperty:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets an int property value with the specified name into
+the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setIntProperty:(NSString *)<em>name</em> value:(int)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the int property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the int property value to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the property
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if properties are read-only</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSCorrelationID:" title="setJMSCorrelationID:"></a>
+	<h3 class="subsubtitle method-title">setJMSCorrelationID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the correlation ID for the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSCorrelationID:(NSString *)<em>correlationID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>correlationID</em></dt>
+			<dd><p>the message ID of a message being referred to</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A client can use the <a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a> header field to
+link one message with another. A typical use is to link a response
+message with its request message.</p>
+
+<p><a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a> can hold one of the following:</p>
+
+<ul>
+<li>A provider-specific message ID</li>
+<li>An application-specific String</li>
+<li>A provider-native byte[] value</li>
+</ul>
+
+
+<p>Since each message sent by a JMS provider is assigned a message ID
+value, it is convenient to link messages via message ID. All message ID
+values must start with the &lsquo;ID:&rsquo; prefix.</p>
+
+<p>In some cases, an application (made up of several clients) needs to
+use an application-specific value for linking messages. For instance,
+an application may use <a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a> to hold a value
+referencing some external information. Application-specified values
+must not start with the &lsquo;ID:&rsquo; prefix; this is reserved for
+provider-generated message ID values.</p>
+
+<p>If a provider supports the native concept of correlation ID, a JMS
+client may need to assign specific <a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a> values
+to match those expected by clients that do not use the JMS API. A
+byte[] value is used for this
+purpose. JMS providers without native correlation ID values are not
+required to support byte[] values. The use of a
+byte[] value for <a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a> is
+non-portable.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the correlation
+ID due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSCorrelationID">&ndash; JMSCorrelationID</a>()</p></code></li>
+			
+			<li><code><p><a href="#//api/name/JMSCorrelationIDAsBytes">&ndash; JMSCorrelationIDAsBytes</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/setJMSCorrelationIDAsBytes:">&ndash; setJMSCorrelationIDAsBytes:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSCorrelationIDAsBytes:" title="setJMSCorrelationIDAsBytes:"></a>
+	<h3 class="subsubtitle method-title">setJMSCorrelationIDAsBytes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the correlation ID as an array of bytes for the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSCorrelationIDAsBytes:(NSData *)<em>correlationID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>correlationID</em></dt>
+			<dd><p>the correlation ID value as an array of bytes</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The array is copied before the method returns, so
+future modifications to the array will not alter this message header.</p>
+
+<p>If a provider supports the native concept of correlation ID, a
+JMS client may need to assign specific <a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a>
+values to match those expected by native messaging clients.
+JMS providers without native correlation ID values are not required to
+support this method and its corresponding get method;</p>
+
+<p>The use of a byte[] value for <a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a> is non-portable.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the correlation
+ID due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSCorrelationID">&ndash; JMSCorrelationID</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/setJMSCorrelationID:">&ndash; setJMSCorrelationID:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/JMSCorrelationIDAsBytes">&ndash; JMSCorrelationIDAsBytes</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSDeliveryMode:" title="setJMSDeliveryMode:"></a>
+	<h3 class="subsubtitle method-title">setJMSDeliveryMode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the DeliveryMode value for this message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSDeliveryMode:(int)<em>deliveryMode</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deliveryMode</em></dt>
+			<dd><p>the delivery mode for this message</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>JMS providers set this field when a message is sent. This method
+can be used to change the value for a message that has been received.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the
+delivery mode due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSDeliveryMode">&ndash; JMSDeliveryMode</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMDeliveryMode.html">KMDeliveryMode</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSDestination:" title="setJMSDestination:"></a>
+	<h3 class="subsubtitle method-title">setJMSDestination:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the Destination object for this message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSDestination:(KMDestination *)<em>destination</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the destination for this message</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>JMS providers set this field when a message is sent. This method
+can be used to change the value for a message that has been received.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the destination
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSDestination">&ndash; JMSDestination</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSExpiration:" title="setJMSExpiration:"></a>
+	<h3 class="subsubtitle method-title">setJMSExpiration:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the message&rsquo;s expiration value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSExpiration:(long long)<em>expiration</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>expiration</em></dt>
+			<dd><p>the message&rsquo;s expiration time</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>JMS providers set this field when a message is sent. This method
+can be used to change the value for a message that has been received.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the message
+expiration due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSExpiration">&ndash; JMSExpiration</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSMessageID:" title="setJMSMessageID:"></a>
+	<h3 class="subsubtitle method-title">setJMSMessageID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the message ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSMessageID:(NSString *)<em>messageID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>messageID</em></dt>
+			<dd><p>the ID of the message</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>JMS providers set this field when a message is sent. This method
+can be used to change the value for a message that has been received.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the message ID
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSMessageID">&ndash; JMSMessageID</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSPriority:" title="setJMSPriority:"></a>
+	<h3 class="subsubtitle method-title">setJMSPriority:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the priority level for this message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSPriority:(int)<em>priority</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>priority</em></dt>
+			<dd><p>the priority of this message</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>JMS providers set this field when a message is sent. This method
+can be used to change the value for a message that has been received.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the message
+priority due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSPriority">&ndash; JMSPriority</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSRedelivered:" title="setJMSRedelivered:"></a>
+	<h3 class="subsubtitle method-title">setJMSRedelivered:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies whether this message is being redelivered.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSRedelivered:(BOOL)<em>redelivered</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>redelivered</em></dt>
+			<dd><p>an indication of whether this message is being
+redelivered</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This field is set at the time the message is delivered. This
+method can be used to change the value for a message that has
+been received.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the redelivered
+state due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSRedelivered">&ndash; JMSRedelivered</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSReplyTo:" title="setJMSReplyTo:"></a>
+	<h3 class="subsubtitle method-title">setJMSReplyTo:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the Destination object to which a reply to this
+message should be sent.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSReplyTo:(KMDestination *)<em>replyTo</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>replyTo</em></dt>
+			<dd><p>Destination to which to send a response to
+this message</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <a href="#//api/name/JMSReplyTo">JMSReplyTo</a> header field contains the destination
+where a reply
+to the current message should be sent. If it is null, no reply is
+expected. The destination may be either a Queue object or
+a Topic object.</p>
+
+<p>Messages sent with a null <a href="#//api/name/JMSReplyTo">JMSReplyTo</a> value may be a
+notification of some event, or they may just be some data the sender
+thinks is of interest.</p>
+
+<p>Messages with a <a href="#//api/name/JMSReplyTo">JMSReplyTo</a> value typically expect a
+response. A response is optional; it is up to the client to decide.
+These messages are called requests. A message sent in response to a
+request is called a reply.</p>
+
+<p>In some cases a client may wish to match a request it sent earlier
+with a reply it has just received. The client can use the
+<a href="#//api/name/JMSCorrelationID">JMSCorrelationID</a> header field for this purpose.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the
+<a href="#//api/name/JMSReplyTo">JMSReplyTo</a> destination due to some
+internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSReplyTo">&ndash; JMSReplyTo</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSTimestamp:" title="setJMSTimestamp:"></a>
+	<h3 class="subsubtitle method-title">setJMSTimestamp:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the message timestamp.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSTimestamp:(long long)<em>timestamp</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timestamp</em></dt>
+			<dd><p>the timestamp for this message</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>JMS providers set this field when a message is sent. This method
+can be used to change the value for a message that has been received.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the timestamp
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSTimestamp">&ndash; JMSTimestamp</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setJMSType:" title="setJMSType:"></a>
+	<h3 class="subsubtitle method-title">setJMSType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the message type.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setJMSType:(NSString *)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>the message type</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Some JMS providers use a message repository that contains the
+definitions of messages sent by applications. The <a href="#//api/name/JMSType">JMSType</a>
+header field may reference a message&rsquo;s definition in the provider&rsquo;s
+repository.</p>
+
+<p>The JMS API does not define a standard message definition repository,
+nor does it define a naming policy for the definitions it contains.</p>
+
+<p>Some messaging systems require that a message type definition for
+each application message be created and that each message specify its
+type. In order to work with such JMS providers, JMS clients should
+assign a value to <a href="#//api/name/JMSType">JMSType</a>, whether the application makes
+use of it or not. This ensures that the field is properly set for those
+providers that require it.</p>
+
+<p>To ensure portability, JMS clients should use symbolic values for
+<a href="#//api/name/JMSType">JMSType</a> that can be configured at installation time to the
+values defined in the current provider&rsquo;s message repository. If string
+literals are used, they may not be valid type names for some JMS
+providers.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the message
+type due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/JMSType">&ndash; JMSType</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setLongProperty:value:" title="setLongProperty:value:"></a>
+	<h3 class="subsubtitle method-title">setLongProperty:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a long property value with the specified name into
+the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setLongProperty:(NSString *)<em>name</em> value:(long long)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the long property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the long property value to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the property
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if properties are read-only</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setObjectProperty:value:" title="setObjectProperty:value:"></a>
+	<h3 class="subsubtitle method-title">setObjectProperty:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a object property value with the specified name into the
+message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setObjectProperty:(NSString *)<em>name</em> value:(NSObject *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the object property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the object property value to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Note that this method works only for the objectified primitive
+object types (Integer, Double,
+Long &hellip;) and String objects.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the property
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if the object is invalid</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if properties are read-only</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setShortProperty:value:" title="setShortProperty:value:"></a>
+	<h3 class="subsubtitle method-title">setShortProperty:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a short property value with the specified name into
+the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setShortProperty:(NSString *)<em>name</em> value:(short)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the short property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the short property value to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the property
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if properties are read-only</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setStringProperty:value:" title="setStringProperty:value:"></a>
+	<h3 class="subsubtitle method-title">setStringProperty:value:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets a String property value with the specified name into
+the message.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setStringProperty:(NSString *)<em>name</em> value:(NSString *)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>the name of the String property</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>the String property value to set</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the property
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>if the name is null or if the name is
+an empty string.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageNotWriteableException</em></dt>
+			<dd><p>if properties are read-only</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

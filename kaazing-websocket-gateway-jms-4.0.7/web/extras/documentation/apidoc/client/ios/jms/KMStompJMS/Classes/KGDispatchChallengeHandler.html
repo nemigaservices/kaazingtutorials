@@ -1,0 +1,609 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KGDispatchChallengeHandler Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KGDispatchChallengeHandler Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/canHandle:">&nbsp;&nbsp;&nbsp;&nbsp;- canHandle:</option>
+	
+	<option value="//api/name/handle:">&nbsp;&nbsp;&nbsp;&nbsp;- handle:</option>
+	
+	<option value="//api/name/registerChallengeHandler:challengeHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- registerChallengeHandler:challengeHandler:</option>
+	
+	<option value="//api/name/unregisterChallengeHandler:challengeHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- unregisterChallengeHandler:challengeHandler:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canHandle:">canHandle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handle:">handle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerChallengeHandler:challengeHandler:">registerChallengeHandler:challengeHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unregisterChallengeHandler:challengeHandler:">unregisterChallengeHandler:challengeHandler:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KGDispatchChallengeHandler Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KGDispatchChallengeHandler Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KGChallengeHandler.html">KGChallengeHandler</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KGDispatchChallengeHandler.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A DispatchChallengeHandler is responsible for dispatching challenge requests
+to appropriate challenge handlers when challenges
+arrive from specific URI locations in challenge responses.</p>
+
+<p><p/>
+This allows clients to use specific challenge handlers to handle specific
+types of challenges at different URI locations.
+<p/></p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/canHandle:">&ndash;&nbsp;canHandle:</a></code>
+		<span class="tooltip"><p>Can the presented challenge be potentially handled by this challenge handler?</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/handle:">&ndash;&nbsp;handle:</a></code>
+		<span class="tooltip"><p>Handle the presented challenge by creating a challenge response or returning nil.
+This responsibility is usually achieved
+by using the associated <a href="../Classes/KGLoginHandler.html">KGLoginHandler</a> to obtain user credentials, and transforming those credentials
+into a <a href="../Classes/KGChallengeResponse.html">KGChallengeResponse</a>.</p>
+
+<p><p/>
+When it is not possible to <a href="#//api/name/create">create</a> a <a href="../Classes/KGChallengeResponse.html">KGChallengeResponse</a>, this method MUST return nil.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/registerChallengeHandler:challengeHandler:">&ndash;&nbsp;registerChallengeHandler:challengeHandler:</a></code>
+		<span class="tooltip"><p>Register a challenge handler to respond to challenges at one or more locations.</p>
+
+<p><p/>
+When a challenge response is received for a protected URI, the <code>locationDescription</code>
+matches against elements of the protected URI; if a match is found, one
+consults the challenge handler(s) registered at that <code>locationDescription</code> to find
+a challenge handler suitable to respond to the challenge.
+<p/>
+A <code>locationDescription</code> comprises a username, password, host, port and paths,
+any of which can be wild-carded with the &ldquo;*&rdquo; character to match any number of request URIs.
+If no port is explicitly mentioned in a <code>locationDescription</code>, a default port will be inferred
+based on the scheme mentioned in the location description, according to the following table:
+<table border=1>
+<tr><th>scheme</th><th>default port</th><th>Sample locationDescription</th></tr>
+<tr><td>http</td><td>80</td><td>foo.example.com or <code>http://foo.example.com</code></td></tr>
+<tr><td>ws</td><td>80</td><td>foo.example.com or ws://foo.example.com</td></tr>
+<tr><td>https</td><td>443</td><td><code>https://foo.example.com</code></td></tr>
+<tr><td>wss</td><td>443</td><td>wss://foo.example.com</td></tr>
+</table>
+<p/>
+The protocol scheme (e.g. http or ws) if present in <code>locationDescription</code> will not be used to
+match <code>locationDescription</code> with the protected URI, because authentication challenges are
+implemented on top of one of the HTTP/s protocols always, whether one is initiating web socket
+connections or regular HTTP connections.  That is to say for example, the locationDescription <code>"foo.example.com"</code>
+matches both URIs <code>http://foo.example.com</code> and <code>ws://foo.example.com</code>.
+<p/>
+Some examples of <code>locationDescription</code> values with wildcards are:
+<ol>
+<li><code>*</code>&#047; &mdash; matches all requests to any host on port 80 (default port), with no user info or path specified.  </li>
+<li><code>*.hostname.com:8000</code>  &mdash; matches all requests to port 8000 on any sub-domain of <code>hostname.com</code>,
+but not <code>hostname.com</code> itself.</li>
+<li><code>server.hostname.com:*</code>&#047;<code>*</code> &mdash; matches all requests to a particular server on any port on any path but not the empty path. </li>
+</ol></p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unregisterChallengeHandler:challengeHandler:">&ndash;&nbsp;unregisterChallengeHandler:challengeHandler:</a></code>
+		<span class="tooltip"><p>If the provided challengeHandler is registered at the provided location, clear that
+association such that any future challenge requests matching the location will never
+be handled by the provided challenge handler.</p>
+
+<p><p/>
+If no such location or challengeHandler registration exists, this method silently succeeds.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/canHandle:" title="canHandle:"></a>
+	<h3 class="subsubtitle method-title">canHandle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Can the presented challenge be potentially handled by this challenge handler?</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)canHandle:(KGChallengeRequest *)<em>challengeRequest</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>challengeRequest</em></dt>
+			<dd><p>a challenge request object containing a challenge</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>true if this challenge handler could potentially respond meaningfully to the challenge.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGChallengeHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/handle:" title="handle:"></a>
+	<h3 class="subsubtitle method-title">handle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Handle the presented challenge by creating a challenge response or returning nil.
+This responsibility is usually achieved
+by using the associated <a href="../Classes/KGLoginHandler.html">KGLoginHandler</a> to obtain user credentials, and transforming those credentials
+into a <a href="../Classes/KGChallengeResponse.html">KGChallengeResponse</a>.</p>
+
+<p><p/>
+When it is not possible to <a href="#//api/name/create">create</a> a <a href="../Classes/KGChallengeResponse.html">KGChallengeResponse</a>, this method MUST return nil.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KGChallengeResponse *)handle:(KGChallengeRequest *)<em>challengeRequest</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>challengeRequest</em></dt>
+			<dd><p>a challenge object</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a challenge response object or nil if no response is possible.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGChallengeHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/registerChallengeHandler:challengeHandler:" title="registerChallengeHandler:challengeHandler:"></a>
+	<h3 class="subsubtitle method-title">registerChallengeHandler:challengeHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Register a challenge handler to respond to challenges at one or more locations.</p>
+
+<p><p/>
+When a challenge response is received for a protected URI, the <code>locationDescription</code>
+matches against elements of the protected URI; if a match is found, one
+consults the challenge handler(s) registered at that <code>locationDescription</code> to find
+a challenge handler suitable to respond to the challenge.
+<p/>
+A <code>locationDescription</code> comprises a username, password, host, port and paths,
+any of which can be wild-carded with the &ldquo;*&rdquo; character to match any number of request URIs.
+If no port is explicitly mentioned in a <code>locationDescription</code>, a default port will be inferred
+based on the scheme mentioned in the location description, according to the following table:
+<table border=1>
+<tr><th>scheme</th><th>default port</th><th>Sample locationDescription</th></tr>
+<tr><td>http</td><td>80</td><td>foo.example.com or <code>http://foo.example.com</code></td></tr>
+<tr><td>ws</td><td>80</td><td>foo.example.com or ws://foo.example.com</td></tr>
+<tr><td>https</td><td>443</td><td><code>https://foo.example.com</code></td></tr>
+<tr><td>wss</td><td>443</td><td>wss://foo.example.com</td></tr>
+</table>
+<p/>
+The protocol scheme (e.g. http or ws) if present in <code>locationDescription</code> will not be used to
+match <code>locationDescription</code> with the protected URI, because authentication challenges are
+implemented on top of one of the HTTP/s protocols always, whether one is initiating web socket
+connections or regular HTTP connections.  That is to say for example, the locationDescription <code>"foo.example.com"</code>
+matches both URIs <code>http://foo.example.com</code> and <code>ws://foo.example.com</code>.
+<p/>
+Some examples of <code>locationDescription</code> values with wildcards are:
+<ol>
+<li><code>*</code>&#047; &mdash; matches all requests to any host on port 80 (default port), with no user info or path specified.  </li>
+<li><code>*.hostname.com:8000</code>  &mdash; matches all requests to port 8000 on any sub-domain of <code>hostname.com</code>,
+but not <code>hostname.com</code> itself.</li>
+<li><code>server.hostname.com:*</code>&#047;<code>*</code> &mdash; matches all requests to a particular server on any port on any path but not the empty path. </li>
+</ol></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KGDispatchChallengeHandler *)registerChallengeHandler:(NSString *)<em>locationDescription</em> challengeHandler:(KGChallengeHandler *)<em>challengeHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locationDescription</em></dt>
+			<dd><p>the (possibly wild-carded) location(s) at which to register a handler.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>challengeHandler</em></dt>
+			<dd><p>the challenge handler to register at the location(s).</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a reference to this challenge handler for chained calls</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGDispatchChallengeHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unregisterChallengeHandler:challengeHandler:" title="unregisterChallengeHandler:challengeHandler:"></a>
+	<h3 class="subsubtitle method-title">unregisterChallengeHandler:challengeHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If the provided challengeHandler is registered at the provided location, clear that
+association such that any future challenge requests matching the location will never
+be handled by the provided challenge handler.</p>
+
+<p><p/>
+If no such location or challengeHandler registration exists, this method silently succeeds.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KGChallengeHandler *)unregisterChallengeHandler:(NSString *)<em>locationDescription</em> challengeHandler:(KGChallengeHandler *)<em>challengeHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>locationDescription</em></dt>
+			<dd><p>the exact location description at which the challenge handler was originally registered</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>challengeHandler</em></dt>
+			<dd><p>the challenge handler to de-register.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a reference to this object for chained call support</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGDispatchChallengeHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

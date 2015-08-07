@@ -1,0 +1,1630 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KMMessageProducer Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KMMessageProducer Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/close">&nbsp;&nbsp;&nbsp;&nbsp;- close</option>
+	
+	<option value="//api/name/deliveryMode">&nbsp;&nbsp;&nbsp;&nbsp;- deliveryMode</option>
+	
+	<option value="//api/name/destination">&nbsp;&nbsp;&nbsp;&nbsp;- destination</option>
+	
+	<option value="//api/name/disableMessageID">&nbsp;&nbsp;&nbsp;&nbsp;- disableMessageID</option>
+	
+	<option value="//api/name/disableMessageTimestamp">&nbsp;&nbsp;&nbsp;&nbsp;- disableMessageTimestamp</option>
+	
+	<option value="//api/name/priority">&nbsp;&nbsp;&nbsp;&nbsp;- priority</option>
+	
+	<option value="//api/name/send:">&nbsp;&nbsp;&nbsp;&nbsp;- send:</option>
+	
+	<option value="//api/name/send:deliveryMode:priority:timeToLive:">&nbsp;&nbsp;&nbsp;&nbsp;- send:deliveryMode:priority:timeToLive:</option>
+	
+	<option value="//api/name/send:message:">&nbsp;&nbsp;&nbsp;&nbsp;- send:message:</option>
+	
+	<option value="//api/name/send:message:deliveryMode:priority:timeToLive:">&nbsp;&nbsp;&nbsp;&nbsp;- send:message:deliveryMode:priority:timeToLive:</option>
+	
+	<option value="//api/name/setDeliveryMode:">&nbsp;&nbsp;&nbsp;&nbsp;- setDeliveryMode:</option>
+	
+	<option value="//api/name/setDisableMessageID:">&nbsp;&nbsp;&nbsp;&nbsp;- setDisableMessageID:</option>
+	
+	<option value="//api/name/setDisableMessageTimestamp:">&nbsp;&nbsp;&nbsp;&nbsp;- setDisableMessageTimestamp:</option>
+	
+	<option value="//api/name/setPriority:">&nbsp;&nbsp;&nbsp;&nbsp;- setPriority:</option>
+	
+	<option value="//api/name/setTimeToLive:">&nbsp;&nbsp;&nbsp;&nbsp;- setTimeToLive:</option>
+	
+	<option value="//api/name/timeToLive">&nbsp;&nbsp;&nbsp;&nbsp;- timeToLive</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/close">close</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deliveryMode">deliveryMode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/destination">destination</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disableMessageID">disableMessageID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disableMessageTimestamp">disableMessageTimestamp</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/priority">priority</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/send:">send:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/send:deliveryMode:priority:timeToLive:">send:deliveryMode:priority:timeToLive:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/send:message:">send:message:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/send:message:deliveryMode:priority:timeToLive:">send:message:deliveryMode:priority:timeToLive:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDeliveryMode:">setDeliveryMode:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDisableMessageID:">setDisableMessageID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDisableMessageTimestamp:">setDisableMessageTimestamp:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setPriority:">setPriority:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setTimeToLive:">setTimeToLive:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timeToLive">timeToLive</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KMMessageProducer Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KMMessageProducer Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/KCObject.html">KCObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KMMessageProducer.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A client uses a MessageProducer object to send messages to a
+<a href="#//api/name/destination">destination</a>. A MessageProducer object is created by passing a
+Destination object to a message-producer creation method
+supplied by a session.</p>
+
+<p>MessageProducer is the parent interface for all message
+producers.</p>
+
+<p>A client also has the option of creating a message producer without
+supplying a <a href="#//api/name/destination">destination</a>. In this case, a <a href="#//api/name/destination">destination</a> must be provided with
+every send operation. A typical use for this kind of message producer is
+to send replies to requests using the request&rsquo;s JMSReplyTo
+<a href="#//api/name/destination">destination</a>.</p>
+
+<p>A client can specify a default delivery mode, <a href="#//api/name/priority">priority</a>, and time to live
+for messages sent by a message producer. It can also specify the delivery
+mode, <a href="#//api/name/priority">priority</a>, and time to live for an individual message.</p>
+
+<p>A client can specify a time-to-live value in milliseconds for each
+message it sends. This value defines a message expiration time that
+is the sum of the message&rsquo;s time-to-live and the GMT when it is sent (for
+transacted sends, this is the time the client sends the message, not
+the time the transaction is committed).</p>
+
+<p>A JMS provider should do its best to expire messages accurately;
+however, the JMS API does not define the accuracy provided.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDisableMessageID:">&ndash;&nbsp;setDisableMessageID:</a></code>
+		<span class="tooltip"><p>Sets whether message IDs are disabled.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/disableMessageID">&ndash;&nbsp;disableMessageID</a></code>
+		<span class="tooltip"><p>Gets an indication of whether message IDs are disabled.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDisableMessageTimestamp:">&ndash;&nbsp;setDisableMessageTimestamp:</a></code>
+		<span class="tooltip"><p>Sets whether message timestamps are disabled.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/disableMessageTimestamp">&ndash;&nbsp;disableMessageTimestamp</a></code>
+		<span class="tooltip"><p>Gets an indication of whether message timestamps are disabled.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDeliveryMode:">&ndash;&nbsp;setDeliveryMode:</a></code>
+		<span class="tooltip"><p>Sets the producer&rsquo;s default delivery mode.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deliveryMode">&ndash;&nbsp;deliveryMode</a></code>
+		<span class="tooltip"><p>Gets the producer&rsquo;s default delivery mode.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setPriority:">&ndash;&nbsp;setPriority:</a></code>
+		<span class="tooltip"><p>Sets the producer&rsquo;s default <a href="#//api/name/priority">priority</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/priority">&ndash;&nbsp;priority</a></code>
+		<span class="tooltip"><p>Gets the producer&rsquo;s default priority.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setTimeToLive:">&ndash;&nbsp;setTimeToLive:</a></code>
+		<span class="tooltip"><p>Sets the default length of time in milliseconds from its dispatch time
+that a produced message should be retained by the message system.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/timeToLive">&ndash;&nbsp;timeToLive</a></code>
+		<span class="tooltip"><p>Gets the default length of time in milliseconds from its dispatch time
+that a produced message should be retained by the message system.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/destination">&ndash;&nbsp;destination</a></code>
+		<span class="tooltip"><p>Gets the destination associated with this MessageProducer.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/close">&ndash;&nbsp;close</a></code>
+		<span class="tooltip"><p>Closes the message producer.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/send:">&ndash;&nbsp;send:</a></code>
+		<span class="tooltip"><p>Sends a message using the MessageProducer&rsquo;s
+default delivery mode, <a href="#//api/name/priority">priority</a>, and time to live.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/send:deliveryMode:priority:timeToLive:">&ndash;&nbsp;send:deliveryMode:priority:timeToLive:</a></code>
+		<span class="tooltip"><p>Sends a message to the <a href="#//api/name/destination">destination</a>, specifying delivery mode, <a href="#//api/name/priority">priority</a>, and
+time to live.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/send:message:">&ndash;&nbsp;send:message:</a></code>
+		<span class="tooltip"><p>Sends a message to a <a href="#//api/name/destination">destination</a> for an unidentified message producer.
+Uses the MessageProducer&rsquo;s default delivery mode, <a href="#//api/name/priority">priority</a>,
+and time to live.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/send:message:deliveryMode:priority:timeToLive:">&ndash;&nbsp;send:message:deliveryMode:priority:timeToLive:</a></code>
+		<span class="tooltip"><p>Sends a message to a <a href="#//api/name/destination">destination</a> for an unidentified message producer,
+specifying delivery mode, <a href="#//api/name/priority">priority</a> and time to live.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/close" title="close"></a>
+	<h3 class="subsubtitle method-title">close</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Closes the message producer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)close</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Since a provider may allocate some resources on behalf of a
+MessageProducer outside the application, clients should close them when they
+are no longer needed.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to close the producer
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deliveryMode" title="deliveryMode"></a>
+	<h3 class="subsubtitle method-title">deliveryMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the producer&rsquo;s default delivery mode.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)deliveryMode</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the message delivery mode for this message producer</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the delivery
+mode due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setDeliveryMode:">&ndash; setDeliveryMode:</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMDeliveryMode.html">KMDeliveryMode</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMMessage.html">KMMessage</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/destination" title="destination"></a>
+	<h3 class="subsubtitle method-title">destination</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the destination associated with this MessageProducer.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KMDestination *)destination</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>this producer&rsquo;s Destination</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the destination for
+this MessageProducer
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/disableMessageID" title="disableMessageID"></a>
+	<h3 class="subsubtitle method-title">disableMessageID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets an indication of whether message IDs are disabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)disableMessageID</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>an indication of whether message IDs are disabled</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to determine if
+message IDs are disabled due to some internal
+error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/disableMessageTimestamp" title="disableMessageTimestamp"></a>
+	<h3 class="subsubtitle method-title">disableMessageTimestamp</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets an indication of whether message timestamps are disabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)disableMessageTimestamp</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>an indication of whether message timestamps are disabled</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to determine if
+timestamps are disabled due to some internal
+error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/priority" title="priority"></a>
+	<h3 class="subsubtitle method-title">priority</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the producer&rsquo;s default priority.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (int)priority</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the message priority for this message producer</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the priority
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setPriority:">&ndash; setPriority:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/send:" title="send:"></a>
+	<h3 class="subsubtitle method-title">send:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sends a message using the MessageProducer&rsquo;s
+default delivery mode, <a href="#//api/name/priority">priority</a>, and time to live.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)send:(KMMessage *)<em>message</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>the message to send</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to send the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if an invalid message is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if a client uses
+this method with a MessageProducer with
+an invalid <a href="#//api/name/destination">destination</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMUnsupportedOperationException</em></dt>
+			<dd><p>if a client uses this
+method with a MessageProducer that did
+not specify a <a href="#//api/name/destination">destination</a> at creation time.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMSession.html#//api/name/createProducer:">[KMSession createProducer:]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/send:deliveryMode:priority:timeToLive:" title="send:deliveryMode:priority:timeToLive:"></a>
+	<h3 class="subsubtitle method-title">send:deliveryMode:priority:timeToLive:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sends a message to the <a href="#//api/name/destination">destination</a>, specifying delivery mode, <a href="#//api/name/priority">priority</a>, and
+time to live.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)send:(KMMessage *)<em>message</em> deliveryMode:(int)<em>deliveryMode</em> priority:(int)<em>priority</em> timeToLive:(long long)<em>timeToLive</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>the message to send</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deliveryMode</em></dt>
+			<dd><p>the delivery mode to use</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>priority</em></dt>
+			<dd><p>the <a href="#//api/name/priority">priority</a> for this message</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeToLive</em></dt>
+			<dd><p>the message&rsquo;s lifetime (in milliseconds)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to send the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if an invalid message is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if a client uses
+this method with a MessageProducer with
+an invalid <a href="#//api/name/destination">destination</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMUnsupportedOperationException</em></dt>
+			<dd><p>if a client uses this
+method with a MessageProducer that did
+not specify a <a href="#//api/name/destination">destination</a> at creation time.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMSession.html#//api/name/createProducer:">[KMSession createProducer:]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/send:message:" title="send:message:"></a>
+	<h3 class="subsubtitle method-title">send:message:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sends a message to a <a href="#//api/name/destination">destination</a> for an unidentified message producer.
+Uses the MessageProducer&rsquo;s default delivery mode, <a href="#//api/name/priority">priority</a>,
+and time to live.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)send:(KMDestination *)<em>destination</em> message:(KMMessage *)<em>message</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the <a href="#//api/name/destination">destination</a> to send this message to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>the message to send</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Typically, a message producer is assigned a <a href="#//api/name/destination">destination</a> at creation
+time; however, the JMS API also supports unidentified message producers,
+which require that the <a href="#//api/name/destination">destination</a> be supplied every time a message is
+sent.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to send the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if an invalid message is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if a client uses
+this method with an invalid <a href="#//api/name/destination">destination</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMUnsupportedOperationException</em></dt>
+			<dd><p>if a client uses this
+method with a MessageProducer that
+specified a <a href="#//api/name/destination">destination</a> at creation time.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMSession.html#//api/name/createProducer:">[KMSession createProducer:]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/send:message:deliveryMode:priority:timeToLive:" title="send:message:deliveryMode:priority:timeToLive:"></a>
+	<h3 class="subsubtitle method-title">send:message:deliveryMode:priority:timeToLive:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sends a message to a <a href="#//api/name/destination">destination</a> for an unidentified message producer,
+specifying delivery mode, <a href="#//api/name/priority">priority</a> and time to live.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)send:(KMDestination *)<em>destination</em> message:(KMMessage *)<em>message</em> deliveryMode:(int)<em>deliveryMode</em> priority:(int)<em>priority</em> timeToLive:(long long)<em>timeToLive</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>destination</em></dt>
+			<dd><p>the <a href="#//api/name/destination">destination</a> to send this message to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>the message to send</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deliveryMode</em></dt>
+			<dd><p>the delivery mode to use</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>priority</em></dt>
+			<dd><p>the <a href="#//api/name/priority">priority</a> for this message</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeToLive</em></dt>
+			<dd><p>the message&rsquo;s lifetime (in milliseconds)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Typically, a message producer is assigned a <a href="#//api/name/destination">destination</a> at creation
+time; however, the JMS API also supports unidentified message producers,
+which require that the <a href="#//api/name/destination">destination</a> be supplied every time a message is
+sent.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to send the message
+due to some internal error.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMMessageFormatException</em></dt>
+			<dd><p>if an invalid message is specified.</p></dd>
+		</dl>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMInvalidDestinationException</em></dt>
+			<dd><p>if a client uses
+this method with an invalid <a href="#//api/name/destination">destination</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/KMSession.html#//api/name/createProducer:">[KMSession createProducer:]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDeliveryMode:" title="setDeliveryMode:"></a>
+	<h3 class="subsubtitle method-title">setDeliveryMode:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the producer&rsquo;s default delivery mode.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDeliveryMode:(int)<em>deliveryMode</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deliveryMode</em></dt>
+			<dd><p>the message delivery mode for this message
+producer; legal values are DeliveryModeNonPersistent
+and DeliveryModePersistent</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Delivery mode is set to PERSISTENT by default.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the delivery
+mode due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/deliveryMode">&ndash; deliveryMode</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMDeliveryMode.html">KMDeliveryMode</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMMessage.html">KMMessage</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDisableMessageID:" title="setDisableMessageID:"></a>
+	<h3 class="subsubtitle method-title">setDisableMessageID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets whether message IDs are disabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDisableMessageID:(BOOL)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>indicates if message IDs are disabled</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Since message IDs take some effort to create and increase a
+message&rsquo;s size, some JMS providers may be able to optimize message
+overhead if they are given a hint that the message ID is not used by
+an application. By calling the setDisableMessageID
+method on this message producer, a JMS client enables this potential
+optimization for all messages sent by this message producer. If the JMS
+provider accepts this hint,
+these messages must have the message ID set to null; if the provider
+ignores the hint, the message ID must be set to its normal unique value.</p>
+
+<p>Message IDs are enabled by default.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set message ID to
+disabled due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDisableMessageTimestamp:" title="setDisableMessageTimestamp:"></a>
+	<h3 class="subsubtitle method-title">setDisableMessageTimestamp:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets whether message timestamps are disabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDisableMessageTimestamp:(BOOL)<em>value</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>indicates if message timestamps are disabled</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Since timestamps take some effort to create and increase a
+message&rsquo;s size, some JMS providers may be able to optimize message
+overhead if they are given a hint that the timestamp is not used by an
+application. By calling the setDisableMessageTimestamp
+method on this message producer, a JMS client enables this potential
+optimization for all messages sent by this message producer.  If the
+JMS provider accepts this hint,
+these messages must have the timestamp set to zero; if the provider
+ignores the hint, the timestamp must be set to its normal value.</p>
+
+<p>Message timestamps are enabled by default.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set timestamps to
+disabled due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setPriority:" title="setPriority:"></a>
+	<h3 class="subsubtitle method-title">setPriority:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the producer&rsquo;s default <a href="#//api/name/priority">priority</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setPriority:(int)<em>defaultPriority</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>defaultPriority</em></dt>
+			<dd><p>the message <a href="#//api/name/priority">priority</a> for this message producer;
+must be a value between 0 and 9</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The JMS API defines ten levels of <a href="#//api/name/priority">priority</a> value, with 0 as the
+lowest <a href="#//api/name/priority">priority</a> and 9 as the highest. Clients should consider priorities
+0-4 as gradations of normal <a href="#//api/name/priority">priority</a> and priorities 5-9 as gradations
+of expedited <a href="#//api/name/priority">priority</a>. Priority is set to 4 by default.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the <a href="#//api/name/priority">priority</a>
+due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/priority">&ndash; priority</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setTimeToLive:" title="setTimeToLive:"></a>
+	<h3 class="subsubtitle method-title">setTimeToLive:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the default length of time in milliseconds from its dispatch time
+that a produced message should be retained by the message system.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setTimeToLive:(long long)<em>timeToLive</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeToLive</em></dt>
+			<dd><p>the message time to live in milliseconds; zero is
+unlimited</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Time to live is set to zero by default.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to set the time to
+live due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/timeToLive">&ndash; timeToLive</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/KMMessage.html">KMMessage</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/timeToLive" title="timeToLive"></a>
+	<h3 class="subsubtitle method-title">timeToLive</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the default length of time in milliseconds from its dispatch time
+that a produced message should be retained by the message system.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (long long)timeToLive</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the message time to live in milliseconds; zero is unlimited</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>KMJMSException</em></dt>
+			<dd><p>if the JMS provider fails to get the time to
+live due to some internal error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/setTimeToLive:">&ndash; setTimeToLive:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KMMessageProducer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

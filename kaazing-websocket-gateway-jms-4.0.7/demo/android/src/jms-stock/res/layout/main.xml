@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F27A31"
+    >
+
+    <EditText
+         android:id="@+id/locationText"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:text="@string/location_default"
+         android:textSize="@dimen/edit_text_size" >
+
+         <requestFocus />
+     </EditText>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" >
+
+        <Button
+            android:id="@+id/connectBtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/connect_label"
+            android:textSize="@dimen/edit_text_size" />
+
+        <Button
+            android:id="@+id/disconnectBtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:enabled="false"
+            android:layout_alignParentRight="true"
+            android:text="@string/disconnect_label"
+            android:textSize="@dimen/edit_text_size" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/stockListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#F27A31"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" >
+
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" >
+
+        <Button
+            android:id="@+id/resumeBtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/resume_label"
+            android:textSize="@dimen/edit_text_size" />
+
+        <Button
+            android:id="@+id/pauseBtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:enabled="false"
+            android:text="@string/pause_label"
+            android:textSize="@dimen/edit_text_size" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# Copyright (c) 2007-2013, Kaazing Corporation. All rights reserved.
+#
+
+PRG="$0"
+
+while [ -h "$PRG" ] ; do
+  ls=`ls -ld "$PRG"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=`dirname "$PRG"`/"$link"
+  fi
+done
+
+PRGDIR=`dirname "$PRG"`
+
+# A temporary variable for the location of the gateway installation,
+# to allow determining the conf and lib subdirectories (assumed to 
+# be siblings to this script's 'bin' directory).
+GW_HOME=`cd "$PRGDIR/.." ; pwd`
+
+# You can define various Java system properties by setting the value
+# of the GATEWAY_OPTS environment variable before calling this script.
+# The script itself should not be changed. For example, the setting
+# below sets the Java maximum memory to 512MB.
+[ -z "$GATEWAY_OPTS" ] && GATEWAY_OPTS="-Xmx512m"
+
+CP=""
+
+for LIBFILE in "$GW_HOME"/lib/*.jar
+do
+  CP="$CP:$LIBFILE"
+done
+
+# Add a directory for management support
+JAVA_LIBRARY_PATH="$GW_HOME/lib/sigar"
+
+java $GATEWAY_OPTS -Djava.library.path="$JAVA_LIBRARY_PATH" -XX:+HeapDumpOnOutOfMemoryError -cp "$CP" com.kaazing.gateway.server.Main $*

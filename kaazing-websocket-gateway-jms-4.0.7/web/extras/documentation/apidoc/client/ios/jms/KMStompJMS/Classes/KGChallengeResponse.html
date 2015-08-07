@@ -1,0 +1,596 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>KGChallengeResponse Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">KMStompJMS </a></h1>
+				<a id="developerHome" href="../index.html">Kaazing Corp.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">KGChallengeResponse Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/clearCredentials">&nbsp;&nbsp;&nbsp;&nbsp;- clearCredentials</option>
+	
+	<option value="//api/name/credentials">&nbsp;&nbsp;&nbsp;&nbsp;- credentials</option>
+	
+	<option value="//api/name/initWithCredentials:nextChallengeHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithCredentials:nextChallengeHandler:</option>
+	
+	<option value="//api/name/nextChallengeHandler">&nbsp;&nbsp;&nbsp;&nbsp;- nextChallengeHandler</option>
+	
+	<option value="//api/name/setCredentials:">&nbsp;&nbsp;&nbsp;&nbsp;- setCredentials:</option>
+	
+	<option value="//api/name/setNextChallengeHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- setNextChallengeHandler:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clearCredentials">clearCredentials</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/credentials">credentials</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithCredentials:nextChallengeHandler:">initWithCredentials:nextChallengeHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nextChallengeHandler">nextChallengeHandler</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setCredentials:">setCredentials:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setNextChallengeHandler:">setNextChallengeHandler:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="KGChallengeResponse Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">KGChallengeResponse Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">KGChallengeResponse.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A challenge response contains a character array representing the response to the server,
+and a reference to the next challenge handler to handle any further challenges for the request.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithCredentials:nextChallengeHandler:">&ndash;&nbsp;initWithCredentials:nextChallengeHandler:</a></code>
+		<span class="tooltip"><p>Constructor from a set of <a href="#//api/name/credentials">credentials</a> to send to the server in an &lsquo;Authorization:&rsquo; header
+and the next challenge handler responsible for handling any further challenges for the request.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/credentials">&ndash;&nbsp;credentials</a></code>
+		<span class="tooltip"><p>Return a set of credentials to send to the server in an &lsquo;Authorization:&rsquo; header.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setCredentials:">&ndash;&nbsp;setCredentials:</a></code>
+		<span class="tooltip"><p>Establish the <a href="#//api/name/credentials">credentials</a> for this response.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nextChallengeHandler">&ndash;&nbsp;nextChallengeHandler</a></code>
+		<span class="tooltip"><p>Return the next challenge handler responsible for handling any further challenges for the request.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setNextChallengeHandler:">&ndash;&nbsp;setNextChallengeHandler:</a></code>
+		<span class="tooltip"><p>Establish the next challenge handler responsible for handling any further challenges for the request.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clearCredentials">&ndash;&nbsp;clearCredentials</a></code>
+		<span class="tooltip"><p>Clear the <a href="#//api/name/credentials">credentials</a> of this response.</p>
+
+<p><p/>
+Calling this method once the <a href="#//api/name/credentials">credentials</a> have been communicated to the network layer
+protects <a href="#//api/name/credentials">credentials</a> in memory.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/clearCredentials" title="clearCredentials"></a>
+	<h3 class="subsubtitle method-title">clearCredentials</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Clear the <a href="#//api/name/credentials">credentials</a> of this response.</p>
+
+<p><p/>
+Calling this method once the <a href="#//api/name/credentials">credentials</a> have been communicated to the network layer
+protects <a href="#//api/name/credentials">credentials</a> in memory.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)clearCredentials</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGChallengeResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/credentials" title="credentials"></a>
+	<h3 class="subsubtitle method-title">credentials</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return a set of credentials to send to the server in an &lsquo;Authorization:&rsquo; header.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)credentials</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a set of credentials to send to the server in an &lsquo;Authorization:&rsquo; header.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGChallengeResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithCredentials:nextChallengeHandler:" title="initWithCredentials:nextChallengeHandler:"></a>
+	<h3 class="subsubtitle method-title">initWithCredentials:nextChallengeHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructor from a set of <a href="#//api/name/credentials">credentials</a> to send to the server in an &lsquo;Authorization:&rsquo; header
+and the next challenge handler responsible for handling any further challenges for the request.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithCredentials:(NSString *)<em>credentials</em> nextChallengeHandler:(KGChallengeHandler *)<em>nextChallengeHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>credentials</em></dt>
+			<dd><p>a set of <a href="#//api/name/credentials">credentials</a> to send to the server in an &lsquo;Authorization:&rsquo; header</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nextChallengeHandler</em></dt>
+			<dd><p>the next challenge handler responsible for handling any further challenges for the request.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGChallengeResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nextChallengeHandler" title="nextChallengeHandler"></a>
+	<h3 class="subsubtitle method-title">nextChallengeHandler</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return the next challenge handler responsible for handling any further challenges for the request.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (KGChallengeHandler *)nextChallengeHandler</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the next challenge handler responsible for handling any further challenges for the request.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGChallengeResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setCredentials:" title="setCredentials:"></a>
+	<h3 class="subsubtitle method-title">setCredentials:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Establish the <a href="#//api/name/credentials">credentials</a> for this response.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setCredentials:(NSString *)<em>credentials</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>credentials</em></dt>
+			<dd><p>the <a href="#//api/name/credentials">credentials</a> to be used for this challenge response.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGChallengeResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setNextChallengeHandler:" title="setNextChallengeHandler:"></a>
+	<h3 class="subsubtitle method-title">setNextChallengeHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Establish the next challenge handler responsible for handling any further challenges for the request.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setNextChallengeHandler:(KGChallengeHandler *)<em>nextChallengeHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nextChallengeHandler</em></dt>
+			<dd><p>the next challenge handler responsible for handling any further challenges for the request.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">KGChallengeResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Kaazing Corp.. All rights reserved. (Last updated: 2015-03-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
